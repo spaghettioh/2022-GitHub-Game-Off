@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClumpController : MonoBehaviour
 {
-    [SerializeField] private float _moveForce = 2f;
+    [SerializeField] private float _torque = 2f;
     [SerializeField] private float _maxSpeed = 5f;
     [SerializeField] private TransformAnchorSO _clumpTransformAnchor;
 
@@ -46,11 +46,11 @@ public class ClumpController : MonoBehaviour
 
     private void Update()
     {
-        var v = Camera.main.transform.up * Input.GetAxisRaw("Vertical");
+        var v = Camera.main.transform.right * Input.GetAxisRaw("Vertical");
 
         if (_body.velocity.magnitude < _maxSpeed)
         {
-            _body.AddForce(v * _moveForce, ForceMode.Force);
+            _body.AddTorque(v * _torque, ForceMode.Force);
         }
     }
 
