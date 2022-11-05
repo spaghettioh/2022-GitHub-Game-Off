@@ -4,37 +4,38 @@ using UnityEngine;
 
 public class ClumpController : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private float _torque = 2f;
     [SerializeField] private float _maxSpeed = 5f;
-    [SerializeField] private TransformAnchorSO _clumpTransformAnchor;
 
+    [Header("Mass")]
     [SerializeField] private float _startingMass;
     [SerializeField] private ClumpMassSO _clumpMass;
 
+    [Header("Collection")]
     [SerializeField] private CollectEventSO _collectEvent;
+    [SerializeField] private VoidEventSO _knockEvent;
     private List<Collectible> _collectibles = new List<Collectible>();
+    [SerializeField] private float _collectionModifier;
+
+
+
+    [Header("Broadcasting to...")]
+    [SerializeField] private TransformAnchorSO _clumpTransformAnchor;
 
     private Rigidbody _body;
+    private SphereCollider _collider;
 
     private void OnEnable()
     {
         _collectEvent.OnCollected = CollectSomething;
+        //_knockEvent.OnEventRaised = LoseSomething;
     }
 
     private void OnDisable()
     {
         _collectEvent.OnCollected -= CollectSomething;
-    }
-
-    private void CollectSomething(Collectible collectible)
-    {
-        _clumpMass.Increase(collectible.Mass);
-        _collectibles.Add(collectible);
-    }
-
-    private void LoseSomething()
-    {
-        // TODO Drop the last collected thing
+        _knockEvent.OnEventRaised -= LoseSomething;
     }
 
     private void Start()
@@ -42,6 +43,26 @@ public class ClumpController : MonoBehaviour
         _body = GetComponent<Rigidbody>();
         _clumpTransformAnchor.Set(transform);
         _clumpMass.Set(_startingMass);
+        TryGetComponent(out _collider);
+    }
+
+    private void CollectSomething(Collectible collectible)
+    {
+        _clumpMass.Increase(collectible.Mass);
+        _collectibles.Add(collectible);
+        //_collider.radius += collectible.Mass;
+        //_torque += collectible.Mass;
+    }
+
+    private void LoseSomething()
+    {
+        Collectible detached = _collectibles[_collectibles.Count - 1];
+        detached.SetCollected(false);
+        _clumpMass.Decrease(detached.Mass);
+        _collectibles.Remove(detached);
+
+        //_collider.radius -= detached.Mass;
+        //_torque -= detached.Mass;
     }
 
     private void Update()

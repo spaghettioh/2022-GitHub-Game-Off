@@ -11,22 +11,36 @@ public class Collectible : MonoBehaviour
     [SerializeField] private ClumpMassSO _clumpMass;
     [SerializeField] private TransformAnchorSO _clumpTransform;
 
-    private LayerMask _defaultLayer;
+    [SerializeField] private string _defaultLayer;
     [SerializeField] private string _collectedLayer;
 
     [SerializeField] private CollectEventSO _collectEvent;
     public bool IsCollected { get; private set; }
 
+    [SerializeField] private VoidEventSO _knockEvent;
+
+    private Collider _collider;
+
     private void Start()
     {
-        _defaultLayer = gameObject.layer;
+        TryGetComponent(out _collider);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag(_clumpTag) && _clumpMass.Mass > _mass)
+        if (collision.gameObject.CompareTag(_clumpTag))
         {
-            SetCollected(true);
+            if (_mass < _clumpMass.Mass)
+            {
+                SetCollected(true);
+            }
+            else if (_clumpMass.Mass == _mass)
+            {
+            }
+            else
+            {
+                _knockEvent.Raise();
+            }
         }
     }
 
@@ -37,12 +51,21 @@ public class Collectible : MonoBehaviour
             _collectEvent.Raise(this);
             transform.SetParent(_clumpTransform.Transform);
             IsCollected = true;
-            gameObject.layer = LayerMask.NameToLayer(_collectedLayer);
+            //gameObject.layer = LayerMask.NameToLayer(_collectedLayer);
+            _collider.enabled = false;
         }
         else
         {
             IsCollected = false;
-            gameObject.layer = LayerMask.NameToLayer(_defaultLayer.ToString());
+            transform.SetParent(null);
+            StartCoroutine(ResetLayer());
+            //Rigidbody body = componen
         }
+    }
+
+    private IEnumerator ResetLayer()
+    {
+        yield return new WaitForSeconds(2f);
+        gameObject.layer = LayerMask.NameToLayer(_defaultLayer);
     }
 }
