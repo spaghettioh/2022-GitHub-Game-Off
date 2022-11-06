@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -762,8 +762,7 @@ MonoBehaviour:
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
   _knockEvent: {fileID: 11400000, guid: 33f50c759cd2040f6963327c2706f01b, type: 2}
   _collectionModifier: 0.1
-  _clumpTransformAnchor: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f,
-    type: 2}
+  _clumpTransformAnchor: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,13 +2265,13 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 401524171}
-  m_Follow: {fileID: 401524171}
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 60
-    OrthographicSize: 5
-    NearClipPlane: 0.3
-    FarClipPlane: 1000
+    FieldOfView: 40
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
@@ -2285,7 +2284,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   m_LegacyBlendHint: 0
-  m_ComponentOwner: {fileID: 672987674}
+  m_ComponentOwner: {fileID: 0}
 --- !u!4 &1080554073
 Transform:
   m_ObjectHideFlags: 0
