@@ -6,6 +6,7 @@ using UnityEngine;
 public class ClumpMassSO : ScriptableObject
 {
     private float _mass;
+    [SerializeField] private FloatEventSO _massChangeEvent;
 
     public float Mass
     {
@@ -15,15 +16,23 @@ public class ClumpMassSO : ScriptableObject
     public void Set(float value)
     {
         _mass = value;
+        AlertChange();
     }
 
     public void Increase(float value)
     {
         _mass += value;
+        AlertChange();
     }
 
     public void Decrease(float value)
     {
         _mass -= value;
+        AlertChange();
+    }
+
+    private void AlertChange()
+    {
+        _massChangeEvent.Raise(_mass);
     }
 }
