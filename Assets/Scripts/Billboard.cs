@@ -5,6 +5,7 @@ using UnityEngine;
 public class Billboard : MonoBehaviour
 {
     private Camera _mainCamera;
+    [SerializeField] private bool _faceCameraOnly;
 
     private void Start()
     {
@@ -25,7 +26,15 @@ public class Billboard : MonoBehaviour
     private void FaceCamera()
     {
         var cam = _mainCamera.transform.rotation.eulerAngles;
-        transform.rotation = Quaternion.Euler(cam);
+        if (_faceCameraOnly)
+        {
+            transform.rotation = Quaternion.Euler(cam.x, 0f, 0f);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(cam);
+
+        }
     }
 
     private void SetMainCamera()
