@@ -15,12 +15,15 @@ public class HUDManager : MonoBehaviour
 
     [Space]
     public float TempWinValue;
+    [SerializeField] private GameObject _winText;
 
     [Header("Listening to...")]
     [SerializeField] private FloatEventSO _massChangeEvent;
+    [SerializeField] private VoidEventSO _winCondition;
 
     private void Start()
     {
+        _winText.SetActive(false);
         _winAmountBehind.text = $"/ {TempWinValue}";
         _winAmountFront.text = $"/ {TempWinValue}";
     }
@@ -28,11 +31,13 @@ public class HUDManager : MonoBehaviour
     private void OnEnable()
     {
         _massChangeEvent.OnEventRaised += ProcessMassChange;
+        _winCondition.OnEventRaised += ShowWinText;
     }
 
     private void OnDisable()
     {
         _massChangeEvent.OnEventRaised += ProcessMassChange;
+        _winCondition.OnEventRaised -= ShowWinText;
     }
 
     private void ProcessMassChange(float value)
@@ -41,5 +46,15 @@ public class HUDManager : MonoBehaviour
         _massTextBehind.text = $"Size: {rounded}";
         _massTextFront.text = $"Size: {rounded}";
         _progressSlider.value = 1 / (TempWinValue / value);
+
+        if (value > TempWinValue)
+        {
+            ShowWinText();
+        }
+    }
+
+    private void ShowWinText()
+    {
+        _winText.SetActive(true);
     }
 }
