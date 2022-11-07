@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class Billboard : MonoBehaviour
 {
-    private Transform cameraTransform;
+    private Camera _mainCamera;
 
     private void Start()
     {
-        cameraTransform = Camera.main.transform;
+        SetMainCamera();
     }
 
     private void Update()
     {
-        transform.LookAt(cameraTransform);
+        FaceCamera();
+    }
+
+    private void OnValidate()
+    {
+        SetMainCamera();
+        FaceCamera();
+    }
+
+    private void FaceCamera()
+    {
+        var cam = _mainCamera.transform.rotation.eulerAngles;
+        transform.rotation = Quaternion.Euler(cam);
+    }
+
+    private void SetMainCamera()
+    {
+        _mainCamera = Camera.main;
     }
 }

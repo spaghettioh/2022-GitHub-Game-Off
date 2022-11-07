@@ -8,10 +8,12 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private Vector3 _followOffset;
     [SerializeField] private Camera _camera;
 
+    [SerializeField] private int _sensitivity = 80;
+
     void LateUpdate()
     {
         SetPosition();
-        transform.Rotate(Vector3.up, Input.GetAxisRaw("Horizontal"));
+        transform.Rotate(Vector3.up, Input.GetAxisRaw("Horizontal") * Time.deltaTime * _sensitivity);
     }
 
     private void SetPosition()
