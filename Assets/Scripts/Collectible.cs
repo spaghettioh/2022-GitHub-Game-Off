@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    //[Header("Size to roll up")]
-    [field: SerializeField]
-    public float Mass { get; private set; }
+    [SerializeField] private float _mass;
+    public float Mass { get { return _mass; } }
 
     [SerializeField] private string _clumpTag;
     [SerializeField] private ClumpMassSO _clumpMass;
@@ -15,9 +14,9 @@ public class Collectible : MonoBehaviour
     [SerializeField] private string _defaultLayer;
     [SerializeField] private string _collectedLayer;
 
-    [Header("Broadcasting to...")]
     [SerializeField] private CollectEventSO _collectEvent;
     public bool IsCollected { get; private set; }
+
     [SerializeField] private VoidEventSO _knockEvent;
 
     private Collider _collider;
@@ -27,36 +26,21 @@ public class Collectible : MonoBehaviour
         TryGetComponent(out _collider);
     }
 
-    private void OnEnable()
+    private void OnCollisionEnter(Collision collision)
     {
-        _clumpMass.OnMassChanged += CheckMassThreshold;
-    }
-
-    private void OnDisable()
-    {
-        _clumpMass.OnMassChanged -= CheckMassThreshold;
-    }
-
-    private void CheckMassThreshold(float clumpMass)
-    {
-        if (clumpMass >= Mass)
+        if (collision.gameObject.CompareTag(_clumpTag))
         {
-            SetColliderToTrigger();
-        }
-        // TODO Add something to make the thing shake if it's within some threshold
-    }
-
-    private void SetColliderToTrigger()
-    {
-        _collider.isTrigger = true;
-        _clumpMass.OnMassChanged -= CheckMassThreshold;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag(_clumpTag))
-        {
-            SetCollected(true);
+            if (_mass < _clumpMass.Mass)
+            {
+                SetCollected(true);
+            }
+            else if (_clumpMass.Mass == _mass)
+            {
+            }
+            else
+            {
+                _knockEvent.Raise();
+            }
         }
     }
 
