@@ -12,14 +12,15 @@ public class ClumpController : MonoBehaviour
     [Header("Mass")]
     [SerializeField] private float _startingMass;
     [SerializeField] private ClumpMassSO _clumpMass;
-    [Tooltip("Collected mass percentage added to clump")]
-    [SerializeField] private float _rollUpChange = .1f;
+    [Tooltip("Collider change on whole numbers")]
+    [SerializeField] private float _colliderChange = .2f;
 
     [Header("Collection")]
     [SerializeField] private CollectEventSO _collectEvent;
     [SerializeField] private VoidEventSO _knockEvent;
     [SerializeField] private List<Collectible> _collectibles = new List<Collectible>();
-    [SerializeField] private float _collectionModifier;
+    [Tooltip("Collected mass percentage added to clump")]
+    [SerializeField] private float _collectionModifier = .1f;
 
 
 
@@ -51,14 +52,17 @@ public class ClumpController : MonoBehaviour
 
     private void CollectSomething(Collectible collectible)
     {
+        var currentMass = _clumpMass.Mass;
+
         _clumpMass.Increase(collectible.Mass * _collectionModifier);
         _collectibles.Add(collectible);
 
-        if (_clumpMass.Mass >= Mathf.Ceil(_clumpMass.Mass))
+        // Increase collider size
+        if (_clumpMass.Mass >= Mathf.Ceil(currentMass))
         {
-            _collider.radius += _collectionModifier;
+            _collider.radius += _colliderChange;
+            _torque += _colliderChange * 100f;
         }
-        //_torque += collectible.Mass;
     }
 
     private void LoseSomething()
