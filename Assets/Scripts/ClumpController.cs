@@ -7,15 +7,18 @@ public class ClumpController : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float _torque = 2f;
     [SerializeField] private float _maxSpeed = 5f;
+    [SerializeField] private float _reverseModifier = .66f;
 
     [Header("Mass")]
     [SerializeField] private float _startingMass;
     [SerializeField] private ClumpMassSO _clumpMass;
+    [Tooltip("Collected mass percentage added to clump")]
+    [SerializeField] private float _rollUpChange = .1f;
 
     [Header("Collection")]
     [SerializeField] private CollectEventSO _collectEvent;
     [SerializeField] private VoidEventSO _knockEvent;
-    private List<Collectible> _collectibles = new List<Collectible>();
+    [SerializeField] private List<Collectible> _collectibles = new List<Collectible>();
     [SerializeField] private float _collectionModifier;
 
 
@@ -48,7 +51,7 @@ public class ClumpController : MonoBehaviour
 
     private void CollectSomething(Collectible collectible)
     {
-        _clumpMass.Increase(collectible.Mass);
+        _clumpMass.Increase(collectible.Mass * _collectionModifier);
         _collectibles.Add(collectible);
         //_collider.radius += collectible.Mass;
         //_torque += collectible.Mass;
@@ -58,7 +61,7 @@ public class ClumpController : MonoBehaviour
     {
         Collectible detached = _collectibles[_collectibles.Count - 1];
         detached.SetCollected(false);
-        _clumpMass.Decrease(detached.Mass);
+        _clumpMass.Decrease(detached.Mass * _collectionModifier);
         _collectibles.Remove(detached);
 
         //_collider.radius -= detached.Mass;
@@ -67,11 +70,17 @@ public class ClumpController : MonoBehaviour
 
     private void Update()
     {
-        var v = Camera.main.transform.right * Input.GetAxisRaw("Vertical");
+        var v = Input.GetAxisRaw("Vertical");
+        if (v < 0)
+        {
+            v *= _reverseModifier;
+        }
+
+        var moveDirection = Camera.main.transform.right * v;
 
         if (_body.velocity.magnitude < _maxSpeed)
         {
-            _body.AddTorque(v * _torque, ForceMode.Force);
+            _body.AddTorque(moveDirection * _torque * Time.deltaTime, ForceMode.Force);
         }
     }
 

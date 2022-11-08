@@ -132,10 +132,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 502166}
-  - component: {fileID: 502169}
-  - component: {fileID: 502168}
-  - component: {fileID: 502167}
   - component: {fileID: 502170}
+  - component: {fileID: 502168}
+  - component: {fileID: 502169}
+  - component: {fileID: 502167}
   m_Layer: 7
   m_Name: Average (15)
   m_TagString: Untagged
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -892,7 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -1007,10 +1007,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 88259848}
-  - component: {fileID: 88259851}
-  - component: {fileID: 88259850}
-  - component: {fileID: 88259849}
   - component: {fileID: 88259852}
+  - component: {fileID: 88259850}
+  - component: {fileID: 88259851}
+  - component: {fileID: 88259849}
   m_Layer: 7
   m_Name: Average (29)
   m_TagString: Untagged
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -1438,7 +1438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -1767,7 +1767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -1900,7 +1900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -2033,7 +2033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -2148,10 +2148,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 212902385}
-  - component: {fileID: 212902388}
-  - component: {fileID: 212902387}
-  - component: {fileID: 212902386}
   - component: {fileID: 212902389}
+  - component: {fileID: 212902387}
+  - component: {fileID: 212902388}
+  - component: {fileID: 212902386}
   m_Layer: 7
   m_Name: Average (12)
   m_TagString: Untagged
@@ -2264,7 +2264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -2397,7 +2397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -3020,7 +3020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -3251,7 +3251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -3366,10 +3366,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 295687064}
-  - component: {fileID: 295687067}
-  - component: {fileID: 295687066}
-  - component: {fileID: 295687065}
   - component: {fileID: 295687068}
+  - component: {fileID: 295687066}
+  - component: {fileID: 295687067}
+  - component: {fileID: 295687065}
   m_Layer: 7
   m_Name: Average (14)
   m_TagString: Untagged
@@ -3482,7 +3482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -3615,7 +3615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -3748,7 +3748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -3765,10 +3765,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 309651415}
-  - component: {fileID: 309651418}
-  - component: {fileID: 309651417}
-  - component: {fileID: 309651416}
   - component: {fileID: 309651419}
+  - component: {fileID: 309651417}
+  - component: {fileID: 309651418}
+  - component: {fileID: 309651416}
   m_Layer: 7
   m_Name: Average (27)
   m_TagString: Untagged
@@ -3881,7 +3881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -4585,7 +4585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -4718,7 +4718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -4906,12 +4906,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22a0f79960db4200b1f7997556aca84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _torque: 0.2
+  _torque: 60
   _maxSpeed: 5
-  _startingMass: 5
+  _reverseModifier: 0.66
+  _startingMass: 2
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
+  _rollUpChange: 0.1
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
   _knockEvent: {fileID: 11400000, guid: 33f50c759cd2040f6963327c2706f01b, type: 2}
+  _collectibles: []
   _collectionModifier: 0.1
   _clumpTransformAnchor: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
 --- !u!1 &407161475
@@ -5039,7 +5042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -5255,10 +5258,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 427483790}
-  - component: {fileID: 427483793}
-  - component: {fileID: 427483792}
-  - component: {fileID: 427483791}
   - component: {fileID: 427483794}
+  - component: {fileID: 427483792}
+  - component: {fileID: 427483793}
+  - component: {fileID: 427483791}
   m_Layer: 7
   m_Name: Average (30)
   m_TagString: Untagged
@@ -5371,7 +5374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -5504,7 +5507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -6015,7 +6018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -6032,10 +6035,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 523484920}
-  - component: {fileID: 523484923}
-  - component: {fileID: 523484922}
-  - component: {fileID: 523484921}
   - component: {fileID: 523484924}
+  - component: {fileID: 523484922}
+  - component: {fileID: 523484923}
+  - component: {fileID: 523484921}
   m_Layer: 7
   m_Name: Average (24)
   m_TagString: Untagged
@@ -6148,7 +6151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -6560,7 +6563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -7024,7 +7027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -7157,7 +7160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -7587,10 +7590,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 651619298}
-  - component: {fileID: 651619301}
-  - component: {fileID: 651619300}
-  - component: {fileID: 651619299}
   - component: {fileID: 651619302}
+  - component: {fileID: 651619300}
+  - component: {fileID: 651619301}
+  - component: {fileID: 651619299}
   m_Layer: 7
   m_Name: Average (18)
   m_TagString: Untagged
@@ -7703,7 +7706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -8255,7 +8258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -8486,7 +8489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -8503,10 +8506,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 718057617}
-  - component: {fileID: 718057620}
-  - component: {fileID: 718057619}
-  - component: {fileID: 718057618}
   - component: {fileID: 718057621}
+  - component: {fileID: 718057619}
+  - component: {fileID: 718057620}
+  - component: {fileID: 718057618}
   m_Layer: 7
   m_Name: Average (23)
   m_TagString: Untagged
@@ -8619,7 +8622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -8752,7 +8755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -8983,7 +8986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -9214,7 +9217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -9583,7 +9586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -9600,10 +9603,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 826735347}
-  - component: {fileID: 826735350}
-  - component: {fileID: 826735349}
-  - component: {fileID: 826735348}
   - component: {fileID: 826735351}
+  - component: {fileID: 826735349}
+  - component: {fileID: 826735350}
+  - component: {fileID: 826735348}
   m_Layer: 7
   m_Name: Average (11)
   m_TagString: Untagged
@@ -9716,7 +9719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -9849,7 +9852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -10031,7 +10034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -10164,7 +10167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -10469,10 +10472,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 873062009}
-  - component: {fileID: 873062012}
-  - component: {fileID: 873062011}
-  - component: {fileID: 873062010}
   - component: {fileID: 873062013}
+  - component: {fileID: 873062011}
+  - component: {fileID: 873062012}
+  - component: {fileID: 873062010}
   m_Layer: 7
   m_Name: Average (17)
   m_TagString: Untagged
@@ -10585,7 +10588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -10816,7 +10819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -11047,7 +11050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -11558,7 +11561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -11691,7 +11694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -11884,7 +11887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -12115,7 +12118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -12512,7 +12515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -12827,7 +12830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -13150,7 +13153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -13265,10 +13268,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1068340322}
-  - component: {fileID: 1068340325}
-  - component: {fileID: 1068340324}
-  - component: {fileID: 1068340323}
   - component: {fileID: 1068340326}
+  - component: {fileID: 1068340324}
+  - component: {fileID: 1068340325}
+  - component: {fileID: 1068340323}
   m_Layer: 7
   m_Name: Average (28)
   m_TagString: Untagged
@@ -13381,7 +13384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -13514,7 +13517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -13998,7 +14001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -14327,7 +14330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -14344,10 +14347,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1126727532}
-  - component: {fileID: 1126727535}
-  - component: {fileID: 1126727534}
-  - component: {fileID: 1126727533}
   - component: {fileID: 1126727536}
+  - component: {fileID: 1126727534}
+  - component: {fileID: 1126727535}
+  - component: {fileID: 1126727533}
   m_Layer: 7
   m_Name: Average (7)
   m_TagString: Untagged
@@ -14460,7 +14463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -14673,10 +14676,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1170185285}
-  - component: {fileID: 1170185288}
-  - component: {fileID: 1170185287}
-  - component: {fileID: 1170185286}
   - component: {fileID: 1170185289}
+  - component: {fileID: 1170185287}
+  - component: {fileID: 1170185288}
+  - component: {fileID: 1170185286}
   m_Layer: 7
   m_Name: Average (8)
   m_TagString: Untagged
@@ -14789,7 +14792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -15118,7 +15121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -15349,7 +15352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -15503,6 +15506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _follow: {fileID: 401524171}
   _followOffset: {x: 0, y: 5, z: 1.5}
+  _offsetSmoothing: 0
   _camera: {fileID: 1767533717}
   _sensitivity: 65
 --- !u!1 &1235830924
@@ -15514,10 +15518,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1235830925}
-  - component: {fileID: 1235830928}
-  - component: {fileID: 1235830927}
-  - component: {fileID: 1235830926}
   - component: {fileID: 1235830929}
+  - component: {fileID: 1235830927}
+  - component: {fileID: 1235830928}
+  - component: {fileID: 1235830926}
   m_Layer: 7
   m_Name: Average (6)
   m_TagString: Untagged
@@ -15630,7 +15634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -15745,10 +15749,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1275665173}
-  - component: {fileID: 1275665176}
-  - component: {fileID: 1275665175}
-  - component: {fileID: 1275665174}
   - component: {fileID: 1275665177}
+  - component: {fileID: 1275665175}
+  - component: {fileID: 1275665176}
+  - component: {fileID: 1275665174}
   m_Layer: 7
   m_Name: Average (9)
   m_TagString: Untagged
@@ -15861,7 +15865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -15878,10 +15882,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1282291080}
-  - component: {fileID: 1282291083}
-  - component: {fileID: 1282291082}
-  - component: {fileID: 1282291081}
   - component: {fileID: 1282291084}
+  - component: {fileID: 1282291082}
+  - component: {fileID: 1282291083}
+  - component: {fileID: 1282291081}
   m_Layer: 7
   m_Name: Average (25)
   m_TagString: Untagged
@@ -15994,7 +15998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -16109,10 +16113,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1308375831}
-  - component: {fileID: 1308375834}
-  - component: {fileID: 1308375833}
-  - component: {fileID: 1308375832}
   - component: {fileID: 1308375835}
+  - component: {fileID: 1308375833}
+  - component: {fileID: 1308375834}
+  - component: {fileID: 1308375832}
   m_Layer: 7
   m_Name: Average (5)
   m_TagString: Untagged
@@ -16225,7 +16229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -16456,7 +16460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -16822,7 +16826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -17053,7 +17057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -17270,7 +17274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -17403,7 +17407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -17594,10 +17598,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1449694384}
-  - component: {fileID: 1449694387}
-  - component: {fileID: 1449694386}
-  - component: {fileID: 1449694385}
   - component: {fileID: 1449694388}
+  - component: {fileID: 1449694386}
+  - component: {fileID: 1449694387}
+  - component: {fileID: 1449694385}
   m_Layer: 7
   m_Name: Average (22)
   m_TagString: Untagged
@@ -17710,7 +17714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -18137,7 +18141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -18368,7 +18372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -18501,7 +18505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -18518,10 +18522,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1529697243}
-  - component: {fileID: 1529697246}
-  - component: {fileID: 1529697245}
-  - component: {fileID: 1529697244}
   - component: {fileID: 1529697247}
+  - component: {fileID: 1529697245}
+  - component: {fileID: 1529697246}
+  - component: {fileID: 1529697244}
   m_Layer: 7
   m_Name: Average (1)
   m_TagString: Untagged
@@ -18634,7 +18638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -18767,7 +18771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -19193,7 +19197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -19210,10 +19214,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1557397920}
-  - component: {fileID: 1557397923}
-  - component: {fileID: 1557397922}
-  - component: {fileID: 1557397921}
   - component: {fileID: 1557397924}
+  - component: {fileID: 1557397922}
+  - component: {fileID: 1557397923}
+  - component: {fileID: 1557397921}
   m_Layer: 7
   m_Name: Average (26)
   m_TagString: Untagged
@@ -19326,7 +19330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -19441,10 +19445,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1579848743}
-  - component: {fileID: 1579848746}
-  - component: {fileID: 1579848745}
-  - component: {fileID: 1579848744}
   - component: {fileID: 1579848747}
+  - component: {fileID: 1579848745}
+  - component: {fileID: 1579848746}
+  - component: {fileID: 1579848744}
   m_Layer: 7
   m_Name: Average (10)
   m_TagString: Untagged
@@ -19557,7 +19561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -19788,7 +19792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -20558,7 +20562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -20691,7 +20695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -20708,10 +20712,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1707098369}
-  - component: {fileID: 1707098372}
-  - component: {fileID: 1707098371}
-  - component: {fileID: 1707098370}
   - component: {fileID: 1707098373}
+  - component: {fileID: 1707098371}
+  - component: {fileID: 1707098372}
+  - component: {fileID: 1707098370}
   m_Layer: 7
   m_Name: Average (16)
   m_TagString: Untagged
@@ -20824,7 +20828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -20957,7 +20961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -21214,10 +21218,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1775341180}
-  - component: {fileID: 1775341183}
-  - component: {fileID: 1775341182}
-  - component: {fileID: 1775341181}
   - component: {fileID: 1775341184}
+  - component: {fileID: 1775341182}
+  - component: {fileID: 1775341183}
+  - component: {fileID: 1775341181}
   m_Layer: 7
   m_Name: Average (19)
   m_TagString: Untagged
@@ -21330,7 +21334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -21445,10 +21449,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1796690409}
-  - component: {fileID: 1796690412}
-  - component: {fileID: 1796690411}
-  - component: {fileID: 1796690410}
   - component: {fileID: 1796690413}
+  - component: {fileID: 1796690411}
+  - component: {fileID: 1796690412}
+  - component: {fileID: 1796690410}
   m_Layer: 7
   m_Name: Average (21)
   m_TagString: Untagged
@@ -21561,7 +21565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -21578,10 +21582,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1805592003}
-  - component: {fileID: 1805592006}
-  - component: {fileID: 1805592005}
-  - component: {fileID: 1805592004}
   - component: {fileID: 1805592007}
+  - component: {fileID: 1805592005}
+  - component: {fileID: 1805592006}
+  - component: {fileID: 1805592004}
   m_Layer: 7
   m_Name: Average (13)
   m_TagString: Untagged
@@ -21694,7 +21698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -21827,7 +21831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -21960,7 +21964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -22522,7 +22526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -22655,7 +22659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -23082,7 +23086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -23313,7 +23317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -23446,7 +23450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -23463,10 +23467,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1956172626}
-  - component: {fileID: 1956172629}
-  - component: {fileID: 1956172628}
-  - component: {fileID: 1956172627}
   - component: {fileID: 1956172630}
+  - component: {fileID: 1956172628}
+  - component: {fileID: 1956172629}
+  - component: {fileID: 1956172627}
   m_Layer: 7
   m_Name: Average (4)
   m_TagString: Untagged
@@ -23579,7 +23583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -23694,10 +23698,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1959471503}
-  - component: {fileID: 1959471506}
-  - component: {fileID: 1959471505}
-  - component: {fileID: 1959471504}
   - component: {fileID: 1959471507}
+  - component: {fileID: 1959471505}
+  - component: {fileID: 1959471506}
+  - component: {fileID: 1959471504}
   m_Layer: 7
   m_Name: Average (3)
   m_TagString: Untagged
@@ -23810,7 +23814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -23943,7 +23947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -24352,10 +24356,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2007364276}
-  - component: {fileID: 2007364279}
-  - component: {fileID: 2007364278}
-  - component: {fileID: 2007364277}
   - component: {fileID: 2007364280}
+  - component: {fileID: 2007364278}
+  - component: {fileID: 2007364279}
+  - component: {fileID: 2007364277}
   m_Layer: 7
   m_Name: Average (2)
   m_TagString: Untagged
@@ -24468,7 +24472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 5
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -24699,7 +24703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -25320,7 +25324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  _mass: 1
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
