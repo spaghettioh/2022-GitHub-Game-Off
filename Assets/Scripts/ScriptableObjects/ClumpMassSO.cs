@@ -1,38 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "ClumpMass", menuName = "Game Off/ClumpMass")]
 public class ClumpMassSO : ScriptableObject
 {
-    private float _mass;
-    [SerializeField] private FloatEventSO _massChangeEvent;
-
-    public float Mass
-    {
-        get { return _mass; }
-    }
+    [field: SerializeField]
+    public float Mass { get; private set; }
+    public UnityAction<float> OnMassChanged;
 
     public void Set(float value)
     {
-        _mass = value;
+        Mass = value;
         AlertChange();
     }
 
     public void Increase(float value)
     {
-        _mass += value;
+        Mass += value;
         AlertChange();
     }
 
     public void Decrease(float value)
     {
-        _mass -= value;
+        Mass -= value;
         AlertChange();
     }
 
     private void AlertChange()
     {
-        _massChangeEvent.Raise(_mass);
+        OnMassChanged.Invoke(Mass);
     }
 }

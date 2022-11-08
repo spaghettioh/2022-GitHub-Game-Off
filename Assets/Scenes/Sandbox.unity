@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &502169
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &17206420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -879,7 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &69541983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,7 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &88259851
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -1425,7 +1425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &107098304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,7 +1438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -1754,7 +1754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &128693248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1767,7 +1767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &141936856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1900,7 +1900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -1955,7 +1955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &170070994
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2033,7 +2033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -2199,7 +2199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &212902388
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2264,7 +2264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -2384,7 +2384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &213109648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2397,7 +2397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -2942,7 +2942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &265793659
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3020,7 +3020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -3238,7 +3238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &284484780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3251,7 +3251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -3417,7 +3417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &295687067
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3482,7 +3482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -3537,7 +3537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &303004482
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3615,7 +3615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -3735,7 +3735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &307280532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3748,7 +3748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -3816,7 +3816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &309651418
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3881,7 +3881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -4432,7 +4432,7 @@ RectTransform:
   - {fileID: 1044190806}
   - {fileID: 1667572354}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4572,7 +4572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &358010190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4585,7 +4585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -4640,7 +4640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &370265401
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4718,7 +4718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -5026,7 +5026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &407161480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5039,7 +5039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -5306,7 +5306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &427483793
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5371,7 +5371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -5426,7 +5426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &433301911
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5504,7 +5504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -6002,7 +6002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &512686245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6015,7 +6015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -6083,7 +6083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &523484923
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6148,7 +6148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -6482,7 +6482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &552160633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6560,7 +6560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -7011,7 +7011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &580461928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7024,7 +7024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -7144,7 +7144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &581976930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7157,7 +7157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -7638,7 +7638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &651619301
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7703,7 +7703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -8242,7 +8242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &704278607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8255,7 +8255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -8408,7 +8408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &717062590
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8486,7 +8486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -8554,7 +8554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &718057620
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8619,7 +8619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -8674,7 +8674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &720852005
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8752,7 +8752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -8970,7 +8970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &741294601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8983,7 +8983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -9201,7 +9201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &778633456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9214,7 +9214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -9260,7 +9260,7 @@ Transform:
   - {fileID: 24275127}
   - {fileID: 422309882}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &797562438
 GameObject:
@@ -9505,7 +9505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &809192448
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9583,7 +9583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -9651,7 +9651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &826735350
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9716,7 +9716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -9836,7 +9836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &829044849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9849,7 +9849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -10018,7 +10018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &836439535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10031,7 +10031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -10086,7 +10086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &851877842
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10164,7 +10164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -10520,7 +10520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &873062012
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10585,7 +10585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -10803,7 +10803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &880065081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10816,7 +10816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -11034,7 +11034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &894311301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11047,7 +11047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -11545,7 +11545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &953075842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11558,7 +11558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -11613,7 +11613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &961178782
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11691,7 +11691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -11757,7 +11757,7 @@ Transform:
   - {fileID: 88259848}
   - {fileID: 427483790}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &992389563
 GameObject:
@@ -11806,7 +11806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &992389566
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11884,7 +11884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -12102,7 +12102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &995481451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12115,7 +12115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -12287,7 +12287,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1007447860
 GameObject:
@@ -12434,7 +12434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1008964448
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12512,7 +12512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -12814,7 +12814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1033279469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12827,7 +12827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -13137,7 +13137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1059308971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13150,7 +13150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -13316,7 +13316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1068340325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13381,7 +13381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -13436,7 +13436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1072997456
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13514,7 +13514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -13985,7 +13985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1103581497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13998,7 +13998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -14249,7 +14249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1119863088
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14327,7 +14327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -14395,7 +14395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1126727535
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14460,7 +14460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -14724,7 +14724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1170185288
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14789,7 +14789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -15040,7 +15040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1196078998
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15118,7 +15118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -15336,7 +15336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1223144988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15349,7 +15349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -15565,7 +15565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1235830928
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15630,7 +15630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -15796,7 +15796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1275665176
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15861,7 +15861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -15929,7 +15929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1282291083
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15994,7 +15994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -16160,7 +16160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1308375834
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16225,7 +16225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -16378,7 +16378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1319257008
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16456,7 +16456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -16744,7 +16744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1348941337
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16822,7 +16822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -17040,7 +17040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1375941439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17053,7 +17053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -17257,7 +17257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1384655296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17270,7 +17270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -17325,7 +17325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1427947880
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17403,7 +17403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -17645,7 +17645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1449694387
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17710,7 +17710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -18124,7 +18124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1495517001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18137,7 +18137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -18355,7 +18355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1513340025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18368,7 +18368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -18423,7 +18423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1518327768
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18501,7 +18501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -18569,7 +18569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1529697246
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18634,7 +18634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -18754,7 +18754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1537128174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18767,7 +18767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -19180,7 +19180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1555465438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19193,7 +19193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -19261,7 +19261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1557397923
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19326,7 +19326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -19492,7 +19492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1579848746
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19557,7 +19557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -19710,7 +19710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1583630858
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19788,7 +19788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -20545,7 +20545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1672396677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20558,7 +20558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -20678,7 +20678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1674891327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20691,7 +20691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -20759,7 +20759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1707098372
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20824,7 +20824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -20879,7 +20879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1718218024
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20957,7 +20957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -21265,7 +21265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1775341183
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21330,7 +21330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -21496,7 +21496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1796690412
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21561,7 +21561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -21629,7 +21629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1805592006
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21694,7 +21694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -21814,7 +21814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1814949107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21827,7 +21827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -21882,7 +21882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1819091873
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21960,7 +21960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -22509,7 +22509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1874894368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22522,7 +22522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -22642,7 +22642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1877227512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22655,7 +22655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -23069,7 +23069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1923903638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23082,7 +23082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -23300,7 +23300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1941989747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23313,7 +23313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -23433,7 +23433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1952361643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23446,7 +23446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -23514,7 +23514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1956172629
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23579,7 +23579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -23745,7 +23745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &1959471506
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23810,7 +23810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -23930,7 +23930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &1964251710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23943,7 +23943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -24403,7 +24403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &2007364279
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24468,7 +24468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 6
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -24686,7 +24686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!114 &2029485733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24699,7 +24699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -24998,7 +24998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 10
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
@@ -25242,7 +25242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!212 &2114578354
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25320,7 +25320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.1
+  <Mass>k__BackingField: 0
   _clumpTag: Clump
   _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
   _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}

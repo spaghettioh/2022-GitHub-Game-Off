@@ -24,8 +24,6 @@ public class HUDManager : MonoBehaviour
     private void Start()
     {
         _winText.SetActive(false);
-        _winAmountBehind.text = $"/ {TempWinValue}";
-        _winAmountFront.text = $"/ {TempWinValue}";
     }
 
     private void OnEnable()
@@ -43,8 +41,8 @@ public class HUDManager : MonoBehaviour
     private void ProcessMassChange(float value)
     {
         float rounded = Mathf.Round(value * 100f) / 100f;
-        _massTextBehind.text = $"Size: {rounded}";
-        _massTextFront.text = $"Size: {rounded}";
+        _massTextBehind.text = $"Size: {rounded} / {TempWinValue}";
+        _massTextFront.text = $"Size: {rounded} / {TempWinValue}";
         _progressSlider.value = 1 / (TempWinValue / value);
 
         if (value > TempWinValue)
