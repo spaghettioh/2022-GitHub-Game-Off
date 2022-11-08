@@ -53,7 +53,11 @@ public class ClumpController : MonoBehaviour
     {
         _clumpMass.Increase(collectible.Mass * _collectionModifier);
         _collectibles.Add(collectible);
-        //_collider.radius += collectible.Mass;
+
+        if (_clumpMass.Mass >= Mathf.Ceil(_clumpMass.Mass))
+        {
+            _collider.radius += _collectionModifier;
+        }
         //_torque += collectible.Mass;
     }
 
