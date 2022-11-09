@@ -8,8 +8,7 @@ public class Collectible : MonoBehaviour
     public float Mass { get { return _mass; } }
 
     [SerializeField] private string _clumpTag;
-    [SerializeField] private ClumpMassSO _clumpMass;
-    [SerializeField] private TransformAnchorSO _clumpTransform;
+    [SerializeField] private ClumpDataSO _clumpData;
 
     [SerializeField] private string _defaultLayer;
     [SerializeField] private string _collectedLayer;
@@ -30,11 +29,11 @@ public class Collectible : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(_clumpTag))
         {
-            if (_mass < _clumpMass.Mass)
+            if (_mass < _clumpData.Mass)
             {
                 SetCollected(true);
             }
-            else if (_clumpMass.Mass == _mass)
+            else if (_clumpData.Mass == _mass)
             {
             }
             else
@@ -49,7 +48,7 @@ public class Collectible : MonoBehaviour
         if (collect)
         {
             _collectEvent.Raise(this);
-            transform.SetParent(_clumpTransform.Transform);
+            transform.SetParent(_clumpData.Transform);
             IsCollected = true;
             //gameObject.layer = LayerMask.NameToLayer(_collectedLayer);
             _collider.enabled = false;

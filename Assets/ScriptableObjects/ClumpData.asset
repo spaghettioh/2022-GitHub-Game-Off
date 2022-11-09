@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e227bafb3db6f4b90b97b099a701be32, type: 3}
-  m_Name: ClumpMass
+  m_Script: {fileID: 11500000, guid: 1a2c92b0260594ddea0dc72b63967232, type: 3}
+  m_Name: ClumpData
   m_EditorClassIdentifier: 
-  _massChangeEvent: {fileID: 11400000, guid: ef4a87ba1281b462886a113ea110c479, type: 2}

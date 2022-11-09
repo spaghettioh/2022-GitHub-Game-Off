@@ -18,7 +18,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private GameObject _winText;
 
     [Header("Listening to...")]
-    [SerializeField] private FloatEventSO _massChangeEvent;
+    [SerializeField] private ClumpDataSO _massChangeEvent;
     [SerializeField] private VoidEventSO _winCondition;
 
     private void Start()
@@ -28,13 +28,13 @@ public class HUDManager : MonoBehaviour
 
     private void OnEnable()
     {
-        _massChangeEvent.OnEventRaised += ProcessMassChange;
+        _massChangeEvent.OnSizeChanged += ProcessMassChange;
         _winCondition.OnEventRaised += ShowWinText;
     }
 
     private void OnDisable()
     {
-        _massChangeEvent.OnEventRaised += ProcessMassChange;
+        _massChangeEvent.OnSizeChanged += ProcessMassChange;
         _winCondition.OnEventRaised -= ShowWinText;
     }
 

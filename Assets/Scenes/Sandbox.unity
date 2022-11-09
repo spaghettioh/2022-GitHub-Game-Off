@@ -250,8 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -434,8 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -945,8 +943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -1176,8 +1173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -1309,8 +1305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -1624,8 +1619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -1953,8 +1947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -2086,8 +2079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -2219,8 +2211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -2352,8 +2343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -2583,8 +2573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -2716,8 +2705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -2849,8 +2837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -3472,8 +3459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -3703,8 +3689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -3836,8 +3821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -3969,8 +3953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -4102,8 +4085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -4333,8 +4315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -4466,8 +4447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -4599,8 +4579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -4732,8 +4711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -4865,8 +4843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -5096,8 +5073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -5578,8 +5554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -5706,7 +5681,7 @@ MonoBehaviour:
   _progressSlider: {fileID: 1044190807}
   TempWinValue: 4
   _winText: {fileID: 1667572352}
-  _massChangeEvent: {fileID: 11400000, guid: ef4a87ba1281b462886a113ea110c479, type: 2}
+  _massChangeEvent: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _winCondition: {fileID: 11400000, guid: ef077a62f70bf461f8b11f1a1d8e8b2c, type: 2}
 --- !u!1 &358010185
 GameObject:
@@ -5835,8 +5810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -5968,8 +5942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -6101,8 +6074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -6290,14 +6262,13 @@ MonoBehaviour:
   _torque: 60
   _maxSpeed: 5
   _reverseModifier: 0.66
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _startingMass: 1.1
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _colliderChange: 0.2
+  _colliderChange: 0.1
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
   _knockEvent: {fileID: 11400000, guid: 33f50c759cd2040f6963327c2706f01b, type: 2}
   _collectibles: []
   _collectionModifier: 0.1
-  _clumpTransformAnchor: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
 --- !u!1 &403627847
 GameObject:
   m_ObjectHideFlags: 0
@@ -6474,8 +6445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -6607,8 +6577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -6939,8 +6908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -7072,8 +7040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -7303,8 +7270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -7767,8 +7733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -7900,8 +7865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -8033,8 +7997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -8166,8 +8129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -8299,8 +8261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -8432,8 +8393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -8844,8 +8804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -8977,8 +8936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -9306,8 +9264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -9439,8 +9396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -9572,8 +9528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -10118,8 +10073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -10251,8 +10205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -10472,8 +10425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -10936,8 +10888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -11167,8 +11118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -11300,8 +11250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -11433,8 +11382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -11566,8 +11514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -11895,8 +11842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -12166,8 +12112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -12397,8 +12342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -12530,8 +12474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -12760,8 +12703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -12893,8 +12835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -13075,8 +13016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -13208,8 +13148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -13628,8 +13567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -13859,8 +13797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -14090,8 +14027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -14223,8 +14159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -14636,8 +14571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -14769,8 +14703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -15000,8 +14933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -15133,8 +15065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -15266,8 +15197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -15459,8 +15389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -15592,8 +15521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -15725,8 +15653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -15956,8 +15883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -16353,8 +16279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -16668,8 +16593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -16990,8 +16914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -17221,8 +17144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -17354,8 +17276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -17838,8 +17759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -18167,8 +18087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -18300,8 +18219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -18433,8 +18351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -18762,8 +18679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -18895,8 +18811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -19224,8 +19139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -19455,8 +19369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -19588,8 +19501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -19870,8 +19782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -20003,8 +19914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -20136,8 +20046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -20367,8 +20276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -20500,8 +20408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -20731,8 +20638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -20962,8 +20868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -21095,8 +21000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -21461,8 +21365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -21594,8 +21497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -21727,8 +21629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -21958,8 +21859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -22091,8 +21991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -22224,8 +22123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -22441,8 +22339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -22574,8 +22471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -22881,8 +22777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -23014,8 +22909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -23147,8 +23041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -23574,8 +23467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -23805,8 +23697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -23938,8 +23829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -24301,8 +24191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -24434,8 +24323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -24567,8 +24455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -24700,8 +24587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -24833,8 +24719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -25064,8 +24949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -25295,8 +25179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -25428,8 +25311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -25561,8 +25443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -25829,8 +25710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -25962,8 +25842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -26597,8 +26476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -26730,8 +26608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -26863,8 +26740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -26996,8 +26872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -27129,8 +27004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -27262,8 +27136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -27503,8 +27376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -27734,8 +27606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -27867,8 +27738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -28000,8 +27870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -28133,8 +28002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -28266,8 +28134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -28399,8 +28266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -28630,8 +28496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -28861,8 +28726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -29092,8 +28956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -29323,8 +29186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -29652,8 +29514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -29785,8 +29646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -30016,8 +29876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -30149,8 +30008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 2
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -30282,8 +30140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -30513,8 +30370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -30646,8 +30502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -30779,8 +30634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -31108,8 +30962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -31339,8 +31192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -31570,8 +31422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -31801,8 +31652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -31934,8 +31784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -32165,8 +32014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -32396,8 +32244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0.5
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -32499,8 +32346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 0
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 0}
   _defaultLayer: 
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
@@ -32821,8 +32667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _clumpTag: Clump
-  _clumpMass: {fileID: 11400000, guid: cc9d5d4c37c23446e9a94baf681fb6e5, type: 2}
-  _clumpTransform: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected
   _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}

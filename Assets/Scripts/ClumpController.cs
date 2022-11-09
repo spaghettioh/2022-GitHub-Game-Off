@@ -10,10 +10,10 @@ public class ClumpController : MonoBehaviour
     [SerializeField] private float _reverseModifier = .66f;
 
     [Header("Mass")]
+    [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private float _startingMass;
-    [SerializeField] private ClumpMassSO _clumpMass;
-    [Tooltip("Collider change on whole numbers")]
-    [SerializeField] private float _colliderChange = .2f;
+    [Tooltip("Collider radius change on size whole numbers")]
+    [SerializeField] private float _colliderChange = .1f;
 
     [Header("Collection")]
     [SerializeField] private CollectEventSO _collectEvent;
@@ -21,11 +21,6 @@ public class ClumpController : MonoBehaviour
     [SerializeField] private List<Collectible> _collectibles = new List<Collectible>();
     [Tooltip("Collected mass percentage added to clump")]
     [SerializeField] private float _collectionModifier = .1f;
-
-
-
-    [Header("Broadcasting to...")]
-    [SerializeField] private TransformAnchorSO _clumpTransformAnchor;
 
     private Rigidbody _body;
     private SphereCollider _collider;
@@ -45,20 +40,20 @@ public class ClumpController : MonoBehaviour
     private void Start()
     {
         _body = GetComponent<Rigidbody>();
-        _clumpTransformAnchor.Set(transform);
-        _clumpMass.Set(_startingMass);
+        _clumpData.SetTransform(transform);
+        _clumpData.SetSize(_startingMass);
         TryGetComponent(out _collider);
     }
 
     private void CollectSomething(Collectible collectible)
     {
-        var currentMass = _clumpMass.Mass;
+        var currentMass = _clumpData.Mass;
 
-        _clumpMass.Increase(collectible.Mass * _collectionModifier);
+        _clumpData.IncreaseSize(collectible.Mass * _collectionModifier);
         _collectibles.Add(collectible);
 
         // Increase collider size
-        if (_clumpMass.Mass >= Mathf.Ceil(currentMass))
+        if (_clumpData.Mass >= Mathf.Ceil(currentMass))
         {
             _collider.radius += _colliderChange;
             _torque += _colliderChange * 100f;
@@ -69,7 +64,7 @@ public class ClumpController : MonoBehaviour
     {
         Collectible detached = _collectibles[_collectibles.Count - 1];
         detached.SetCollected(false);
-        _clumpMass.Decrease(detached.Mass * _collectionModifier);
+        _clumpData.DecreaseSize(detached.Mass * _collectionModifier);
         _collectibles.Remove(detached);
 
         //_collider.radius -= detached.Mass;
