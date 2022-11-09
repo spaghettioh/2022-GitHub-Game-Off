@@ -14,7 +14,7 @@ public class ClumpDataSO : ScriptableObject
         private set;
     }
 
-    public float Size
+    public float SizeInMeters
     {
         get;
         private set;
@@ -27,19 +27,19 @@ public class ClumpDataSO : ScriptableObject
 
     public void SetSize(float value)
     {
-        Size = value;
+        SizeInMeters = Mathf.Round(value * 100f) / 100f;
         AlertSizeChange();
     }
 
     public void IncreaseSize(float value)
     {
-        Size += value;
+        SizeInMeters += Mathf.Round(value * 1000f) / 1000f;
         AlertSizeChange();
     }
 
     public void DecreaseSize(float value)
     {
-        Size -= value;
+        SizeInMeters -= Mathf.Round(value * 1000f) / 1000f;
         AlertSizeChange();
     }
 
@@ -47,7 +47,7 @@ public class ClumpDataSO : ScriptableObject
     {
         if (OnSizeChanged != null)
         {
-            OnSizeChanged.Invoke(Size);
+            OnSizeChanged.Invoke(SizeInMeters);
         }
         else
         {

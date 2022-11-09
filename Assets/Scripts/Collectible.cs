@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    [Tooltip("Clump size required to collect")]
+    [SerializeField] private float SizeInMeters;
+
     [field: SerializeField]
-    public float ClumpSizeToCollect
+    public float CollectedSize
     {
-        get; private set;
+        get;
+        private set;
     }
 
-    [SerializeField] private string _clumpTag;
     [SerializeField] private ClumpDataSO _clumpData;
 
     [SerializeField] private string _defaultLayer;
@@ -26,8 +27,8 @@ public class Collectible : MonoBehaviour
 
     private void Start()
     {
-        _collider = GetComponent<Collider>();
-        //TryGetComponent(out _collider);
+        //_collider = GetComponent<Collider>();
+        TryGetComponent(out _collider);
     }
 
     private void OnEnable()
@@ -53,9 +54,10 @@ public class Collectible : MonoBehaviour
     private IEnumerator Co_CompareSize(float clumpSize)
     {
         yield return new WaitForSeconds(.5f);
-        if (clumpSize >= ClumpSizeToCollect)
+        if (clumpSize >= SizeInMeters)
         {
             _collider.isTrigger = true;
+            _clumpData.OnSizeChanged -= CompareSize;
         }
     }
 

@@ -6,12 +6,13 @@ public class ClumpController : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float _torque = 2f;
-    [SerializeField] private float _maxSpeed = 5f;
-    [SerializeField] private float _reverseModifier = .66f;
+    [SerializeField] private float _maxSpeed = 7f;
+    [Tooltip("Percentage of max speed to move in reverse")]
+    [SerializeField] private float _reverseSpeedPercentage = .66f;
 
-    [Header("Mass")]
+    [Header("Data and size")]
     [SerializeField] private ClumpDataSO _clumpData;
-    [SerializeField] private float _startingMass;
+    [SerializeField] private float _startingSizeInMeters = 5f;
     [Tooltip("Collider radius change on size whole numbers")]
     [SerializeField] private float _colliderChange = .1f;
 
@@ -34,41 +35,38 @@ public class ClumpController : MonoBehaviour
     private void OnDisable()
     {
         _collectEvent.OnCollected -= CollectSomething;
-        _knockEvent.OnEventRaised -= LoseSomething;
+        //_knockEvent.OnEventRaised -= LoseSomething;
     }
 
     private void Start()
     {
         _body = GetComponent<Rigidbody>();
         _clumpData.SetTransform(transform);
-        _clumpData.SetSize(_startingMass);
+        _clumpData.SetSize(_startingSizeInMeters);
         TryGetComponent(out _collider);
     }
 
     private void CollectSomething(Collectible collectible)
     {
-        var currentMass = _clumpData.Size;
+        var currentMass = _clumpData.SizeInMeters;
 
-        _clumpData.IncreaseSize(collectible.ClumpSizeToCollect * _collectionModifier);
+        _clumpData.IncreaseSize(collectible.CollectedSize);
         _collectibles.Add(collectible);
 
         // Increase collider size
-        if (_clumpData.Size >= Mathf.Ceil(currentMass))
-        {
-            _collider.radius += _colliderChange;
-            _torque += _colliderChange * 100f;
-        }
+        _collider.radius += collectible.CollectedSize / 10;
+        _torque += collectible.CollectedSize * 10;
     }
 
     private void LoseSomething()
     {
         Collectible detached = _collectibles[_collectibles.Count - 1];
         detached.SetCollected(false);
-        _clumpData.DecreaseSize(detached.ClumpSizeToCollect * _collectionModifier);
+        _clumpData.DecreaseSize(detached.CollectedSize);
         _collectibles.Remove(detached);
 
-        //_collider.radius -= detached.Mass;
-        //_torque -= detached.Mass;
+        _collider.radius -= detached.CollectedSize / 10;
+        _torque -= detached.CollectedSize * 10;
     }
 
     private void Update()
@@ -76,7 +74,7 @@ public class ClumpController : MonoBehaviour
         var v = Input.GetAxisRaw("Vertical");
         if (v < 0)
         {
-            v *= _reverseModifier;
+            v *= _reverseSpeedPercentage;
         }
 
         var moveDirection = Camera.main.transform.right * v;

@@ -7,52 +7,51 @@ using TMPro;
 public class HUDManager : MonoBehaviour
 {
     [Header("Progress")]
-    [SerializeField] private TMP_Text _massTextBehind;
-    [SerializeField] private TMP_Text _massTextFront;
-    [SerializeField] private TMP_Text _winAmountBehind;
-    [SerializeField] private TMP_Text _winAmountFront;
+    [SerializeField] private TMP_Text _sizeTextBehind;
+    [SerializeField] private TMP_Text _sizeTextFront;
     [SerializeField] private Slider _progressSlider;
 
     [Space]
-    public float TempWinValue;
-    [SerializeField] private GameObject _winText;
+    [SerializeField] private float _tempWinValue;
+    [SerializeField] private GameObject _winDialog;
 
     [Header("Listening to...")]
-    [SerializeField] private ClumpDataSO _massChangeEvent;
+    [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private VoidEventSO _winCondition;
 
     private void Start()
     {
-        _winText.SetActive(false);
+        _winDialog.SetActive(false);
     }
 
     private void OnEnable()
     {
-        _massChangeEvent.OnSizeChanged += ProcessMassChange;
-        _winCondition.OnEventRaised += ShowWinText;
+        _clumpData.OnSizeChanged += ProcessSizeChange;
+        _winCondition.OnEventRaised += CheckForWin;
     }
 
     private void OnDisable()
     {
-        _massChangeEvent.OnSizeChanged += ProcessMassChange;
-        _winCondition.OnEventRaised -= ShowWinText;
+        _clumpData.OnSizeChanged -= ProcessSizeChange;
+        _winCondition.OnEventRaised -= CheckForWin;
     }
 
-    private void ProcessMassChange(float value)
+    private void ProcessSizeChange(float size)
     {
-        float rounded = Mathf.Round(value * 100f) / 100f;
-        _massTextBehind.text = $"Size: {rounded} / {TempWinValue}";
-        _massTextFront.text = $"Size: {rounded} / {TempWinValue}";
-        _progressSlider.value = 1 / (TempWinValue / value);
+        float rounded = Mathf.Round(size * 100f) / 100f;
+        string currentSize = $"Size: {rounded} / {_tempWinValue}";
+        _sizeTextBehind.text = currentSize;
+        _sizeTextFront.text = currentSize;
+        _progressSlider.value = 1 / (_tempWinValue / size);
 
-        if (value > TempWinValue)
+        CheckForWin();
+    }
+
+    private void CheckForWin()
+    {
+        if (_clumpData.SizeInMeters >= _tempWinValue)
         {
-            ShowWinText();
+            _winDialog.SetActive(true);
         }
-    }
-
-    private void ShowWinText()
-    {
-        _winText.SetActive(true);
     }
 }
