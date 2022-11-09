@@ -19,6 +19,7 @@ public class Collectible : MonoBehaviour
     [SerializeField] private string _collectedLayer;
 
     [SerializeField] private CollectEventSO _collectEvent;
+    [SerializeField] private VoidEventSO _collectVoidEvent;
     public bool IsCollected { get; private set; }
 
     [SerializeField] private VoidEventSO _knockEvent;
@@ -74,6 +75,7 @@ public class Collectible : MonoBehaviour
         if (collect)
         {
             _collectEvent.Raise(this);
+            _collectVoidEvent.Raise();
             transform.SetParent(_clumpData.Transform);
             IsCollected = true;
             //gameObject.layer = LayerMask.NameToLayer(_collectedLayer);
