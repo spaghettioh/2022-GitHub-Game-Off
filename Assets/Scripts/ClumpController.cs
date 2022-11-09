@@ -47,13 +47,13 @@ public class ClumpController : MonoBehaviour
 
     private void CollectSomething(Collectible collectible)
     {
-        var currentMass = _clumpData.Mass;
+        var currentMass = _clumpData.Size;
 
-        _clumpData.IncreaseSize(collectible.Mass * _collectionModifier);
+        _clumpData.IncreaseSize(collectible.ClumpSizeToCollect * _collectionModifier);
         _collectibles.Add(collectible);
 
         // Increase collider size
-        if (_clumpData.Mass >= Mathf.Ceil(currentMass))
+        if (_clumpData.Size >= Mathf.Ceil(currentMass))
         {
             _collider.radius += _colliderChange;
             _torque += _colliderChange * 100f;
@@ -64,7 +64,7 @@ public class ClumpController : MonoBehaviour
     {
         Collectible detached = _collectibles[_collectibles.Count - 1];
         detached.SetCollected(false);
-        _clumpData.DecreaseSize(detached.Mass * _collectionModifier);
+        _clumpData.DecreaseSize(detached.ClumpSizeToCollect * _collectionModifier);
         _collectibles.Remove(detached);
 
         //_collider.radius -= detached.Mass;

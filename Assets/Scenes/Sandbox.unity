@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -941,7 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -1303,7 +1303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -1617,7 +1617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -1945,7 +1945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -2077,7 +2077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -2341,7 +2341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -2571,7 +2571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -2703,7 +2703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -2835,7 +2835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -3457,7 +3457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -3687,7 +3687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -3819,7 +3819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -3951,7 +3951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -4083,7 +4083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -4313,7 +4313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -4445,7 +4445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -4577,7 +4577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -4709,7 +4709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -4841,7 +4841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -5071,7 +5071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -5552,7 +5552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -5808,7 +5808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -5940,7 +5940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -6072,7 +6072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -6443,7 +6443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -6575,7 +6575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -6906,7 +6906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -7038,7 +7038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -7268,7 +7268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -7731,7 +7731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -7863,7 +7863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -7995,7 +7995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -8127,7 +8127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -8259,7 +8259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -8391,7 +8391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -8802,7 +8802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -8934,7 +8934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -9262,7 +9262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -9394,7 +9394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -9526,7 +9526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -10071,7 +10071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -10203,7 +10203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -10423,7 +10423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -10886,7 +10886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -11116,7 +11116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -11248,7 +11248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -11380,7 +11380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -11512,7 +11512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -11840,7 +11840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -12110,7 +12110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -12340,7 +12340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -12472,7 +12472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -12701,7 +12701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -12833,7 +12833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -13014,7 +13014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -13146,7 +13146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -13565,7 +13565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -13795,7 +13795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -14025,7 +14025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -14157,7 +14157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -14569,7 +14569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -14701,7 +14701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -14931,7 +14931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -15063,7 +15063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -15195,7 +15195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -15387,7 +15387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -15519,7 +15519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -15651,7 +15651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -15881,7 +15881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -16277,7 +16277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -16591,7 +16591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -16912,7 +16912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -17142,7 +17142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -17274,7 +17274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -17757,7 +17757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -18085,7 +18085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -18217,7 +18217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -18349,7 +18349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -18677,7 +18677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -18809,7 +18809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -19137,7 +19137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -19367,7 +19367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -19499,7 +19499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -19780,7 +19780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -19912,7 +19912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -20044,7 +20044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -20274,7 +20274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -20406,7 +20406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -20636,7 +20636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -20866,7 +20866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -20998,7 +20998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -21363,7 +21363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -21495,7 +21495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -21627,7 +21627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -21857,7 +21857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -21989,7 +21989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -22121,7 +22121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -22337,7 +22337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -22469,7 +22469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -22775,7 +22775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -22907,7 +22907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -23039,7 +23039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -23465,7 +23465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -23695,7 +23695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -23827,7 +23827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -24189,7 +24189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -24321,7 +24321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -24453,7 +24453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -24585,7 +24585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -24717,7 +24717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -24947,7 +24947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -25177,7 +25177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -25309,7 +25309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -25441,7 +25441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -25708,7 +25708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -25840,7 +25840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -26474,7 +26474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -26606,7 +26606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -26738,7 +26738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -26870,7 +26870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -27002,7 +27002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -27134,7 +27134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -27374,7 +27374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -27604,7 +27604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -27736,7 +27736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -27868,7 +27868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -28000,7 +28000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -28132,7 +28132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -28264,7 +28264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -28494,7 +28494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -28724,7 +28724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -28954,7 +28954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -29184,7 +29184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -29512,7 +29512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -29644,7 +29644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -29874,7 +29874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -30006,7 +30006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 2
+  <ClumpSizeToCollect>k__BackingField: 2
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -30138,7 +30138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -30368,7 +30368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -30500,7 +30500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -30632,7 +30632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -30960,7 +30960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -31190,7 +31190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -31420,7 +31420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -31650,7 +31650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -31782,7 +31782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1.5
+  <ClumpSizeToCollect>k__BackingField: 1.5
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
@@ -32012,7 +32012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -32242,7 +32242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0.5
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: Prop
@@ -32344,7 +32344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 0
+  <ClumpSizeToCollect>k__BackingField: 0
   _clumpTag: Clump
   _clumpData: {fileID: 0}
   _defaultLayer: 
@@ -32665,7 +32665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
+  <ClumpSizeToCollect>k__BackingField: 1
   _clumpTag: Clump
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop

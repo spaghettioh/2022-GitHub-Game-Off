@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    [SerializeField] private float _mass;
-    public float Mass { get { return _mass; } }
+    [Tooltip("Clump size required to collect")]
+    [field: SerializeField]
+    public float ClumpSizeToCollect
+    {
+        get; private set;
+    }
 
     [SerializeField] private string _clumpTag;
     [SerializeField] private ClumpDataSO _clumpData;
@@ -22,24 +26,44 @@ public class Collectible : MonoBehaviour
 
     private void Start()
     {
-        TryGetComponent(out _collider);
+        _collider = GetComponent<Collider>();
+        //TryGetComponent(out _collider);
+    }
+
+    private void OnEnable()
+    {
+        _clumpData.OnSizeChanged += CompareSize;
+    }
+
+    private void OnDisable()
+    {
+        _clumpData.OnSizeChanged -= CompareSize;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag(_clumpTag))
+        _knockEvent.Raise();
+    }
+
+    private void CompareSize(float clumpSize)
+    {
+        StartCoroutine(Co_CompareSize(clumpSize));
+    }
+
+    private IEnumerator Co_CompareSize(float clumpSize)
+    {
+        yield return new WaitForSeconds(.5f);
+        if (clumpSize >= ClumpSizeToCollect)
         {
-            if (_mass < _clumpData.Mass)
-            {
-                SetCollected(true);
-            }
-            else if (_clumpData.Mass == _mass)
-            {
-            }
-            else
-            {
-                _knockEvent.Raise();
-            }
+            _collider.isTrigger = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == _clumpData.Transform.gameObject)
+        {
+            SetCollected(true);
         }
     }
 
