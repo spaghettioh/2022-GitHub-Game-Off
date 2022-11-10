@@ -22433,7 +22433,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2985779781155416182, guid: b9e0af3427104432d9b408ce5094bfff, type: 3}
       propertyPath: m_CropFrame
-      value: 3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985779781155416182, guid: b9e0af3427104432d9b408ce5094bfff, type: 3}
+      propertyPath: m_GridSnapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2985779781155416185, guid: b9e0af3427104432d9b408ce5094bfff, type: 3}
       propertyPath: m_RootOrder
