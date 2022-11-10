@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameInitializer : MonoBehaviour
+public class SceneInitializer : MonoBehaviour
 {
-    [SerializeField] private LoadEventSO _loadEventChannel;
-    [SerializeField] private string _titleSceneName;
+    [SerializeField] private VoidEventSO _openCurtainsEvent;
     [Header("PersistentManagers")]
     [SerializeField] private string _persistentManagersSceneName = "PersistentManagers";
 
@@ -14,13 +13,13 @@ public class GameInitializer : MonoBehaviour
         {
             // Load the managers scene and scubscribe to its complete event
             // so that the EventSystem works properly
-            SceneManager.LoadSceneAsync(_persistentManagersSceneName, LoadSceneMode.Additive)
-                .completed += PersistentManagersLoaded;
+            SceneManager.LoadSceneAsync(_persistentManagersSceneName,
+                LoadSceneMode.Additive).completed += PersistentManagersLoaded;
         }
     }
 
     private void PersistentManagersLoaded(AsyncOperation unused)
     {
-        _loadEventChannel.Raise(_titleSceneName);
+        _openCurtainsEvent.Raise();
     }
 }

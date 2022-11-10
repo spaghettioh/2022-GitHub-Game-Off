@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(menuName = "Game Off/Scriptable Objects/Load Event Channel",
+[CreateAssetMenu(menuName = "Scriptable Objects/Load Event Channel",
     fileName = "LoadEvent")]
 public class LoadEventSO : ScriptableObject
 {

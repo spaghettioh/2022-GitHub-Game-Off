@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 public class SceneLoaderSystem : MonoBehaviour
 {
     [SerializeField] private LoadEventSO _loadEventChannel;
-    [SerializeField] private VoidEventSO _startWaxOn;
-    [SerializeField] private VoidEventSO _waxOnFinished;
-    [SerializeField] private VoidEventSO _startWaxOff;
+    [SerializeField] private VoidEventSO _closeCurtainsEvent;
+    [SerializeField] private VoidEventSO _curtainsClosed;
+    [SerializeField] private VoidEventSO _loadNextScene;
 
     private string _currentActiveScene;
     private string _nextScene;
@@ -26,15 +26,15 @@ public class SceneLoaderSystem : MonoBehaviour
     {
         _currentActiveScene = SceneManager.GetActiveScene().name;
         _nextScene = newScene;
-        _startWaxOn.Raise();
+        _closeCurtainsEvent.Raise();
         // Subscribe to the screen wipe finish
-        _waxOnFinished.OnEventRaised += TriggerNewScene;
+        _curtainsClosed.OnEventRaised += TriggerNewScene;
     }
 
     private void TriggerNewScene()
     {
         // Unsubscribe from the screen wipe finish
-        _waxOnFinished.OnEventRaised -= TriggerNewScene;
+        _curtainsClosed.OnEventRaised -= TriggerNewScene;
         StartCoroutine(LoadScene());
     }
 
@@ -52,6 +52,6 @@ public class SceneLoaderSystem : MonoBehaviour
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(_nextScene));
         _currentActiveScene = _nextScene;
 
-        _startWaxOff.Raise();
+        _loadNextScene.Raise();
     }
 }
