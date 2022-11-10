@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/00_Startup.unity
+    path: Assets/Scenes/GameInitialization.unity
+    guid: 7c1cbd83303e046d8a7ef9bc479bfe7a
+  - enabled: 1
+    path: Assets/Scenes/PersistentManagers.unity
+    guid: 4593c4a0f348b47ebb2978632ccb1959
+  - enabled: 1
+    path: Assets/Scenes/UI/UI_00_BootScreen.unity
     guid: 4b4a6c55a23af48c0b8944b2f5c55572
   - enabled: 1
-    path: Assets/Scenes/Sandbox.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/01_TitleScreen.unity
+    path: Assets/Scenes/UI/UI_01_Title.unity
     guid: 3403efc32e31f4ab99a58247ecee91e3
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_99_Sandbox.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}
