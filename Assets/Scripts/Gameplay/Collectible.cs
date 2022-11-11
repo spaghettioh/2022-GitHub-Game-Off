@@ -7,11 +7,7 @@ public class Collectible : MonoBehaviour
     [SerializeField] private float SizeInMeters;
 
     [field: SerializeField]
-    public float CollectedSize
-    {
-        get;
-        private set;
-    }
+    public float CollectedSize { get; private set; }
 
     [SerializeField] private ClumpDataSO _clumpData;
 
@@ -24,22 +20,34 @@ public class Collectible : MonoBehaviour
 
     [SerializeField] private VoidEventSO _knockEvent;
 
-    private Collider _collider;
-
-    private void Start()
+    private List<CollectibleCollider> _colliders;
+    
+    private void Awake()
     {
-        //_collider = GetComponent<Collider>();
-        TryGetComponent(out _collider);
+        _colliders = new List<CollectibleCollider>(
+            GetComponentsInChildren<CollectibleCollider>());
     }
 
     private void OnEnable()
     {
-        _clumpData.OnSizeChanged += CompareSize;
+        _clumpData.OnSizeChanged +=
+            (float clumpSize) => StartCoroutine(CompareSizeRoutine(clumpSize));
+
+        _colliders.ForEach((CollectibleCollider c) =>
+        {
+            c.OnTrigger += TriggerEntered;
+        });
     }
 
     private void OnDisable()
     {
-        _clumpData.OnSizeChanged -= CompareSize;
+        _clumpData.OnSizeChanged -=
+            (float clumpSize) => StartCoroutine(CompareSizeRoutine(clumpSize));
+
+        _colliders.ForEach((CollectibleCollider c) =>
+        {
+            c.OnTrigger -= TriggerEntered;
+        });
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -47,23 +55,28 @@ public class Collectible : MonoBehaviour
         _knockEvent.Raise();
     }
 
-    private void CompareSize(float clumpSize)
+    /// <summary>
+    /// Necessary because of the setup time from scene loading for some reason
+    /// </summary>
+    /// <param name="clumpSize"></param>
+    /// <returns></returns>
+    private IEnumerator CompareSizeRoutine(float clumpSize)
     {
-        StartCoroutine(Co_CompareSize(clumpSize));
-    }
-
-    private IEnumerator Co_CompareSize(float clumpSize)
-    {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.1f);
         if (clumpSize >= SizeInMeters)
         {
-            _collider.isTrigger = true;
-            _clumpData.OnSizeChanged -= CompareSize;
+            _colliders.ForEach((CollectibleCollider c) =>
+            {
+                c.SetIsTrigger(true);
+            });
+            _clumpData.OnSizeChanged -=
+                (float clumpSize) => StartCoroutine(CompareSizeRoutine(clumpSize));
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void TriggerEntered(Collider other)
     {
+        print("foo");
         if (other.gameObject == _clumpData.Transform.gameObject)
         {
             SetCollected(true);
@@ -78,15 +91,17 @@ public class Collectible : MonoBehaviour
             _collectVoidEvent.Raise();
             transform.SetParent(_clumpData.Transform);
             IsCollected = true;
-            //gameObject.layer = LayerMask.NameToLayer(_collectedLayer);
-            _collider.enabled = false;
+            gameObject.layer = LayerMask.NameToLayer(_collectedLayer);
+            _colliders.ForEach((CollectibleCollider c) =>
+            {
+                c.gameObject.SetActive(false);
+            });
         }
         else
         {
             IsCollected = false;
             transform.SetParent(null);
             StartCoroutine(ResetLayer());
-            //Rigidbody body = componen
         }
     }
 

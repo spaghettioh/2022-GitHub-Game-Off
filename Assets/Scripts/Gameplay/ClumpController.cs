@@ -84,4 +84,14 @@ public class ClumpController : MonoBehaviour
             _body.AddTorque(moveDirection * _torque * Time.deltaTime, ForceMode.Force);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        _knockEvent.Raise();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        other.gameObject.transform.SetParent(transform);
+    }
 }
