@@ -7,25 +7,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6338853664386030573, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
+    - target: {fileID: 6338853664386030572, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 0.7542348
       objectReference: {fileID: 0}
-    - target: {fileID: 6338853664386030573, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
+    - target: {fileID: 6338853664386030572, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 0.69138986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338853664386030572, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0042846203
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338853664386030572, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
+      propertyPath: m_Center.y
+      value: -0.0014281273
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030573, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 989bbefcf91e34836bf622db7bf0d0a3, type: 3}
+      objectReference: {fileID: 21300000, guid: 7f6b0e89bc9934f2e870cd53ecf3c81a, type: 3}
     - target: {fileID: 6338853664386030573, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6338853664386030575, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
+      propertyPath: SizeInMeters
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338853664386030575, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
+      propertyPath: <CollectedSize>k__BackingField
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030576, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
       propertyPath: m_Name
-      value: Prop_02VerySmall_Stamp
+      value: Prop_02VerySmall_Die
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030579, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
       propertyPath: m_RootOrder

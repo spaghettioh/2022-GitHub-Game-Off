@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6338853664386030573}
   - component: {fileID: 6338853664386030572}
   m_Layer: 7
-  m_Name: Prop_03Small
+  m_Name: Prop_05Average
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SizeInMeters: 1
-  <CollectedSize>k__BackingField: 0.3
+  <CollectedSize>k__BackingField: 0.5
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _defaultLayer: Prop
   _collectedLayer: Collected

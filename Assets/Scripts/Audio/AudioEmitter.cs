@@ -20,13 +20,10 @@ public class AudioEmitter : MonoBehaviour
     /// <param name="audioCue">The sound effect cue</param>
     public void PlaySoundEffect(AudioCueSO audioCue)
     {
-        // Grab a random clip
-        AudioClip newClip = GetRandomClip(audioCue.Clips);
-        _currentClip = newClip;
-        _audioSource.PlayOneShot(newClip);
-
-        // Let the audio manager know when it's done
-        StartCoroutine(WrapUp());
+        SetNewPitch(audioCue.PitchVariation);
+        _currentClip = GetRandomClip(audioCue.Clips);
+        _audioSource.PlayOneShot(_currentClip);
+        StartCoroutine(WrapItUp());
     }
 
     /// <summary>
@@ -75,7 +72,7 @@ public class AudioEmitter : MonoBehaviour
     /// Waits for the clip to finish playing, then resets the emitter object
     /// </summary>
     /// <returns></returns>
-    private IEnumerator WrapUp()
+    private IEnumerator WrapItUp()
     {
         yield return new WaitForSeconds(_currentClip.length);
         ClearEmitter();
@@ -91,5 +88,19 @@ public class AudioEmitter : MonoBehaviour
         }
 
         ClearEmitter();
+    }
+
+    /// <summary>
+    /// Sets a new pitch for the audio source.
+    /// </summary>
+    /// <param name="pitchRandomness">If > 0 will waver from 1 to that amount.</param>
+    private void SetNewPitch(float pitchRandomness)
+    {
+        if (pitchRandomness > 0)
+        {
+            float newPitch;
+            newPitch = Random.Range(1f - pitchRandomness, 1f + pitchRandomness);
+            _audioSource.pitch = newPitch;
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,22 @@ public enum AudioCueType
     fileName = "SFXorMusic_NAME")]
 public class AudioCueSO : ScriptableObject
 {
-    public AudioCueType CueType;
-    public List<AudioClip> Clips;
+    [field: SerializeField]
+    public AudioCueType CueType { get; private set; }
+
+    [field: SerializeField]
+    public List<AudioClip> Clips { get; private set; }
+
+    [Range(0, 1)]
+    [SerializeField]
+    [Tooltip("Variation in pitch for each playback.")]
+    private float _pitchVariation;
+
+    /// <summary>
+    /// The amount of randomness to vary playback of the asset
+    /// </summary>
+    public float PitchVariation
+    {
+        get { return _pitchVariation; }
+    }
 }

@@ -84,6 +84,4 @@ public class ClumpController : MonoBehaviour
             _body.AddTorque(moveDirection * _torque * Time.deltaTime, ForceMode.Force);
         }
     }
-
-
 }

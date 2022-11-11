@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] private Transform _follow;
+    [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private Vector3 _followOffset;
     [SerializeField] private float _offsetSmoothing;
     [SerializeField] private Camera _camera;
@@ -33,7 +33,7 @@ public class CameraFollow : MonoBehaviour
 
     private void SetPosition()
     {
-        transform.position = _follow.position;
+        transform.position = _clumpData.Transform.position;
         _camera.transform.localPosition = _followOffset;
         _camera.orthographicSize = _followOffset.y;
     }
