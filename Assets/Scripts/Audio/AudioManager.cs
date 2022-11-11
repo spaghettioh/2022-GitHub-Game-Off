@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioEventSO _audioEventChannel;
 
     private AudioEmitter _musicEmitter;
+    private AudioEmitter _fadingMusicEmitter;
 
     private void Awake()
     {
@@ -20,11 +21,13 @@ public class AudioManager : MonoBehaviour
     private void OnEnable()
     {
         _audioEventChannel.OnPlaybackRequested += ActivateEmitter;
+        _audioEventChannel.OnMusicFadeRequested += FadeOutMusic;
     }
 
     private void OnDisable()
     {
         _audioEventChannel.OnPlaybackRequested -= ActivateEmitter;
+        _audioEventChannel.OnMusicFadeRequested -= FadeOutMusic;
     }
 
     /// <summary>
@@ -35,6 +38,7 @@ public class AudioManager : MonoBehaviour
     {
         if (audioCue.CueType == AudioCueType.Music)
         {
+            // Create a music emitter if one doesn't exist
             if (_musicEmitter == null)
             {
                 _musicEmitter = _audioEmitterPool.RequestEmitter();
@@ -43,7 +47,6 @@ public class AudioManager : MonoBehaviour
 
             _musicEmitter.name = audioCue.name;
             _musicEmitter.PlayMusic(audioCue);
-            //_musicEmitter.OnEmitterFinished += ReturnEmitterToPool;
         }
         else
         {
@@ -54,6 +57,21 @@ public class AudioManager : MonoBehaviour
             emitter.PlaySoundEffect(audioCue);
             emitter.OnEmitterFinished += ReturnEmitterToPool;
         }
+    }
+
+    private void FadeOutMusic(float fadeLength)
+    {
+        if (_musicEmitter == null)
+        {
+            Debug.LogWarning($"{name} heard Fade event but there's " +
+                $"no music emitter");
+            return;
+        }
+
+        _fadingMusicEmitter = _musicEmitter;
+        _musicEmitter = null;
+        _fadingMusicEmitter.FadeMusic(fadeLength);
+        _fadingMusicEmitter.OnEmitterFinished += ReturnEmitterToPool;
     }
 
     /// <summary>

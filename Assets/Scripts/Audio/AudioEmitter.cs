@@ -48,6 +48,11 @@ public class AudioEmitter : MonoBehaviour
         }
     }
 
+    public void FadeMusic(float fadeLength)
+    {
+        StartCoroutine(FadeOutMusic(fadeLength));
+    }
+
     /// <summary>
     /// Grabs a random clip from the list in the Audio Cue
     /// </summary>
@@ -59,16 +64,32 @@ public class AudioEmitter : MonoBehaviour
         return clip;
     }
 
+    private void ClearEmitter()
+    {
+        _audioSource.clip = null;
+        _currentClip = null;
+        OnEmitterFinished.Invoke(this);
+    }
+
     /// <summary>
     /// Waits for the clip to finish playing, then resets the emitter object
     /// </summary>
-    /// <param name="length">The length of the audio clip (seconds)</param>
     /// <returns></returns>
     private IEnumerator WrapUp()
     {
         yield return new WaitForSeconds(_currentClip.length);
-        _audioSource.clip = null;
-        _currentClip = null;
-        OnEmitterFinished.Invoke(this);
+        ClearEmitter();
+    }
+
+    private IEnumerator FadeOutMusic(float fadeLength)
+    {
+        while (_audioSource.volume > 0)
+        {
+            float dt = Time.deltaTime;
+            _audioSource.volume -= dt;
+            yield return new WaitForSeconds(dt);
+        }
+
+        ClearEmitter();
     }
 }
