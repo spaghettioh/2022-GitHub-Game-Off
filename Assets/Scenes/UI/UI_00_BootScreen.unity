@@ -983,10 +983,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1732960851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89bef1932597e4923a672fcd05a627e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 68409f137c33c47138a7a0e8e3b4b110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoad: UI_01_Title
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 26da3b366274b4ea09c17ce2bb1024a2, type: 2}
+        m_TargetAssemblyTypeName: LoadEventSO, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Cutscene_00_Prologue
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1968059566
 GameObject:
   m_ObjectHideFlags: 0

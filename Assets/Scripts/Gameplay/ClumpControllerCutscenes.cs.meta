@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 952c16b598e234466837a7d6bb79f257
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
+  - _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
+  - _knockEvent: {fileID: 11400000, guid: 33f50c759cd2040f6963327c2706f01b, type: 2}
+  - _clumpTransformAnchor: {fileID: 11400000, guid: f550d223852ec4398b608b87c4a3855f, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

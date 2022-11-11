@@ -15,8 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/UI/UI_00_BootScreen.unity
     guid: 4b4a6c55a23af48c0b8944b2f5c55572
   - enabled: 1
+    path: Assets/Scenes/Cutscenes/Cutscene_00_Prologue.unity
+    guid: 666e2bd8c38c446b784b777815d6b4f0
+  - enabled: 1
     path: Assets/Scenes/UI/UI_01_Title.unity
     guid: 3403efc32e31f4ab99a58247ecee91e3
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Cutscene_01_Level01.unity
+    guid: e1e3f9c04ceae48dcbac8f8b999769d0
   - enabled: 1
     path: Assets/Scenes/Levels/Level_01_Name.unity
     guid: 99c9720ab356a0642a771bea13969a05
