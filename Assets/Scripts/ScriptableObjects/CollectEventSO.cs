@@ -12,7 +12,7 @@ public class CollectEventSO : ScriptableObject
     {
         if (OnCollected != null)
         {
-        OnCollected.Invoke(collectible);
+            OnCollected.Invoke(collectible);
         }
         else
         {
