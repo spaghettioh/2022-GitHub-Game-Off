@@ -388,7 +388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 32
-  m_ScaleFactor: 1
+  m_ScaleFactor: 6
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -451,10 +451,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 286209912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89bef1932597e4923a672fcd05a627e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 68409f137c33c47138a7a0e8e3b4b110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoad: UI_01_Title
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 26da3b366274b4ea09c17ce2bb1024a2, type: 2}
+        m_TargetAssemblyTypeName: LoadEventSO, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: UI_01_Title
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &463841085
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -208, y: -16}
+  m_AnchoredPosition: {x: -208, y: -39}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &463841087
