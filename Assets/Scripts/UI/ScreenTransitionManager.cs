@@ -44,7 +44,7 @@ public class ScreenTransitionManager : MonoBehaviour
 
         //yield return new WaitForSeconds(_screenWipeAnimator
         //    .GetCurrentAnimatorStateInfo(0).length);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
 
         _waxOnFinished.Raise();
     }
@@ -55,7 +55,7 @@ public class ScreenTransitionManager : MonoBehaviour
 
         //yield return new WaitForSeconds(_screenWipeAnimator
         //    .GetCurrentAnimatorStateInfo(0).length);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
         _waxOffFinished.Raise();
     }
 }
