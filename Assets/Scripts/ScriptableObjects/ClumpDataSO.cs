@@ -8,17 +8,8 @@ public class ClumpDataSO : ScriptableObject
 {
     public UnityAction<float> OnSizeChanged;
 
-    public Transform Transform
-    {
-        get;
-        private set;
-    }
-
-    public float SizeInMeters
-    {
-        get;
-        private set;
-    }
+    public Transform Transform { get; private set; }
+    public float Size { get; private set; }
 
     public void SetTransform(Transform t)
     {
@@ -27,27 +18,27 @@ public class ClumpDataSO : ScriptableObject
 
     public void SetSize(float value)
     {
-        SizeInMeters = Mathf.Round(value * 100f) / 100f;
-        AlertSizeChange();
+        Size = value;
+        Announce();
     }
 
     public void IncreaseSize(float value)
     {
-        SizeInMeters += Mathf.Round(value * 1000f) / 1000f;
-        AlertSizeChange();
+        Size += value;
+        Announce();
     }
 
     public void DecreaseSize(float value)
     {
-        SizeInMeters -= Mathf.Round(value * 1000f) / 1000f;
-        AlertSizeChange();
+        Size -= value;
+        Announce();
     }
 
-    private void AlertSizeChange()
+    private void Announce()
     {
         if (OnSizeChanged != null)
         {
-            OnSizeChanged.Invoke(SizeInMeters);
+            OnSizeChanged.Invoke(Size);
         }
         else
         {

@@ -32,12 +32,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030575, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
+      propertyPath: Size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338853664386030575, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
       propertyPath: SizeInMeters
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030575, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
+      propertyPath: <ClumpIncrease>k__BackingField
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338853664386030575, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
       propertyPath: <CollectedSize>k__BackingField
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030576, guid: 9c1a36aaf43864afd98b79cb5c82542d, type: 3}
       propertyPath: m_Name

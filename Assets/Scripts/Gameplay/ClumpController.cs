@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ClumpController : MonoBehaviour
@@ -12,61 +10,21 @@ public class ClumpController : MonoBehaviour
 
     [Header("Data and size")]
     [SerializeField] private ClumpDataSO _clumpData;
-    [SerializeField] private float _startingSizeInMeters = 5f;
-    [Tooltip("Collider radius change on size whole numbers")]
-    [SerializeField] private float _colliderChange = .1f;
+    [SerializeField] private float _startingSize = 5f;
 
-    [Header("Collection")]
-    [SerializeField] private CollectEventSO _collectEvent;
-    [SerializeField] private VoidEventSO _knockEvent;
-    [SerializeField] private List<Collectible> _collectibles = new List<Collectible>();
-    [Tooltip("Collected mass percentage added to clump")]
-    [SerializeField] private float _collectionModifier = .1f;
-
+    private Camera _camera;
     private Rigidbody _body;
-    private SphereCollider _collider;
 
-    private void OnEnable()
+    private void Awake()
     {
-        _collectEvent.OnCollected = CollectSomething;
-        //_knockEvent.OnEventRaised = LoseSomething;
-    }
-
-    private void OnDisable()
-    {
-        _collectEvent.OnCollected -= CollectSomething;
-        //_knockEvent.OnEventRaised -= LoseSomething;
+        _body = GetComponent<Rigidbody>();
     }
 
     private void Start()
     {
-        _body = GetComponent<Rigidbody>();
         _clumpData.SetTransform(transform);
-        _clumpData.SetSize(_startingSizeInMeters);
-        TryGetComponent(out _collider);
-    }
-
-    private void CollectSomething(Collectible collectible)
-    {
-        var currentMass = _clumpData.SizeInMeters;
-
-        _clumpData.IncreaseSize(collectible.CollectedSize);
-        _collectibles.Add(collectible);
-
-        // Increase collider size
-        _collider.radius += collectible.CollectedSize / 10;
-        _torque += collectible.CollectedSize * 10;
-    }
-
-    private void LoseSomething()
-    {
-        Collectible detached = _collectibles[_collectibles.Count - 1];
-        detached.SetCollected(false);
-        _clumpData.DecreaseSize(detached.CollectedSize);
-        _collectibles.Remove(detached);
-
-        _collider.radius -= detached.CollectedSize / 10;
-        _torque -= detached.CollectedSize * 10;
+        _clumpData.SetSize(_startingSize);
+        _camera = Camera.main;
     }
 
     private void Update()
@@ -77,21 +35,11 @@ public class ClumpController : MonoBehaviour
             v *= _reverseSpeedPercentage;
         }
 
-        var moveDirection = Camera.main.transform.right * v;
+        var moveDirection = _camera.transform.right * v;
 
         if (_body.velocity.magnitude < _maxSpeed)
         {
-            _body.AddTorque(moveDirection * _torque * Time.deltaTime, ForceMode.Force);
+            _body.AddTorque(_torque * Time.deltaTime * moveDirection, ForceMode.Force);
         }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        _knockEvent.Raise();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        other.gameObject.transform.SetParent(transform);
     }
 }

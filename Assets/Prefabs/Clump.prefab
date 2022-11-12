@@ -449,12 +449,7 @@ MonoBehaviour:
   _maxSpeed: 10
   _reverseSpeedPercentage: 0.66
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
-  _startingSizeInMeters: 1
-  _colliderChange: 0.1
-  _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
-  _knockEvent: {fileID: 11400000, guid: 33f50c759cd2040f6963327c2706f01b, type: 2}
-  _collectibles: []
-  _collectionModifier: 0.1
+  _startingSize: 2
 --- !u!135 &3029413483206481819
 SphereCollider:
   m_ObjectHideFlags: 0

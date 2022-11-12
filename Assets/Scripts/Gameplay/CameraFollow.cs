@@ -40,6 +40,6 @@ public class CameraFollow : MonoBehaviour
 
     private void OnValidate()
     {
-        SetPosition();
+        //SetPosition();
     }
 }

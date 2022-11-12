@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17407f345c5054a5ab01339491754d47, type: 3}
-  m_Name: CollectEvent
+  m_Script: {fileID: 11500000, guid: 33f25c6bb8ac24a71997fcf968670ba3, type: 3}
+  m_Name: PropCollisionEvent
   m_EditorClassIdentifier: 

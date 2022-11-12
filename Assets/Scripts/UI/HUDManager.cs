@@ -19,7 +19,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private VoidEventSO _winCondition;
 
-    private void Start()
+    private void Awake()
     {
         _winDialog.SetActive(false);
     }
@@ -49,7 +49,7 @@ public class HUDManager : MonoBehaviour
 
     private void CheckForWin()
     {
-        if (_clumpData.SizeInMeters >= _tempWinValue)
+        if (_clumpData.Size >= _tempWinValue)
         {
             _winDialog.SetActive(true);
         }

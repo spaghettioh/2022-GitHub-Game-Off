@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9283f3a8922c45f29072e47a2333738, type: 3}
   m_Name: Music_Cutscene_01_Tutorial
   m_EditorClassIdentifier: 
-  <CueType>k__BackingField: 0
+  <CueType>k__BackingField: 1
   <Clips>k__BackingField:
   - {fileID: 8300000, guid: 9e20eaad60aab49dba7529fa3275765a, type: 3}
   _pitchVariation: 0

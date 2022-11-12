@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Clump
   - Collectible
+  - Prop
   layers:
   - Default
   - TransparentFX

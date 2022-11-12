@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6338853664386030573}
   - component: {fileID: 6338853664386030572}
   m_Layer: 7
-  m_Name: Prop_07Large
-  m_TagString: Untagged
+  m_Name: Prop_08VeryLarge_NAME
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,14 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed37775261904472b7aca710e8d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SizeInMeters: 1
-  <CollectedSize>k__BackingField: 0.7
-  _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
-  _defaultLayer: Prop
-  _collectedLayer: Collected
-  _collectEvent: {fileID: 11400000, guid: f122d817d3d0d45cc9d600d9aa4c435c, type: 2}
-  _collectVoidEvent: {fileID: 11400000, guid: def85d9eb7c044b5c95ad0c6a20bc82b, type: 2}
-  _knockEvent: {fileID: 11400000, guid: 33f50c759cd2040f6963327c2706f01b, type: 2}
+  <Size>k__BackingField: 8
+  <ClumpIncrease>k__BackingField: 0
+  _propCollisionEvent: {fileID: 11400000, guid: 3a620f729369a4a8d813f627330d0f3d, type: 2}
 --- !u!114 &6338853664386030578
 MonoBehaviour:
   m_ObjectHideFlags: 0

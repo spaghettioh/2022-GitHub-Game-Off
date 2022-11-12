@@ -5,9 +5,8 @@ using UnityEngine.Events;
 
 public class CollectibleCollider : MonoBehaviour
 {
-    [SerializeField] private ClumpDataSO _clumpData;
     public UnityAction OnCollision;
-    public UnityAction<Collider> OnTrigger;
+    public UnityAction OnTrigger;
 
     private Collider _collider;
 
@@ -37,7 +36,7 @@ public class CollectibleCollider : MonoBehaviour
     {
         if (OnTrigger != null)
         {
-            OnTrigger.Invoke(other);
+            OnTrigger.Invoke();
         }
         else
         {

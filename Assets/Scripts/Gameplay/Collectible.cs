@@ -1,27 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Collectible : MonoBehaviour
 {
-    [SerializeField] private float SizeInMeters;
+    //public UnityAction<Collectible, bool> OnCollectibleEvent;
+    [field: SerializeField]
+    public float Size { get; private set; }
 
     [field: SerializeField]
-    public float CollectedSize { get; private set; }
+    public float ClumpIncrease { get; private set; }
 
-    [SerializeField] private ClumpDataSO _clumpData;
-
-    [SerializeField] private string _defaultLayer;
-    [SerializeField] private string _collectedLayer;
-
-    [SerializeField] private CollectEventSO _collectEvent;
-    [SerializeField] private VoidEventSO _collectVoidEvent;
+    [field: SerializeField]
     public bool IsCollected { get; private set; }
 
-    [SerializeField] private VoidEventSO _knockEvent;
+    [field: SerializeField]
+    public bool CanBeCollected { get; private set; }
+
+    [Header("Broadcasting to...")]
+    [SerializeField] private PropCollisionEventSO _propCollisionEvent;
 
     private List<CollectibleCollider> _colliders;
-    
+
     private void Awake()
     {
         _colliders = new List<CollectibleCollider>(
@@ -30,84 +32,51 @@ public class Collectible : MonoBehaviour
 
     private void OnEnable()
     {
-        _clumpData.OnSizeChanged +=
-            (float clumpSize) => StartCoroutine(CompareSizeRoutine(clumpSize));
-
-        _colliders.ForEach((CollectibleCollider c) =>
+        _colliders.ForEach(c =>
         {
             c.OnTrigger += TriggerEntered;
+            c.OnCollision += CollisionEntered;
         });
     }
 
     private void OnDisable()
     {
-        _clumpData.OnSizeChanged -=
-            (float clumpSize) => StartCoroutine(CompareSizeRoutine(clumpSize));
-
-        _colliders.ForEach((CollectibleCollider c) =>
+        _colliders.ForEach(c =>
         {
             c.OnTrigger -= TriggerEntered;
+            c.OnCollision -= CollisionEntered;
         });
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void SetCollidersIsTrigger(bool isTrigger)
     {
-        _knockEvent.Raise();
+        _colliders.ForEach(c => c.SetIsTrigger(isTrigger));
+        CanBeCollected = isTrigger;
     }
 
-    /// <summary>
-    /// Necessary because of the setup time from scene loading for some reason
-    /// </summary>
-    /// <param name="clumpSize"></param>
-    /// <returns></returns>
-    private IEnumerator CompareSizeRoutine(float clumpSize)
+    public void DisableColliders()
     {
-        yield return new WaitForSeconds(.1f);
-        if (clumpSize >= SizeInMeters)
-        {
-            _colliders.ForEach((CollectibleCollider c) =>
-            {
-                c.SetIsTrigger(true);
-            });
-            _clumpData.OnSizeChanged -=
-                (float clumpSize) => StartCoroutine(CompareSizeRoutine(clumpSize));
-        }
+        _colliders.ForEach(c => c.enabled = false);
+        CanBeCollected = false;
     }
 
-    private void TriggerEntered(Collider other)
+    public void SetLayer(string collectedPropLayer)
     {
-        print("foo");
-        if (other.gameObject == _clumpData.Transform.gameObject)
+        gameObject.layer = LayerMask.NameToLayer(collectedPropLayer);
+        _colliders.ForEach(c =>
         {
-            SetCollected(true);
-        }
+            c.gameObject.layer = LayerMask.NameToLayer(collectedPropLayer);
+            c.gameObject.SetActive(false);
+        });
     }
 
-    public void SetCollected(bool collect)
+    private void CollisionEntered()
     {
-        if (collect)
-        {
-            _collectEvent.Raise(this);
-            _collectVoidEvent.Raise();
-            transform.SetParent(_clumpData.Transform);
-            IsCollected = true;
-            gameObject.layer = LayerMask.NameToLayer(_collectedLayer);
-            _colliders.ForEach((CollectibleCollider c) =>
-            {
-                c.gameObject.SetActive(false);
-            });
-        }
-        else
-        {
-            IsCollected = false;
-            transform.SetParent(null);
-            StartCoroutine(ResetLayer());
-        }
+        _propCollisionEvent.Raise(this);
     }
 
-    private IEnumerator ResetLayer()
+    private void TriggerEntered()
     {
-        yield return new WaitForSeconds(2f);
-        gameObject.layer = LayerMask.NameToLayer(_defaultLayer);
+        _propCollisionEvent.Raise(this);
     }
 }
