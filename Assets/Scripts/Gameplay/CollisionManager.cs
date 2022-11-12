@@ -73,6 +73,7 @@ public class CollisionManager : MonoBehaviour
         collectible.transform.SetParent(_clumpDataSO.Transform);
         collectible.SetLayer(_collectedPropLayer);
         collectible.DisableColliders();
+        collectible.MoveTowardAttachPoint(_clumpDataSO.Collider);
         _clumpDataSO.IncreaseSize(collectible.ClumpIncrease);
     }
 }

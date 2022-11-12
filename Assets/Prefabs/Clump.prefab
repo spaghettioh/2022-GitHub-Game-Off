@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!1 &3029413482716524461
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!1 &3029413483041274214
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!1 &3029413483103431887
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!1 &3029413483206481820
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,8 +445,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22a0f79960db4200b1f7997556aca84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mode: 0
   _torque: 70
-  _maxSpeed: 10
+  _maxSpeed: 7
   _reverseSpeedPercentage: 0.66
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _startingSize: 2
@@ -461,7 +462,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.22
+  m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3029413483206481818
 Rigidbody:
@@ -576,7 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!1 &3029413484415264512
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1
 --- !u!1 &3029413484439268208
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,4 +773,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d4e34c4e9854060bd1e4d43e19bc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _faceCameraOnly: 0
+  _faceCameraOnly: 1

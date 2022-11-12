@@ -6,7 +6,6 @@ using UnityEngine.Events;
 
 public class Collectible : MonoBehaviour
 {
-    //public UnityAction<Collectible, bool> OnCollectibleEvent;
     [field: SerializeField]
     public float Size { get; private set; }
 
@@ -78,5 +77,37 @@ public class Collectible : MonoBehaviour
     private void TriggerEntered()
     {
         _propCollisionEvent.Raise(this);
+    }
+
+    public void MoveTowardAttachPoint(SphereCollider collider)
+    {
+        StartCoroutine(MoveTowardsPositionRoutine(collider));
+    }
+
+    private IEnumerator MoveTowardsPositionRoutine(SphereCollider collider)
+    {
+        var attachPoint = Instantiate(
+            new GameObject(),
+            collider.ClosestPoint(transform.position),
+            Quaternion.identity,
+            collider.transform).transform;
+        attachPoint.name = $"TempAttachPointFor{name}";
+
+        var duration = 0f;
+
+
+        var startPosition = transform.localPosition;
+        var endPosition = attachPoint.localPosition;
+
+        while (transform.localPosition != endPosition)
+        {
+            // Take some seconds to move toward the collision point
+            transform.localPosition =
+                Vector3.Lerp(startPosition, endPosition, duration / 10f);
+            duration += Time.deltaTime;
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+
+        Destroy(attachPoint.gameObject);
     }
 }

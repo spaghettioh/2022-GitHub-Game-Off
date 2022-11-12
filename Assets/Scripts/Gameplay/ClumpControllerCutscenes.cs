@@ -12,17 +12,19 @@ public class ClumpControllerCutscenes : MonoBehaviour
     [SerializeField] private float _startingSize = 2f;
 
     private Rigidbody _body;
+    private SphereCollider _collider;
 
     private Vector3 torqueDirection = Vector3.right;
 
     private void Awake()
     {
         _body = GetComponent<Rigidbody>();
+        _collider = GetComponent<SphereCollider>();
     }
 
     private void Start()
     {
-        _clumpData.SetTransform(transform);
+        _clumpData.SetUp(transform, _collider);
         _clumpData.SetSize(_startingSize);
     }
 

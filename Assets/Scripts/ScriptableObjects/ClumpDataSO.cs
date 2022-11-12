@@ -10,10 +10,12 @@ public class ClumpDataSO : ScriptableObject
 
     public Transform Transform { get; private set; }
     public float Size { get; private set; }
+    public SphereCollider Collider { get; private set; }
 
-    public void SetTransform(Transform t)
+    public void SetUp(Transform t, SphereCollider c)
     {
         Transform = t;
+        Collider = c;
     }
 
     public void SetSize(float value)
