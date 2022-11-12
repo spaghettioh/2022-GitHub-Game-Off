@@ -19,8 +19,11 @@ public class Billboard : MonoBehaviour
 
     private void OnValidate()
     {
-        SetMainCamera();
-        FaceCamera();
+        if (gameObject.activeInHierarchy)
+        {
+            SetMainCamera();
+            FaceCamera();
+        }
     }
 
     private void FaceCamera()
@@ -33,7 +36,6 @@ public class Billboard : MonoBehaviour
         else
         {
             transform.rotation = Quaternion.Euler(cam);
-
         }
     }
 
