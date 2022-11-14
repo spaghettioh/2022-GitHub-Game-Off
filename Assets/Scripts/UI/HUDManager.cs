@@ -19,6 +19,9 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private VoidEventSO _winCondition;
 
+    [Header("Broadcasting to...")]
+    [SerializeField] private ScaleEventSO _scaleEvent;
+
     private void Awake()
     {
         _winDialog.SetActive(false);
@@ -44,7 +47,13 @@ public class HUDManager : MonoBehaviour
         _sizeTextFront.text = currentSize;
         _progressSlider.value = 1 / (_tempWinValue / size);
 
+        CheckForScaleUp();
         CheckForWin();
+    }
+
+    private void CheckForScaleUp()
+    {
+
     }
 
     private void CheckForWin()

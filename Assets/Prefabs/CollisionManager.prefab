@@ -45,11 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clumpDataSO: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
-  _collectibles: []
-  _sfxChannel: {fileID: 11400000, guid: 6eb9381f6eb7d4299979aa0aa12b8466, type: 2}
-  _collectSound: {fileID: 11400000, guid: 452d11ff030de43dba0b6178f24ca84c, type: 2}
-  _crashSound: {fileID: 11400000, guid: 14ea6da2035f94e349c1336c03472b17, type: 2}
   _defaultPropLayer: Prop
   _collectedPropLayer: Collected
   _propTag: Prop
+  _props: []
+  _currentCollection: []
+  _collectSound: {fileID: 11400000, guid: 452d11ff030de43dba0b6178f24ca84c, type: 2}
+  _crashSoundSmall: {fileID: 11400000, guid: 14ea6da2035f94e349c1336c03472b17, type: 2}
+  _crashSoundLarge: {fileID: 11400000, guid: b01cc3af5cc2a4c4b99deaad156131ee, type: 2}
   _propCollisionEvent: {fileID: 11400000, guid: 3a620f729369a4a8d813f627330d0f3d, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 6eb9381f6eb7d4299979aa0aa12b8466, type: 2}
+  _crashEvent: {fileID: 11400000, guid: 33f50c759cd2040f6963327c2706f01b, type: 2}

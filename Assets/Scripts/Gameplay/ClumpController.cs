@@ -11,20 +11,18 @@ public class ClumpController : MonoBehaviour
 
     [SerializeField] private Mode _mode = Mode.Gameplay;
 
-    [Header("Movement")]
-    [SerializeField] private float _torque = 2f;
-    [SerializeField] private float _maxSpeed = 7f;
-    [Tooltip("Percentage of max speed to move in reverse")]
-    [SerializeField] private float _reverseSpeedPercentage = .66f;
-
     [Header("Data and size")]
     [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private float _startingSize = 5f;
+
+    [Header("Listening to...")]
+    [SerializeField] private VoidEventSO _crashEvent;
 
     private Camera _camera;
     private Rigidbody _body;
     private SphereCollider _collider;
     private Vector3 cutsceneTorqueAxis = Vector3.right;
+    private bool _isInCrashedState;
 
     private void Awake()
     {
@@ -32,10 +30,19 @@ public class ClumpController : MonoBehaviour
         _collider = GetComponent<SphereCollider>();
     }
 
+    private void OnEnable()
+    {
+        _crashEvent.OnEventRaised += PauseMovement;
+    }
+
+    private void OnDisable()
+    {
+        _crashEvent.OnEventRaised -= PauseMovement;
+    }
+
     private void Start()
     {
-        _clumpData.SetUp(transform, _collider);
-        _clumpData.SetSize(_startingSize);
+        _clumpData.SetUp(transform, _collider, _startingSize);
         _camera = Camera.main;
     }
 
@@ -45,15 +52,33 @@ public class ClumpController : MonoBehaviour
             == Mode.Gameplay ? Input.GetAxisRaw("Vertical")
             : 1f;
 
-        if (v < 0) v *= _reverseSpeedPercentage;
+        if (v < 0) v *= _clumpData.ReverseSpeedPercentage;
 
         var moveDirection = _mode
             == Mode.Gameplay ? _camera.transform.right * v
             : cutsceneTorqueAxis;
 
-        if (_body.velocity.magnitude < _maxSpeed)
+        if (_clumpData.Velocity < _clumpData.MaxSpeed && !_isInCrashedState)
         {
-            _body.AddTorque(_torque * Time.deltaTime * moveDirection, ForceMode.Force);
+            _body.AddTorque(_clumpData.Torque * Time.deltaTime * moveDirection,
+                ForceMode.Force);
+        }
+
+        _clumpData.SetVelocity(_body.velocity.magnitude);
+    }
+
+    private void PauseMovement()
+    {
+        StartCoroutine(PauseMovementRoutine());
+    }
+
+    private IEnumerator PauseMovementRoutine()
+    {
+        if (_mode == Mode.Gameplay)
+        {
+            _isInCrashedState = true;
+            yield return new WaitForSeconds(1f);
+            _isInCrashedState = false;
         }
     }
 

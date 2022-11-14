@@ -10,70 +10,89 @@ public class CollisionManager : MonoBehaviour
     [SerializeField] private string _defaultPropLayer;
     [SerializeField] private string _collectedPropLayer;
     [SerializeField] private string _propTag;
-    [SerializeField] private List<Collectible> _collectibles;
+    [SerializeField] private List<Collectible> _props;
+    [SerializeField] private List<Collectible> _currentCollection;
 
     [Header("Audio")]
     [SerializeField] private AudioCueSO _collectSound;
-    [SerializeField] private AudioCueSO _crashSound;
+    [SerializeField] private AudioCueSO _crashSoundSmall;
+    [SerializeField] private AudioCueSO _crashSoundLarge;
 
     [Header("Listening to...")]
     [SerializeField] private PropCollisionEventSO _propCollisionEvent;
 
     [Header("Broadcasting to...")]
     [SerializeField] private AudioEventSO _sfxChannel;
+    [SerializeField] private VoidEventSO _crashEvent;
 
     private void OnEnable()
     {
-        _clumpDataSO.OnSizeChanged += AdjustColliders;
+        _clumpDataSO.OnSizeChanged += AdjustPropCollectable;
         _propCollisionEvent.OnCollisionRaised += ProcessPropCollision;
     }
 
     private void OnDisable()
     {
-        _clumpDataSO.OnSizeChanged -= AdjustColliders;
+        _clumpDataSO.OnSizeChanged -= AdjustPropCollectable;
         _propCollisionEvent.OnCollisionRaised -= ProcessPropCollision;
     }
 
     private void Start()
     {
-        var props = new List<GameObject>(
-            GameObject.FindGameObjectsWithTag(_propTag));
-        props.ForEach(p => _collectibles.Add(p.GetComponent<Collectible>()));
+        new List<GameObject>(
+            GameObject.FindGameObjectsWithTag(_propTag))
+            .ForEach(p => _props.Add(p.GetComponent<Collectible>()));
     }
 
     private void ProcessPropCollision(Collectible collectible)
     {
-        if (collectible.CanBeCollected)
+        if (collectible.IsCollectable)
         {
-            AddCollectibleToClump(collectible);
+            AddPropToClump(collectible);
         }
         else
         {
-            ShowCollectibleReaction(collectible);
+            ShowPropReaction(collectible);
         }
     }
 
-    private void ShowCollectibleReaction(Collectible collectible)
+    private void ShowPropReaction(Collectible collidingProp)
     {
-        _sfxChannel.RaisePlayback(_crashSound);
-        // TODO shake object if clump size is close
+        if (_clumpDataSO.Velocity >= (_clumpDataSO.MaxSpeed / 2))
+        {
+            _sfxChannel.RaisePlayback(_crashSoundLarge);
+            _crashEvent.Raise();
+
+            if (_currentCollection.Count > 0)
+            {
+                var lastPropCollected
+                    = _currentCollection[_currentCollection.Count - 1];
+
+                _currentCollection.Remove(lastPropCollected);
+                _clumpDataSO.DecreaseSize(lastPropCollected.ClumpIncrease);
+                lastPropCollected.UnCollect(_defaultPropLayer);
+            }
+            collidingProp.Shake();
+        }
+        else
+        {
+            _sfxChannel.RaisePlayback(_crashSoundSmall);
+        }
     }
 
-    private void AdjustColliders(float clumpSize = default)
+    private void AdjustPropCollectable(float clumpSize = default)
     {
         if (clumpSize == default) clumpSize = _clumpDataSO.Size;
 
-        _collectibles.FindAll(c => c.Size <= clumpSize)
-            .ForEach(c => c.SetCollidersIsTrigger(true));
+        _props.FindAll(p => p.Size <= clumpSize)
+            .ForEach(p => p.ToggleCollectable(true));
     }
 
-    private void AddCollectibleToClump(Collectible collectible)
+    private void AddPropToClump(Collectible collectible)
     {
         _sfxChannel.RaisePlayback(_collectSound);
-        collectible.transform.SetParent(_clumpDataSO.Transform);
-        collectible.SetLayer(_collectedPropLayer);
-        collectible.DisableColliders();
-        collectible.MoveTowardAttachPoint(_clumpDataSO.Collider);
+        _currentCollection.Add(collectible);
         _clumpDataSO.IncreaseSize(collectible.ClumpIncrease);
+        collectible.Collect(_clumpDataSO.Transform, _clumpDataSO.Collider, _collectedPropLayer);
     }
 }

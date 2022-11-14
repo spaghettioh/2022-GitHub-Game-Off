@@ -126,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030575, guid: 8e175761d91164dd18adb1897d5742fd, type: 3}
       propertyPath: <ClumpIncrease>k__BackingField
-      value: 0.4
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030575, guid: 8e175761d91164dd18adb1897d5742fd, type: 3}
       propertyPath: <CollectedSize>k__BackingField

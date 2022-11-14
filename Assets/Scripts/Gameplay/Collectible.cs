@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DG.Tweening;
 
 public class Collectible : MonoBehaviour
 {
@@ -13,20 +14,24 @@ public class Collectible : MonoBehaviour
     public float ClumpIncrease { get; private set; }
 
     [field: SerializeField]
-    public bool IsCollected { get; private set; }
-
-    [field: SerializeField]
-    public bool CanBeCollected { get; private set; }
+    public bool IsCollectable { get; private set; }
 
     [Header("Broadcasting to...")]
     [SerializeField] private PropCollisionEventSO _propCollisionEvent;
 
+    public Transform OriginalParent { get; private set; }
+
     private List<CollectibleCollider> _colliders;
+    private GameObject _attachPoint;
+    private float _attachDuration = 10f;
+    private float _flickerDuration = 2f;
+    private float _shakeDuration = 1f;
 
     private void Awake()
     {
         _colliders = new List<CollectibleCollider>(
             GetComponentsInChildren<CollectibleCollider>());
+        OriginalParent = transform.parent;
     }
 
     private void OnEnable()
@@ -47,67 +52,97 @@ public class Collectible : MonoBehaviour
         });
     }
 
-    public void SetCollidersIsTrigger(bool isTrigger)
-    {
-        _colliders.ForEach(c => c.SetIsTrigger(isTrigger));
-        CanBeCollected = isTrigger;
-    }
+    //public void SetCollidersIsTrigger(bool isTrigger) =>
+    //    _colliders.ForEach(c => c.SetIsTrigger(isTrigger));
 
-    public void DisableColliders()
-    {
-        _colliders.ForEach(c => c.enabled = false);
-        CanBeCollected = false;
-    }
-
-    public void SetLayer(string collectedPropLayer)
-    {
+    public void SetLayer(string collectedPropLayer) =>
         gameObject.layer = LayerMask.NameToLayer(collectedPropLayer);
-        _colliders.ForEach(c =>
-        {
-            c.gameObject.layer = LayerMask.NameToLayer(collectedPropLayer);
-            c.gameObject.SetActive(false);
-        });
+
+    public void ToggleCollectable(bool onOff)
+    {
+        _colliders.ForEach(c => c.SetIsTrigger(onOff));
+        IsCollectable = onOff;
     }
 
-    private void CollisionEntered()
+    private void CollisionEntered() => _propCollisionEvent.Raise(this);
+    private void TriggerEntered() => _propCollisionEvent.Raise(this);
+
+    public void Collect(Transform newParent, SphereCollider collider, string collectedLayer)
     {
-        _propCollisionEvent.Raise(this);
+        transform.SetParent(newParent);
+        SetLayer(collectedLayer);
+        ToggleCollectable(false);
+        StartCoroutine(CollectRoutine(collider));
     }
 
-    private void TriggerEntered()
+    private IEnumerator CollectRoutine(SphereCollider collider)
     {
-        _propCollisionEvent.Raise(this);
-    }
+        // Disable colliders
+        _colliders.ForEach(c => c.gameObject.SetActive(false));
 
-    public void MoveTowardAttachPoint(SphereCollider collider)
-    {
-        StartCoroutine(MoveTowardsPositionRoutine(collider));
-    }
-
-    private IEnumerator MoveTowardsPositionRoutine(SphereCollider collider)
-    {
-        var attachPoint = Instantiate(
-            new GameObject(),
-            collider.ClosestPoint(transform.position),
-            Quaternion.identity,
-            collider.transform).transform;
-        attachPoint.name = $"TempAttachPointFor{name}";
+        // Move toward the collision point
+        _attachPoint = new GameObject();
+        _attachPoint.transform.position =
+            collider.ClosestPoint(transform.position);
+        _attachPoint.transform.SetParent(collider.transform);
+        _attachPoint.name = $"AttachPoint-{name}";
 
         var duration = 0f;
-
-
         var startPosition = transform.localPosition;
-        var endPosition = attachPoint.localPosition;
+        var endPosition = _attachPoint.transform.localPosition;
 
         while (transform.localPosition != endPosition)
         {
-            // Take some seconds to move toward the collision point
             transform.localPosition =
-                Vector3.Lerp(startPosition, endPosition, duration / 10f);
+                Vector3.Lerp(
+                    startPosition, endPosition, duration / _attachDuration);
             duration += Time.deltaTime;
             yield return new WaitForSeconds(Time.deltaTime);
         }
+        Destroy(_attachPoint);
+    }
 
-        Destroy(attachPoint.gameObject);
+    public void UnCollect(string defaultLayer)
+    {
+        StopAllCoroutines();
+        StartCoroutine(UnCollectRoutine(defaultLayer));
+    }
+
+    private IEnumerator UnCollectRoutine(string defaultLayer)
+    {
+        // Destroy the attach point in case that coroutine hasn't finished
+        Destroy(_attachPoint);
+        transform.SetParent(OriginalParent);
+
+        // Moves to a seemingly random position
+        var p = transform.position;
+        var randomX = p.x + UnityEngine.Random.Range(-1f, 1f);
+        var randomZ = p.z + UnityEngine.Random.Range(-1f, 1f);
+        var endPos = new Vector3(randomX, 0, randomZ);
+        transform.DOJump(endPos, 1, 2, 1);
+
+        // Flickers the sprite for some time
+        var flickerTime = 0f;
+        var sprite = GetComponent<SpriteRenderer>();
+        var alphaChange = Color.white;
+        while (flickerTime < _flickerDuration)
+        {
+            alphaChange.a = alphaChange.a == 1 ? 0 : 1;
+            sprite.color = alphaChange;
+            var waitTime = Time.deltaTime + .1f;
+            yield return new WaitForSeconds(waitTime);
+            flickerTime += waitTime;
+        }
+        sprite.color = Color.white;
+
+        // Resets the prop
+        SetLayer(defaultLayer);
+        ToggleCollectable(true);
+        _colliders.ForEach(c => c.gameObject.SetActive(true));
+    }
+
+    public void Shake()
+    {
+        transform.DOShakePosition(_shakeDuration, .1f);
     }
 }

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6338853664386030575}
   - component: {fileID: 6338853664386030578}
   - component: {fileID: 6338853664386030573}
-  - component: {fileID: 6338853664386030572}
   m_Layer: 7
   m_Name: Prop_04BelowAverage_NAME
   m_TagString: Prop
@@ -49,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Size>k__BackingField: 4
   <ClumpIncrease>k__BackingField: 0
+  <IsCollected>k__BackingField: 0
+  <CanBeCollected>k__BackingField: 0
   _propCollisionEvent: {fileID: 11400000, guid: 3a620f729369a4a8d813f627330d0f3d, type: 2}
 --- !u!114 &6338853664386030578
 MonoBehaviour:
@@ -115,16 +116,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &6338853664386030572
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6338853664386030576}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 0.20000005}
-  m_Center: {x: 0, y: -0.000000007450581, z: -0.000000014901161}

@@ -52,8 +52,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030575, guid: 8e175761d91164dd18adb1897d5742fd, type: 3}
+      propertyPath: <Size>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338853664386030575, guid: 8e175761d91164dd18adb1897d5742fd, type: 3}
       propertyPath: <ClumpIncrease>k__BackingField
-      value: 0.3
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030575, guid: 8e175761d91164dd18adb1897d5742fd, type: 3}
       propertyPath: <CollectedSize>k__BackingField
@@ -61,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030576, guid: 8e175761d91164dd18adb1897d5742fd, type: 3}
       propertyPath: m_Name
-      value: Prop_03Small_Battery
+      value: Prop_02VerySmall_Battery
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030579, guid: 8e175761d91164dd18adb1897d5742fd, type: 3}
       propertyPath: m_RootOrder
