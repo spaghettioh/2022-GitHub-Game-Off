@@ -24,22 +24,24 @@ public class ClumpDataSO : ScriptableObject
 
     public PropScaleCategory Scale { get; private set; }
 
+    private float _startSize;
+    private PropScaleCategory _startScale;
+
     public void SetUp(Transform t, SphereCollider c, float s)
     {
         Transform = t;
         Collider = c;
-        SetSize(s);
+
+        Size = s;
+        _startSize = s;
+
+        Scale = GetCurrentScale();
+        _startScale = Scale;
     }
 
     public void SetVelocity(float value)
     {
         Velocity = value;
-    }
-
-    public void SetSize(float value)
-    {
-        Size = value;
-        CheckScaleChange();
     }
 
     public void IncreaseSize(float value)
@@ -56,64 +58,35 @@ public class ClumpDataSO : ScriptableObject
 
     private void CheckScaleChange()
     {
-        var currentScale = Scale;
+        var peviousScale = Scale;
+        var currentScale = GetCurrentScale();
 
-        switch (Mathf.Floor(Size))
+        if (currentScale != peviousScale)
         {
-            case 0f:
-                Scale = PropScaleCategory._00Tiniest;
-                break;
-
-            case 1f:
-                Scale = PropScaleCategory._01Tiny;
-                break;
-
-            case 2f:
-                Scale = PropScaleCategory._02VerySmall;
-                break;
-
-            case 3f:
-                Scale = PropScaleCategory._03Small;
-                break;
-
-            case 4f:
-                Scale = PropScaleCategory._04BelowAverage;
-                break;
-
-            case 5f:
-                Scale = PropScaleCategory._05Average;
-                break;
-
-            case 6f:
-                Scale = PropScaleCategory._06AboveAverage;
-                break;
-
-            case 7f:
-                Scale = PropScaleCategory._07Large;
-                break;
-
-            case 8f:
-                Scale = PropScaleCategory._08VeryLarge;
-                break;
-
-            case 9f:
-                Scale = PropScaleCategory._09Huge;
-                break;
-
-            case 10f:
-                Scale = PropScaleCategory._10Massive;
-                break;
-
-            default:
-                break;
-        }
-
-        if (Scale != currentScale)
-        {
+            Scale = currentScale;
             AnnounceScaleChange();
         }
 
         AnnounceSizeChange();
+    }
+
+    private PropScaleCategory GetCurrentScale()
+    {
+        switch (Mathf.Floor(Size))
+        {
+            case 0f: return PropScaleCategory._00Tiniest;
+            case 1f: return PropScaleCategory._01Tiny;
+            case 2f: return PropScaleCategory._02VerySmall;
+            case 3f: return PropScaleCategory._03Small;
+            case 4f: return PropScaleCategory._04BelowAverage;
+            case 5f: return PropScaleCategory._05Average;
+            case 6f: return PropScaleCategory._06AboveAverage;
+            case 7f: return PropScaleCategory._07Large;
+            case 8f: return PropScaleCategory._08VeryLarge;
+            case 9f: return PropScaleCategory._09Huge;
+            case 10f: return PropScaleCategory._10Massive;
+            default: return PropScaleCategory._02VerySmall;
+        }
     }
 
     private void AnnounceScaleChange()
@@ -126,5 +99,11 @@ public class ClumpDataSO : ScriptableObject
     {
         if (OnSizeChanged != null) OnSizeChanged.Invoke(Size);
         else Debug.LogWarning($"Nobody heard size change event from {name}");
+    }
+
+    private void OnDisable()
+    {
+        Size = _startSize;
+        Scale = _startScale;
     }
 }

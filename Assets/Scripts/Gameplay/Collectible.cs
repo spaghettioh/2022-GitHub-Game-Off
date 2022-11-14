@@ -18,6 +18,7 @@ public class Collectible : MonoBehaviour
 
     [Header("Broadcasting to...")]
     [SerializeField] private PropCollisionEventSO _propCollisionEvent;
+    [SerializeField] private CollectEventSO _collectEvent;
 
     private Transform OriginalParent;
 
@@ -52,9 +53,6 @@ public class Collectible : MonoBehaviour
         });
     }
 
-    //public void SetCollidersIsTrigger(bool isTrigger) =>
-    //    _colliders.ForEach(c => c.SetIsTrigger(isTrigger));
-
     public void SetLayer(string collectedPropLayer) =>
         gameObject.layer = LayerMask.NameToLayer(collectedPropLayer);
 
@@ -67,38 +65,27 @@ public class Collectible : MonoBehaviour
     private void CollisionEntered() => _propCollisionEvent.Raise(this);
     private void TriggerEntered() => _propCollisionEvent.Raise(this);
 
-    public void Collect(Transform newParent, SphereCollider collider, string collectedLayer)
+    public void Collect(
+        Transform newParent, SphereCollider collider, string collectedLayer)
     {
         transform.SetParent(newParent);
         SetLayer(collectedLayer);
         ToggleCollectable(false);
-        StartCoroutine(CollectRoutine(collider));
-    }
 
-    private IEnumerator CollectRoutine(SphereCollider collider)
-    {
         // Disable colliders
         _colliders.ForEach(c => c.gameObject.SetActive(false));
 
-        // Move toward the collision point
+        // Create an object at the closest point to the collider
         _attachPoint = new GameObject();
         _attachPoint.transform.position =
             collider.ClosestPoint(transform.position);
         _attachPoint.transform.SetParent(collider.transform);
-        _attachPoint.name = $"AttachPoint-{name}";
 
-        var duration = 0f;
-        var startPosition = transform.localPosition;
+        // Then move towards it
         var endPosition = _attachPoint.transform.localPosition;
+        transform.DOLocalMove(endPosition, _attachDuration);
 
-        while (transform.localPosition != endPosition)
-        {
-            transform.localPosition =
-                Vector3.Lerp(
-                    startPosition, endPosition, duration / _attachDuration);
-            duration += Time.deltaTime;
-            yield return new WaitForSeconds(Time.deltaTime);
-        }
+        // Clean up
         Destroy(_attachPoint);
     }
 

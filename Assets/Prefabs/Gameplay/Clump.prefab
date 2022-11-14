@@ -446,6 +446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 0
+  _crashStateDuration: 1
   _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
   _startingSize: 2
   _crashEvent: {fileID: 11400000, guid: 33f50c759cd2040f6963327c2706f01b, type: 2}

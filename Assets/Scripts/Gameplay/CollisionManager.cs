@@ -27,21 +27,23 @@ public class CollisionManager : MonoBehaviour
 
     private void OnEnable()
     {
-        _clumpDataSO.OnSizeChanged += AdjustPropCollectable;
+        _clumpDataSO.OnSizeChanged += AdjustPropsCollectable;
         _propCollisionEvent.OnCollisionRaised += ProcessPropCollision;
     }
 
     private void OnDisable()
     {
-        _clumpDataSO.OnSizeChanged -= AdjustPropCollectable;
+        _clumpDataSO.OnSizeChanged -= AdjustPropsCollectable;
         _propCollisionEvent.OnCollisionRaised -= ProcessPropCollision;
     }
 
     private void Start()
     {
+        // Build the list of all collectibles
         new List<GameObject>(
             GameObject.FindGameObjectsWithTag(_propTag))
             .ForEach(p => _props.Add(p.GetComponent<Collectible>()));
+        AdjustPropsCollectable();
     }
 
     private void ProcessPropCollision(Collectible collectible)
@@ -80,7 +82,7 @@ public class CollisionManager : MonoBehaviour
         }
     }
 
-    private void AdjustPropCollectable(float clumpSize = default)
+    private void AdjustPropsCollectable(float clumpSize = default)
     {
         if (clumpSize == default) clumpSize = _clumpDataSO.Size;
 

@@ -10,6 +10,7 @@ public class ClumpController : MonoBehaviour
     }
 
     [SerializeField] private Mode _mode = Mode.Gameplay;
+    [SerializeField] private float _crashStateDuration = 1f;
 
     [Header("Data and size")]
     [SerializeField] private ClumpDataSO _clumpData;
@@ -48,16 +49,18 @@ public class ClumpController : MonoBehaviour
 
     private void Update()
     {
-        var v = _mode
+        var torqueInput = _mode
             == Mode.Gameplay ? Input.GetAxisRaw("Vertical")
             : 1f;
 
-        if (v < 0) v *= _clumpData.ReverseSpeedPercentage;
+        if (torqueInput < 0) torqueInput *= _clumpData.ReverseSpeedPercentage;
 
-        var moveDirection = _mode
-            == Mode.Gameplay ? _camera.transform.right * v
-            : cutsceneTorqueAxis;
+        Move(_mode == Mode.Gameplay ? _camera.transform.right * torqueInput
+            : cutsceneTorqueAxis);
+    }
 
+    private void Move(Vector3 moveDirection)
+    {
         if (_clumpData.Velocity < _clumpData.MaxSpeed && !_isInCrashedState)
         {
             _body.AddTorque(_clumpData.Torque * Time.deltaTime * moveDirection,
@@ -67,34 +70,24 @@ public class ClumpController : MonoBehaviour
         _clumpData.SetVelocity(_body.velocity.magnitude);
     }
 
-    private void PauseMovement()
-    {
-        StartCoroutine(PauseMovementRoutine());
-    }
-
+    private void PauseMovement() => StartCoroutine(PauseMovementRoutine());
     private IEnumerator PauseMovementRoutine()
     {
         if (_mode == Mode.Gameplay)
         {
             _isInCrashedState = true;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(_crashStateDuration);
             _isInCrashedState = false;
         }
     }
 
-    public void TutorialSteerLeft()
-    {
+    public void TutorialSteerLeft() =>
         StartCoroutine(TutorialSteerRoutine(Vector3.forward + Vector3.right));
-    }
-
-    public void TutorialSteerRight()
-    {
+    public void TutorialSteerRight() =>
         StartCoroutine(TutorialSteerRoutine(Vector3.back + Vector3.right));
-    }
-
     private IEnumerator TutorialSteerRoutine(Vector3 heading)
     {
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.1f);
         cutsceneTorqueAxis = heading;
     }
 }
