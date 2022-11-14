@@ -19,7 +19,7 @@ public class Collectible : MonoBehaviour
     [Header("Broadcasting to...")]
     [SerializeField] private PropCollisionEventSO _propCollisionEvent;
 
-    public Transform OriginalParent { get; private set; }
+    private Transform OriginalParent;
 
     private List<CollectibleCollider> _colliders;
     private GameObject _attachPoint;
