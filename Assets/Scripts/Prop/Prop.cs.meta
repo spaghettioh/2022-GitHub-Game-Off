@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: a3e807a0b9e0f424cb96e66c21bef333
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _collectSound: {fileID: 11400000, guid: 452d11ff030de43dba0b6178f24ca84c, type: 2}
+  - _crashSoundSmall: {fileID: 11400000, guid: 14ea6da2035f94e349c1336c03472b17, type: 2}
+  - _crashSoundLarge: {fileID: 11400000, guid: b01cc3af5cc2a4c4b99deaad156131ee, type: 2}
+  - _clumpData: {fileID: 11400000, guid: fb2d4feb1c34e429e98df0db61d1dfe3, type: 2}
+  - _collectEvent: {fileID: 11400000, guid: 6cd82bef9c9dd443dac866668ed6b034, type: 2}
+  - _sfxChannel: {fileID: 11400000, guid: 6eb9381f6eb7d4299979aa0aa12b8466, type: 2}
+  - _crashEvent: {fileID: 11400000, guid: 33f50c759cd2040f6963327c2706f01b, type: 2}
+  - _originalParent: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
