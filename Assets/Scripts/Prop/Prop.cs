@@ -19,6 +19,12 @@ public class Prop : MonoBehaviour
     public float ClumpSizeChangeAmount { get; private set; }
 
     [field: SerializeField]
+    public float ClumpRadiusChangeAmount { get; private set; }
+
+    [field: SerializeField]
+    public float ClumpTorqueChangeAmount { get; private set; }
+
+    [field: SerializeField]
     public bool IsCollectable { get; private set; }
 
     [Header("Sound FX")]
@@ -42,8 +48,9 @@ public class Prop : MonoBehaviour
     [SerializeField] private float _flickerDuration = 2f;
     [SerializeField] private float _shakeDuration = 1f;
     [Space]
-    [SerializeField] private GameObject _attachPoint;
+    private GameObject _attachPoint;
     [SerializeField] private float _attachDuration = 10f;
+    [field: SerializeField] public bool IsAttaching { get; private set; }
 
     private Transform _t;
 
@@ -74,7 +81,7 @@ public class Prop : MonoBehaviour
             c.OnTrigger -= Collect;
             c.OnCollision -= Crash;
         });
-        _t.DOComplete();
+        _t.DOKill();
     }
 
     public void ToggleCollectable(bool onOff)
@@ -90,7 +97,7 @@ public class Prop : MonoBehaviour
             _sfxChannel.RaisePlayback(_crashSoundLarge);
             _crashEvent.Raise(name);
 
-            Shake();
+            _graphic.DOShakePosition(_shakeDuration, .1f);
         }
         else
         {
@@ -116,10 +123,22 @@ public class Prop : MonoBehaviour
 
         // Then move towards it
         Vector3 endPosition = _attachPoint.transform.localPosition;
-        //_t.DOLocalMove(endPosition, _attachDuration)
-        //    .OnComplete(() => Destroy(_attachPoint));
+        StartCoroutine(CollectRoutine());
+        _t.DOLocalMove(endPosition, _attachDuration).OnComplete(() =>
+        {
+            Destroy(_attachPoint);
+        });
 
+        _clumpData.IncreaseTorqueAndCollider(
+            ClumpTorqueChangeAmount, ClumpRadiusChangeAmount);
         _collectEvent.Raise(this);
+    }
+
+    private IEnumerator CollectRoutine()
+    {
+        IsAttaching = true;
+        yield return new WaitForSeconds(1f);
+        IsAttaching = false;
     }
 
     public void Uncollect() => StartCoroutine(UncollectRoutine());
@@ -136,7 +155,8 @@ public class Prop : MonoBehaviour
         var randomX = p.x + UnityEngine.Random.Range(-1f, 1f);
         var randomZ = p.z + UnityEngine.Random.Range(-1f, 1f);
         var endPos = new Vector3(randomX, 0, randomZ);
-        _t.DOLocalJump(endPos, 1, 2, 1);
+        _t.DOPunchScale(_t.localScale * 1.1f, 1f);
+        _t.DOLocalJump(endPos, 1f, 2, 1f);
 
         // Flickers the sprite for some time
         var flickerTime = 0f;
@@ -154,11 +174,9 @@ public class Prop : MonoBehaviour
         // Resets the prop
         _colliders.ForEach(c => c.gameObject.SetActive(true));
         ToggleCollectable(true);
-    }
 
-    public void Shake()
-    {
-        _graphic.DOShakePosition(_shakeDuration, .1f);
+        _clumpData.DecreaseTorqueAndCollider(
+            ClumpTorqueChangeAmount, ClumpRadiusChangeAmount);
     }
 
     private void OnValidate()

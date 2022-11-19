@@ -6,6 +6,9 @@ using DG.Tweening;
 
 public class PropScaleManager : MonoBehaviour
 {
+    [SerializeField] private Transform _scaler;
+    [SerializeField] private float _scaleFactor = .5f;
+
     [Header("Listening to...")]
     [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private ScaleEventSO _scaleEvent;
@@ -19,7 +22,6 @@ public class PropScaleManager : MonoBehaviour
 
     private float _scaleDuration = 2f;
     private PropScaleCategory _currentClumpScale;
-    [SerializeField] private Transform _scaler;
 
     private void OnEnable()
     {
@@ -44,20 +46,25 @@ public class PropScaleManager : MonoBehaviour
             _pauseGameplay.Raise(true, true, name);
 
             // Scale all the objects already collected
-            PropManager.CurrentCollection.ForEach(c => c.transform.DOScale(
-                c.transform.localScale.x / 1f, _scaleDuration));
-            _scaler.transform.position = _clumpData.Transform.position;
+            PropManager.CurrentCollection.ForEach(p => p.transform.DOScale(
+                p.transform.localScale.x * _scaleFactor, _scaleDuration));
+
+            // Move the scaler to the clump position
+            // to scale everything relative to that
+            var pos = _clumpData.Transform.position;
+            pos.y = 0;
+            _scaler.transform.position = pos;
 
             // switch the scale group parents to scale relative to the clump
             _scaleGroups.ForEach(group => group.parent = _scaler.transform);
 
             // scale everything down
-            _scaler.DOScale(1f, _scaleDuration).OnComplete(() =>
+            _scaler.DOScale(_scaleFactor, _scaleDuration).OnComplete(() =>
             {
                 // reparent the groups
                 _scaleGroups.ForEach(group =>
                 {
-                    if (group.localScale.x < 1f)
+                    if (group.localScale.x < .25f)
                     {
                         group.gameObject.SetActive(false);
                         }

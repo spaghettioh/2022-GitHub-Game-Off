@@ -43,10 +43,23 @@ public class ClumpDataSO : ScriptableObject
         Torque = _scaleConfigs.GetConfig(Scale).Torque;
     }
 
-    public void SetVelocity(float value)
+    public void IncreaseTorqueAndCollider(float value)
+        => IncreaseTorqueAndCollider(value, value);
+    public void IncreaseTorqueAndCollider(float torque, float radius)
     {
-        Velocity = value;
+        Torque += torque;
+        Collider.radius += radius;
     }
+
+    public void DecreaseTorqueAndCollider(float value)
+        => IncreaseTorqueAndCollider(value, value);
+    public void DecreaseTorqueAndCollider(float torque, float radius)
+    {
+        Torque -= torque;
+        Collider.radius -= radius;
+    }
+
+    public void SetVelocity(float value) => Velocity = value;
 
     public void IncreaseSize(float value)
     {

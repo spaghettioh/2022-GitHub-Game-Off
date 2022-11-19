@@ -10,8 +10,7 @@ public class PropManager : MonoBehaviour
     [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private List<Prop> _props;
     [SerializeField] private List<Prop> _collectableProps;
-    [SerializeField] private List<Prop> _currentCollection;
-    public static List<Prop> CurrentCollection;
+    public static readonly List<Prop> CurrentCollection = new List<Prop>();
     [SerializeField] private TransformAnchorSO _clumpPropCollection;
 
     [Header("Listening to...")]
@@ -21,60 +20,69 @@ public class PropManager : MonoBehaviour
     private void OnEnable()
     {
         _clumpData.OnSizeChanged += AdjustPropsCollectable;
-        _propCollectEvent.OnEventRaised += ProcessPropCollect;
-        _crashEvent.OnEventRaised += ProcessPropCrash;
+        _propCollectEvent.OnEventRaised += CollectProp;
+        _crashEvent.OnEventRaised += CrashIntoProp;
     }
 
     private void OnDisable()
     {
         _clumpData.OnSizeChanged -= AdjustPropsCollectable;
-        _propCollectEvent.OnEventRaised -= ProcessPropCollect;
-        _crashEvent.OnEventRaised -= ProcessPropCrash;
+        _propCollectEvent.OnEventRaised -= CollectProp;
+        _crashEvent.OnEventRaised -= CrashIntoProp;
     }
 
     private void Start()
     {
         _props = new List<Prop>(GetComponentsInChildren<Prop>());
-
-        _currentCollection = new List<Prop>();
-        CurrentCollection = new List<Prop>();
         AdjustPropsCollectable();
     }
 
-    private void ProcessPropCollect(Prop collectedProp)
+    private void CollectProp(Prop collectedProp)
     {
         _collectableProps.Remove(collectedProp);
-        _currentCollection.Add(collectedProp);
         CurrentCollection.Add(collectedProp);
         collectedProp.transform.SetParent(_clumpPropCollection.Transform);
         _clumpData.IncreaseSize(collectedProp.ClumpSizeChangeAmount);
     }
 
-    private void ProcessPropCrash()
+    private void CrashIntoProp()
     {
-        if (_currentCollection.Count > 0)
+        if (CurrentCollection.Count > 0)
         {
-            var lastPropCollected
-                = _currentCollection[_currentCollection.Count - 1];
-
-            _currentCollection.Remove(lastPropCollected);
-            CurrentCollection.Remove(lastPropCollected);
-            _collectableProps.Add(lastPropCollected);
-            _clumpData.DecreaseSize(lastPropCollected.ClumpSizeChangeAmount);
-            lastPropCollected.Uncollect();
+            var attaching = CurrentCollection.FindAll(p => p.IsAttaching);
+            if (attaching.Count > 0)
+            {
+                attaching.ForEach(p =>
+                {
+                    UncollectProp(p);
+                });
+            }
+            else
+            {
+                var lastPropCollected
+                    = CurrentCollection[CurrentCollection.Count - 1];
+                UncollectProp(lastPropCollected);
+            }
         }
+    }
+
+    private void UncollectProp(Prop p)
+    {
+        CurrentCollection.Remove(p);
+        _collectableProps.Add(p);
+        _clumpData.DecreaseSize(p.ClumpSizeChangeAmount);
+        p.Uncollect();
     }
 
     private void AdjustPropsCollectable(float clumpSize = default)
     {
         if (clumpSize == default) clumpSize = _clumpData.Size;
 
-        _props.FindAll(p => p.Size <= clumpSize)
-            .ForEach(p =>
-            {
-                _props.Remove(p);
-                _collectableProps.Add(p);
-                p.ToggleCollectable(true);
-            });
+        _props.FindAll(p => p.Size <= clumpSize).ForEach(p =>
+        {
+            _props.Remove(p);
+            _collectableProps.Add(p);
+            p.ToggleCollectable(true);
+        });
     }
 }

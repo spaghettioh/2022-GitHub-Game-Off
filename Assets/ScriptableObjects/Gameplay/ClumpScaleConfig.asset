@@ -26,34 +26,34 @@ MonoBehaviour:
     Size: 2
     Torque: 100
   - PropScale: 3
-    ColliderRadius: 0.35
+    ColliderRadius: 0.2
     Size: 3
     Torque: 100
   - PropScale: 4
-    ColliderRadius: 0.5
+    ColliderRadius: 0.2
     Size: 4
     Torque: 100
   - PropScale: 5
-    ColliderRadius: 0.65
+    ColliderRadius: 0.2
     Size: 5
     Torque: 100
   - PropScale: 6
-    ColliderRadius: 0.8
+    ColliderRadius: 0.2
     Size: 6
     Torque: 100
   - PropScale: 7
-    ColliderRadius: 0.7
+    ColliderRadius: 0.2
     Size: 7
     Torque: 100
   - PropScale: 8
-    ColliderRadius: 0.8
+    ColliderRadius: 0.2
     Size: 8
     Torque: 100
   - PropScale: 9
-    ColliderRadius: 0.9
+    ColliderRadius: 0.2
     Size: 9
     Torque: 100
   - PropScale: 10
-    ColliderRadius: 1
+    ColliderRadius: 0.2
     Size: 10
     Torque: 100

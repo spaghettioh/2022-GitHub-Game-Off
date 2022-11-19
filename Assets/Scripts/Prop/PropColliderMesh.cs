@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -37,25 +35,13 @@ public class PropColliderMesh : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (OnCollision != null)
-        {
-            OnCollision.Invoke(collision);
-        }
-        else
-        {
-            Debug.LogWarning("No subscribers to collision event");
-        }
+        if (OnCollision != null) OnCollision.Invoke(collision);
+        else Debug.LogWarning("No subscribers to collision event");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (OnTrigger != null)
-        {
-            OnTrigger.Invoke(other);
-        }
-        else
-        {
-            Debug.LogWarning("No subscribers to trigger event");
-        }
+        if (OnTrigger != null) OnTrigger.Invoke(other);
+        else Debug.LogWarning("No subscribers to trigger event");
     }
 }

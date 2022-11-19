@@ -146,7 +146,9 @@ MonoBehaviour:
   _sprite: {fileID: 0}
   _graphic: {fileID: 94253132491989657}
   <Size>k__BackingField: 0
-  <ClumpSizeChangeAmount>k__BackingField: 0
+  <ClumpSizeChangeAmount>k__BackingField: 0.02
+  <ClumpRadiusChangeAmount>k__BackingField: 0.01
+  <ClumpTorqueChangeAmount>k__BackingField: 5
   <IsCollectable>k__BackingField: 0
   _collectSound: {fileID: 11400000, guid: 452d11ff030de43dba0b6178f24ca84c, type: 2}
   _crashSoundSmall: {fileID: 11400000, guid: 14ea6da2035f94e349c1336c03472b17, type: 2}
@@ -159,5 +161,5 @@ MonoBehaviour:
   _originalParent: {fileID: 0}
   _flickerDuration: 2
   _shakeDuration: 1
-  _attachPoint: {fileID: 0}
   _attachDuration: 10
+  <IsAttaching>k__BackingField: 0
