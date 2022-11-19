@@ -7,6 +7,7 @@ public class AudioEventSO : ScriptableObject
 {
     public UnityAction<AudioCueSO> OnPlaybackRequested;
     public UnityAction<float> OnMusicFadeRequested;
+    public UnityAction OnStopMusicRequested;
 
     public void RaisePlayback(AudioCueSO audioCue)
     {
@@ -26,6 +27,19 @@ public class AudioEventSO : ScriptableObject
         if (OnMusicFadeRequested != null)
         {
             OnMusicFadeRequested.Invoke(fadeLength);
+        }
+        else
+        {
+            Debug.LogWarning("Music fade event raised but nothing " +
+                "listens...");
+        }
+    }
+
+    public void RaiseStopMusic()
+    {
+        if (OnStopMusicRequested != null)
+        {
+            OnStopMusicRequested.Invoke();
         }
         else
         {

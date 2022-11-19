@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c92b0260594ddea0dc72b63967232, type: 3}
   m_Name: ClumpData
   m_EditorClassIdentifier: 
-  <Torque>k__BackingField: 100
+  _scaleConfigs: {fileID: 11400000, guid: ee8837f93061946b28b2ee42f02d28fb, type: 2}
+  <Torque>k__BackingField: 140
   <MaxSpeed>k__BackingField: 7
   <ReverseSpeedPercentage>k__BackingField: 0.66

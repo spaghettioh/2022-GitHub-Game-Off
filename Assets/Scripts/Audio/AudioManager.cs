@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,12 +23,14 @@ public class AudioManager : MonoBehaviour
     {
         _audioEventChannel.OnPlaybackRequested += ActivateEmitter;
         _audioEventChannel.OnMusicFadeRequested += FadeOutMusic;
+        _audioEventChannel.OnStopMusicRequested += StopMusic;
     }
 
     private void OnDisable()
     {
         _audioEventChannel.OnPlaybackRequested -= ActivateEmitter;
         _audioEventChannel.OnMusicFadeRequested -= FadeOutMusic;
+        _audioEventChannel.OnStopMusicRequested -= StopMusic;
     }
 
     /// <summary>
@@ -54,8 +57,8 @@ public class AudioManager : MonoBehaviour
             AudioEmitter emitter = _audioEmitterPool.RequestEmitter();
             emitter.name = audioCue.name;
             emitter.gameObject.SetActive(true);
-            emitter.PlaySoundEffect(audioCue);
             emitter.OnEmitterFinished += ReturnEmitterToPool;
+            emitter.PlaySoundEffect(audioCue);
         }
     }
 
@@ -70,8 +73,21 @@ public class AudioManager : MonoBehaviour
 
         _fadingMusicEmitter = _musicEmitter;
         _musicEmitter = null;
-        _fadingMusicEmitter.FadeMusic(fadeLength);
         _fadingMusicEmitter.OnEmitterFinished += ReturnEmitterToPool;
+        _fadingMusicEmitter.FadeMusic(fadeLength);
+    }
+
+    private void StopMusic()
+    {
+        if (_musicEmitter == null)
+        {
+            Debug.LogWarning($"{name} heard Stop event but there's " +
+                $"no music emitter");
+            return;
+        }
+
+        _musicEmitter.OnEmitterFinished += ReturnEmitterToPool;
+        _musicEmitter.Stop();
     }
 
     /// <summary>

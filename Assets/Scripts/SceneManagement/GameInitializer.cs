@@ -21,6 +21,6 @@ public class GameInitializer : MonoBehaviour
 
     private void PersistentManagersLoaded(AsyncOperation unused)
     {
-        _loadEventChannel.Raise(_titleSceneName);
+        _loadEventChannel.Raise(_titleSceneName, name);
     }
 }

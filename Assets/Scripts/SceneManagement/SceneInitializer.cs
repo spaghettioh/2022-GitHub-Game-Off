@@ -3,23 +3,23 @@ using UnityEngine.SceneManagement;
 
 public class SceneInitializer : MonoBehaviour
 {
-    [SerializeField] private VoidEventSO _openCurtainsEvent;
+    [SerializeField] private VoidEventSO _skipCurtains;
+
     [Header("PersistentManagers")]
     [SerializeField] private string _persistentManagersSceneName = "PersistentManagers";
 
     private void Start()
     {
+        // Load the managers scene
         if (!SceneManager.GetSceneByName(_persistentManagersSceneName).isLoaded)
         {
-            // Load the managers scene and scubscribe to its complete event
-            // so that the EventSystem works properly
             SceneManager.LoadSceneAsync(_persistentManagersSceneName,
                 LoadSceneMode.Additive).completed += PersistentManagersLoaded;
         }
     }
 
-    private void PersistentManagersLoaded(AsyncOperation unused)
+    private void PersistentManagersLoaded(AsyncOperation unused = default)
     {
-        _openCurtainsEvent.Raise();
+        _skipCurtains.Raise(name);
     }
 }

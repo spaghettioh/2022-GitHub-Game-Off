@@ -63,7 +63,7 @@ public class CollisionManager : MonoBehaviour
         if (_clumpDataSO.Velocity >= (_clumpDataSO.MaxSpeed / 2))
         {
             _sfxChannel.RaisePlayback(_crashSoundLarge);
-            _crashEvent.Raise();
+            _crashEvent.Raise(name);
 
             if (_currentCollection.Count > 0)
             {

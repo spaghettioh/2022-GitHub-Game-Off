@@ -5,57 +5,63 @@ using UnityEngine;
 
 public class ScreenTransitionManager : MonoBehaviour
 {
-    //[SerializeField] private Animator _screenWipeAnimator;
+    [SerializeField] private GameObject _scrim;
 
-    [Header("Next scene requested, wipe screen")]
-    [SerializeField] private VoidEventSO _waxOn;
-    [Header("Screen wiped, load the next scene")]
-    [SerializeField] private VoidEventSO _waxOnFinished;
-    [Header("Next scene loaded, unwipe screen")]
-    [SerializeField] private VoidEventSO _waxOff;
-    [Header("Wipe removed, begin mini game")]
-    [SerializeField] private VoidEventSO _waxOffFinished;
+    [Header("Next scene requested, close curtains")]
+    [SerializeField] private VoidEventSO _closeCurtains;
+    [Header("Curtains closed, load the next scene")]
+    [SerializeField] private VoidEventSO _curtainsClosed;
+    [Header("Next scene loaded, open curtains")]
+    [SerializeField] private VoidEventSO _openCurtains;
+    [Header("Curtains opened, begin mini game")]
+    [SerializeField] private VoidEventSO _curtainsOpened;
+    [Header("Skip curtains (used by initializers)")]
+    [SerializeField] private VoidEventSO _skipCurtains;
+
+    [Header("For pausing the game")]
+    [SerializeField] private PauseGameplayEventSO _pauseEvent;
 
     private void OnEnable()
     {
-        _waxOff.OnEventRaised += TriggerWaxOff;
-        _waxOn.OnEventRaised += TriggerWaxOn;
+        _openCurtains.OnEventRaised += OpenCurtains;
+        _closeCurtains.OnEventRaised += CloseCurtains;
+        _skipCurtains.OnEventRaised += SkipCurtains;
+        _pauseEvent.OnEventRaised += PauseGame;
     }
 
     private void OnDisable()
     {
-        _waxOff.OnEventRaised -= TriggerWaxOff;
-        _waxOn.OnEventRaised -= TriggerWaxOn;
+        _openCurtains.OnEventRaised -= OpenCurtains;
+        _closeCurtains.OnEventRaised -= CloseCurtains;
+        _skipCurtains.OnEventRaised -= SkipCurtains;
+        _pauseEvent.OnEventRaised -= PauseGame;
     }
 
-    private void TriggerWaxOn()
+    private void CloseCurtains() => StartCoroutine(CloseCurtainsRoutine());
+    private IEnumerator CloseCurtainsRoutine()
     {
-        StartCoroutine(WaxOn());
-    }
-
-    private void TriggerWaxOff()
-    {
-        StartCoroutine(WaxOff());
-    }
-
-    private IEnumerator WaxOn()
-    {
-        //_screenWipeAnimator.SetTrigger("WaxOn");
-
-        //yield return new WaitForSeconds(_screenWipeAnimator
-        //    .GetCurrentAnimatorStateInfo(0).length);
+        _scrim.SetActive(true);
         yield return new WaitForSeconds(0f);
 
-        _waxOnFinished.Raise();
+        _curtainsClosed.Raise(name);
     }
 
-    private IEnumerator WaxOff()
+    private void OpenCurtains() => StartCoroutine(OpenCurtainsRoutine());
+    private IEnumerator OpenCurtainsRoutine()
     {
-        //_screenWipeAnimator.SetTrigger("WaxOff");
+        yield return new WaitForSeconds(.5f);
+        _scrim.SetActive(false);
+        _curtainsOpened.Raise(name);
+    }
 
-        //yield return new WaitForSeconds(_screenWipeAnimator
-        //    .GetCurrentAnimatorStateInfo(0).length);
-        yield return new WaitForSeconds(0f);
-        _waxOffFinished.Raise();
+    private void SkipCurtains()
+    {
+        _scrim.SetActive(false);
+        _curtainsOpened.Raise(name);
+    }
+
+    private void PauseGame(bool pause, bool shouldStopMovement)
+    {
+        _scrim.SetActive(pause);
     }
 }

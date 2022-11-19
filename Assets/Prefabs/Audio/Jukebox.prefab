@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _music: {fileID: 0}
-  _waxOff: {fileID: 11400000, guid: 076250e70de264f6e94d4439130e6a16, type: 2}
+  _beginPlaybackOn: {fileID: 11400000, guid: 0ee31f3c921054585871bdb1b4f479a6, type: 2}
   _audioEventChannel: {fileID: 11400000, guid: 6eb9381f6eb7d4299979aa0aa12b8466, type: 2}

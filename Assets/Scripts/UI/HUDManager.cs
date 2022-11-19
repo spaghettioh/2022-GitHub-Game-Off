@@ -20,7 +20,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private VoidEventSO _winCondition;
 
     [Header("Broadcasting to...")]
-    [SerializeField] private ScaleEventSO _scaleEvent;
+    [SerializeField] private PauseGameplayEventSO _pauseEvent;
 
     private void Awake()
     {
@@ -61,6 +61,7 @@ public class HUDManager : MonoBehaviour
         if (_clumpData.Size >= _tempWinValue)
         {
             _winDialog.SetActive(true);
+            _pauseEvent.Raise(true, false, name);
         }
     }
 }

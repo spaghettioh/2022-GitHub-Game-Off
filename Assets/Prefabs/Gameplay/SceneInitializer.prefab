@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4119859294719742062}
   - component: {fileID: 1478819537265998018}
+  - component: {fileID: 2264177748873945539}
   m_Layer: 0
   m_Name: SceneInitializer
   m_TagString: Untagged
@@ -44,5 +45,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a43817af7e14b77a5170f7c67e7d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _openCurtainsEvent: {fileID: 11400000, guid: 076250e70de264f6e94d4439130e6a16, type: 2}
+  _skipCurtains: {fileID: 11400000, guid: 73801d0be729e4179bf1474ec86146d7, type: 2}
   _persistentManagersSceneName: PersistentManagers
+--- !u!114 &2264177748873945539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7828459515804152115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e070d7a6e4f49e981636c303f8abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _voidEventChannel: {fileID: 11400000, guid: cb9a17bd10dbe46c3bf8ce92d3e6fdd2, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 076250e70de264f6e94d4439130e6a16, type: 2}
+        m_TargetAssemblyTypeName: VoidEventSO, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Initializer
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -4,19 +4,19 @@ public class Jukebox : MonoBehaviour
 {
     [SerializeField] private AudioCueSO _music;
     [Header("Listening for...")]
-    [SerializeField] private VoidEventSO _waxOff;
+    [SerializeField] private VoidEventSO _beginPlaybackOn;
 
     [Header("Broadcasting to...")]
     [SerializeField] private AudioEventSO _audioEventChannel;
 
     private void OnEnable()
     {
-        _waxOff.OnEventRaised += TriggerMusic;
+        _beginPlaybackOn.OnEventRaised += TriggerMusic;
     }
 
     private void OnDisable()
     {
-        _waxOff.OnEventRaised -= TriggerMusic;
+        _beginPlaybackOn.OnEventRaised -= TriggerMusic;
     }
 
     private void TriggerMusic()

@@ -8,15 +8,16 @@ public class VoidEventSO : ScriptableObject
 {
     public UnityAction OnEventRaised;
 
-    public void Raise()
+    public void Raise(string elevator = "(Undefined)")
     {
         if (OnEventRaised != null)
         {
+            Debug.Log($"{elevator} raised {name}.");
             OnEventRaised.Invoke();
         }
         else
         {
-            Debug.LogWarning($"Nothing heard Void Event: {name}");
+            Debug.LogWarning($"{elevator} raised {name} but nothing heard it.");
         }
     }
 }

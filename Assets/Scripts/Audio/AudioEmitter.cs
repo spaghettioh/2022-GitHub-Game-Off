@@ -45,9 +45,9 @@ public class AudioEmitter : MonoBehaviour
         }
     }
 
-    public void FadeMusic(float fadeLength)
+    public void Stop()
     {
-        StartCoroutine(FadeOutMusic(fadeLength));
+        ClearEmitter();
     }
 
     /// <summary>
@@ -61,13 +61,6 @@ public class AudioEmitter : MonoBehaviour
         return clip;
     }
 
-    private void ClearEmitter()
-    {
-        _audioSource.clip = null;
-        _currentClip = null;
-        OnEmitterFinished.Invoke(this);
-    }
-
     /// <summary>
     /// Waits for the clip to finish playing, then resets the emitter object
     /// </summary>
@@ -78,12 +71,14 @@ public class AudioEmitter : MonoBehaviour
         ClearEmitter();
     }
 
+    public void FadeMusic(float fadeLength) =>
+        StartCoroutine(FadeOutMusic(fadeLength));
     private IEnumerator FadeOutMusic(float fadeLength)
     {
         while (_audioSource.volume > 0)
         {
             float dt = Time.deltaTime;
-            _audioSource.volume -= dt;
+            _audioSource.volume -= dt / fadeLength;
             yield return new WaitForSeconds(dt);
         }
 
@@ -102,5 +97,13 @@ public class AudioEmitter : MonoBehaviour
             newPitch = Random.Range(1f - pitchRandomness, 1f + pitchRandomness);
             _audioSource.pitch = newPitch;
         }
+    }
+
+    private void ClearEmitter()
+    {
+        _audioSource.clip = null;
+        _audioSource.volume = 1f;
+        _currentClip = null;
+        OnEmitterFinished.Invoke(this);
     }
 }

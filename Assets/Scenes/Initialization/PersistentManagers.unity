@@ -216,10 +216,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd90b63efc0a340478a4132ec1f96c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waxOn: {fileID: 11400000, guid: 5c274b34b210848a1aaa98ff33446275, type: 2}
-  _waxOnFinished: {fileID: 11400000, guid: 9cff850f33d20494bbfc793c0f36da4a, type: 2}
-  _waxOff: {fileID: 11400000, guid: 076250e70de264f6e94d4439130e6a16, type: 2}
-  _waxOffFinished: {fileID: 11400000, guid: cb9a17bd10dbe46c3bf8ce92d3e6fdd2, type: 2}
+  _scrim: {fileID: 1479422259}
+  _closeCurtains: {fileID: 11400000, guid: 5c274b34b210848a1aaa98ff33446275, type: 2}
+  _curtainsClosed: {fileID: 11400000, guid: 9cff850f33d20494bbfc793c0f36da4a, type: 2}
+  _openCurtains: {fileID: 11400000, guid: 076250e70de264f6e94d4439130e6a16, type: 2}
+  _curtainsOpened: {fileID: 11400000, guid: 0ee31f3c921054585871bdb1b4f479a6, type: 2}
+  _skipCurtains: {fileID: 11400000, guid: 73801d0be729e4179bf1474ec86146d7, type: 2}
+  _pauseEvent: {fileID: 11400000, guid: 22f792b1ccc424bba9789fa3641d76ad, type: 2}
 --- !u!224 &540111398
 RectTransform:
   m_ObjectHideFlags: 0
@@ -258,7 +261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &635303529
 RectTransform:
   m_ObjectHideFlags: 0
@@ -476,7 +479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1479422260
 RectTransform:
   m_ObjectHideFlags: 0
@@ -586,9 +589,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _loadEventChannel: {fileID: 11400000, guid: 26da3b366274b4ea09c17ce2bb1024a2, type: 2}
-  _closeCurtainsEvent: {fileID: 11400000, guid: 5c274b34b210848a1aaa98ff33446275, type: 2}
+  _closeCurtains: {fileID: 11400000, guid: 5c274b34b210848a1aaa98ff33446275, type: 2}
   _curtainsClosed: {fileID: 11400000, guid: 9cff850f33d20494bbfc793c0f36da4a, type: 2}
-  _loadNextScene: {fileID: 11400000, guid: 076250e70de264f6e94d4439130e6a16, type: 2}
+  _sceneLoaded: {fileID: 11400000, guid: cb9a17bd10dbe46c3bf8ce92d3e6fdd2, type: 2}
 --- !u!4 &2051684541
 Transform:
   m_ObjectHideFlags: 0

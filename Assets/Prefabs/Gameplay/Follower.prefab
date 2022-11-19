@@ -50,6 +50,7 @@ MonoBehaviour:
   _offsetSmoothing: 2
   _camera: {fileID: 466163207659305073}
   _sensitivity: 65
+  _pauseEvent: {fileID: 11400000, guid: 22f792b1ccc424bba9789fa3641d76ad, type: 2}
 --- !u!1001 &3393385439018373130
 PrefabInstance:
   m_ObjectHideFlags: 0
