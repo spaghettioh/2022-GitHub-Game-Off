@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,14 +8,8 @@ public class VoidEventSO : ScriptableObject
 
     public void Raise(string elevator = "(Undefined)")
     {
-        if (OnEventRaised != null)
-        {
-            Debug.Log($"{elevator} raised {name}.");
-            OnEventRaised.Invoke();
-        }
-        else
-        {
-            Debug.LogWarning($"{elevator} raised {name} but nothing heard it.");
-        }
+        if (OnEventRaised != null) OnEventRaised.Invoke();
+        else Debug.LogWarning(
+            $"{elevator} raised {name} but nothing heard it.");
     }
 }

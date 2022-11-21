@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,12 +8,15 @@ public class PropManager : MonoBehaviour
     [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private List<Prop> _props;
     [SerializeField] private List<Prop> _collectableProps;
-    public static readonly List<Prop> CurrentCollection = new List<Prop>();
+    public List<Prop> CurrentCollection = new List<Prop>();
     [SerializeField] private TransformAnchorSO _clumpPropCollection;
 
     [Header("Listening to...")]
     [SerializeField] private PropCollectEventSO _propCollectEvent;
     [SerializeField] private VoidEventSO _crashEvent;
+
+    [Header("Editor")]
+    [SerializeField] private bool _forceSpriteOrientation;
 
     private void OnEnable()
     {
@@ -33,16 +34,21 @@ public class PropManager : MonoBehaviour
 
     private void Start()
     {
-        _props = new List<Prop>(GetComponentsInChildren<Prop>());
+        BuildPropsList();
         AdjustPropsCollectable();
     }
 
-    private void CollectProp(Prop collectedProp)
+    private void BuildPropsList()
     {
-        _collectableProps.Remove(collectedProp);
-        CurrentCollection.Add(collectedProp);
-        collectedProp.transform.SetParent(_clumpPropCollection.Transform);
-        _clumpData.IncreaseSize(collectedProp.ClumpSizeChangeAmount);
+        _props = new List<Prop>(GetComponentsInChildren<Prop>());
+    }
+
+    private void CollectProp(Prop p)
+    {
+        CurrentCollection.Add(p);
+        _collectableProps.Remove(p);
+        p.transform.SetParent(_clumpPropCollection.Transform);
+        _clumpData.IncreaseSize(p.ClumpSizeChangeAmount);
     }
 
     private void CrashIntoProp()
@@ -59,9 +65,7 @@ public class PropManager : MonoBehaviour
             }
             else
             {
-                var lastPropCollected
-                    = CurrentCollection[CurrentCollection.Count - 1];
-                UncollectProp(lastPropCollected);
+                UncollectProp(CurrentCollection.Last());
             }
         }
     }
@@ -84,5 +88,25 @@ public class PropManager : MonoBehaviour
             _collectableProps.Add(p);
             p.ToggleCollectable(true);
         });
+    }
+
+    private void OnValidate()
+    {
+        BuildPropsList();
+
+        if (_forceSpriteOrientation)
+        {
+            _props.ForEach(p =>
+            {
+                p.GetComponentInChildren<Billboard>().OrientNow();
+                _forceSpriteOrientation = false;
+
+                var t = p.Graphic.rotation.eulerAngles;
+                t.x = 0;
+                t.z = 0;
+                p.GetComponentInChildren<PropColliderMesh>()
+                    .transform.rotation = Quaternion.Euler(t);
+            });
+        }
     }
 }

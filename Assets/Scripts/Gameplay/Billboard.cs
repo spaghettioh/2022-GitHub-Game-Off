@@ -1,15 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Billboard : MonoBehaviour
 {
     private Camera _mainCamera;
-    [SerializeField] private bool _faceCameraOnly;
+    [SerializeField] private bool _canLean;
+    [SerializeField] private bool _isProp;
 
     private void Start()
     {
         SetMainCamera();
+        FaceCamera();
     }
 
     private void Update()
@@ -17,30 +17,34 @@ public class Billboard : MonoBehaviour
         FaceCamera();
     }
 
-    private void OnValidate()
+    private void FaceCamera()
+    {
+        var cam = _mainCamera.transform.rotation.eulerAngles;
+        if (!_canLean)
+        {
+            cam.x = 0f;
+            cam.z = 0f;
+        }
+
+        if (_isProp)
+        {
+            cam.x += -90;
+        }
+
+        transform.rotation = Quaternion.Euler(cam);
+    }
+
+    private void SetMainCamera()
+    {
+        _mainCamera = Camera.main;
+    }
+
+    public void OrientNow()
     {
         if (gameObject.activeInHierarchy)
         {
             SetMainCamera();
             FaceCamera();
         }
-    }
-
-    private void FaceCamera()
-    {
-        var cam = _mainCamera.transform.rotation.eulerAngles;
-        if (_faceCameraOnly)
-        {
-            transform.rotation = Quaternion.Euler(cam.x, 0f, 0f);
-        }
-        else
-        {
-            transform.rotation = Quaternion.Euler(cam);
-        }
-    }
-
-    private void SetMainCamera()
-    {
-        _mainCamera = Camera.main;
     }
 }

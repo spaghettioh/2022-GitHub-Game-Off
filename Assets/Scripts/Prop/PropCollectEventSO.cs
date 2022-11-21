@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,13 +9,7 @@ public class PropCollectEventSO : ScriptableObject
 
     public void Raise(Prop prop, string elevator = "(Unknown)")
     {
-        if (OnEventRaised != null)
-        {
-            OnEventRaised.Invoke(prop);
-        }
-        else
-        {
-            Debug.LogWarning($"{elevator} raised {name} but no one listens.");
-        }
+        if (OnEventRaised != null) OnEventRaised.Invoke(prop);
+        else Debug.LogWarning($"{elevator} raised {name} but no one listens.");
     }
 }

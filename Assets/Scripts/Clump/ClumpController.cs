@@ -26,12 +26,8 @@ public class ClumpController : MonoBehaviour
     private Vector3 _cutsceneTorqueAxis = Vector3.right;
     private bool _canMove = true;
 
-    private void Awake()
-    {
-        //_body = GetComponent<Rigidbody>();
-        //_collider = GetComponent<SphereCollider>();
+    private void Awake() =>
         _clumpData.SetUp(transform, _collider, _startingSize);
-    }
 
     private void OnEnable()
     {
@@ -45,10 +41,7 @@ public class ClumpController : MonoBehaviour
         _pauseGameplay.OnEventRaised -= PauseMovement;
     }
 
-    private void Start()
-    {
-        _camera = Camera.main;
-    }
+    private void Start() => _camera = Camera.main;
 
     private void Update()
     {
@@ -100,13 +93,15 @@ public class ClumpController : MonoBehaviour
         }
     }
 
-    public void TutorialSteerLeft() =>
-        StartCoroutine(TutorialSteerRoutine(Vector3.forward + Vector3.right));
-    public void TutorialSteerRight() =>
-        StartCoroutine(TutorialSteerRoutine(Vector3.back + Vector3.right));
-    private IEnumerator TutorialSteerRoutine(Vector3 heading)
+    public void TutorialSteerLeft(float waitTime) =>
+        StartCoroutine(TutorialSteerRoutine(
+            Vector3.forward + Vector3.right, waitTime));
+    public void TutorialSteerRight(float waitTime) =>
+        StartCoroutine(TutorialSteerRoutine(
+            Vector3.back + Vector3.right, waitTime));
+    private IEnumerator TutorialSteerRoutine(Vector3 heading, float waitTime)
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(waitTime);
         _cutsceneTorqueAxis = heading;
     }
 }

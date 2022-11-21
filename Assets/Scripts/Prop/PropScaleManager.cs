@@ -1,27 +1,30 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
 using DG.Tweening;
+using UnityEngine;
 
 public class PropScaleManager : MonoBehaviour
 {
     [SerializeField] private Transform _scaler;
     [SerializeField] private float _scaleFactor = .5f;
+    [SerializeField] private float _scaleDuration = 2f;
 
     [Header("Listening to...")]
     [SerializeField] private ClumpDataSO _clumpData;
-    [SerializeField] private ScaleEventSO _scaleEvent;
 
     [Header("Broadcasting to...")]
     [SerializeField] private PauseGameplayEventSO _pauseGameplay;
 
-    [Space]
-    [SerializeField] private string _scaleGroupTag;
+    [Header("DEBUG")]
     [SerializeField] private List<Transform> _scaleGroups;
+    [SerializeField] private PropScaleCategory _currentClumpScale;
+    [SerializeField] private PropManager _propManager;
+    [SerializeField] private ClumpPropCollection _collectionObject;
 
-    private float _scaleDuration = 2f;
-    private PropScaleCategory _currentClumpScale;
+    private void Awake()
+    {
+        TryGetComponent(out _propManager);
+    }
 
     private void OnEnable()
     {
@@ -35,6 +38,7 @@ public class PropScaleManager : MonoBehaviour
 
     private void Start()
     {
+        BuildScaleGroups();
         _currentClumpScale = _clumpData.Scale;
     }
 
@@ -46,8 +50,13 @@ public class PropScaleManager : MonoBehaviour
             _pauseGameplay.Raise(true, true, name);
 
             // Scale all the objects already collected
-            PropManager.CurrentCollection.ForEach(p => p.transform.DOScale(
-                p.transform.localScale.x * _scaleFactor, _scaleDuration));
+            _propManager.CurrentCollection.ForEach(p =>
+            {
+                // Forces stuff to reach the attach point if still travelling
+                p.transform.DOComplete();
+                //p.transform.DOScale(
+                //    p.transform.localScale.x * _scaleFactor, _scaleDuration);
+            });
 
             // Move the scaler to the clump position
             // to scale everything relative to that
@@ -56,7 +65,7 @@ public class PropScaleManager : MonoBehaviour
             _scaler.transform.position = pos;
 
             // switch the scale group parents to scale relative to the clump
-            _scaleGroups.ForEach(group => group.parent = _scaler.transform);
+            _scaleGroups.ForEach(group => group.SetParent(_scaler.transform));
 
             // scale everything down
             _scaler.DOScale(_scaleFactor, _scaleDuration).OnComplete(() =>
@@ -67,10 +76,10 @@ public class PropScaleManager : MonoBehaviour
                     if (group.localScale.x < .25f)
                     {
                         group.gameObject.SetActive(false);
-                        }
+                    }
                     else
                     {
-                        group.parent = transform;
+                        group.SetParent(transform);
                     }
                 });
 
@@ -85,11 +94,16 @@ public class PropScaleManager : MonoBehaviour
         }
     }
 
+    private void BuildScaleGroups()
+    {
+        _scaleGroups = new List<Transform>(
+            GetComponentsInChildren<Transform>().ToList()
+            .FindAll(t => t.GetComponent<PropScaleObjectGroup>() != null)
+        );
+    }
+
     private void OnValidate()
     {
-        _scaleGroups = new List<Transform>();
-        new List<PropScaleObjectGroup>(
-            FindObjectsOfType<PropScaleObjectGroup>()
-            ).ForEach(g => _scaleGroups.Add(g.transform));
+        BuildScaleGroups();
     }
 }

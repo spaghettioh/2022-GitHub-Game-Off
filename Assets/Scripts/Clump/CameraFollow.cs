@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
@@ -29,15 +27,16 @@ public class CameraFollow : MonoBehaviour
     {
         if (_canRotate)
         {
-            transform.Rotate(Vector3.up, Input.GetAxisRaw("Horizontal") * Time.deltaTime * _sensitivity);
+            transform.Rotate(Vector3.up,
+                Input.GetAxisRaw("Horizontal") * Time.deltaTime * _sensitivity);
 
             var temp = _followOffset.z;
 
-            if (Input.GetAxisRaw("Vertical") < 0)
-            {
-                temp = _followOffset.z * -1f;
-            }
-            Mathf.Lerp(_followOffset.z, temp, Time.deltaTime * _offsetSmoothing);
+            //if (Input.GetAxisRaw("Vertical") < 0)
+            //{
+            //    temp = _followOffset.z * -1f;
+            //}
+            //Mathf.Lerp(_followOffset.z, temp, Time.deltaTime * _offsetSmoothing);
             //else
             //{
             //    Mathf.Lerp(_currentOffsetZ, _followOffset)
@@ -61,6 +60,6 @@ public class CameraFollow : MonoBehaviour
 
     private void OnValidate()
     {
-        //SetPosition();
+        if (gameObject.activeInHierarchy) SetPosition();
     }
 }

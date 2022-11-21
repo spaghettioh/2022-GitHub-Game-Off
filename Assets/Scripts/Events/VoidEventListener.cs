@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,21 +8,9 @@ public class VoidEventListener : MonoBehaviour
 
 	public UnityEvent OnEventRaised;
 
-	private void OnEnable()
-	{
-		if (_voidEventChannel != null)
-			_voidEventChannel.OnEventRaised += Respond;
-	}
+	private void OnEnable() => _voidEventChannel.OnEventRaised += Respond;
 
-	private void OnDisable()
-	{
-		if (_voidEventChannel != null)
-			_voidEventChannel.OnEventRaised -= Respond;
-	}
+	private void OnDisable() => _voidEventChannel.OnEventRaised -= Respond;
 
-	private void Respond()
-	{
-		if (OnEventRaised != null)
-			OnEventRaised.Invoke();
-	}
+	private void Respond() => OnEventRaised.Invoke();
 }

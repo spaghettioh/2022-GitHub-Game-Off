@@ -103,6 +103,7 @@ public class AudioEmitter : MonoBehaviour
     {
         _audioSource.clip = null;
         _audioSource.volume = 1f;
+        _audioSource.pitch = 1f;
         _currentClip = null;
         OnEmitterFinished.Invoke(this);
     }

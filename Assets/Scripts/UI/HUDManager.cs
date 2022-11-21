@@ -10,6 +10,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private TMP_Text _sizeTextBehind;
     [SerializeField] private TMP_Text _sizeTextFront;
     [SerializeField] private Slider _progressSlider;
+    [SerializeField] private string _nextScene;
 
     [Space]
     [SerializeField] private float _tempWinValue;
@@ -21,6 +22,7 @@ public class HUDManager : MonoBehaviour
 
     [Header("Broadcasting to...")]
     [SerializeField] private PauseGameplayEventSO _pauseEvent;
+    [SerializeField] private LoadEventSO _loadEvent;
 
     private void Awake()
     {
@@ -30,13 +32,11 @@ public class HUDManager : MonoBehaviour
     private void OnEnable()
     {
         _clumpData.OnSizeChanged += ProcessSizeChange;
-        _winCondition.OnEventRaised += CheckForWin;
     }
 
     private void OnDisable()
     {
         _clumpData.OnSizeChanged -= ProcessSizeChange;
-        _winCondition.OnEventRaised -= CheckForWin;
     }
 
     private void ProcessSizeChange(float size)
@@ -62,6 +62,13 @@ public class HUDManager : MonoBehaviour
         {
             _winDialog.SetActive(true);
             _pauseEvent.Raise(true, false, name);
+            StartCoroutine(TriggerNextScene());
         }
+    }
+
+    private IEnumerator TriggerNextScene()
+    {
+        yield return new WaitForSeconds(2f);
+        _loadEvent.Raise(_nextScene, name);
     }
 }

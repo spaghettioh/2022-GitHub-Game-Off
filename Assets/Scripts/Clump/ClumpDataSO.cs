@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,18 +9,18 @@ public class ClumpDataSO : ScriptableObject
 
     [SerializeField] private ClumpScaleConfigSO _scaleConfigs;
 
-    public Transform Transform { get; private set; }
-    public float Size { get; private set; }
-    public SphereCollider Collider { get; private set; }
-    public float Velocity { get; private set; }
-    public float Torque { get; private set; }
+    [field: SerializeField] public Transform Transform { get; private set; }
+    [field: SerializeField] public float Size { get; private set; }
+    [field: SerializeField] public SphereCollider Collider { get; private set; }
+    [field: SerializeField] public float Velocity { get; private set; }
+    [field: SerializeField] public float Torque { get; private set; }
     [field: SerializeField] public float MaxSpeed { get; private set; }
 
     [Tooltip("Percentage of max speed to move in reverse")]
     [field: SerializeField]
     public float ReverseSpeedPercentage { get; private set; }
 
-    public PropScaleCategory Scale { get; private set; }
+    [field: SerializeField] public PropScaleCategory Scale { get; private set; }
 
     private float _startSize;
     private PropScaleCategory _startScale;
@@ -75,14 +73,16 @@ public class ClumpDataSO : ScriptableObject
 
     private void CheckForChanges()
     {
-        var peviousScale = Scale;
-        var currentScale = GetCurrentScale();
+        var newScale = GetCurrentScale();
 
-        if (currentScale != peviousScale)
+        if (Scale != newScale)
         {
-            Scale = currentScale;
-            Torque = _scaleConfigs.GetConfig(Scale).Torque;
-            Collider.radius = _scaleConfigs.GetConfig(Scale).ColliderRadius;
+            Scale = newScale;
+            // TODO decide what to do with these -
+            // Should we get them from the scale data, or just rely on the props?
+            // they are currently applied via the prop being collected
+            //Torque = _scaleConfigs.GetConfig(Scale).Torque;
+            //Collider.radius = _scaleConfigs.GetConfig(Scale).ColliderRadius;
             AnnounceScaleChange();
         }
 

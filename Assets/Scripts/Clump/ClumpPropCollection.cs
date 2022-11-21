@@ -1,11 +1,14 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ClumpPropCollection : MonoBehaviour
 {
     [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private TransformAnchorSO _clumpPropCollection;
+    [field: SerializeField]
+    public List<Prop> CollectedProps { get; private set; }
     private Transform _t;
 
     private void Awake()
@@ -14,9 +17,21 @@ public class ClumpPropCollection : MonoBehaviour
         TryGetComponent(out _t);
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        _t.SetPositionAndRotation(
-            _clumpData.Transform.position, _clumpData.Transform.rotation);
+        _clumpData.OnScaleChanged += ScaleDown;
+    }
+
+    private void OnDisable()
+    {
+        _clumpData.OnScaleChanged -= ScaleDown;
+    }
+
+    private void Update() => _t.SetPositionAndRotation(
+        _clumpData.Transform.position, _clumpData.Transform.rotation);
+
+    private void ScaleDown(PropScaleCategory DGAF)
+    {
+        transform.DOScale(transform.localScale * .5f, 2f);
     }
 }

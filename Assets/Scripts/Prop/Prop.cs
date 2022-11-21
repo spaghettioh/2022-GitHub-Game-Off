@@ -1,17 +1,17 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
-using DG.Tweening;
 using System.Linq;
+using DG.Tweening;
+using UnityEngine;
 
 public class Prop : MonoBehaviour
 {
     [SerializeField] private Sprite _sprite;
     [SerializeField] private Transform _graphic;
+    public Transform Graphic { get { return _graphic; } }
+
     private SpriteRenderer _renderer;
-    
+
     [field: SerializeField]
     public float Size { get; private set; }
 
@@ -52,17 +52,14 @@ public class Prop : MonoBehaviour
     [SerializeField] private float _attachDuration = 10f;
     [field: SerializeField] public bool IsAttaching { get; private set; }
 
-    private Transform _t;
+    private Transform _transform;
 
     private void Awake()
     {
-        _colliders = new List<PropColliderMesh>();
-        GetComponentsInChildren<MeshCollider>().ToList()
-            .ForEach(m => _colliders.Add(
-                m.gameObject.AddComponent<PropColliderMesh>()));
         _originalParent = transform.parent;
         _graphic.TryGetComponent(out _renderer);
-        TryGetComponent(out _t);
+        TryGetComponent(out _transform);
+        BuildColliderList();
     }
 
     private void OnEnable()
@@ -81,7 +78,23 @@ public class Prop : MonoBehaviour
             c.OnTrigger -= Collect;
             c.OnCollision -= Crash;
         });
-        _t.DOKill();
+        _transform.DOKill();
+    }
+
+    private void BuildColliderList()
+    {
+        _colliders = new List<PropColliderMesh>(
+            GetComponentsInChildren<PropColliderMesh>());
+    }
+
+    private PropColliderMesh AddColliderScript(GameObject g)
+    {
+        var collider = g.GetComponent<PropColliderMesh>();
+        if (collider == null)
+        {
+            collider = g.AddComponent<PropColliderMesh>();
+        }
+        return collider;
     }
 
     public void ToggleCollectable(bool onOff)
@@ -97,7 +110,8 @@ public class Prop : MonoBehaviour
             _sfxChannel.RaisePlayback(_crashSoundLarge);
             _crashEvent.Raise(name);
 
-            _graphic.DOShakePosition(_shakeDuration, .1f);
+            _graphic.DOShakePosition(
+                _shakeDuration, .1f / transform.lossyScale.x);
         }
         else
         {
@@ -109,54 +123,62 @@ public class Prop : MonoBehaviour
     {
         if (collider != _clumpData.Collider) return;
 
+        _collectEvent.Raise(this);
+
         // Disable colliders, turn off collectability, inform manager
         ToggleCollectable(false);
         _colliders.ForEach(c => c.gameObject.SetActive(false));
         _sfxChannel.RaisePlayback(_collectSound);
 
+        CreateAttachPoint(collider);
+
+        // Waits for one second to see if a crash will uncollect it
+        _transform.DOLocalMove(_transform.localPosition, 1f)
+            .OnComplete(MoveTowardAttachPoint);
+    }
+
+    private void CreateAttachPoint(Collider collider)
+    {
         // Create an object at the closest point to the collider
-        _attachPoint = new GameObject();
+        _attachPoint = new GameObject("TempAttachPoint");
         _attachPoint.transform.position =
             collider.ClosestPoint(transform.position);
         _attachPoint.transform.SetParent(collider.transform);
-        _attachPoint.name = "TempAttachPoint";
+    }
 
+    private void MoveTowardAttachPoint()
+    {
         // Then move towards it
         Vector3 endPosition = _attachPoint.transform.localPosition;
-        StartCoroutine(CollectRoutine());
-        _t.DOLocalMove(endPosition, _attachDuration).OnComplete(() =>
+        _clumpData.IncreaseTorqueAndCollider(
+            ClumpTorqueChangeAmount, ClumpRadiusChangeAmount);
+        _transform.DOLocalMove(endPosition, _attachDuration).OnComplete(() =>
         {
             Destroy(_attachPoint);
         });
-
-        _clumpData.IncreaseTorqueAndCollider(
-            ClumpTorqueChangeAmount, ClumpRadiusChangeAmount);
-        _collectEvent.Raise(this);
     }
 
-    private IEnumerator CollectRoutine()
-    {
-        IsAttaching = true;
-        yield return new WaitForSeconds(1f);
-        IsAttaching = false;
-    }
-
-    public void Uncollect() => StartCoroutine(UncollectRoutine());
-    private IEnumerator UncollectRoutine()
+    public void Uncollect()
     {
         // Stop everything
-        _t.DOComplete();
+        StopAllCoroutines();
+        _transform.DOKill();
+
+        StartCoroutine(UncollectRoutine());
+    }
+    private IEnumerator UncollectRoutine()
+    {
         // Return to the starting parent
-        _t.SetParent(_originalParent);
-        _t.rotation = Quaternion.identity;
+        _transform.SetParent(_originalParent);
+        _transform.rotation = Quaternion.identity;
 
         // Moves to a seemingly random position
         var p = transform.localPosition;
-        var randomX = p.x + UnityEngine.Random.Range(-1f, 1f);
-        var randomZ = p.z + UnityEngine.Random.Range(-1f, 1f);
-        var endPos = new Vector3(randomX, 0, randomZ);
-        _t.DOPunchScale(_t.localScale * 1.1f, 1f);
-        _t.DOLocalJump(endPos, 1f, 2, 1f);
+        var endPos = Vector3.zero;
+        endPos.x = p.x + Random.Range(-1f, 1f);
+        endPos.z = p.z + Random.Range(-1f, 1f);
+        _transform.DOPunchScale(_transform.localScale * 1.1f, 1f);
+        _transform.DOLocalJump(endPos, 1f, 2, 1f);
 
         // Flickers the sprite for some time
         var flickerTime = 0f;
@@ -181,6 +203,27 @@ public class Prop : MonoBehaviour
 
     private void OnValidate()
     {
-        GetComponentInChildren<SpriteRenderer>().sprite = _sprite;
+        BuildColliderList();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Vector3 pos = transform.position;
+
+        Color color;
+        color = Color.green;
+        color.a = .5f;
+        Gizmos.color = color;
+        Gizmos.DrawLine(pos + (Vector3.down / 2), pos + (Vector3.up / 2));
+
+        color = Color.red;
+        color.a = .5f;
+        Gizmos.color = color;
+        Gizmos.DrawLine(pos + (Vector3.left / 2), pos + (Vector3.right / 2));
+
+        color = Color.blue;
+        color.a = .5f;
+        Gizmos.color = color;
+        Gizmos.DrawLine(pos + (Vector3.forward / 2), pos + (Vector3.back / 2));
     }
 }
