@@ -7,10 +7,8 @@ using UnityEngine;
 public class Prop : MonoBehaviour
 {
     [SerializeField] private Sprite _sprite;
-    [SerializeField] private Transform _graphic;
-    public Transform Graphic { get { return _graphic; } }
-
-    private SpriteRenderer _renderer;
+    [SerializeField] private SpriteRenderer _renderer;
+    public Transform Graphic { get { return _renderer.transform; } }
 
     [field: SerializeField]
     public float Size { get; private set; }
@@ -57,7 +55,6 @@ public class Prop : MonoBehaviour
     private void Awake()
     {
         _originalParent = transform.parent;
-        _graphic.TryGetComponent(out _renderer);
         TryGetComponent(out _transform);
         BuildColliderList();
     }
@@ -110,7 +107,7 @@ public class Prop : MonoBehaviour
             _sfxChannel.RaisePlayback(_crashSoundLarge);
             _crashEvent.Raise(name);
 
-            _graphic.DOShakePosition(
+            _renderer.transform.DOShakePosition(
                 _shakeDuration, .1f / transform.lossyScale.x);
         }
         else
@@ -204,6 +201,11 @@ public class Prop : MonoBehaviour
     private void OnValidate()
     {
         BuildColliderList();
+        if (_sprite != null)
+        {
+            _renderer.sprite = _sprite;
+        }
+        //name = _sprite.name;
     }
 
     private void OnDrawGizmos()

@@ -544,12 +544,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: _colliders.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: _colliders.Array.data[0]
       value: 
-      objectReference: {fileID: -1215128265451636332}
+      objectReference: {fileID: 1376063505111285543}
     - target: {fileID: 5156284617504704147, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -568,7 +568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030576, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: m_Name
-      value: Prop_02_Die
+      value: Prop_02VerySmall_Die
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030576, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: m_TagString
@@ -592,6 +592,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+--- !u!114 &1376063505111285543 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8585478290872315323, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+  m_PrefabInstance: {fileID: 7223067310528713372}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fde64775bfc242db86cb7e3b1d55004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3730489715659721071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6338853664386030579, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}

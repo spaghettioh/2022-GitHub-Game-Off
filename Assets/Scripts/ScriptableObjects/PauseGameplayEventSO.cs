@@ -9,6 +9,7 @@ public class PauseGameplayEventSO : ScriptableObject
     public void Raise(bool pause,
         bool shouldStopMovement = false, string elevator = "(Unknown)")
     {
+        Debug.Log($"{elevator} raised {name}");
         if (OnEventRaised != null) OnEventRaised
                 .Invoke(pause, shouldStopMovement);
         else Debug.LogWarning($"{elevator} raised {name} (pause: {pause}," +

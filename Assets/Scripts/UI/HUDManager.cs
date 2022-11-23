@@ -3,72 +3,67 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class HUDManager : MonoBehaviour
 {
     [Header("Progress")]
-    [SerializeField] private TMP_Text _sizeTextBehind;
-    [SerializeField] private TMP_Text _sizeTextFront;
-    [SerializeField] private Slider _progressSlider;
-    [SerializeField] private string _nextScene;
+    [SerializeField] private TMP_Text _propCountText;
 
     [Space]
-    [SerializeField] private float _tempWinValue;
+    [SerializeField] private int _winAmount;
     [SerializeField] private GameObject _winDialog;
+    [SerializeField] private GameObject _loseDialog;
 
     [Header("Listening to...")]
     [SerializeField] private ClumpDataSO _clumpData;
+    [SerializeField] private IntEventSO _propsToWin;
     [SerializeField] private VoidEventSO _winCondition;
+    [SerializeField] private VoidEventSO _loseCondition;
 
     [Header("Broadcasting to...")]
     [SerializeField] private PauseGameplayEventSO _pauseEvent;
     [SerializeField] private LoadEventSO _loadEvent;
 
-    private void Awake()
-    {
-        _winDialog.SetActive(false);
-    }
-
     private void OnEnable()
     {
-        _clumpData.OnSizeChanged += ProcessSizeChange;
+        _propsToWin.OnEventRaised += SetWinAmount;
+        _clumpData.OnSizeChanged += UpdateCountText;
+        _winCondition.OnEventRaised += ShowWinDialog;
+        _loseCondition.OnEventRaised += ShowLoseDialog;
     }
 
     private void OnDisable()
     {
-        _clumpData.OnSizeChanged -= ProcessSizeChange;
+        _propsToWin.OnEventRaised -= SetWinAmount;
+        _clumpData.OnSizeChanged -= UpdateCountText;
+        _winCondition.OnEventRaised -= ShowWinDialog;
+        _loseCondition.OnEventRaised -= ShowLoseDialog;
     }
 
-    private void ProcessSizeChange(float size)
+    private void Start()
     {
-        float rounded = Mathf.Round(size * 100f) / 100f;
-        string currentSize = $"Size: {rounded} / {_tempWinValue}";
-        _sizeTextBehind.text = currentSize;
-        _sizeTextFront.text = currentSize;
-        _progressSlider.value = 1 / (_tempWinValue / size);
-
-        CheckForScaleUp();
-        CheckForWin();
+        _winDialog.SetActive(false);
+        _loseDialog.SetActive(false);
     }
 
-    private void CheckForScaleUp()
+    private void SetWinAmount(int winAmount)
     {
-
+        _winAmount = winAmount;
+        UpdateCountText(0);
+    }
+    private void UpdateCountText(float f)
+    {
+        _propCountText.text = $"Collected: {_clumpData.Size} / {_winAmount}";
     }
 
-    private void CheckForWin()
+    private void ShowWinDialog()
     {
-        if (_clumpData.Size >= _tempWinValue)
-        {
-            _winDialog.SetActive(true);
-            _pauseEvent.Raise(true, false, name);
-            StartCoroutine(TriggerNextScene());
-        }
+        _winDialog.SetActive(true);
     }
 
-    private IEnumerator TriggerNextScene()
+    private void ShowLoseDialog()
     {
-        yield return new WaitForSeconds(2f);
-        _loadEvent.Raise(_nextScene, name);
+        _loseDialog.SetActive(true);
     }
 }

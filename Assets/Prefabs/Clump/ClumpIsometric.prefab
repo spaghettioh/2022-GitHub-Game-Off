@@ -730,7 +730,6 @@ GameObject:
   - component: {fileID: 8174904349858219775}
   - component: {fileID: 8174904349858219772}
   - component: {fileID: 8174904349858219773}
-  - component: {fileID: 8174904349858219774}
   m_Layer: 0
   m_Name: Direction
   m_TagString: Untagged
@@ -803,19 +802,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8174904349858219774
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8174904349858219760}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8174904349878539282
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +813,6 @@ GameObject:
   - component: {fileID: 8174904349878539281}
   - component: {fileID: 8174904349878539294}
   - component: {fileID: 8174904349878539295}
-  - component: {fileID: 8174904349878539280}
   m_Layer: 0
   m_Name: TorqueAxis
   m_TagString: Untagged
@@ -900,19 +885,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8174904349878539280
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8174904349878539282}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8174904350244944289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,7 +995,6 @@ GameObject:
   - component: {fileID: 8174904351393471536}
   - component: {fileID: 8174904351393471549}
   - component: {fileID: 8174904351393471550}
-  - component: {fileID: 8174904351393471551}
   m_Layer: 0
   m_Name: TorqueTelemetry
   m_TagString: Untagged
@@ -1098,16 +1069,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8174904351393471551
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8174904351393471537}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

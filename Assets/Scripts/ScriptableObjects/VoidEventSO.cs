@@ -8,8 +8,9 @@ public class VoidEventSO : ScriptableObject
 
     public void Raise(string elevator = "(Undefined)")
     {
+        Debug.Log($"{elevator} raised {name}");
         if (OnEventRaised != null) OnEventRaised.Invoke();
         else Debug.LogWarning(
-            $"{elevator} raised {name} but nothing heard it.");
+            $"{elevator} raised {name} but no one listens.");
     }
 }

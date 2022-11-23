@@ -19,10 +19,15 @@ public class ClumpControllerIsometric : MonoBehaviour
     [Header("Data and size")]
     [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private float _startingSize;
+    [SerializeField] private float _startingTorque;
+    [SerializeField] private float _velocity;
+    [SerializeField] private float _angularVelocity;
+    [SerializeField] private ForceMode _forceMode;
 
     [Header("Listening to...")]
     [SerializeField] private VoidEventSO _crashEvent;
     [SerializeField] private PauseGameplayEventSO _pauseGameplay;
+    [SerializeField] private InputHandlerSO _inputSO;
 
     private Camera _camera;
     private Vector3 _cutsceneTorqueAxis = Vector3.right;
@@ -32,7 +37,7 @@ public class ClumpControllerIsometric : MonoBehaviour
 
     private void Awake()
     {
-        _clumpData.SetUp(transform, _collider, _startingSize);
+        _clumpData.SetUp(transform, _collider, _startingSize, _startingTorque);
         _telemetryObject.gameObject.SetActive(false);
     }
 
@@ -59,7 +64,9 @@ public class ClumpControllerIsometric : MonoBehaviour
     {
         var v = Input.GetAxisRaw("Vertical");
         var h = Input.GetAxisRaw("Horizontal");
-        _input = new Vector3(h, 0, v);
+        _input = new Vector3(
+            _inputSO.DirectionalInput.x, 0, _inputSO.DirectionalInput.y);
+        //_input = new Vector3(h, 0, v);
 
         SetTorqueDirection();
 
@@ -91,11 +98,14 @@ public class ClumpControllerIsometric : MonoBehaviour
     {
         if (_input != Vector3.zero && _canMove)
         {
-            _body.AddTorque(_clumpData.Torque * Time.deltaTime * _telemetryObject.right,
-                ForceMode.Force);
+            _body.AddTorque(_startingTorque * Time.deltaTime * _telemetryObject.right,
+            //_body.AddTorque(_clumpData.Torque * Time.deltaTime * _telemetryObject.right,
+                _forceMode);
         }
 
         _clumpData.SetVelocity(_body.velocity.magnitude);
+        _velocity = _body.velocity.magnitude;
+        _angularVelocity = _body.angularVelocity.magnitude;
     }
 
     private void PauseMovement(bool pause, bool shouldStopMovement)
@@ -140,8 +150,8 @@ public class ClumpControllerIsometric : MonoBehaviour
         _cutsceneTorqueAxis = heading;
     }
 
-    private void OnValidate()
-    {
-        _clumpData.SetUp(transform, _collider, _startingSize);
-    }
+    //private void OnValidate()
+    //{
+    //    _clumpData.SetUp(transform, _collider, _startingSize);
+    //}
 }

@@ -19,8 +19,5 @@ public class Jukebox : MonoBehaviour
         _beginPlaybackOn.OnEventRaised -= TriggerMusic;
     }
 
-    private void TriggerMusic()
-    {
-        _audioEventChannel.RaisePlayback(_music);
-    }
+    private void TriggerMusic() => _audioEventChannel.RaisePlayback(_music);
 }

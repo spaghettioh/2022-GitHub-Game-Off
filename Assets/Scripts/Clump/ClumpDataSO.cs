@@ -8,6 +8,7 @@ public class ClumpDataSO : ScriptableObject
     public UnityAction<PropScaleCategory> OnScaleChanged;
 
     [SerializeField] private ClumpScaleConfigSO _scaleConfigs;
+    [SerializeField] private ClumpPropCollection _propCollection;
 
     [field: SerializeField] public Transform Transform { get; private set; }
     [field: SerializeField] public float Size { get; private set; }
@@ -22,10 +23,10 @@ public class ClumpDataSO : ScriptableObject
 
     [field: SerializeField] public PropScaleCategory Scale { get; private set; }
 
-    private float _startSize;
-    private PropScaleCategory _startScale;
+    [SerializeField] float _startSize;
+    [SerializeField] PropScaleCategory _startScale;
 
-    public void SetUp(Transform t, SphereCollider c, float s)
+    public void SetUp(Transform t, SphereCollider c, float s, float q)
     {
         Transform = t;
         Collider = c;
@@ -38,7 +39,8 @@ public class ClumpDataSO : ScriptableObject
 
         // Clump config
         Collider.radius = _scaleConfigs.GetConfig(Scale).ColliderRadius;
-        Torque = _scaleConfigs.GetConfig(Scale).Torque;
+        Torque = q;
+        //Torque = _scaleConfigs.GetConfig(Scale).Torque;
     }
 
     public void IncreaseTorqueAndCollider(float value)
@@ -73,20 +75,15 @@ public class ClumpDataSO : ScriptableObject
 
     private void CheckForChanges()
     {
-        var newScale = GetCurrentScale();
+        //var newScale = GetCurrentScale();
 
-        if (Scale != newScale)
-        {
-            Scale = newScale;
-            // TODO decide what to do with these -
-            // Should we get them from the scale data, or just rely on the props?
-            // they are currently applied via the prop being collected
-            //Torque = _scaleConfigs.GetConfig(Scale).Torque;
-            //Collider.radius = _scaleConfigs.GetConfig(Scale).ColliderRadius;
-            AnnounceScaleChange();
-        }
+        //if (Scale != newScale)
+        //{
+        //    Scale = newScale;
+            //AnnounceScaleChange();
+        //}
 
-        AnnounceSizeChange();
+        //AnnounceSizeChange();
     }
 
     private PropScaleCategory GetCurrentScale()

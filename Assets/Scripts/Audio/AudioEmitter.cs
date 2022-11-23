@@ -88,7 +88,8 @@ public class AudioEmitter : MonoBehaviour
     /// <summary>
     /// Sets a new pitch for the audio source.
     /// </summary>
-    /// <param name="pitchRandomness">If > 0 will waver from 1 to that amount.</param>
+    /// <param name="pitchRandomness">
+    /// If > 0 will waver from 1 to that amount.</param>
     private void SetNewPitch(float pitchRandomness)
     {
         if (pitchRandomness > 0)

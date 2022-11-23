@@ -11,6 +11,9 @@ public class ClumpPropCollection : MonoBehaviour
     public List<Prop> CollectedProps { get; private set; }
     private Transform _t;
 
+    [Header("Listening to...")]
+    [SerializeField] private PropCollectEventSO _collectEvent;
+
     private void Awake()
     {
         _clumpPropCollection.Set(transform);
@@ -20,6 +23,7 @@ public class ClumpPropCollection : MonoBehaviour
     private void OnEnable()
     {
         _clumpData.OnScaleChanged += ScaleDown;
+        _collectEvent.OnEventRaised += Collect;
     }
 
     private void OnDisable()
@@ -27,11 +31,16 @@ public class ClumpPropCollection : MonoBehaviour
         _clumpData.OnScaleChanged -= ScaleDown;
     }
 
+    private void Collect(Prop collectedProp)
+    {
+        CollectedProps.Add(collectedProp);
+    }
+
     private void Update() => _t.SetPositionAndRotation(
         _clumpData.Transform.position, _clumpData.Transform.rotation);
 
     private void ScaleDown(PropScaleCategory DGAF)
     {
-        transform.DOScale(transform.localScale * .5f, 2f);
+        //transform.DOScale(transform.localScale * .5f, 2f);
     }
 }

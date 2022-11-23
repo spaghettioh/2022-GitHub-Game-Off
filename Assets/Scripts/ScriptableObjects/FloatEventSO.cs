@@ -9,6 +9,7 @@ public class FloatEventSO : ScriptableObject
 
     public void Raise(float value, string elevator = "(Unknown)")
     {
+        Debug.Log($"{elevator} raised {name}");
         if (OnEventRaised != null) OnEventRaised.Invoke(value);
         else Debug.LogWarning($"{elevator} raised {name} but no one listens.");
     }

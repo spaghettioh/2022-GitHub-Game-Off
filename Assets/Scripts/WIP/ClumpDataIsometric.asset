@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c92b0260594ddea0dc72b63967232, type: 3}
   m_Name: ClumpDataIsometric
   m_EditorClassIdentifier: 
-  _scaleConfigs: {fileID: 11400000, guid: ee8837f93061946b28b2ee42f02d28fb, type: 2}
+  _scaleConfigs: {fileID: 11400000, guid: cc7ba42ae6e1641d6a2c80128c38ba2c, type: 2}
+  _propCollection: {fileID: 0}
   <Transform>k__BackingField: {fileID: 0}
-  <Size>k__BackingField: 2
+  <Size>k__BackingField: 9
   <Collider>k__BackingField: {fileID: 0}
-  <Velocity>k__BackingField: 0
-  <Torque>k__BackingField: 100
+  <Velocity>k__BackingField: 1.6662234
+  <Torque>k__BackingField: 1020
   <MaxSpeed>k__BackingField: 7
   <ReverseSpeedPercentage>k__BackingField: 1
-  <Scale>k__BackingField: 2
+  <Scale>k__BackingField: 0
+  _startSize: 0
+  _startScale: 0

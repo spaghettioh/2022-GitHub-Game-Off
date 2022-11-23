@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sprite: {fileID: 0}
-  _graphic: {fileID: 94253132491989657}
+  _renderer: {fileID: 5156284617504704147}
   <Size>k__BackingField: 0
-  <ClumpSizeChangeAmount>k__BackingField: 0.02
+  <ClumpSizeChangeAmount>k__BackingField: 1
   <ClumpRadiusChangeAmount>k__BackingField: 0.005
   <ClumpTorqueChangeAmount>k__BackingField: 2.5
   <IsCollectable>k__BackingField: 0

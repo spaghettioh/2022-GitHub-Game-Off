@@ -1001,12 +1001,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: _colliders.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: _colliders.Array.data[0]
       value: 
-      objectReference: {fileID: -8128532922903382472}
+      objectReference: {fileID: 3714508255263096066}
     - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: _colliders.Array.data[1]
       value: 
@@ -1029,7 +1029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030576, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: m_Name
-      value: Prop_06_Boulder
+      value: Prop_06AboveAverage_Boulder
       objectReference: {fileID: 0}
     - target: {fileID: 6338853664386030576, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: m_TagString
@@ -1058,3 +1058,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6338853664386030579, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
   m_PrefabInstance: {fileID: 4947532495356940473}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3714508255263096066 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8585478290872315323, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+  m_PrefabInstance: {fileID: 4947532495356940473}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fde64775bfc242db86cb7e3b1d55004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

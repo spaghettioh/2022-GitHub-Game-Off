@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(menuName = "Game Off/Scriptable Objects/Audio Event Channel",
+[CreateAssetMenu(menuName = "Game Off/Audio Event Channel",
     fileName = "AudioEventChannel")]
 public class AudioEventSO : ScriptableObject
 {
@@ -9,7 +9,8 @@ public class AudioEventSO : ScriptableObject
     public UnityAction<float> OnMusicFadeRequested;
     public UnityAction OnStopMusicRequested;
 
-    public void RaisePlayback(AudioCueSO audioCue)
+    public void RaisePlayback(AudioCueSO audioCue,
+        string elevator = "(Unknown)")
     {
         if (OnPlaybackRequested != null)
         {
@@ -17,12 +18,12 @@ public class AudioEventSO : ScriptableObject
         }
         else
         {
-            Debug.LogWarning("Audio playback event raised but nothing " +
-                "listens...");
+            Debug.LogWarning($"{elevator} raised {name} playback for " +
+                $"{audioCue.name} but no one listens.");
         }
     }
 
-    public void RaiseMusicFade(float fadeLength)
+    public void RaiseMusicFade(float fadeLength, string elevator = "(Unknown)")
     {
         if (OnMusicFadeRequested != null)
         {
@@ -30,12 +31,12 @@ public class AudioEventSO : ScriptableObject
         }
         else
         {
-            Debug.LogWarning("Music fade event raised but nothing " +
-                "listens...");
+            Debug.LogWarning($"{elevator} raised {name} fade for " +
+                $"{fadeLength} seconds but no one listens.");
         }
     }
 
-    public void RaiseStopMusic()
+    public void RaiseStopMusic(string elevator = "(Unknown)")
     {
         if (OnStopMusicRequested != null)
         {
@@ -43,8 +44,8 @@ public class AudioEventSO : ScriptableObject
         }
         else
         {
-            Debug.LogWarning("Music fade event raised but nothing " +
-                "listens...");
+            Debug.LogWarning($"{elevator} raised stop music " +
+                $"but no one listens");
         }
     }
 }

@@ -26,8 +26,8 @@ public class ClumpController : MonoBehaviour
     private Vector3 _cutsceneTorqueAxis = Vector3.right;
     private bool _canMove = true;
 
-    private void Awake() =>
-        _clumpData.SetUp(transform, _collider, _startingSize);
+    //private void Awake() =>
+        //_clumpData.SetUp(transform, _collider, _startingSize);
 
     private void OnEnable()
     {
