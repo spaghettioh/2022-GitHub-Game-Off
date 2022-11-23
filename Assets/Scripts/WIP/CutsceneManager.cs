@@ -32,6 +32,9 @@ public class CutsceneManager : MonoBehaviour
     [Header("DEBUG")]
     [SerializeField] private CutsceneScreenSO _currentScreen;
     [SerializeField] private int _currentScreenIndex;
+    [SerializeField] private bool _isParsingText;
+    [SerializeField] private bool _isWaiting;
+    [SerializeField] private bool _isUserRushing;
 
     private void OnEnable()
     {
@@ -46,8 +49,7 @@ public class CutsceneManager : MonoBehaviour
     // Used by a button to skip a block
     public void RushCutscene()
     {
-        StopAllCoroutines();
-        ShowNextScreen();
+        _isUserRushing = true;
     }
 
     public void ShowNextScreen()
@@ -58,7 +60,7 @@ public class CutsceneManager : MonoBehaviour
         if (_currentScreenIndex < _screens.Count)
         {
             SetScreenImage(_screens[_currentScreenIndex].Graphic);
-            StartCoroutine(ParseNextTextBlockRoutine());
+            StartCoroutine(ParseNextBlockRoutine());
             _currentScreenIndex++;
         }
         else
@@ -67,11 +69,11 @@ public class CutsceneManager : MonoBehaviour
         }
     }
 
-    private IEnumerator ParseNextTextBlockRoutine()
+    private IEnumerator ParseNextBlockRoutine()
     {
         _currentScreen = _screens[_currentScreenIndex];
 
-        foreach(var block in _currentScreen.TextBlocks)
+        foreach (var block in _currentScreen.TextBlocks)
         {
             _cutsceneTextBox.text = "";
 
@@ -80,16 +82,40 @@ public class CutsceneManager : MonoBehaviour
                 _audioEvent.RaisePlayback(block.BlockSound);
             }
 
-            foreach (char c in block.Text.ToList())
+            StartCoroutine(ParseNextTextRoutine(block.Text,
+                block.CharacterSound, block.WaitTime));
+
+            while (_isParsingText)
+            {
+                yield return null;
+            }
+        }
+
+        ShowNextScreen();
+    }
+
+    private IEnumerator ParseNextTextRoutine(
+        string text, AudioCueSO characterSound, float waitTime)
+    {
+        _isParsingText = true;
+        foreach (char c in text.ToList())
+        {
+            if (_isUserRushing)
+            {
+                _isUserRushing = false;
+                _isParsingText = false;
+                yield break;
+            }
+            else
             {
                 yield return new WaitForSeconds(_characterWaitTime);
                 _cutsceneTextBox.text += c;
 
                 if (c != ' ')
                 {
-                    if (block.CharacterSound != null)
+                    if (characterSound != null)
                     {
-                        _audioEvent.RaisePlayback(block.CharacterSound);
+                        _audioEvent.RaisePlayback(characterSound);
                     }
                     else
                     {
@@ -97,18 +123,43 @@ public class CutsceneManager : MonoBehaviour
                     }
                 }
             }
+        }
 
-            if (block.WaitTime != 0)
+        //if (waitTime != 0)
+        //{
+        //    yield return new WaitForSeconds(waitTime);
+        //}
+        //else
+        //{
+        //    yield return new WaitForSeconds(_textWaitTime);
+        //}
+
+        StartCoroutine(WaitTimeRoutine(
+            waitTime != 0 ? waitTime : _textWaitTime));
+
+        while (_isWaiting == true)
+        {
+            if (_isUserRushing)
             {
-                yield return new WaitForSeconds(block.WaitTime);
+                _isWaiting = false;
+                _isUserRushing = false;
+                _isParsingText = false;
+                yield break;
             }
             else
             {
-                yield return new WaitForSeconds(_textWaitTime);
+                yield return null;
             }
         }
 
-        ShowNextScreen();
+        _isParsingText = false;
+    }
+
+    private IEnumerator WaitTimeRoutine(float waitTime)
+    {
+        _isWaiting = true;
+        yield return new WaitForSeconds(waitTime);
+        _isWaiting = false;
     }
 
     private void SetScreenImage(Sprite sprite)

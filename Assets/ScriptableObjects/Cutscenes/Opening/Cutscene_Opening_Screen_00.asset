@@ -12,18 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
   m_Name: Cutscene_Opening_Screen_00
   m_EditorClassIdentifier: 
-  <Graphic>k__BackingField: {fileID: 21300000, guid: 36c0614c062d44901809bcbc0b0c58ec, type: 3}
-  <TextBlock>k__BackingField:
-  - Text: This is a normal block.
+  Source: 
+  Splitter: 
+  _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
+  <Graphic>k__BackingField: {fileID: 21300000, guid: 04db5f63382984bb49561a60aa747d8f, type: 3}
+  <TextBlocks>k__BackingField:
+  - Text: 'Once upon a time, there was a
+
+      prince and a princess who
+
+      were
+      so in love despite their
+
+      differences.'
     CharacterSound: {fileID: 0}
     BlockSound: {fileID: 0}
     WaitTime: 0
-  - Text: This block has a custom character sound.
-    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
-    BlockSound: {fileID: 0}
-    WaitTime: 0
-  - Text: This block has a custom wait time, and the next one is just a custom block
-      sound.
+  - Text: 'The princess was always going
+
+      on adventures to keep the
+
+      kingdom
+      safe.'
     CharacterSound: {fileID: 0}
     BlockSound: {fileID: 0}
-    WaitTime: 5
+    WaitTime: 0

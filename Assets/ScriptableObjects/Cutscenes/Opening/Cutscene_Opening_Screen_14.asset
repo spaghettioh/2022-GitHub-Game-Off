@@ -10,24 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
-  m_Name: Cutscene_Opening_Screen_02
+  m_Name: Cutscene_Opening_Screen_14
   m_EditorClassIdentifier: 
   Source: 
   Splitter: 
   _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
-  <Graphic>k__BackingField: {fileID: 21300000, guid: 0f6a61f5745ea4a96a747f3b7682baf7, type: 3}
+  <Graphic>k__BackingField: {fileID: 21300000, guid: b26b65d03120541b2af66e4597697f42, type: 3}
   <TextBlocks>k__BackingField:
-  - Text: 'One day, he found a strange
-
-      looking jar by the lake.'
-    CharacterSound: {fileID: 0}
-    BlockSound: {fileID: 0}
-    WaitTime: 0
-  - Text: 'As he picked it up and wiped
-
-      away the mud a djinn popped
-
-      out!'
-    CharacterSound: {fileID: 0}
-    BlockSound: {fileID: 0}
+  - Text: '"I know just where to start..."'
+    CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
+    BlockSound: {fileID: 11400000, guid: fb8b336af07ff4cf488973b4c549e55b, type: 2}
     WaitTime: 0

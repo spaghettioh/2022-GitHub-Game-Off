@@ -10,24 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
-  m_Name: Cutscene_Opening_Screen_02
+  m_Name: Cutscene_Opening_Screen_05
   m_EditorClassIdentifier: 
   Source: 
   Splitter: 
   _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
-  <Graphic>k__BackingField: {fileID: 21300000, guid: 0f6a61f5745ea4a96a747f3b7682baf7, type: 3}
+  <Graphic>k__BackingField: {fileID: 21300000, guid: 31db4f96cb50448f282058ebe9166d53, type: 3}
   <TextBlocks>k__BackingField:
-  - Text: 'One day, he found a strange
+  - Text: '"A club sandwich?? Really?
 
-      looking jar by the lake.'
-    CharacterSound: {fileID: 0}
-    BlockSound: {fileID: 0}
-    WaitTime: 0
-  - Text: 'As he picked it up and wiped
-
-      away the mud a djinn popped
-
-      out!'
-    CharacterSound: {fileID: 0}
-    BlockSound: {fileID: 0}
+      Waste of a wish if you ask me."'
+    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
+    BlockSound: {fileID: 11400000, guid: 21fec282628a1437fb2307a137aac910, type: 2}
     WaitTime: 0

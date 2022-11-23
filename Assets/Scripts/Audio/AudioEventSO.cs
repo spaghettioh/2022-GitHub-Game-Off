@@ -9,6 +9,8 @@ public class AudioEventSO : ScriptableObject
     public UnityAction<float> OnMusicFadeRequested;
     public UnityAction OnStopMusicRequested;
 
+    public void RaisePlayback(AudioCueSO audioCue) =>
+        RaisePlayback(audioCue, "An inspector event, probably,");
     public void RaisePlayback(AudioCueSO audioCue,
         string elevator = "(Unknown)")
     {
@@ -23,6 +25,8 @@ public class AudioEventSO : ScriptableObject
         }
     }
 
+    public void RaiseMusicFade(float fadeLength) =>
+        RaiseMusicFade(fadeLength, "An inspector event, probably,");
     public void RaiseMusicFade(float fadeLength, string elevator = "(Unknown)")
     {
         if (OnMusicFadeRequested != null)
