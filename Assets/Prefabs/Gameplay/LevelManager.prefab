@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e070d7a6e4f49e981636c303f8abc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _testNow: 0
   _voidEventChannel: {fileID: 11400000, guid: ef077a62f70bf461f8b11f1a1d8e8b2c, type: 2}
   OnEventRaised:
     m_PersistentCalls:
@@ -73,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e070d7a6e4f49e981636c303f8abc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _testNow: 0
   _voidEventChannel: {fileID: 11400000, guid: 327ee5215a0044e2b9efe43dd369753a, type: 2}
   OnEventRaised:
     m_PersistentCalls:
@@ -134,11 +136,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c4a7be1cde24c10b6b075b9018de9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _winAmount: 0
-  _winTimer: 0
+  _winCollectAmount: 0
+  _winTimerSeconds: 0
   _nextScene: 
   _retryScene: 
-  _clumpData: {fileID: 11400000, guid: f67617995c3d3459abb1f04761506328, type: 2}
+  _clumpData: {fileID: 11400000, guid: d0c59fb33456a457c9ee98332ddb6f79, type: 2}
   _timerFinished: {fileID: 11400000, guid: 830071c964ee847c7aa2b0e9a5a5ea0a, type: 2}
   _sceneLoaded: {fileID: 11400000, guid: cb9a17bd10dbe46c3bf8ce92d3e6fdd2, type: 2}
   _propsToWin: {fileID: 11400000, guid: 80ab66e30ded047f99b434ce43d43867, type: 2}

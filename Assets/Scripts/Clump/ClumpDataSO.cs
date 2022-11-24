@@ -4,108 +4,66 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "ClumpData", menuName = "Game Off/ClumpData")]
 public class ClumpDataSO : ScriptableObject
 {
-    public UnityAction<float> OnSizeChanged;
-    public UnityAction<PropScaleCategory> OnScaleChanged;
+    public UnityAction<int> OnPropCountChanged;
+    public UnityAction<float> OnStatsChanged;
 
-    [SerializeField] private ClumpScaleConfigSO _scaleConfigs;
-    [SerializeField] private ClumpPropCollection _propCollection;
-
-    [field: SerializeField] public Transform Transform { get; private set; }
-    [field: SerializeField] public float Size { get; private set; }
-    [field: SerializeField] public SphereCollider Collider { get; private set; }
-    [field: SerializeField] public float Velocity { get; private set; }
-    [field: SerializeField] public float Torque { get; private set; }
     [field: SerializeField] public float MaxSpeed { get; private set; }
+    [field: SerializeField] public float MinColliderRadius { get; private set; }
+    [field: SerializeField] public float MaxColliderRadius { get; private set; }
+    [field: SerializeField] public float MinMoveForce { get; private set; }
+    [field: SerializeField] public float MaxMoveForce { get; private set; }
 
-    [Tooltip("Percentage of max speed to move in reverse")]
-    [field: SerializeField]
-    public float ReverseSpeedPercentage { get; private set; }
+    [Header("DEBUG ==========")]
+    [SerializeField] private string _header;
+    [field: SerializeField] public SphereCollider Collider { get; private set; }
+    [field: SerializeField] public Transform Transform { get; private set; }
+    [field: SerializeField] public int CollectedCount { get; private set; }
+    [field: SerializeField] public float Velocity { get; private set; }
+    [field: SerializeField] public float MoveForce { get; private set; }
 
-    [field: SerializeField] public PropScaleCategory Scale { get; private set; }
-
-    [SerializeField] float _startSize;
-    [SerializeField] PropScaleCategory _startScale;
-
-    public void SetUp(Transform t, SphereCollider c, float s, float q)
+    public void ConfigureData(Transform t, SphereCollider c)
     {
         Transform = t;
         Collider = c;
 
-        Size = s;
-        _startSize = s;
-
-        Scale = GetCurrentScale();
-        _startScale = Scale;
-
-        // Clump config
-        Collider.radius = _scaleConfigs.GetConfig(Scale).ColliderRadius;
-        Torque = q;
-        //Torque = _scaleConfigs.GetConfig(Scale).Torque;
+        MoveForce = MinMoveForce;
+        Collider.radius = MinColliderRadius;
+        CollectedCount = 0;
     }
 
-    public void IncreaseTorqueAndCollider(float value)
-        => IncreaseTorqueAndCollider(value, value);
-    public void IncreaseTorqueAndCollider(float torque, float radius)
+    public void IncreaseSize(float radius, float force)
     {
-        Torque += torque;
+        MoveForce += force;
         Collider.radius += radius;
+        CollectedCount++;
+        RaisePropCountChange();
+        RaiseStatsChange();
     }
 
-    public void DecreaseTorqueAndCollider(float value)
-        => IncreaseTorqueAndCollider(value, value);
-    public void DecreaseTorqueAndCollider(float torque, float radius)
+    public void DecreaseSize(float radius, float force)
     {
-        Torque -= torque;
+        MoveForce -= force;
         Collider.radius -= radius;
+        CollectedCount--;
+        RaisePropCountChange();
+        RaiseStatsChange();
     }
 
     public void SetVelocity(float value) => Velocity = value;
 
-    public void IncreaseSize(float value)
+    private void RaisePropCountChange()
     {
-        Size += value;
-        CheckForChanges();
+        if (OnPropCountChanged != null)
+            OnPropCountChanged.Invoke(CollectedCount);
+        else Debug.LogWarning($"{name} announced a size change" +
+            $" by no one listens.");
     }
 
-    public void DecreaseSize(float value)
+    private void RaiseStatsChange()
     {
-        Size -= value;
-        CheckForChanges();
-    }
-
-    private void CheckForChanges()
-    {
-        //var newScale = GetCurrentScale();
-
-        //if (Scale != newScale)
-        //{
-        //    Scale = newScale;
-            //AnnounceScaleChange();
-        //}
-
-        //AnnounceSizeChange();
-    }
-
-    private PropScaleCategory GetCurrentScale()
-    {
-        return _scaleConfigs.GetConfig(Mathf.Floor(Size)).PropScale;
-    }
-
-    private void AnnounceScaleChange()
-    {
-        if (OnScaleChanged != null) OnScaleChanged.Invoke(Scale);
-        else Debug.LogWarning($"Nobody heard scale change event from {name}");
-    }
-
-    private void AnnounceSizeChange()
-    {
-        if (OnSizeChanged != null) OnSizeChanged.Invoke(Size);
-        else Debug.LogWarning($"Nobody heard size change event from {name}");
-    }
-
-    private void OnDisable()
-    {
-        Size = _startSize;
-        Scale = _startScale;
+        if (OnStatsChanged != null)
+            OnStatsChanged.Invoke(MoveForce);
+        else Debug.LogWarning($"{name} announced a size change" +
+            $" by no one listens.");
     }
 }

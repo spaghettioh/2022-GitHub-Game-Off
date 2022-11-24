@@ -22,13 +22,13 @@ public class ClumpPropCollection : MonoBehaviour
 
     private void OnEnable()
     {
-        _clumpData.OnScaleChanged += ScaleDown;
+        //_clumpData.OnScaleChanged += ScaleDown;
         _collectEvent.OnEventRaised += Collect;
     }
 
     private void OnDisable()
     {
-        _clumpData.OnScaleChanged -= ScaleDown;
+        //_clumpData.OnScaleChanged -= ScaleDown;
     }
 
     private void Collect(Prop collectedProp)

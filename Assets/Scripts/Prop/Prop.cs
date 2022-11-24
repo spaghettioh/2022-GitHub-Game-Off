@@ -1,42 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Prop : MonoBehaviour
 {
+    public UnityAction<Prop> OnCollisionEvent;
+
+    [Header("Config")]
     [SerializeField] private Sprite _sprite;
     [SerializeField] private SpriteRenderer _renderer;
-    public Transform Graphic { get { return _renderer.transform; } }
+    [SerializeField] private TrailRenderer _uncollectTrail;
 
-    [field: SerializeField]
-    public float Size { get; private set; }
-
-    [field: SerializeField]
-    public float ClumpSizeChangeAmount { get; private set; }
-
-    [field: SerializeField]
-    public float ClumpRadiusChangeAmount { get; private set; }
-
-    [field: SerializeField]
-    public float ClumpTorqueChangeAmount { get; private set; }
-
+    [Header("Collection")]
+    [SerializeField] private ClumpDataSO _clumpData;
+    [SerializeField] private AudioCueSO _propCollectSound;
     [field: SerializeField]
     public bool IsCollectable { get; private set; }
-
-    [Header("Sound FX")]
-    [SerializeField] private AudioCueSO _collectSound;
-    [SerializeField] private AudioCueSO _crashSoundSmall;
-    [SerializeField] private AudioCueSO _crashSoundLarge;
-
-    [Header("Listening to...")]
-    [SerializeField] private ClumpDataSO _clumpData;
-
-    [Header("Broadcasting to...")]
-    [SerializeField] private PropCollectEventSO _collectEvent;
-    [SerializeField] private AudioEventSO _sfxChannel;
-    [SerializeField] private VoidEventSO _crashEvent;
+    [field: SerializeField] public float SizeToCollect { get; private set; }
 
     [Space(60)]
     [Header("DEBUG")]
@@ -46,7 +28,7 @@ public class Prop : MonoBehaviour
     [SerializeField] private float _flickerDuration = 2f;
     [SerializeField] private float _shakeDuration = 1f;
     [Space]
-    private GameObject _attachPoint;
+    [SerializeField] private GameObject _attachPoint;
     [SerializeField] private float _attachDuration = 10f;
     [field: SerializeField] public bool IsAttaching { get; private set; }
 
@@ -57,14 +39,14 @@ public class Prop : MonoBehaviour
         _originalParent = transform.parent;
         TryGetComponent(out _transform);
         BuildColliderList();
+        SetTrailActive(false);
     }
 
     private void OnEnable()
     {
         _colliders.ForEach(c =>
         {
-            c.OnTrigger += Collect;
-            c.OnCollision += Crash;
+            c.OnCollision += RaiseCollision;
         });
     }
 
@@ -72,10 +54,15 @@ public class Prop : MonoBehaviour
     {
         _colliders.ForEach(c =>
         {
-            c.OnTrigger -= Collect;
-            c.OnCollision -= Crash;
+            c.OnCollision -= RaiseCollision;
         });
         _transform.DOKill();
+    }
+
+    private void RaiseCollision(Collider collider)
+    {
+        if (OnCollisionEvent != null) OnCollisionEvent.Invoke(this);
+        else Debug.LogWarning($"{name} raised collision but no one listens.");
     }
 
     private void BuildColliderList()
@@ -100,83 +87,73 @@ public class Prop : MonoBehaviour
         IsCollectable = onOff;
     }
 
-    private void Crash(Collision collision)
+    public void ShakeGraphic(float shakeDuration)
     {
-        if (_clumpData.Velocity >= (_clumpData.MaxSpeed / 2))
-        {
-            _sfxChannel.RaisePlayback(_crashSoundLarge);
-            _crashEvent.Raise(name);
-
-            _renderer.transform.DOShakePosition(
-                _shakeDuration, .1f / transform.lossyScale.x);
-        }
-        else
-        {
-            _sfxChannel.RaisePlayback(_crashSoundSmall);
-        }
+        _renderer.transform.DOShakePosition(
+            shakeDuration, .1f / transform.lossyScale.x);
     }
 
-    public void Collect(Collider collider)
+    public void SetCollected(AudioEventSO audioEvent)
     {
-        if (collider != _clumpData.Collider) return;
-
-        _collectEvent.Raise(this);
-
         // Disable colliders, turn off collectability, inform manager
         ToggleCollectable(false);
         _colliders.ForEach(c => c.gameObject.SetActive(false));
-        _sfxChannel.RaisePlayback(_collectSound);
 
-        CreateAttachPoint(collider);
+        if (_propCollectSound != null)
+            audioEvent.RaisePlayback(_propCollectSound);
+
+        CreateAttachPoint();
 
         // Waits for one second to see if a crash will uncollect it
         _transform.DOLocalMove(_transform.localPosition, 1f)
             .OnComplete(MoveTowardAttachPoint);
     }
 
-    private void CreateAttachPoint(Collider collider)
+    private void CreateAttachPoint()
     {
         // Create an object at the closest point to the collider
-        _attachPoint = new GameObject("TempAttachPoint");
+        _attachPoint = new GameObject("PropAttachPoint");
         _attachPoint.transform.position =
-            collider.ClosestPoint(transform.position);
-        _attachPoint.transform.SetParent(collider.transform);
+            _clumpData.Collider.ClosestPoint(transform.position);
+        _attachPoint.transform.SetParent(_clumpData.Transform);
+        transform.SetParent(_attachPoint.transform);
     }
 
     private void MoveTowardAttachPoint()
     {
         // Then move towards it
-        Vector3 endPosition = _attachPoint.transform.localPosition;
-        _clumpData.IncreaseTorqueAndCollider(
-            ClumpTorqueChangeAmount, ClumpRadiusChangeAmount);
-        _transform.DOLocalMove(endPosition, _attachDuration).OnComplete(() =>
+        _transform.DOLocalMove(Vector3.zero, _attachDuration).OnComplete(() =>
         {
+            transform.SetParent(_clumpData.Transform);
             Destroy(_attachPoint);
         });
     }
 
     public void Uncollect()
     {
-        // Stop everything
+        // Stop everything, like moving, or waiting
         StopAllCoroutines();
         _transform.DOKill();
 
-        StartCoroutine(UncollectRoutine());
-    }
-    private IEnumerator UncollectRoutine()
-    {
         // Return to the starting parent
         _transform.SetParent(_originalParent);
         _transform.rotation = Quaternion.identity;
 
         // Moves to a seemingly random position
-        var p = transform.localPosition;
+        SetTrailActive(true);
+        var localPos = transform.localPosition;
         var endPos = Vector3.zero;
-        endPos.x = p.x + Random.Range(-1f, 1f);
-        endPos.z = p.z + Random.Range(-1f, 1f);
+        endPos.x = localPos.x + Random.Range(-1f, 1f);
+        endPos.z = localPos.z + Random.Range(-1f, 1f);
         _transform.DOPunchScale(_transform.localScale * 1.1f, 1f);
-        _transform.DOLocalJump(endPos, 1f, 2, 1f);
+        _transform.DOLocalJump(endPos, 1f, 2, 1f).OnComplete(() =>
+        {
+            StartCoroutine(FlickerRoutine());
+        });
+    }
 
+    private IEnumerator FlickerRoutine()
+    {
         // Flickers the sprite for some time
         var flickerTime = 0f;
         var alphaChange = Color.white;
@@ -189,13 +166,16 @@ public class Prop : MonoBehaviour
             flickerTime += waitTime;
         }
         _renderer.color = Color.white;
+        SetTrailActive(false);
 
         // Resets the prop
         _colliders.ForEach(c => c.gameObject.SetActive(true));
         ToggleCollectable(true);
+    }
 
-        _clumpData.DecreaseTorqueAndCollider(
-            ClumpTorqueChangeAmount, ClumpRadiusChangeAmount);
+    private void SetTrailActive(bool active)
+    {
+        _uncollectTrail.gameObject.SetActive(active);
     }
 
     private void OnValidate()
@@ -204,8 +184,8 @@ public class Prop : MonoBehaviour
         if (_sprite != null)
         {
             _renderer.sprite = _sprite;
+            name = _sprite.name;
         }
-        //name = _sprite.name;
     }
 
     private void OnDrawGizmos()

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -27,13 +26,17 @@ public class LevelManager : MonoBehaviour
     {
         _sceneLoaded.OnEventRaised += FireEvents;
         _timerFinished.OnEventRaised += TimeIsUp;
+        _clumpData.OnPropCountChanged += CheckForCollectionWin;
     }
 
     private void OnDisable()
     {
         _sceneLoaded.OnEventRaised -= FireEvents;
         _timerFinished.OnEventRaised -= TimeIsUp;
+        _clumpData.OnPropCountChanged -= CheckForCollectionWin;
     }
+
+    private bool HasReachedWinAmount() => _clumpData.CollectedCount >= _winCollectAmount;
 
     private void FireEvents()
     {
@@ -45,30 +48,25 @@ public class LevelManager : MonoBehaviour
     private void TimeIsUp()
     {
         _pauseEvent.Raise(true, false, name);
+        StartCoroutine(WinLoseCheckRoutine());
+    }
 
-        if (HasReachedWinAmount())
-        {
+    private void CheckForCollectionWin(int count)
+    {
+        if (HasReachedWinAmount()) StartCoroutine(WinLoseCheckRoutine());
+    }
+
+    private IEnumerator WinLoseCheckRoutine()
+    {
+        var won = HasReachedWinAmount();
+        if (won)
             _winEvent.Raise(name);
-            StartCoroutine(WinConditionMet());
-        }
         else
-        {
             _loseEvent.Raise(name);
-            StartCoroutine(LoseConditionMet());
-        }
-    }
+        _pauseEvent.Raise(true, true, name);
 
-    private bool HasReachedWinAmount() => _clumpData.Size >= _winCollectAmount;
-
-    private IEnumerator WinConditionMet()
-    {
         yield return new WaitForSeconds(2f);
-        _loadEvent.Raise(_nextScene, name);
-    }
 
-    private IEnumerator LoseConditionMet()
-    {
-        yield return new WaitForSeconds(2f);
-        _loadEvent.Raise(_retryScene, name);
+        _loadEvent.Raise(won ? _nextScene : _retryScene, name);
     }
 }

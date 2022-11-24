@@ -37,7 +37,7 @@ public class ClumpControllerIsometric : MonoBehaviour
 
     private void Awake()
     {
-        _clumpData.SetUp(transform, _collider, _startingSize, _startingTorque);
+        //_clumpData.ConfigureData(transform, _collider, _startingSize, _startingTorque);
         _telemetryObject.gameObject.SetActive(false);
     }
 
@@ -98,7 +98,7 @@ public class ClumpControllerIsometric : MonoBehaviour
     {
         if (_input != Vector3.zero && _canMove)
         {
-            _body.AddTorque(_startingTorque * Time.deltaTime * _telemetryObject.right,
+            _body.AddForce(_startingTorque * Time.deltaTime * _telemetryObject.forward,
             //_body.AddTorque(_clumpData.Torque * Time.deltaTime * _telemetryObject.right,
                 _forceMode);
         }

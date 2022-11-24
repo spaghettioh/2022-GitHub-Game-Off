@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2c92b0260594ddea0dc72b63967232, type: 3}
+  m_Name: ClumpData
+  m_EditorClassIdentifier: 
+  <MaxSpeed>k__BackingField: 100
+  <MinColliderRadius>k__BackingField: 0.2
+  <MaxColliderRadius>k__BackingField: 3
+  <MinMoveForce>k__BackingField: 200
+  <MaxMoveForce>k__BackingField: 1000
+  _header: 
+  <Collider>k__BackingField: {fileID: 0}
+  <Transform>k__BackingField: {fileID: 0}
+  <CollectedCount>k__BackingField: 82
+  <Velocity>k__BackingField: 1.2154683
+  <MoveForce>k__BackingField: 990.3611

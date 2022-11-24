@@ -3,8 +3,7 @@ using UnityEngine.Events;
 
 public class PropColliderMesh : MonoBehaviour
 {
-    public UnityAction<Collision> OnCollision;
-    public UnityAction<Collider> OnTrigger;
+    public UnityAction<Collider> OnCollision;
 
     private Collider _collider;
 
@@ -20,13 +19,13 @@ public class PropColliderMesh : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (OnCollision != null) OnCollision.Invoke(collision);
+        if (OnCollision != null) OnCollision.Invoke(collision.collider);
         else Debug.LogWarning($"{name} raised a collision but no one listens.");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (OnTrigger != null) OnTrigger.Invoke(other);
+        if (OnCollision != null) OnCollision.Invoke(other);
         else Debug.LogWarning($"{name} raised a trigger but no one listens.");
     }
 }

@@ -1,107 +1,135 @@
-using System.Collections;
 using UnityEngine;
 
-public class ClumpController : MonoBehaviour
+[System.Serializable]
+public abstract class ClumpController : MonoBehaviour
 {
-    private enum Mode
+    private enum ForceType
     {
-        Gameplay,
-        Cutscene
+        //ExplosionForce,
+        Force,
+        //ForceAtPosition,
+        RelativeForce,
+        RelativeTorque,
+        Torque,
     }
 
-    [SerializeField] private Mode _mode = Mode.Gameplay;
-    [SerializeField] private float _crashStateDuration = 1f;
-    [SerializeField] private SphereCollider _collider;
-    [SerializeField] private Rigidbody _body;
+    // Take directional input
+    // Calculate the force direction based on input
+    // Apply force in that direction
+    [Header("Controller setup")]
+    [SerializeField] protected SphereCollider Collider;
+    [SerializeField] protected Rigidbody Body;
+    [SerializeField] private Transform Telemetry;
 
-    [Header("Data and size")]
-    [SerializeField] private ClumpDataSO _clumpData;
-    [SerializeField] private float _startingSize;
+    [Header("Movement")]
+    [SerializeField] private ForceType _forceType;
+    [SerializeField] private float _force;
+    [SerializeField] private ForceMode _forceMode;
+    [SerializeField] private float _maxSpeed;
 
-    [Header("Listening to...")]
-    [SerializeField] private VoidEventSO _crashEvent;
-    [SerializeField] private PauseGameplayEventSO _pauseGameplay;
+    [Header("CONTROLLER DEBUG ==========")]
+    [SerializeField] private Vector3 _directionalInput;
 
-    private Camera _camera;
-    private Vector3 _cutsceneTorqueAxis = Vector3.right;
-    private bool _canMove = true;
-
-    //private void Awake() =>
-        //_clumpData.SetUp(transform, _collider, _startingSize);
-
-    private void OnEnable()
+    private void Awake()
     {
-        _crashEvent.OnEventRaised += Crashed;
-        _pauseGameplay.OnEventRaised += PauseMovement;
+        Telemetry.gameObject.SetActive(false);
+        Telemetry.SetParent(null);
     }
 
-    private void OnDisable()
+    public virtual void Update()
     {
-        _crashEvent.OnEventRaised -= Crashed;
-        _pauseGameplay.OnEventRaised -= PauseMovement;
+        CalculateForceDirection();
     }
 
-    private void Start() => _camera = Camera.main;
-
-    private void Update()
+    public virtual void FixedUpdate()
     {
-        var torqueInput = _mode
-            == Mode.Gameplay ? Input.GetAxisRaw("Vertical") : 1f;
-
-        if (torqueInput < 0) torqueInput *= _clumpData.ReverseSpeedPercentage;
-
-        Move(_mode == Mode.Gameplay ? _camera.transform.right * torqueInput
-            : _cutsceneTorqueAxis);
+        ApplyDirectionalForce();
     }
 
-    private void Move(Vector3 moveDirection)
+    protected void SetDirectionalInput(Vector2 input)
     {
-        if (_clumpData.Velocity < _clumpData.MaxSpeed && _canMove)
+        _directionalInput = new Vector3(input.x, 0, input.y);
+    }
+
+    public void ConfigureController(float radius, float torque, float maxSpeed)
+    {
+        Collider.radius = radius;
+        _force = torque;
+        _maxSpeed = maxSpeed;
+    }
+
+    public void SetMoveConfig(float force)
+    {
+        _force = force;
+    }
+
+    private void CalculateForceDirection()
+    {
+        if (_directionalInput != Vector3.zero)
         {
-            _body.AddTorque(_clumpData.Torque * Time.deltaTime * moveDirection,
-                ForceMode.Force);
-        }
+            var matrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
+            var skewedInput = matrix.MultiplyPoint3x4(_directionalInput);
 
-        _clumpData.SetVelocity(_body.velocity.magnitude);
-    }
+            var relative = (Telemetry.position + skewedInput)
+                - Telemetry.position;
+            var rot = Quaternion.LookRotation(relative, Vector3.up);
 
-    private void PauseMovement(bool pause, bool shouldStopMovement)
-    {
-        _canMove = !pause;
-
-        if (shouldStopMovement)
-        {
-            _body.Sleep();
-            _body.useGravity = false;
-            _collider.enabled = false;
-        }
-        else
-        {
-            _collider.enabled = true;
-            _body.useGravity = true;
+            Telemetry.rotation = Quaternion.RotateTowards(
+                Telemetry.rotation, rot, 360);
         }
     }
 
-    private void Crashed() => StartCoroutine(CrashedRoutine());
-    private IEnumerator CrashedRoutine()
+    private void ApplyDirectionalForce()
     {
-        if (_mode == Mode.Gameplay)
+        if (_directionalInput != Vector3.zero
+            && Body.velocity.magnitude < _maxSpeed)
         {
-            _canMove = false;
-            yield return new WaitForSeconds(_crashStateDuration);
-            _canMove = true;
+            switch (_forceType)
+            {
+                //case ForceType.ExplosionForce:
+                //    _body.AddExplosionForce(_force * Time.deltaTime * Telemetry.forward,
+                //     _forceMode);
+                //    break;
+
+                case ForceType.Force:
+                    Body.AddForce(
+                        _force * Time.deltaTime * Telemetry.forward,
+                        _forceMode);
+                    break;
+
+                //case ForceType.ForceAtPosition:
+                //    _body.AddForceAtPosition(_force * Time.deltaTime * Telemetry.forward,
+                //    _forceMode);
+                //    break;
+
+                case ForceType.RelativeForce:
+                    Body.AddRelativeForce(
+                        _force * Time.deltaTime * Telemetry.forward,
+                        _forceMode);
+                    break;
+
+                case ForceType.RelativeTorque:
+                    Body.AddRelativeTorque(
+                        _force * Time.deltaTime * Telemetry.right,
+                        _forceMode);
+                    break;
+
+                case ForceType.Torque:
+                    Body.AddTorque(
+                        _force * Time.deltaTime * Telemetry.right,
+                        _forceMode);
+                    break;
+
+                default:
+                    throw new System.Exception("Unmapped ForceType");
+            }
         }
     }
 
-    public void TutorialSteerLeft(float waitTime) =>
-        StartCoroutine(TutorialSteerRoutine(
-            Vector3.forward + Vector3.right, waitTime));
-    public void TutorialSteerRight(float waitTime) =>
-        StartCoroutine(TutorialSteerRoutine(
-            Vector3.back + Vector3.right, waitTime));
-    private IEnumerator TutorialSteerRoutine(Vector3 heading, float waitTime)
+    protected void ShowTelemetry(bool show)
     {
-        yield return new WaitForSeconds(waitTime);
-        _cutsceneTorqueAxis = heading;
+        Telemetry.gameObject.SetActive(show);
+
+        if (show) Telemetry.position = transform.position;
     }
 }

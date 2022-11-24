@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7874543331437844782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3984956405087293208}
+  - component: {fileID: 33196364726931049}
+  - component: {fileID: 5122032243296443293}
+  m_Layer: 7
+  m_Name: _PropManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3984956405087293208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874543331437844782}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &33196364726931049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874543331437844782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e66819bb941498a8d9fc926fd86708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clumpData: {fileID: 11400000, guid: d0c59fb33456a457c9ee98332ddb6f79, type: 2}
+  _propCollection: {fileID: 11400000, guid: 90e803cfd6e7246e29bf008f71b4816e, type: 2}
+  _defaultCollectSound: {fileID: 11400000, guid: 452d11ff030de43dba0b6178f24ca84c, type: 2}
+  _crashShakeDuration: 1
+  _crashSoundSmall: {fileID: 11400000, guid: 14ea6da2035f94e349c1336c03472b17, type: 2}
+  _crashSoundLarge: {fileID: 11400000, guid: b01cc3af5cc2a4c4b99deaad156131ee, type: 2}
+  _propCollectEvent: {fileID: 11400000, guid: 6cd82bef9c9dd443dac866668ed6b034, type: 2}
+  _audioEvent: {fileID: 11400000, guid: 6eb9381f6eb7d4299979aa0aa12b8466, type: 2}
+  _crashEvent: {fileID: 11400000, guid: 33f50c759cd2040f6963327c2706f01b, type: 2}
+  _forceSpriteOrientation: 0
+  _clumpRadiusIncrement: 0
+  _clumpTorqueIncrement: 0
+  _props: []
+  _collectableProps: []
+--- !u!114 &5122032243296443293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874543331437844782}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd24517a1a6d4e89afd02f54517813a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

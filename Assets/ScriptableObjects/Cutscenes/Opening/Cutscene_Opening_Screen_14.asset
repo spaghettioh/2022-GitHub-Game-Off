@@ -19,5 +19,5 @@ MonoBehaviour:
   <TextBlocks>k__BackingField:
   - Text: '"I know just where to start..."'
     CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
-    BlockSound: {fileID: 11400000, guid: fb8b336af07ff4cf488973b4c549e55b, type: 2}
+    BlockSound: {fileID: 0}
     WaitTime: 0

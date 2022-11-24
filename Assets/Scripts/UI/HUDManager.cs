@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using System;
+using UnityEngine;
 
 public class HUDManager : MonoBehaviour
 {
@@ -28,7 +24,7 @@ public class HUDManager : MonoBehaviour
     private void OnEnable()
     {
         _propsToWin.OnEventRaised += SetWinAmount;
-        _clumpData.OnSizeChanged += UpdateCountText;
+        _clumpData.OnPropCountChanged += UpdateCountText;
         _winCondition.OnEventRaised += ShowWinDialog;
         _loseCondition.OnEventRaised += ShowLoseDialog;
     }
@@ -36,7 +32,7 @@ public class HUDManager : MonoBehaviour
     private void OnDisable()
     {
         _propsToWin.OnEventRaised -= SetWinAmount;
-        _clumpData.OnSizeChanged -= UpdateCountText;
+        _clumpData.OnPropCountChanged -= UpdateCountText;
         _winCondition.OnEventRaised -= ShowWinDialog;
         _loseCondition.OnEventRaised -= ShowLoseDialog;
     }
@@ -50,11 +46,11 @@ public class HUDManager : MonoBehaviour
     private void SetWinAmount(int winAmount)
     {
         _winAmount = winAmount;
-        UpdateCountText(0);
+        UpdateCountText();
     }
-    private void UpdateCountText(float f)
+    private void UpdateCountText(int count = 0)
     {
-        _propCountText.text = $"Collected: {_clumpData.Size} / {_winAmount}";
+        _propCountText.text = $"Collected: {count} / {_winAmount}";
     }
 
     private void ShowWinDialog()
