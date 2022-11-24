@@ -38,5 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cutscenes/Cutscene_99_TheEnd.unity
     guid: c9861bc6315a544d3b3fbd4f799d1648
+  - enabled: 1
+    path: Assets/Scenes/UI/UI_99_WinScene.unity
+    guid: 56752aec3afa74f079a958bca3fd439c
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 0e8944a17ade8467f8baba95971a28e5, type: 2}

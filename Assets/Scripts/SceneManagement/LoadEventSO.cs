@@ -8,6 +8,8 @@ public class LoadEventSO : ScriptableObject
     public UnityAction<string> OnSceneLoadRequested;
     public UnityAction<string> OnSceneLoadTransitionlessRequested;
     public UnityAction<string> OnRetrySceneLoadRequested;
+    public UnityAction<string> OnWinSceneRequested;
+    public UnityAction OnFollowingCutsceneRequested;
 
     /// <summary>
     /// Usually used by UI elements or event listeners
@@ -59,6 +61,27 @@ public class LoadEventSO : ScriptableObject
             OnRetrySceneLoadRequested.Invoke(sceneName);
         else
             Debug.LogWarning($"{elevator} raised {name} (retry)" +
+                $" but no one listens.");
+    }
+
+    public void RaiseWinScene(string followingCutscene) =>
+       RaiseForRetry(followingCutscene, "Win event");
+    public void RaiseWinScene(string followingCutscene,
+        string elevator = "(Undefined)")
+    {
+        if (OnWinSceneRequested != null)
+            OnWinSceneRequested.Invoke(followingCutscene);
+        else
+            Debug.LogWarning($"{elevator} raised {name} (win)" +
+                $" but no one listens.");
+    }
+
+    public void RaiseFollowingCutscene(string elevator = "(Undefined)")
+    {
+        if (OnFollowingCutsceneRequested != null)
+            OnFollowingCutsceneRequested.Invoke();
+        else
+            Debug.LogWarning($"{elevator} raised {name} (win)" +
                 $" but no one listens.");
     }
 }
