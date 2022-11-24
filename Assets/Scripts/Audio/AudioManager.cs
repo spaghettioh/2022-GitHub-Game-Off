@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
             // Create a music emitter if one doesn't exist
             if (_musicEmitter == null)
             {
-                _musicEmitter = _audioEmitterPool.RequestEmitter();
+                _musicEmitter = _audioEmitterPool.Request();
                 _musicEmitter.gameObject.SetActive(true);
             }
 
@@ -54,7 +54,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             // Enable an available emitter and send it the audio to play
-            AudioEmitter emitter = _audioEmitterPool.RequestEmitter();
+            AudioEmitter emitter = _audioEmitterPool.Request();
             emitter.name = audioCue.name;
             emitter.gameObject.SetActive(true);
             emitter.OnEmitterFinished += ReturnEmitterToPool;
@@ -97,7 +97,7 @@ public class AudioManager : MonoBehaviour
     private void ReturnEmitterToPool(AudioEmitter emitter)
     {
         emitter.gameObject.SetActive(false);
-        _audioEmitterPool.ReturnEmitter(emitter);
+        _audioEmitterPool.Return(emitter);
         emitter.OnEmitterFinished -= ReturnEmitterToPool;
     }
 }

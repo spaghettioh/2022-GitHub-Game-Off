@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15aa20611e17046b899417566ecbf26e, type: 3}
   m_Name: AudioEmitterPool
   m_EditorClassIdentifier: 
-  _audioEmitterPrefab: {fileID: 2676713326731612945, guid: b7380a659ab5445c0816a95a7fafb3dc, type: 3}
+  _prefab: {fileID: 2676713326731612945, guid: b7380a659ab5445c0816a95a7fafb3dc, type: 3}
