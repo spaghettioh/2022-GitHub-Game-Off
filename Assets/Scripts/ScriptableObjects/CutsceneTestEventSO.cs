@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu]
+[CreateAssetMenu (
+    fileName = "CutsceneTestEvent", menuName = "Game Off/Cutscene Tester")]
 public class CutsceneTestEventSO : ScriptableObject
 {
     public UnityAction<CutsceneScreenSO> OnCutsceneChanged;

@@ -1,11 +1,8 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
-using System.Linq;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [CreateAssetMenu(
-    fileName = "Cutscene_00_Screen_00", menuName = "Game Off/Cutscene Screen")]
+    fileName = "Cutscene_NAME_Screen_00", menuName = "Game Off/Cutscene Screen")]
 public class CutsceneScreenSO : ScriptableObject
 {
     [System.Serializable]
@@ -26,9 +23,6 @@ public class CutsceneScreenSO : ScriptableObject
         public float WaitTime;
     }
 
-    [TextArea(5, 1000)] public string Source;
-    [TextArea] public string Splitter;
-
     [SerializeField] private CutsceneTestEventSO _testEvent;
     [field: SerializeField] public Sprite Graphic { get; private set; }
 
@@ -37,24 +31,12 @@ public class CutsceneScreenSO : ScriptableObject
 
     private void OnValidate()
     {
-        //if (TextBlocks.Count == 0)
-        //{
-        //    throw new System.Exception($"{name} TextAndSounds can't be empty!");
-        //}
-
-        if (Source != "")
+        if (TextBlocks.Count == 0)
         {
-            TextBlocks = new List<TextAndSound>();
-            Source.Split(Splitter).ToList().ForEach(block =>
-            {
-                TextBlocks.Add(new TextAndSound(block));
-            });
-            //Source.ToList().ForEach(c =>
-            //{
-            //    Debug.Log(c);
-            //});
+            throw new System.Exception($"{name} TextAndSounds can't be empty!");
         }
 
-        //_testEvent.Raise(this, name);
+        if (_testEvent != null)
+            _testEvent.Raise(this, name);
     }
 }
