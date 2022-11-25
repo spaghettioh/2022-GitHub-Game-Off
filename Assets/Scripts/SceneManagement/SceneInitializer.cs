@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneInitializer : MonoBehaviour
 {
-    [SerializeField] private VoidEventSO _skipCurtains;
+    [SerializeField] private VoidEventSO _openCurtains;
 
     [Header("PersistentManagers")]
     [SerializeField] private string _persistentManagersSceneName = "PersistentManagers";
@@ -20,6 +20,6 @@ public class SceneInitializer : MonoBehaviour
 
     private void PersistentManagersLoaded(AsyncOperation unused = default)
     {
-        _skipCurtains.Raise(name);
+        _openCurtains.Raise(name);
     }
 }
