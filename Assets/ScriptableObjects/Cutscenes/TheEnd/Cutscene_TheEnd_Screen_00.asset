@@ -12,14 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
   m_Name: Cutscene_TheEnd_Screen_00
   m_EditorClassIdentifier: 
-  <Graphic>k__BackingField: {fileID: 21300000, guid: 13fd4d132bf5d459ca21facd1e43d9c7, type: 3}
+  <Graphic>k__BackingField: {fileID: 21300000, guid: f246a9c378fa744c0b0bda09237bceab, type: 3}
   <TextBlocks>k__BackingField:
-  - BlockSound: {fileID: 0}
-    Text: This is the end.
+  - Text: 'PRINCE:
+
+      My princess, I have brought
+
+      you the WORLD!
+
+      Surely
+      NOW you''re happy?!'
+    BlockSound: {fileID: 0}
     CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
     WaitTime: 0
-  - BlockSound: {fileID: 0}
-    Text: Beautiful friend.
+  - Text: "PRINCESS:\nI\u2019m not!\nPlease, release us!"
+    BlockSound: {fileID: 11400000, guid: fb8b336af07ff4cf488973b4c549e55b, type: 2}
+    CharacterSound: {fileID: 11400000, guid: 94dc3fddfa24243859530d7fdf19e9d8, type: 2}
+    WaitTime: 1
+  - Text: "PRINCE:\nBut, but... how could you STILL\nbe unhappy?\nThere\u2019s nothing
+      left!"
+    BlockSound: {fileID: 0}
     CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
+    WaitTime: 0
+  - Text: 'PRINCESS:
+
+      I only ever wanted you by my
+
+      side, my prince.'
+    BlockSound: {fileID: 0}
+    CharacterSound: {fileID: 11400000, guid: 94dc3fddfa24243859530d7fdf19e9d8, type: 2}
     WaitTime: 0
   _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
+  _validateNow: 0

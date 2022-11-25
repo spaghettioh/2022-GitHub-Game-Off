@@ -12,14 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
   m_Name: Cutscene_Level_03_Screen_00
   m_EditorClassIdentifier: 
-  Source: 
-  Splitter: 
-  _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
-  <Graphic>k__BackingField: {fileID: 21300000, guid: 31db4f96cb50448f282058ebe9166d53, type: 3}
+  <Graphic>k__BackingField: {fileID: 21300000, guid: f3af28622f7eb4707b9fd794cc813eac, type: 3}
   <TextBlocks>k__BackingField:
-  - Text: '"A club sandwich?? Really?
+  - Text: 'PRINCE:
 
-      Waste of a wish if you ask me."'
-    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
-    BlockSound: {fileID: 11400000, guid: 21fec282628a1437fb2307a137aac910, type: 2}
+      My princess! I''ve brought
+
+      you food, warmth, and
+      comfort!'
+    BlockSound: {fileID: 0}
+    CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
     WaitTime: 0
+  - Text: "PRINCESS:\nNo! You\u2019re not listening! I want out of here!\nI have
+      a kingdom to rule!"
+    BlockSound: {fileID: 11400000, guid: fb8b336af07ff4cf488973b4c549e55b, type: 2}
+    CharacterSound: {fileID: 11400000, guid: 94dc3fddfa24243859530d7fdf19e9d8, type: 2}
+    WaitTime: 0
+  _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
+  _validateNow: 0

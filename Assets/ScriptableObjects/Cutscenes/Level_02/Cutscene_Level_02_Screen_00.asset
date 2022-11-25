@@ -12,26 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
   m_Name: Cutscene_Level_02_Screen_00
   m_EditorClassIdentifier: 
-  <Graphic>k__BackingField: {fileID: 21300000, guid: 04db5f63382984bb49561a60aa747d8f, type: 3}
+  <Graphic>k__BackingField: {fileID: 21300000, guid: b1d3d6a2a702b4d4784675d07b6f2448, type: 3}
   <TextBlocks>k__BackingField:
-  - BlockSound: {fileID: 0}
-    Text: 'Once upon a time, there was a
+  - Text: 'PRINCE:
 
-      prince and a princess who
+      My princess! I''ve brought
 
-      were
-      so in love despite their
-
-      differences.'
-    CharacterSound: {fileID: 0}
+      you riches and jewels
+      galore! '
+    BlockSound: {fileID: 0}
+    CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
     WaitTime: 0
-  - BlockSound: {fileID: 0}
-    Text: 'The princess was always going
+  - Text: "PRINCESS:\nI don\u2019t care about riches and\njewels! Let me out!\nI\u2019m
+      cold and hungry!"
+    BlockSound: {fileID: 0}
+    CharacterSound: {fileID: 11400000, guid: 94dc3fddfa24243859530d7fdf19e9d8, type: 2}
+    WaitTime: 0
+  - Text: 'PRINCE:
 
-      on adventures to keep the
+      Cold and hungry, you say?
 
-      kingdom
-      safe.'
-    CharacterSound: {fileID: 0}
+      I know just what to do!'
+    BlockSound: {fileID: 0}
+    CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
     WaitTime: 0
   _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
+  _validateNow: 0
