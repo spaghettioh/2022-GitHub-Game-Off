@@ -12,36 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
   m_Name: Cutscene_Level_01_Screen_03
   m_EditorClassIdentifier: 
-  Source: 
-  Splitter: 
-  _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
   <Graphic>k__BackingField: {fileID: 21300000, guid: c3b139e91577c40e09bc37c271171dec, type: 3}
   <TextBlocks>k__BackingField:
-  - Text: '"Oh thank heavens you found
+  - Text: 'DJINN:
 
-      me! It''s been AGES! You get 3
+      Oh thank heavens you found
 
-      wishes,
-      young prince!"'
-    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
+      me! It''s been AGES! You
+      get
+
+      three wishes, my prince!'
     BlockSound: {fileID: 11400000, guid: 67baacb3168dc46c2948bd5a75a14ca6, type: 2}
-    WaitTime: 0
-  - Text: 'The prince couldn''t believe his
-
-      eyes.
-
-
-      "This CAN''T be
-      real! NO way!"'
-    CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
-    BlockSound: {fileID: 0}
-    WaitTime: 0
-  - Text: '"Ah, but it is! Your heart called
-
-      out with an impossible wish,
-      and
-
-      now here I am to help you!"'
     CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
-    BlockSound: {fileID: 11400000, guid: 21fec282628a1437fb2307a137aac910, type: 2}
     WaitTime: 0
+  - Text: 'PRINCE:
+
+      This CAN''T be real! NO way!"'
+    BlockSound: {fileID: 0}
+    CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
+    WaitTime: 0
+  - Text: 'DJINN:
+
+      But it is! Your heart carries an
+
+      impossible wish,
+      so here I am!
+
+      Make your first wish!'
+    BlockSound: {fileID: 11400000, guid: 21fec282628a1437fb2307a137aac910, type: 2}
+    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
+    WaitTime: 0
+  _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
+  _validateNow: 0

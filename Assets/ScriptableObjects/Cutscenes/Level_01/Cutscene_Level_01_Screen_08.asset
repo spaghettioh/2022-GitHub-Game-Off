@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
   m_Name: Cutscene_Level_01_Screen_08
   m_EditorClassIdentifier: 
-  Source: 
-  Splitter: 
-  _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
   <Graphic>k__BackingField: {fileID: 21300000, guid: 31db4f96cb50448f282058ebe9166d53, type: 3}
   <TextBlocks>k__BackingField:
-  - Text: '"That''s more like it!"'
-    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
+  - Text: 'DJINN:
+
+      That''s more like it!'
     BlockSound: {fileID: 11400000, guid: 21fec282628a1437fb2307a137aac910, type: 2}
-    WaitTime: 0
+    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
+    WaitTime: 1.5
+  _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
+  _validateNow: 0
