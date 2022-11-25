@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class CutsceneTextTestListener : MonoBehaviour
+public class CutsceneTester : MonoBehaviour
 {
     [SerializeField] private CutsceneTestEventSO _testEvent;
     [SerializeField] private Image _thumbnail;
