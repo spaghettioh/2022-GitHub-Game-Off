@@ -13,14 +13,18 @@ public class ComponentPoolBase<T> : ScriptableObject where T : Component
     /// </summary>
     /// <param name="count">The number of emitters to create</param>
     /// <param name="parent">The parent object for the emitters</param>
-    public void PreWarm(int count, Transform parent = null)
+    public List<T> PreWarm(int count, Transform parent = null)
     {
+        var returnList = new List<T>();
+
         _parent = parent;
         // Create a pool of disabled audio emitters
-        for (var i = 0; i < count; i++)
+        for (var i = 1; i < count; i++)
         {
-            Create();
+            returnList.Add(Create());
         }
+
+        return returnList;
     }
 
     /// <summary>

@@ -91,6 +91,7 @@ public class PropManager : MonoBehaviour
 
     private void CrashIntoProp(Prop p)
     {
+        Debug.Log($"Crash velocity: {_clumpData.Velocity}");
         if (_clumpData.Velocity >= _clumpData.MaxSpeed / 3)
         {
             _audioEvent.RaisePlayback(_crashSoundLarge);

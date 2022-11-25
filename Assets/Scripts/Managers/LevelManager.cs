@@ -67,6 +67,6 @@ public class LevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        _loadEvent.Raise(won ? _nextScene : _retryScene, name);
+        _loadEvent.RaiseWinScene(won ? _nextScene : _retryScene, name);
     }
 }

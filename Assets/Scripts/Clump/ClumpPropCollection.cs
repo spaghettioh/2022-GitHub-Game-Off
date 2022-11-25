@@ -2,45 +2,63 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System.Linq;
 
-public class ClumpPropCollection : MonoBehaviour
+public static class ClumpPropCollection
 {
-    [SerializeField] private ClumpDataSO _clumpData;
-    [SerializeField] private TransformAnchorSO _clumpPropCollection;
-    [field: SerializeField]
-    public List<Prop> CollectedProps { get; private set; }
-    private Transform _t;
+    //[SerializeField] private static List<Prop> _clumpPropCollection;
+    //[SerializeField] private ClumpPropCollectionSO _clumpPropCollection;
 
-    [Header("Listening to...")]
-    [SerializeField] private PropCollectEventSO _collectEvent;
+    [field: SerializeField] private static List<Prop> _propsCollected;
+    //public List<Prop> PropsCollected { get { return _propsCollected; } }
 
-    private void Awake()
+    public static void Reset()
     {
-        _clumpPropCollection.Set(transform);
-        TryGetComponent(out _t);
+        _propsCollected = new List<Prop>();
     }
 
-    private void OnEnable()
+    public static void AddProp(Prop prop)
     {
-        //_clumpData.OnScaleChanged += ScaleDown;
-        _collectEvent.OnEventRaised += Collect;
+        Debug.Log(prop);
+        _propsCollected.Add(prop);
     }
 
-    private void OnDisable()
+    public static void RemoveProp(Prop prop)
     {
-        //_clumpData.OnScaleChanged -= ScaleDown;
+        _propsCollected.Remove(prop);
     }
 
-    private void Collect(Prop collectedProp)
+    public static void PrepForWinScreen()
     {
-        CollectedProps.Add(collectedProp);
+        _propsCollected.ForEach(prop =>
+        {
+            // TODO 
+        });
     }
 
-    private void Update() => _t.SetPositionAndRotation(
-        _clumpData.Transform.position, _clumpData.Transform.rotation);
-
-    private void ScaleDown(PropScaleCategory DGAF)
+    public static int GetCount()
     {
-        //transform.DOScale(transform.localScale * .5f, 2f);
+        return _propsCollected.Count;
     }
+
+    public static Prop GetLast()
+    {
+        return _propsCollected.Last();
+    }
+
+    public static List<Prop> GetProps()
+    {
+        return _propsCollected;
+    }
+
+    public static List<Prop> GetAttachingProps()
+    {
+        return _propsCollected.FindAll(p => p.IsAttaching);
+    }
+    //private void Update()
+    //{
+    //    Debug.Log(_clumpPropCollection.PropsCollected.Count);
+    //    _clumpPropCollection.PropsCollected.ForEach(prop =>
+    //    Debug.Log(prop.name));
+    //}
 }

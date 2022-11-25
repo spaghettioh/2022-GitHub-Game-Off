@@ -80,6 +80,8 @@ public class SceneLoaderSystem : MonoBehaviour
 
     private void TransitionToFollowingCutscene()
     {
+        if (_followingCutscene == "")
+            _followingCutscene = "UI_01_Title";
         TransitionToNextScene(_followingCutscene);
         _followingCutscene = "";
     }

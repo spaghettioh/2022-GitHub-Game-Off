@@ -4,14 +4,20 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
 public class Prop : MonoBehaviour
 {
     public UnityAction<Prop> OnCollisionEvent;
 
     [Header("Config")]
     [SerializeField] private Sprite _sprite;
+    public Sprite Sprite
+    {
+        get { return _renderer.sprite; }
+    }
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private TrailRenderer _uncollectTrail;
+    [SerializeField] private Transform _transform;
 
     [Header("Collection")]
     [SerializeField] private ClumpDataSO _clumpData;
@@ -32,7 +38,6 @@ public class Prop : MonoBehaviour
     [SerializeField] private float _attachDuration = 10f;
     [field: SerializeField] public bool IsAttaching { get; private set; }
 
-    private Transform _transform;
 
     private void Awake()
     {
@@ -173,10 +178,8 @@ public class Prop : MonoBehaviour
         ToggleCollectable(true);
     }
 
-    private void SetTrailActive(bool active)
-    {
+    private void SetTrailActive(bool active) =>
         _uncollectTrail.gameObject.SetActive(active);
-    }
 
     private void OnValidate()
     {

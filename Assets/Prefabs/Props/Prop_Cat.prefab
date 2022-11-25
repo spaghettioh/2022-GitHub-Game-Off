@@ -3448,6 +3448,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2078838783906249053, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: _sprite
       value: 
@@ -3496,6 +3500,10 @@ PrefabInstance:
       propertyPath: _colliders.Array.data[8]
       value: 
       objectReference: {fileID: 4794773337616000824}
+    - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+      propertyPath: <SizeToCollect>k__BackingField
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 5156284617504704147, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -3538,7 +3546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7888930937545354424, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}

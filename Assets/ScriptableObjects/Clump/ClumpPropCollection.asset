@@ -12,4 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb41c2d3c834d41d6b4fee809b1f93a6, type: 3}
   m_Name: ClumpPropCollection
   m_EditorClassIdentifier: 
-  _collectEvent: {fileID: 11400000, guid: 6cd82bef9c9dd443dac866668ed6b034, type: 2}
+  _winEvent: {fileID: 11400000, guid: ef077a62f70bf461f8b11f1a1d8e8b2c, type: 2}
+  _currentScenePropsCollected:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _propsForWinScreen:
+  - Sprite: {fileID: 21300000, guid: 21e159b129ecf4c62b2d4932170a6cfe, type: 3}
+    Scale: 1
+  - Sprite: {fileID: 21300000, guid: 21e159b129ecf4c62b2d4932170a6cfe, type: 3}
+    Scale: 1
+  - Sprite: {fileID: 21300000, guid: 21e159b129ecf4c62b2d4932170a6cfe, type: 3}
+    Scale: 1
+  - Sprite: {fileID: 21300000, guid: 21e159b129ecf4c62b2d4932170a6cfe, type: 3}
+    Scale: 1
+  - Sprite: {fileID: 21300000, guid: 21e159b129ecf4c62b2d4932170a6cfe, type: 3}
+    Scale: 1
+  - Sprite: {fileID: 21300000, guid: 21e159b129ecf4c62b2d4932170a6cfe, type: 3}
+    Scale: 1
+  - Sprite: {fileID: 21300000, guid: 21e159b129ecf4c62b2d4932170a6cfe, type: 3}
+    Scale: 1
+  - Sprite: {fileID: 21300000, guid: 21e159b129ecf4c62b2d4932170a6cfe, type: 3}
+    Scale: 1
+  - Sprite: {fileID: 21300000, guid: 21e159b129ecf4c62b2d4932170a6cfe, type: 3}
+    Scale: 0.9999999
+  - Sprite: {fileID: 21300000, guid: 21e159b129ecf4c62b2d4932170a6cfe, type: 3}
+    Scale: 1

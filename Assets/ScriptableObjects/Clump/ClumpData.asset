@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c92b0260594ddea0dc72b63967232, type: 3}
   m_Name: ClumpData
   m_EditorClassIdentifier: 
-  <MaxSpeed>k__BackingField: 100
+  <MaxSpeed>k__BackingField: 10
   <MinColliderRadius>k__BackingField: 0.2
   <MaxColliderRadius>k__BackingField: 3
-  <MinMoveForce>k__BackingField: 200
-  <MaxMoveForce>k__BackingField: 1000
+  <MinMoveForce>k__BackingField: 500
+  <MaxMoveForce>k__BackingField: 2000
   _header: 
   <Collider>k__BackingField: {fileID: 0}
   <Transform>k__BackingField: {fileID: 0}
-  <CollectedCount>k__BackingField: 82
-  <Velocity>k__BackingField: 1.2154683
-  <MoveForce>k__BackingField: 990.3611
+  <CollectedCount>k__BackingField: 171
+  <Velocity>k__BackingField: 0.9901091
+  <MoveForce>k__BackingField: 1332.79
