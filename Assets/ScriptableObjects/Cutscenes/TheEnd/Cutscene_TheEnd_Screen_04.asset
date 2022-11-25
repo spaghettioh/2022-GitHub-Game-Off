@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
   m_Name: Cutscene_TheEnd_Screen_04
   m_EditorClassIdentifier: 
-  <Graphic>k__BackingField: {fileID: 21300000, guid: c648aa3e6a2d8483a857ee50dff8719a, type: 3}
+  <Graphic>k__BackingField: {fileID: 21300000, guid: 0ff62719b2f92435aa5854aa619058ea, type: 3}
   <TextBlocks>k__BackingField:
   - Text: 
     BlockSound: {fileID: 11400000, guid: 21fec282628a1437fb2307a137aac910, type: 2}
