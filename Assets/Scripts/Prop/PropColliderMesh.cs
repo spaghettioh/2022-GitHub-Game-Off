@@ -14,7 +14,6 @@ public class PropColliderMesh : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log($"Collision {name} {collision.collider}");
         if (OnCollision != null)
             OnCollision.Invoke((SphereCollider)collision.collider);
         else Debug.LogWarning($"{name} raised a collision but no one listens.");
@@ -22,7 +21,6 @@ public class PropColliderMesh : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Trigger {name} {other}");
         if (OnCollision != null) OnCollision.Invoke((SphereCollider)other);
         else Debug.LogWarning($"{name} raised a trigger but no one listens.");
     }

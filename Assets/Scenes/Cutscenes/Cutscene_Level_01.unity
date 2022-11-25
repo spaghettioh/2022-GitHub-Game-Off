@@ -574,7 +574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2708097583481262995, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
       propertyPath: _nextScene
-      value: Cutscene_Tutorial
+      value: Level_01
       objectReference: {fileID: 0}
     - target: {fileID: 2708097583481262995, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
       propertyPath: _testEvent
@@ -920,20 +920,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2985779781155416187, guid: b9e0af3427104432d9b408ce5094bfff, type: 3}
+      propertyPath: orthographic size
+      value: 3.21875
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985779781155416187, guid: b9e0af3427104432d9b408ce5094bfff, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2985779781155416187, guid: b9e0af3427104432d9b408ce5094bfff, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0
+      value: 0.0038498556
       objectReference: {fileID: 0}
     - target: {fileID: 2985779781155416187, guid: b9e0af3427104432d9b408ce5094bfff, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 0.99945974
       objectReference: {fileID: 0}
     - target: {fileID: 2985779781155416187, guid: b9e0af3427104432d9b408ce5094bfff, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.99133784
       objectReference: {fileID: 0}
     - target: {fileID: 2985779781155416188, guid: b9e0af3427104432d9b408ce5094bfff, type: 3}
       propertyPath: m_Name
