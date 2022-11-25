@@ -11,9 +11,6 @@ public class InputHandlerSO : ScriptableObject
     {
         if (OnDirectionalInput != null)
             OnDirectionalInput.Invoke(input);
-        else
-            Debug.LogWarning($"{elevator} raised Directional Input but " +
-                $"no one listens.");
 
         DirectionalInput = input;
     }
