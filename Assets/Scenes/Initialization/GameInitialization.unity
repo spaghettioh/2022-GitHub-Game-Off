@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _loadEventChannel: {fileID: 11400000, guid: 26da3b366274b4ea09c17ce2bb1024a2, type: 2}
-  _titleSceneName: UI_00_BootScreen
+  _titleSceneName: UI_BootScreen
   _persistentManagersSceneName: PersistentManagers
 --- !u!4 &224780464
 Transform:

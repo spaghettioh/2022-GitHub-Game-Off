@@ -592,7 +592,7 @@ MonoBehaviour:
   _closeCurtains: {fileID: 11400000, guid: 5c274b34b210848a1aaa98ff33446275, type: 2}
   _curtainsClosed: {fileID: 11400000, guid: 9cff850f33d20494bbfc793c0f36da4a, type: 2}
   _sceneLoaded: {fileID: 11400000, guid: cb9a17bd10dbe46c3bf8ce92d3e6fdd2, type: 2}
-  _winSceneName: UI_99_WinScene
+  _winSceneName: UI_WinScene
   _currentActiveScene: 
   _nextScene: 
   _followingCutscene: 

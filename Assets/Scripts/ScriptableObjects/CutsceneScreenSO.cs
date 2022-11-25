@@ -55,6 +55,6 @@ public class CutsceneScreenSO : ScriptableObject
             //});
         }
 
-        _testEvent.Raise(this, name);
+        //_testEvent.Raise(this, name);
     }
 }

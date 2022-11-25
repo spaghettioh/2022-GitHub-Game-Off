@@ -12,13 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Initialization/PersistentManagers.unity
     guid: 4593c4a0f348b47ebb2978632ccb1959
   - enabled: 1
-    path: Assets/Scenes/UI/UI_00_BootScreen.unity
+    path: Assets/Scenes/UI/UI_BootScreen.unity
     guid: 4b4a6c55a23af48c0b8944b2f5c55572
   - enabled: 1
-    path: Assets/Scenes/UI/UI_01_Title.unity
+    path: Assets/Scenes/UI/UI_Title.unity
     guid: 3403efc32e31f4ab99a58247ecee91e3
   - enabled: 1
-    path: Assets/Scenes/UI/UI_99_WinScene.unity
+    path: Assets/Scenes/UI/UI_WinScene.unity
     guid: 56752aec3afa74f079a958bca3fd439c
   - enabled: 1
     path: Assets/Scenes/Levels/Level_01.unity
@@ -30,14 +30,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level_03.unity
     guid: c1d41e8a2e331435195982cfe8d3fe03
   - enabled: 1
-    path: Assets/Scenes/Cutscenes/Cutscene_00_Prologue.unity
+    path: Assets/Scenes/Cutscenes/Cutscene_Title.unity
     guid: 666e2bd8c38c446b784b777815d6b4f0
   - enabled: 1
-    path: Assets/Scenes/Cutscenes/Cutscene_01_Opening.unity
-    guid: 9a035b5c56c944c11a5641044d7a7d76
-  - enabled: 1
-    path: Assets/Scenes/Cutscenes/Cutscene_02_Tutorial.unity
+    path: Assets/Scenes/Cutscenes/Cutscene_Tutorial.unity
     guid: e1e3f9c04ceae48dcbac8f8b999769d0
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Cutscene_Level_01.unity
+    guid: 9a035b5c56c944c11a5641044d7a7d76
   - enabled: 1
     path: Assets/Scenes/Cutscenes/Cutscene_Level_02.unity
     guid: 9725fda3317b34236b56a9b88e0432b1
