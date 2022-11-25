@@ -15,14 +15,11 @@ public class CutsceneTester : MonoBehaviour
 
     private void UpdateCutscene(CutsceneScreenSO screen)
     {
-        // Set the cutscene thumbnail
-        _thumbnail.sprite = screen.Graphic;
-
         // Reset all the boxes
         _textBoxes.ForEach(box =>
         {
             box.gameObject.SetActive(true);
-            box.text = "";
+            box.text = ""; // Unity whines if you update disabled shit
             box.gameObject.SetActive(false);
         });
 
@@ -34,6 +31,9 @@ public class CutsceneTester : MonoBehaviour
             box.gameObject.SetActive(true);
             box.text = block.Text;
         });
+
+        // Set the cutscene thumbnail
+        _thumbnail.sprite = screen.Graphic;
     }
 
     private void OnValidate()

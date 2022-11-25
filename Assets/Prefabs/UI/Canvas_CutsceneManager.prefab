@@ -1627,12 +1627,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"Oh thank heavens you found
+  m_text: 'Once upon a time, there was a
 
-    me! It''s been AGES! You get 3
+    prince and a princess who
 
-    wishes,
-    young prince!"'
+    were
+    so in love despite their
+
+    differences.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1283ee22397094efea62b55fa34168f5, type: 2}
   m_sharedMaterial: {fileID: -4860380454808173432, guid: 1283ee22397094efea62b55fa34168f5, type: 2}
@@ -1895,7 +1897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1926401991987377454
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1944,12 +1946,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"Ah, but it is! Your heart called
-
-    out with an impossible wish, and
-
-    now
-    here I am to help you!"'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1283ee22397094efea62b55fa34168f5, type: 2}
   m_sharedMaterial: {fileID: -4860380454808173432, guid: 1283ee22397094efea62b55fa34168f5, type: 2}
@@ -2105,7 +2102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c3b139e91577c40e09bc37c271171dec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 04db5f63382984bb49561a60aa747d8f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2358,13 +2355,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The prince couldn''t believe his
+  m_text: 'The princess was always going
 
-    eyes.
+    on adventures to keep the
 
-
-    "This CAN''T be real!
-    NO way!"'
+    kingdom
+    safe.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1283ee22397094efea62b55fa34168f5, type: 2}
   m_sharedMaterial: {fileID: -4860380454808173432, guid: 1283ee22397094efea62b55fa34168f5, type: 2}
