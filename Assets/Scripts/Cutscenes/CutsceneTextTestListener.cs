@@ -6,20 +6,38 @@ using TMPro;
 
 public class CutsceneTextTestListener : MonoBehaviour
 {
-    public CutsceneTestEventSO _testEvent;
-    public Image Image;
-    public TMP_Text Text;
+    [SerializeField] private CutsceneTestEventSO _testEvent;
+    [SerializeField] private Image _thumbnail;
+    [SerializeField] private List<TMP_Text> _textBoxes;
+
+    private void OnEnable() => _testEvent.OnCutsceneChanged += UpdateCutscene;
+    private void OnDisable() => _testEvent.OnCutsceneChanged -= UpdateCutscene;
+
+    private void UpdateCutscene(CutsceneScreenSO screen)
+    {
+        // Set the cutscene thumbnail
+        _thumbnail.sprite = screen.Graphic;
+
+        // Reset all the boxes
+        _textBoxes.ForEach(box =>
+        {
+            box.gameObject.SetActive(true);
+            box.text = "";
+            box.gameObject.SetActive(false);
+        });
+
+        // Enable & update text boxes for each block
+        var index = 0;
+        screen.TextBlocks.ForEach(block =>
+        {
+            var box = _textBoxes[index++];
+            box.gameObject.SetActive(true);
+            box.text = block.Text;
+        });
+    }
 
     private void OnValidate()
     {
-        _testEvent.OnCutsceneChanged += (screen) =>
-        {
-            Image.sprite = screen.Graphic;
-            Text.text = "";
-            screen.TextBlocks.ForEach(block =>
-            {
-                Text.text += block.Text + "\r\n----------\r\n";
-            });
-        };
+        _testEvent.OnCutsceneChanged += UpdateCutscene;
     }
 }
