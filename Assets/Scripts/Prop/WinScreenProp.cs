@@ -42,5 +42,6 @@ public class WinScreenProp : MonoBehaviour
     {
         _body.useGravity = true;
         _body.isKinematic = false;
+        _body.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
     }
 }

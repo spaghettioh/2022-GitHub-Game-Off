@@ -148,9 +148,9 @@ public class Prop : MonoBehaviour
         SetTrailActive(true);
         var localPos = transform.localPosition;
         var endPos = Vector3.zero;
-        endPos.x = localPos.x + Random.Range(-1f, 1f);
-        endPos.z = localPos.z + Random.Range(-1f, 1f);
-        _transform.DOPunchScale(_transform.localScale * 1.1f, 1f);
+        endPos.x = localPos.x + Random.Range(-2f, 2f);
+        endPos.z = localPos.z + Random.Range(-2f, 2f);
+        //_transform.DOPunchScale(_transform.localScale * .5f, 1f, 1, 1f);
         _transform.DOLocalJump(endPos, 1f, 2, 1f).OnComplete(() =>
         {
             StartCoroutine(FlickerRoutine());

@@ -236,7 +236,7 @@ TrailRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 24.21
+  m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
 --- !u!1 &6338853664386030576
@@ -249,8 +249,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6338853664386030579}
   - component: {fileID: 2585733098176632727}
+  - component: {fileID: 4923336615321762884}
+  - component: {fileID: 4829698496663024425}
   m_Layer: 7
-  m_Name: _PropBase
+  m_Name: _PropForWinScreen
   m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,6 +305,40 @@ MonoBehaviour:
   _attachPoint: {fileID: 0}
   _attachDuration: 10
   <IsAttaching>k__BackingField: 0
+--- !u!114 &4923336615321762884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6338853664386030576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6915ab75f32cc4ca48fca81f9ddd2e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _body: {fileID: 4829698496663024425}
+  _transform: {fileID: 6338853664386030579}
+  _normalCollider: {fileID: 3161551464957821711}
+  _winScreenCollider: {fileID: 2037139408939982395}
+  _spriteRenderer: {fileID: 5156284617504704147}
+  _isFalling: 0
+--- !u!54 &4829698496663024425
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6338853664386030576}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 8
+  m_CollisionDetection: 0
 --- !u!1 &8446817313727042264
 GameObject:
   m_ObjectHideFlags: 0

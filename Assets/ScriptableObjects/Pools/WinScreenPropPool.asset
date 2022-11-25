@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971771d693f564c26b1a99187ddf43f2, type: 3}
   m_Name: WinScreenPropPool
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 4923336615321762884, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+  _prefab: {fileID: 4923336615321762884, guid: 0b907ca10a08d44d8984b1a8a5adc511, type: 3}

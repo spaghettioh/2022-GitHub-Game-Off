@@ -54,6 +54,8 @@ public class PropManager : MonoBehaviour
 
     private void ProcessCollision(Prop prop)
     {
+        Debug.Log($"Process collisiosn {prop.IsCollectable}");
+
         if (prop.IsCollectable)
         {
             CollectProp(prop);

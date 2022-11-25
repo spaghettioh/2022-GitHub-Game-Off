@@ -3,14 +3,9 @@ using UnityEngine.Events;
 
 public class PropColliderMesh : MonoBehaviour
 {
-    public UnityAction<Collider> OnCollision;
+    public UnityAction<SphereCollider> OnCollision;
 
-    private Collider _collider;
-
-    private void Awake()
-    {
-        TryGetComponent(out _collider);
-    }
+    [SerializeField] private SphereCollider _collider;
 
     public void AdjustSizeAndTrigger(bool isTrigger)
     {
@@ -19,13 +14,16 @@ public class PropColliderMesh : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (OnCollision != null) OnCollision.Invoke(collision.collider);
+        Debug.Log($"Collision {name} {collision.collider}");
+        if (OnCollision != null)
+            OnCollision.Invoke((SphereCollider)collision.collider);
         else Debug.LogWarning($"{name} raised a collision but no one listens.");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (OnCollision != null) OnCollision.Invoke(other);
+        Debug.Log($"Trigger {name} {other}");
+        if (OnCollision != null) OnCollision.Invoke((SphereCollider)other);
         else Debug.LogWarning($"{name} raised a trigger but no one listens.");
     }
 }
