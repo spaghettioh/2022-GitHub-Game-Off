@@ -21,6 +21,9 @@ public class ScreenTransitionManager : MonoBehaviour
     [Header("For pausing the game")]
     [SerializeField] private PauseGameplayEventSO _pauseEvent;
 
+    [Header("")]
+    [SerializeField] private GameObject _hud;
+
     private void OnEnable()
     {
         _openCurtains.OnEventRaised += OpenCurtains;

@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Graphic>k__BackingField: {fileID: 21300000, guid: 881f78d8b51a84f84b7ae62c61a0d62b, type: 3}
   <TextBlocks>k__BackingField:
-  - Text: "PRINCE:\nHey! What\u2019s happening to me?\nNo, wait!\nThis isn\u2019t
-      \u2026"
+  - Text: "PRINCE:\nHey!\nWhat\u2019s happening to me?\nNo, wait! This isn't..."
     BlockSound: {fileID: 11400000, guid: 6be929be2ea614ce9af6361280b722f5, type: 2}
     CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
     WaitTime: 0

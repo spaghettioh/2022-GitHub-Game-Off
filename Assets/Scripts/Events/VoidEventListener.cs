@@ -3,8 +3,6 @@ using UnityEngine.Events;
 
 public class VoidEventListener : MonoBehaviour
 {
-	[SerializeField] private bool _testNow;
-
 	[Header("Listening to...")]
 	[SerializeField] private VoidEventSO _voidEventChannel;
 

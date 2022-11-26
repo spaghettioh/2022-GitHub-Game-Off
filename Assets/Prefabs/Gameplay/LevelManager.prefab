@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e070d7a6e4f49e981636c303f8abc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _testNow: 0
   _voidEventChannel: {fileID: 11400000, guid: ef077a62f70bf461f8b11f1a1d8e8b2c, type: 2}
   OnEventRaised:
     m_PersistentCalls:
@@ -74,7 +73,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e070d7a6e4f49e981636c303f8abc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _testNow: 0
   _voidEventChannel: {fileID: 11400000, guid: 327ee5215a0044e2b9efe43dd369753a, type: 2}
   OnEventRaised:
     m_PersistentCalls:
@@ -101,6 +99,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8342915070629445940}
   - component: {fileID: 8342915070629445943}
+  - component: {fileID: 448084824833015577}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -150,3 +149,31 @@ MonoBehaviour:
   _pauseEvent: {fileID: 11400000, guid: 22f792b1ccc424bba9789fa3641d76ad, type: 2}
   _loadEvent: {fileID: 11400000, guid: 26da3b366274b4ea09c17ce2bb1024a2, type: 2}
   _openCurtains: {fileID: 11400000, guid: 076250e70de264f6e94d4439130e6a16, type: 2}
+--- !u!114 &448084824833015577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342915070629445941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e070d7a6e4f49e981636c303f8abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _voidEventChannel: {fileID: 11400000, guid: ef077a62f70bf461f8b11f1a1d8e8b2c, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 52d1ace4bed4e44b18c1e42360745c55, type: 2}
+        m_TargetAssemblyTypeName: VoidEventSO, GameOff
+        m_MethodName: Raise
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LevelManager
+          m_BoolArgument: 0
+        m_CallState: 2
