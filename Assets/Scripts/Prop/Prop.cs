@@ -21,6 +21,7 @@ public class Prop : MonoBehaviour
 
     [Header("Collection")]
     [SerializeField] private ClumpDataSO _clumpData;
+    [field: SerializeField] public int ScorePoints {get; private set;}
     [SerializeField] private AudioCueSO _propCollectSound;
     public AudioCueSO PropCollectSound
     {

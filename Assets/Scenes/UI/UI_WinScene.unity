@@ -1297,6 +1297,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
+      propertyPath: orthographic size
+      value: 2.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.08974359
+      objectReference: {fileID: 0}
+    - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.82051283
+      objectReference: {fileID: 0}
     - target: {fileID: 868993520624883822, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_Name
       value: Camera_NonLevels
@@ -3613,8 +3625,8 @@ RectTransform:
   - {fileID: 415566131}
   - {fileID: 1977143737}
   - {fileID: 743749642}
-  - {fileID: 1208270966}
   - {fileID: 408474321}
+  - {fileID: 1208270966}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4213,7 +4225,7 @@ GameObject:
   - component: {fileID: 388946211}
   - component: {fileID: 388946210}
   m_Layer: 5
-  m_Name: Text_CollectedValue
+  m_Name: Text_ItemsValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4236,7 +4248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59.41999, y: -59}
+  m_AnchoredPosition: {x: -60, y: -59}
   m_SizeDelta: {x: 47.05, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388946210
@@ -4293,7 +4305,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4970,7 +4982,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 340285732}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5236,7 +5248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106.47, y: -73}
+  m_AnchoredPosition: {x: -106, y: -73}
   m_SizeDelta: {x: 47.05, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &415566132
@@ -6480,6 +6492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 537847426}
   - component: {fileID: 537847425}
+  - component: {fileID: 537847427}
   m_Layer: 0
   m_Name: Advancer
   m_TagString: Untagged
@@ -6503,17 +6516,17 @@ MonoBehaviour:
   OnEventRaised:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 26da3b366274b4ea09c17ce2bb1024a2, type: 2}
-        m_TargetAssemblyTypeName: LoadEventSO, Assembly-CSharp
-        m_MethodName: RaiseFollowingCutscene
-        m_Mode: 5
+      - m_Target: {fileID: 537847427}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: WinSceneAdvancer
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!4 &537847426
 Transform:
@@ -6530,6 +6543,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &537847427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537847424}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7195195d7580b414ebf8bae18b8d349d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waitTime: 2
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 26da3b366274b4ea09c17ce2bb1024a2, type: 2}
+        m_TargetAssemblyTypeName: LoadEventSO, Assembly-CSharp
+        m_MethodName: RaiseFollowingCutscene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: WinSceneAdvancer
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &540135053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7107,7 +7148,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh1803732
+  m_Name: pb_Mesh2359522
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9568,7 +9609,7 @@ GameObject:
   - component: {fileID: 854252610}
   - component: {fileID: 854252609}
   m_Layer: 5
-  m_Name: Text_CollectedLabel
+  m_Name: Text_ItemsLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9591,7 +9632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106.47, y: -59}
+  m_AnchoredPosition: {x: -106, y: -59}
   m_SizeDelta: {x: 47.05, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854252609
@@ -14070,7 +14111,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1198764902}
   - component: {fileID: 1198764903}
-  - component: {fileID: 1198764904}
   m_Layer: 0
   m_Name: WinScreenManager
   m_TagString: Untagged
@@ -14114,29 +14154,23 @@ MonoBehaviour:
   _bottleLeft: {fileID: 915204376}
   _bottleRight: {fileID: 577427515}
   _spawnedProps: []
-  _dropTime: 5
+  _startTime: 1
+  _tallyTime: 5
+  _tallyIncrementTime: 0.02
+  _scoreSound: {fileID: 11400000, guid: 8620c71a8077e4b32971b14af341fcb9, type: 2}
+  _scoreFinishedSound: {fileID: 11400000, guid: 00e0a2492d9b240cc812702eebb55eee, type: 2}
+  _testRemainingTime: 213
+  _itemsText: {fileID: 388946210}
+  _timeText: {fileID: 1977143738}
+  _scoreText: {fileID: 408474322}
   _curtainsOpened: {fileID: 11400000, guid: 0ee31f3c921054585871bdb1b4f479a6, type: 2}
-  _allPropsDropped: {fileID: 11400000, guid: 2058d58419c9c4ec69ca4d1cf4d1bfae, type: 2}
+  _winScreenFinished: {fileID: 11400000, guid: 2058d58419c9c4ec69ca4d1cf4d1bfae, type: 2}
   _audioEvent: {fileID: 11400000, guid: 6eb9381f6eb7d4299979aa0aa12b8466, type: 2}
   _propsCollected: []
   _poolSize: 50
   _test: 1
---- !u!114 &1198764904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198764901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07e070d7a6e4f49e981636c303f8abc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _voidEventChannel: {fileID: 11400000, guid: 0ee31f3c921054585871bdb1b4f479a6, type: 2}
-  OnEventRaised:
-    m_PersistentCalls:
-      m_Calls: []
+  _timeBetweenTallies: 0
+  _totalScore: 0
 --- !u!1001 &1201067070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14394,7 +14428,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 340285732}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -14456,6 +14490,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 537847427}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1208270968
 MonoBehaviour:
@@ -23813,7 +23859,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59.41999, y: -73}
+  m_AnchoredPosition: {x: -60, y: -73}
   m_SizeDelta: {x: 47.05, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977143738
@@ -23870,7 +23916,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

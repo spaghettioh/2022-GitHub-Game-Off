@@ -13,8 +13,8 @@ public class WinScreenProp : MonoBehaviour
     [SerializeField] private SphereCollider _winScreenCollider;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private bool _isFalling;
-    [SerializeField] private AudioCueSO _propCollectSound;
-    public AudioCueSO PropCollectSound { get { return _propCollectSound; } }
+    [SerializeField] private int _scorePoints;
+    public int ScorePoints { get { return _scorePoints; } }
 
     private void FixedUpdate()
     {
@@ -33,7 +33,7 @@ public class WinScreenProp : MonoBehaviour
     {
         _spriteRenderer.sprite = propData.Sprite;
         _transform.DOScale(propData.Scale / 2f, 0f);
-        _propCollectSound = propData.PropCollectSound;
+        _scorePoints = propData.ScorePoints;
         _transform.DOMove(position, 0);
         _normalCollider.gameObject.SetActive(false);
         _winScreenCollider.radius = _normalCollider.radius / 2f;

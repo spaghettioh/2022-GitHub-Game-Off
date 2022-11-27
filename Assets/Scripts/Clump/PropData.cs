@@ -5,12 +5,12 @@ public class PropData
 {
     public Sprite Sprite;
     public float Scale;
-    public AudioCueSO PropCollectSound;
+    public int ScorePoints;
 
-    public PropData(Sprite sprite, float scale, AudioCueSO propCollectSound)
+    public PropData(Sprite sprite, float scale, int scorePoints)
     {
         Sprite = sprite;
         Scale = scale;
-        PropCollectSound = propCollectSound;
+        ScorePoints = scorePoints;
     }
 }

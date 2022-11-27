@@ -60,6 +60,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c1cb9b5c5033e4dfab6354774c1673cc, type: 2}
     - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+      propertyPath: <ScorePoints>k__BackingField
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: <SizeToCollect>k__BackingField
       value: 5
       objectReference: {fileID: 0}

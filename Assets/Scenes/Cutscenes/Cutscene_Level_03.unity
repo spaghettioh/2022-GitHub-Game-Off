@@ -153,6 +153,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
+      propertyPath: orthographic size
+      value: 2.8125
+      objectReference: {fileID: 0}
     - target: {fileID: 868993520624883822, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_Name
       value: Camera_NonLevels
@@ -437,53 +441,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2708097582142550828, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708097582142550828, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708097582142550828, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 220
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708097582142550828, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708097582142550828, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708097582142550829, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_text
-      value: 'Once upon a time, there was
-
-        a prince and a princess who
-
-        were
-        so in love despite their
-
-        differences.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708097582386453107, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708097582386453107, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708097582386453107, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708097582386453107, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2708097583481262994, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -656,30 +613,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_CutsceneManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2865550653017024207, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 220
-      objectReference: {fileID: 0}
-    - target: {fileID: 3174613981378665649, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3174613981378665649, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3174613981378665649, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 220
-      objectReference: {fileID: 0}
-    - target: {fileID: 3174613981378665649, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3174613981378665649, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4343120877798480148, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -712,30 +645,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 8619810669189141925, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8619810669189141925, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8619810669189141925, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 160
-      objectReference: {fileID: 0}
-    - target: {fileID: 8619810669189141925, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8619810669189141925, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8619810669189141925, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8756269042124868101, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
       propertyPath: _testEvent
       value: 
@@ -747,48 +656,6 @@ PrefabInstance:
     - target: {fileID: 8756269042124868101, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
       propertyPath: rects.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8770709043269594932, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_text
-      value: "Once upon a time, there was\na prince and a princess who\nwere so in
-        love despite their\ndifferences.\r\n----------\r\nThe princess was always
-        going on adventures to keep the kingdom safe.\r\n----------\r\nThe prince
-        was always consumed with worry that she would be harmed.\r\n----------\r\nAlthough
-        she always asked him to join her, he refused to put them BOTH in harm's way.\r\n----------\r\nThe
-        prince was desperate to keep the princess home and safe.\r\n----------\r\nOne
-        day, he found a strange looking lamp by the lake.\r\n----------\r\nAs he
-        picked it up and wiped away the mud a genie popped out!\r\n----------\r\n\"Oh
-        thank heavens you found me! It's been AGES! You get 3 wishes, young prince!\"
-        \r\n----------\r\nThe prince couldn't believe his eyes.\r\n----------\r\n\"This
-        CAN'T be real! NO way!\" \r\n----------\r\n\"Ah, but it is! Your heart called
-        out with an impossible wish, and now here I am to help you!\r\n----------\r\nSo,
-        PLEASE, make your first wish!\" \r\n----------\r\nStill in disbelief, the
-        prince's first wish was...\r\n----------\r\n\"A club sandwich!\"\r\n----------\r\n\"A
-        club sandwich?? Really? Waste of a wish if you ask me,\" the genie said,
-        shrugging his shoulders.\r\n----------\r\nPOOF!\nA perfect looking sandwich
-        appeared!\r\n----------\r\nAs the Prince took a bite, he commented, \"It's
-        missing mayo.\"\r\n----------\r\n\"Nevermind that! Now you see I'm the real
-        deal.\r\n----------\r\nWhat is your impossible wish? What is your deepest
-        desire? \" \r\n----------\r\n\"My deepest desire...\nis for the Princess...\"
-        \n\"Yes?\" said the genie in anticipation.\r\n----------\r\n\"To be safe,
-        where no harm ever comes to her!\" exclaimed the prince.\r\n----------\r\n\"That's
-        more like it!\" said the genie as he rolled up his sleeves.\r\n----------\r\nPOOF!\nThe
-        princess appeared before the prince in a glass jar.\r\n----------\r\n\"Hey!
-        Let me out of here! What have you done?\" yelled the now tiny princess.\r\n----------\r\n\"This
-        genie granted me my deepest wish, to keep you safe!\r\n----------\r\nNow
-        I don't have to worry about you!\" said the prince.\r\n----------\r\n\"But
-        there's nothing in here! Please let me out!\" replied the princess \r\n----------\r\nThe
-        Prince knew he had one more wish. \"Oh! I know what my 3rd wish is!\r\n----------\r\nI
-        wish for the ability to give the princess anything and everything in the
-        world!\" exclaimed the prince.\r\n----------\r\n\"Oh, you're a fun one!\"
-        laughed the genie.\r\n----------\r\nPOOF!\nA magic ball appeared.\r\n----------\r\n\"This
-        magic ball will collect anything in the world for you!\r\n----------\r\nBut
-        you must start small before it will collect larger items\" said the genie.\r\n----------\r\n\"I
-        know just where to start,\" said the prince.\r\n----------\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8770709043269594932, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}
-      propertyPath: m_overflowMode
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ae36ceec36784e2ba7cc3b4cd2403b5, type: 3}

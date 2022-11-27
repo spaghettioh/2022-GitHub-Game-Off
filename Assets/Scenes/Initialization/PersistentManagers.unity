@@ -206,6 +206,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6577346399659518401, guid: 7965837e311864be2b513be9db08329a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7421898312163830147, guid: 7965837e311864be2b513be9db08329a, type: 3}
       propertyPath: m_Name
       value: Canvas_Persistent
