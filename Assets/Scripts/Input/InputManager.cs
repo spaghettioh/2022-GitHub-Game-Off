@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour
 {
@@ -12,19 +9,17 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        _keys = new Vector2(Input.GetAxis("Horizontal"),
-            Input.GetAxis("Vertical"));
+        _keys = new Vector2(Input.GetAxisRaw("Horizontal"),
+            Input.GetAxisRaw("Vertical"));
 
         _touch = new Vector2(_touchInput.Horizontal, _touchInput.Vertical);
 
         if (_keys != Vector2.zero)
         {
-            Debug.Log($"Key input detected");
             _inputHandler.SetDirectionalInput(_keys);
         }
         else if (_touch != Vector2.zero)
         {
-            Debug.Log($"Touch input detected");
             _inputHandler.SetDirectionalInput(_touch);
         }
         else

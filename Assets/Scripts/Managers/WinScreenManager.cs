@@ -7,22 +7,24 @@ using DG.Tweening;
 public class WinScreenManager : MonoBehaviour
 {
     [SerializeField] private ClumpPropCollectionSO _propCollection;
-    [SerializeField] private VoidEventSO _allPropsDropped;
     [SerializeField] private WinScreenPropPoolSO _propPool;
     [SerializeField] private Transform _propParent;
     [SerializeField] private Transform _bottleLeft;
     [SerializeField] private Transform _bottleRight;
     [SerializeField] private List<WinScreenProp> _spawnedProps;
-    [SerializeField] private Camera _mainCamera;
     [SerializeField] private float _dropTime;
 
     [Header("Starts when...")]
     [SerializeField] private VoidEventSO _curtainsOpened;
 
+    [Header("Broadcasting to...")]
+    [SerializeField] private VoidEventSO _allPropsDropped;
+    [SerializeField] private AudioEventSO _audioEvent;
+
     [Header("DEBUG / TESTING")]
     [SerializeField] private List<PropData> _propsCollected;
-    //[SerializeField] private List<Prop> _testProps;
     [SerializeField] private int _poolSize;
+    [SerializeField] private bool _test;
 
     private void OnEnable()
     {
@@ -34,14 +36,24 @@ public class WinScreenManager : MonoBehaviour
         _curtainsOpened.OnEventRaised -= StartWinScreen;
     }
 
+    public void RushWinScreen()
+    {
+        StopAllCoroutines();
+        PropsFinishedDropping();
+    }
+
     private void StartWinScreen()
     {
         // Use test data when no props are present - useful for testing
-        if (_propCollection.GetPropsWon().Count == 0)
+        if (_test)
         {
+            _propCollection.Reset();
             GetComponentsInChildren<Prop>(true).ToList()
                 .ForEach(prop => _propsCollected.Add(
-                new PropData(prop.Sprite, prop.transform.localScale.x)));
+                new PropData(
+                    prop.Sprite,
+                    prop.transform.localScale.x,
+                    prop.PropCollectSound)));
         }
         else  _propsCollected = _propCollection.GetPropsWon();
 
@@ -63,11 +75,12 @@ public class WinScreenManager : MonoBehaviour
 
     private Vector3 GetRandomPosition()
     {
-        var randomXPos = Random.Range(
-            _bottleLeft.position.x, _bottleRight.position.x);
-        var randomYPos = Random.Range(
-            _bottleLeft.position.y, _bottleLeft.position.y + 2);
-        return new Vector3(randomXPos, randomYPos, 0f);
+        var lPos = _bottleLeft.position;
+        var rPos = _bottleRight.position;
+        var randomXPos = Random.Range(lPos.x, rPos.x);
+        var randomYPos = Random.Range(lPos.y, lPos.y + 2);
+        float randomZPos = lPos.z += Random.Range(-1, 1);
+        return new Vector3(randomXPos, randomYPos, randomZPos);
     }
 
     private IEnumerator DropProps()
@@ -81,6 +94,8 @@ public class WinScreenManager : MonoBehaviour
 
             prop.gameObject.SetActive(true);
             prop.Drop();
+            if (prop.PropCollectSound != null)
+                _audioEvent.RaisePlayback(prop.PropCollectSound, name);
 
             yield return new WaitForSeconds(waitTime);
         }

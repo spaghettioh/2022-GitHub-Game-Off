@@ -58,7 +58,8 @@ public class ClumpPropCollectionSO : ScriptableObject
     private void BuildWonPropData()
     {
         _currentScenePropsCollected.ForEach(prop => _propsForWinScreen.Add(
-            new PropData(prop.Sprite, prop.transform.localScale.x)));
+            new PropData(prop.Sprite, prop.transform.localScale.x,
+            prop.PropCollectSound)));
     }
 
     public List<PropData> GetPropsWon()

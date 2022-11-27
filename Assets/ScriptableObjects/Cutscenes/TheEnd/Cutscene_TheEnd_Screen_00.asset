@@ -29,7 +29,7 @@ MonoBehaviour:
     BlockSound: {fileID: 11400000, guid: fb8b336af07ff4cf488973b4c549e55b, type: 2}
     CharacterSound: {fileID: 11400000, guid: 94dc3fddfa24243859530d7fdf19e9d8, type: 2}
     WaitTime: 1
-  - Text: "PRINCE:\nBut, but... how could you STILL\nbe unhappy?\nThere\u2019s nothing
+  - Text: "PRINCE:\nBut, but... how could you\nSTILL be unhappy?\nThere\u2019s nothing
       left!"
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}

@@ -22,6 +22,10 @@ public class Prop : MonoBehaviour
     [Header("Collection")]
     [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private AudioCueSO _propCollectSound;
+    public AudioCueSO PropCollectSound
+    {
+        get { return _propCollectSound; }
+    }
     [field: SerializeField]
     public bool IsCollectable { get; private set; }
     [field: SerializeField] public float SizeToCollect { get; private set; }

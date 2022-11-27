@@ -20,10 +20,11 @@ MonoBehaviour:
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 0}
     WaitTime: 0
-  - Text: 'He picked it, and as he wiped
+  - Text: 'He picked it up, and as he
 
-      away the mud, a djinn popped
+      wiped away the mud, a djinn
 
+      popped
       out!'
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 0}

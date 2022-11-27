@@ -39,7 +39,9 @@ MonoBehaviour:
     WaitTime: 0
   - Text: 'PRINCE:
 
-      Anything. I would do anything.'
+      Anything.
+
+      I would do anything!'
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
     WaitTime: 0
@@ -54,7 +56,7 @@ MonoBehaviour:
       your wishes than I did
       with
 
-      mine.'
+      mine...'
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
     WaitTime: 0

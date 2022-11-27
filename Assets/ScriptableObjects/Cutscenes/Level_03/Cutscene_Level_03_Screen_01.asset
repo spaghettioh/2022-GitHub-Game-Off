@@ -19,7 +19,9 @@ MonoBehaviour:
       Of course! I should''ve known!
 
       I shall return quickly,
-      my sweet!'
+
+      my
+      sweet!'
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
     WaitTime: 0

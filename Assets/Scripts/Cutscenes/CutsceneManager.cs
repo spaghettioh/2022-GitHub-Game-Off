@@ -52,6 +52,11 @@ public class CutsceneManager : MonoBehaviour
         _isUserRushing = true;
     }
 
+    public void SkipCutscene()
+    {
+        _loadEvent.Raise(_nextScene, name);
+    }
+
     public void ShowNextScreen()
     {
         // Unsubscribe now because curtains raise twice for some reason
@@ -85,7 +90,7 @@ public class CutsceneManager : MonoBehaviour
             StartCoroutine(ParseNextTextRoutine(block.Text,
                 block.CharacterSound, block.WaitTime));
 
-            while (_isParsingText)
+            while (_isParsingText || _isWaiting)
             {
                 yield return null;
             }
@@ -125,17 +130,10 @@ public class CutsceneManager : MonoBehaviour
             }
         }
 
-        //if (waitTime != 0)
-        //{
-        //    yield return new WaitForSeconds(waitTime);
-        //}
-        //else
-        //{
-        //    yield return new WaitForSeconds(_textWaitTime);
-        //}
-
         StartCoroutine(WaitTimeRoutine(
             waitTime != 0 ? waitTime : _textWaitTime));
+
+        _isParsingText = false;
 
         while (_isWaiting == true)
         {
@@ -151,8 +149,6 @@ public class CutsceneManager : MonoBehaviour
                 yield return null;
             }
         }
-
-        _isParsingText = false;
     }
 
     private IEnumerator WaitTimeRoutine(float waitTime)

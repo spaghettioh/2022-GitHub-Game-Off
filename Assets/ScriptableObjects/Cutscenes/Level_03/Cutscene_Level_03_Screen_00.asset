@@ -18,12 +18,14 @@ MonoBehaviour:
 
       My princess! I''ve brought
 
-      you food, warmth, and
+      you food, warmth,
+
+      and
       comfort!'
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
     WaitTime: 0
-  - Text: "PRINCESS:\nNo! You\u2019re not listening! I want out of here!\nI have
+  - Text: "PRINCESS:\nNo! You\u2019re not listening! I\nwant out of here!\nI have
       a kingdom to rule!"
     BlockSound: {fileID: 11400000, guid: fb8b336af07ff4cf488973b4c549e55b, type: 2}
     CharacterSound: {fileID: 11400000, guid: 94dc3fddfa24243859530d7fdf19e9d8, type: 2}

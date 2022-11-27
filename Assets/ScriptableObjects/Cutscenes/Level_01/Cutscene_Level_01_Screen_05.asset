@@ -18,9 +18,8 @@ MonoBehaviour:
 
       Really? A club sandwich?
 
-
-      Waste of a wish if you
-      ask me...'
+      Waste of a wish if you ask
+      me...'
     BlockSound: {fileID: 11400000, guid: 21fec282628a1437fb2307a137aac910, type: 2}
     CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
     WaitTime: 0

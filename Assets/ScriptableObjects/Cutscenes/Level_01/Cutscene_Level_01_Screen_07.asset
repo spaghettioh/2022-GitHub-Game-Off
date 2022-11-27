@@ -40,7 +40,7 @@ MonoBehaviour:
       Yes?!?!?!'
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
-    WaitTime: 0
+    WaitTime: 1
   - Text: 'PRINCE:
 
       To be safe, where no harm

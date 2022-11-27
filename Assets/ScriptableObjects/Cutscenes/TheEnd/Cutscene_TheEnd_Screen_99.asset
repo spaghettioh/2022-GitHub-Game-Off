@@ -22,7 +22,7 @@ MonoBehaviour:
       =)'
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 0}
-    WaitTime: 2
+    WaitTime: 0
   - Text: 'There''s more levels coming,
 
       but please let me know if you
@@ -31,18 +31,27 @@ MonoBehaviour:
       any bugs!'
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 0}
-    WaitTime: 2
-  - Text: 'I love you for making it this far.
+    WaitTime: 0
+  - Text: 'I love you
+
+      for making it this far.
 
       <3'
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 0}
-    WaitTime: 2
-  - Text: 'But not for anything else.
+    WaitTime: 0
+  - Text: 'But not
 
-
-      HUEHUEHUEHUEHUEH'
+      for anything else.'
+    BlockSound: {fileID: 0}
+    CharacterSound: {fileID: 0}
+    WaitTime: 1
+  - Text: HUEHUEHUEHUEHUEH
     BlockSound: {fileID: 11400000, guid: 21fec282628a1437fb2307a137aac910, type: 2}
+    CharacterSound: {fileID: 0}
+    WaitTime: 0
+  - Text: THE END
+    BlockSound: {fileID: 0}
     CharacterSound: {fileID: 0}
     WaitTime: 1
   _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}

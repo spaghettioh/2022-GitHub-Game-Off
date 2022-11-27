@@ -54,8 +54,6 @@ public class PropManager : MonoBehaviour
 
     private void ProcessCollision(Prop prop)
     {
-        Debug.Log($"Process collisiosn {prop.IsCollectable}");
-
         if (prop.IsCollectable)
         {
             CollectProp(prop);
@@ -93,8 +91,7 @@ public class PropManager : MonoBehaviour
 
     private void CrashIntoProp(Prop p)
     {
-        Debug.Log($"Crash velocity: {_clumpData.Velocity}");
-        if (_clumpData.Velocity >= _clumpData.MaxSpeed / 3)
+        if (_clumpData.Velocity >= _clumpData.MaxSpeed / 2)
         {
             _audioEvent.RaisePlayback(_crashSoundLarge);
 
