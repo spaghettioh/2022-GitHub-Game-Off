@@ -9,10 +9,12 @@ public class LevelTimer : MonoBehaviour
     [SerializeField] private TMP_Text timeText;
     [SerializeField] private float _timeRemainingSeconds = 10;
     [SerializeField] private bool _timerIsRunning = false;
+    [SerializeField] private ScoreSO _scoreSO;
 
     [Header("Listening to...")]
     [SerializeField] private VoidEventSO _curtainsOpened;
     [SerializeField] private FloatEventSO _secondsToWin;
+    [SerializeField] private VoidEventSO _winCondition;
 
     [Header("Broadcasting to...")]
     [SerializeField] private VoidEventSO _timerFinished;
@@ -21,12 +23,14 @@ public class LevelTimer : MonoBehaviour
     {
         _secondsToWin.OnEventRaised += SetTimer;
         _curtainsOpened.OnEventRaised += StartTimer;
+        _winCondition.OnEventRaised += CaptureWinTime;
     }
 
     private void OnDisable()
     {
         _secondsToWin.OnEventRaised -= SetTimer;
         _curtainsOpened.OnEventRaised -= StartTimer;
+        _winCondition.OnEventRaised -= CaptureWinTime;
     }
 
     private void SetTimer(float seconds)
@@ -59,9 +63,12 @@ public class LevelTimer : MonoBehaviour
 
     private void DisplayTime(float timeToDisplay)
     {
-        timeToDisplay += 1;
-        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
-        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        timeText.text = _scoreSO.GetFormattedTime(timeToDisplay);
+    }
+
+    private void CaptureWinTime()
+    {
+        _timerIsRunning = false;
+        _scoreSO.SetTimeThisLevel(_timeRemainingSeconds);
     }
 }

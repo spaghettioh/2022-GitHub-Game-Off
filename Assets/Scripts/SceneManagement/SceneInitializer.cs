@@ -1,17 +1,33 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+using System;
 
 public class SceneInitializer : MonoBehaviour
 {
-    [SerializeField] private VoidEventSO _openCurtains;
-    [SerializeField] private string _persistentManagersSceneName = "PersistentManagers";
+    [Header("Cold start")]
+    [SerializeField]
+    private string _persistentManagersSceneName = "PersistentManagers";
+    [SerializeField] private VoidEventSO _skipCurtains;
 
-    [Header("DEBUG ==========")]
-    [SerializeField] private bool _openCurtainsRequested;
+    [Header("Scene transitions")]
+    [SerializeField] private VoidEventSO _sceneLoaded;
+    [SerializeField] private UnityEvent _onSceneLoaded;
+    [Space]
+    [SerializeField] private VoidEventSO _openCurtains;
+    [SerializeField] private VoidEventSO _curtainsOpened;
+    [SerializeField] private UnityEvent _onCurtainsOpened;
 
     private void OnEnable()
     {
-        _openCurtains.OnEventRaised += CheckForCurtains;
+        _sceneLoaded.OnEventRaised += OnSceneLoaded;
+        _curtainsOpened.OnEventRaised += OnCurtainsOpened;
+    }
+
+    private void OnDisable()
+    {
+        _sceneLoaded.OnEventRaised -= OnSceneLoaded;
+        _curtainsOpened.OnEventRaised -= OnCurtainsOpened;
     }
 
     private void Start()
@@ -20,21 +36,26 @@ public class SceneInitializer : MonoBehaviour
         if (!SceneManager.GetSceneByName(_persistentManagersSceneName).isLoaded)
         {
             SceneManager.LoadSceneAsync(_persistentManagersSceneName,
-                LoadSceneMode.Additive).completed += PersistentManagersLoaded;
-        }
-        else
-        {
-            PersistentManagersLoaded();
+                LoadSceneMode.Additive).completed += OnPersistentManagersLoaded;
         }
     }
 
-    private void PersistentManagersLoaded(AsyncOperation unused = default)
+    private void OnPersistentManagersLoaded(AsyncOperation ignore)
     {
-        if (!_openCurtainsRequested) _openCurtains.Raise(name);
+        // Unsubscribe on cold starts
+        _sceneLoaded.OnEventRaised -= OnSceneLoaded;
+        _sceneLoaded.Raise($"{name}, after loading PeristentManagers,");
+        _skipCurtains.Raise($"{name}, after loading PeristentManagers,");
     }
 
-    private void CheckForCurtains()
+    private void OnSceneLoaded()
     {
-        _openCurtainsRequested = true;
+        _onSceneLoaded.Invoke();
+        _openCurtains.Raise($"{name}, after being loaded,");
+    }
+
+    private void OnCurtainsOpened()
+    {
+        _onCurtainsOpened.Invoke();
     }
 }

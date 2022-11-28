@@ -7,6 +7,13 @@ using TMPro;
 
 public class WinScreenManager : MonoBehaviour
 {
+    [Header("Win Screen")]
+    [SerializeField] private float _startTime;
+    [Tooltip("How long counting each score should take")]
+    [SerializeField] private float _tallyTime;
+    [Tooltip("How long score increments should take")]
+    [SerializeField] private float _tallyIncrementTime;
+
     [Header("Prop spawning")]
     [SerializeField] private ClumpPropCollectionSO _propCollection;
     [SerializeField] private WinScreenPropPoolSO _propPool;
@@ -16,17 +23,10 @@ public class WinScreenManager : MonoBehaviour
     [SerializeField] private List<WinScreenProp> _spawnedProps;
 
     [Header("Score")]
+    [SerializeField] private ScoreSO _scoreSO;
     [Tooltip("How long to wait before starting to count the score")]
-    [SerializeField] private float _startTime;
-    [Tooltip("How long counting each score should take")]
-    [SerializeField] private float _tallyTime;
-    [Tooltip("How long score increments should take")]
-    [SerializeField] private float _tallyIncrementTime;
     [SerializeField] private AudioCueSO _scoreSound;
     [SerializeField] private AudioCueSO _scoreFinishedSound;
-
-    [Header("!!! To be replaced with timekeeper")]
-    [SerializeField] private int _testRemainingTime;
 
     [Header("UI")]
     [SerializeField] private TMP_Text _itemsText;
@@ -41,11 +41,18 @@ public class WinScreenManager : MonoBehaviour
     [SerializeField] private AudioEventSO _audioEvent;
 
     [Header("DEBUG ==========")]
+    [SerializeField] private bool _test;
+    [SerializeField] private float _testRemainingTime;
+
+    [Space]
     [SerializeField] private List<PropData> _propsCollected;
     [SerializeField] private int _poolSize;
-    [SerializeField] private bool _test;
     [SerializeField] private float _timeBetweenTallies;
     [SerializeField] private int _totalScore;
+    [Space]
+    [SerializeField] private int _thisLevelScore;
+    [SerializeField] private float _thisLevelTime;
+    [SerializeField] private float _timeForCounting;
 
     private void OnEnable()
     {
@@ -77,17 +84,22 @@ public class WinScreenManager : MonoBehaviour
                     prop.Sprite,
                     prop.transform.localScale.x,
                     prop.ScorePoints)));
+            _timeForCounting = _testRemainingTime;
         }
-        else  _propsCollected = _propCollection.GetPropsWon();
+        else
+        {
+            _propsCollected = _propCollection.GetPropsWon();
+            _timeForCounting = _scoreSO.LevelTimeRemaining;
+        }
 
         _poolSize = _propsCollected.Count();
         _spawnedProps = _propPool.PreWarm(_poolSize, _propParent);
 
         _itemsText.text = _poolSize.ToString();
-        _timeText.text = _testRemainingTime.ToString();
-        _scoreText.text = "0";
+        _timeText.text = _scoreSO.GetFormattedTime(_timeForCounting);
+        _scoreText.text = $"{_scoreSO.TotalScore}";
 
-        _timeBetweenTallies = _tallyTime / 4f;
+        _timeBetweenTallies = _tallyTime / 3f;
 
         PrepProps();
         StartCoroutine(TallyPropsRoutine());
@@ -127,6 +139,7 @@ public class WinScreenManager : MonoBehaviour
             prop.Drop();
             _itemsText.text = _spawnedProps.Count.ToString();
             AddToScore(prop.ScorePoints);
+            _thisLevelScore += prop.ScorePoints;
 
             yield return new WaitForSeconds(_tallyIncrementTime);
         }
@@ -137,16 +150,20 @@ public class WinScreenManager : MonoBehaviour
     private IEnumerator TallyTimeRoutine()
     {
         yield return new WaitForSeconds(_timeBetweenTallies);
-        while (_testRemainingTime > 0)
+        _thisLevelTime = _timeForCounting;
+        while (_timeForCounting > 0f)
         {
             AddToScore(1000);
-            _testRemainingTime--;
-            _timeText.text = _testRemainingTime.ToString();
+            _timeForCounting--;
+            _timeText.text = _scoreSO.GetFormattedTime(_timeForCounting);
+
             yield return new WaitForSeconds(_tallyIncrementTime);
         }
+        _timeText.text = _scoreSO.GetFormattedTime(-1f);
 
         StartCoroutine(WrapUpPropScreenRoutine());
     }
+
 
     private void AddToScore(int amount)
     {
@@ -163,13 +180,14 @@ public class WinScreenManager : MonoBehaviour
         if (_scoreFinishedSound != null)
             _audioEvent.RaisePlayback(_scoreFinishedSound, name);
         _winScreenFinished.Raise(name);
+        UpdateScore();
 
         var offTime = .2f;
         var onTime = .3f;
         int loopPrevention = 0;
         
         // Blinks the text
-        while (offTime < 1000)
+        while (loopPrevention < 1000f)
         {
             _scoreText.gameObject.SetActive(false);
             yield return new WaitForSeconds(offTime);
@@ -179,5 +197,11 @@ public class WinScreenManager : MonoBehaviour
         }
 
         _scoreText.gameObject.SetActive(true);
+    }
+
+    private void UpdateScore()
+    {
+        _scoreSO.UpdateTotalScore(_thisLevelScore);
+        _scoreSO.UpdateTotalTime(_thisLevelTime);
     }
 }

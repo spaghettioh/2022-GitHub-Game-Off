@@ -45,6 +45,16 @@ public class AudioEmitter : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Plays a music clip from an audio cue
+    /// </summary>
+    /// <param name="audioCue"></param>
+    public void PauseUnpause(bool pauseUnpause)
+    {
+        if (pauseUnpause) _audioSource.Pause();
+        else _audioSource.Play();
+    }
+
     public void Stop()
     {
         ClearEmitter();

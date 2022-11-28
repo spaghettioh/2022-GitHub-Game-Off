@@ -6,6 +6,7 @@ using UnityEngine;
 public class ScreenTransitionManager : MonoBehaviour
 {
     [SerializeField] private GameObject _scrim;
+    [SerializeField] private float _transitionTime;
 
     [Header("Next scene requested, close curtains")]
     [SerializeField] private VoidEventSO _closeCurtains;
@@ -20,9 +21,6 @@ public class ScreenTransitionManager : MonoBehaviour
 
     [Header("For pausing the game")]
     [SerializeField] private PauseGameplayEventSO _pauseEvent;
-
-    [Header("")]
-    [SerializeField] private GameObject _hud;
 
     private void OnEnable()
     {
@@ -44,7 +42,8 @@ public class ScreenTransitionManager : MonoBehaviour
     private IEnumerator CloseCurtainsRoutine()
     {
         _scrim.SetActive(true);
-        yield return new WaitForSeconds(0f);
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(_transitionTime);
 
         _curtainsClosed.Raise(name);
     }
@@ -52,9 +51,10 @@ public class ScreenTransitionManager : MonoBehaviour
     private void OpenCurtains() => StartCoroutine(OpenCurtainsRoutine());
     private IEnumerator OpenCurtainsRoutine()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSecondsRealtime(_transitionTime);
         _scrim.SetActive(false);
         _curtainsOpened.Raise(name);
+        Time.timeScale = 1f;
     }
 
     private void SkipCurtains()

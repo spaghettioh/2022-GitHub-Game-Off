@@ -10,7 +10,7 @@ public class CoroutineEventHandler : MonoBehaviour
     [Header("...do this:")]
     [SerializeField] private UnityEvent _event;
 
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(WaitTimeRoutine());
     }

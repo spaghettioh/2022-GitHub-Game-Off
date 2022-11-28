@@ -36,11 +36,6 @@ public class SceneLoaderSystem : MonoBehaviour
             -= LoadSceneImmediately;
     }
 
-    private void Start()
-    {
-        _sceneLoaded.Raise($"{name} via Start()");
-    }
-
     private void LoadSceneImmediately(string newScene) =>
         StartCoroutine(LoadSceneImmediatelyRoutine(newScene));
     private IEnumerator LoadSceneImmediatelyRoutine(string newScene)

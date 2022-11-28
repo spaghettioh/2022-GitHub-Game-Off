@@ -8,6 +8,7 @@ public class AudioEventSO : ScriptableObject
     public UnityAction<AudioCueSO> OnPlaybackRequested;
     public UnityAction<float> OnMusicFadeRequested;
     public UnityAction OnStopMusicRequested;
+    public UnityAction<bool> OnPauseUnpauseMusicRequested;
 
     public void RaisePlayback(AudioCueSO audioCue) =>
         RaisePlayback(audioCue, "An inspector event, probably,");
@@ -42,13 +43,18 @@ public class AudioEventSO : ScriptableObject
 
     public void RaiseStopMusic(string elevator = "(Unknown)")
     {
-        if (OnStopMusicRequested != null)
+        RaiseMusicFade(0f, elevator);
+    }
+
+    public void RaisePauseUnpauseMusic(bool pauseUnpause, string elevator = "(Unknown)")
+    {
+        if (OnPauseUnpauseMusicRequested != null)
         {
-            OnStopMusicRequested.Invoke();
+            OnPauseUnpauseMusicRequested.Invoke(pauseUnpause);
         }
         else
         {
-            Debug.LogWarning($"{elevator} raised stop music " +
+            Debug.LogWarning($"{elevator} raised pause music " +
                 $"but no one listens");
         }
     }

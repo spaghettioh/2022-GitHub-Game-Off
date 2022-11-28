@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Billboard : MonoBehaviour
 {
-    private Camera _mainCamera;
     [SerializeField] private bool _canLean;
     [SerializeField] private bool _isProp;
+    private Camera _mainCamera;
 
     private void Start()
     {

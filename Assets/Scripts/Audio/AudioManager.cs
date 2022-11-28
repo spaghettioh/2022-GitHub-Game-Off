@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
         _audioEventChannel.OnPlaybackRequested += ActivateEmitter;
         _audioEventChannel.OnMusicFadeRequested += FadeOutMusic;
         _audioEventChannel.OnStopMusicRequested += StopMusic;
+        _audioEventChannel.OnPauseUnpauseMusicRequested += PauseUnpauseMusic;
     }
 
     private void OnDisable()
@@ -31,6 +32,7 @@ public class AudioManager : MonoBehaviour
         _audioEventChannel.OnPlaybackRequested -= ActivateEmitter;
         _audioEventChannel.OnMusicFadeRequested -= FadeOutMusic;
         _audioEventChannel.OnStopMusicRequested -= StopMusic;
+        _audioEventChannel.OnPauseUnpauseMusicRequested -= PauseUnpauseMusic;
     }
 
     /// <summary>
@@ -88,6 +90,18 @@ public class AudioManager : MonoBehaviour
 
         _musicEmitter.OnEmitterFinished += ReturnEmitterToPool;
         _musicEmitter.Stop();
+    }
+
+    private void PauseUnpauseMusic(bool pauseUnpause)
+    {
+        if (_musicEmitter == null)
+        {
+            Debug.LogWarning($"{name} heard Pause event but there's " +
+                $"no music emitter");
+            return;
+        }
+
+        _musicEmitter.PauseUnpause(pauseUnpause);
     }
 
     /// <summary>
