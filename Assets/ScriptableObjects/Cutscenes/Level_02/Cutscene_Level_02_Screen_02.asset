@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
-  m_Name: Cutscene_Level_02_Screen_00
+  m_Name: Cutscene_Level_02_Screen_02
   m_EditorClassIdentifier: 
-  <Graphic>k__BackingField: {fileID: 21300000, guid: 929582360884e4391b10d95d0d85d707, type: 3}
+  <Graphic>k__BackingField: {fileID: 21300000, guid: bb659a64ee3594151a518c8d08658046, type: 3}
   <TextBlocks>k__BackingField:
   - Text: 'PRINCE:
 
-      My princess! I''ve brought
+      Cold and hungry, you say?
 
-      you riches and jewels
-      galore! '
+      I know just what to do!'
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
     WaitTime: 0

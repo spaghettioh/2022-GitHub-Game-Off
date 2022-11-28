@@ -10,26 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
-  m_Name: Cutscene_Level_01_Screen_01
+  m_Name: Cutscene_Level_03_Screen_02
   m_EditorClassIdentifier: 
-  <Graphic>k__BackingField: {fileID: 21300000, guid: fcc907d04af2044669a9cdd6395ac1e3, type: 3}
+  <Graphic>k__BackingField: {fileID: 21300000, guid: af0ff068eac1548c1a78dffef3808f42, type: 3}
   <TextBlocks>k__BackingField:
-  - Text: 'She always asked him to join
+  - Text: 'PRINCE:
 
-      her, he refused to put them
+      Of course! I should''ve known!
 
-      BOTH
-      in harm''s way.'
+      I shall return quickly,
+
+      my
+      sweet!'
     BlockSound: {fileID: 0}
-    CharacterSound: {fileID: 0}
-    WaitTime: 0
-  - Text: 'The prince was desperate for
-
-      a way to keep the princess
-
-      safe.'
-    BlockSound: {fileID: 0}
-    CharacterSound: {fileID: 0}
+    CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
     WaitTime: 0
   _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
   _validateNow: 0

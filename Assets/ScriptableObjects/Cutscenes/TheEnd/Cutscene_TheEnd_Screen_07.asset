@@ -17,6 +17,6 @@ MonoBehaviour:
   - Text: 
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 0}
-    WaitTime: 0
+    WaitTime: 1
   _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
   _validateNow: 0

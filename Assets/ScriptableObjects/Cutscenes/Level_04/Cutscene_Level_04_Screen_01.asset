@@ -12,24 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
   m_Name: Cutscene_Level_04_Screen_01
   m_EditorClassIdentifier: 
-  <Graphic>k__BackingField: {fileID: 21300000, guid: ee1a2cae0f1d9476e8ec8d869e091ca7, type: 3}
+  <Graphic>k__BackingField: {fileID: 21300000, guid: 850427778aa0c465c9df2727c9d1cd9a, type: 3}
   <TextBlocks>k__BackingField:
-  - Text: 'PRINCE:
+  - Text: 'PRINCESS:
 
-      How could I forget!
+      Please, let me out!
 
-      My deepest apologies,
+      I miss my home!
 
-      dear
-      princess!'
-    BlockSound: {fileID: 0}
-    CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
-    WaitTime: 0
-  - Text: 'PRINCE:
-
-      I shall return with haste!'
-    BlockSound: {fileID: 0}
-    CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
+      I miss
+      my mother and father!'
+    BlockSound: {fileID: 11400000, guid: fb8b336af07ff4cf488973b4c549e55b, type: 2}
+    CharacterSound: {fileID: 11400000, guid: 94dc3fddfa24243859530d7fdf19e9d8, type: 2}
     WaitTime: 0
   _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
   _validateNow: 0

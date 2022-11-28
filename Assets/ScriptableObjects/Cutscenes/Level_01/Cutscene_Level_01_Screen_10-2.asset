@@ -10,18 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
-  m_Name: Cutscene_Level_02_Screen_00
+  m_Name: Cutscene_Level_01_Screen_10-2
   m_EditorClassIdentifier: 
-  <Graphic>k__BackingField: {fileID: 21300000, guid: 929582360884e4391b10d95d0d85d707, type: 3}
+  <Graphic>k__BackingField: {fileID: 21300000, guid: 13fd4d132bf5d459ca21facd1e43d9c7, type: 3}
   <TextBlocks>k__BackingField:
-  - Text: 'PRINCE:
+  - Text: 'DJINN:
 
-      My princess! I''ve brought
-
-      you riches and jewels
-      galore! '
+      Delightful...'
     BlockSound: {fileID: 0}
-    CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
-    WaitTime: 0
+    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
+    WaitTime: 1
   _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
   _validateNow: 0
