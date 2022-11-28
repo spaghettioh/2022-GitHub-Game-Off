@@ -29,23 +29,23 @@ public class CutsceneScreenSO : ScriptableObject
     [field: SerializeField]
     public List<TextAndSound> TextBlocks { get; private set; }
 
-    [Tooltip("For use with Cutscene_Tester.scene")]
-    [SerializeField]
-    private CutsceneTestEventSO _testEvent;
-    [Tooltip("Click to fire the tester event")]
-    [SerializeField]
-    private bool _validateNow;
+    //[Tooltip("For use with Cutscene_Tester.scene")]
+    //[SerializeField]
+    //private CutsceneTestEventSO _testEvent;
+    //[Tooltip("Click to fire the tester event")]
+    //[SerializeField]
+    //private bool _validateNow;
 
-    private void OnValidate()
-    {
-        _validateNow = false;
+    //private void OnValidate()
+    //{
+    //    _validateNow = false;
 
-        if (TextBlocks.Count == 0)
-        {
-            throw new System.Exception($"{name} TextAndSounds can't be empty!");
-        }
+    //    if (TextBlocks.Count == 0)
+    //    {
+    //        throw new System.Exception($"{name} TextAndSounds can't be empty!");
+    //    }
 
-        if (_testEvent != null)
-            _testEvent.Raise(this, name);
-    }
+    //    if (_testEvent != null)
+    //        _testEvent.Raise(this, name);
+    //}
 }

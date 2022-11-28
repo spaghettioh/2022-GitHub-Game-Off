@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
   m_Name: Cutscene_TheEnd_Screen_03
   m_EditorClassIdentifier: 
-  <Graphic>k__BackingField: {fileID: 21300000, guid: c648aa3e6a2d8483a857ee50dff8719a, type: 3}
+  <Graphic>k__BackingField: {fileID: 21300000, guid: bdc7bec79413e43fb98a56f529a4d9ce, type: 3}
   <TextBlocks>k__BackingField:
   - Text: 'PRINCE:
 

@@ -9,6 +9,7 @@ public class SceneInitializer : MonoBehaviour
     [SerializeField]
     private string _persistentManagersSceneName = "PersistentManagers";
     [SerializeField] private VoidEventSO _skipCurtains;
+    [SerializeField] private ScoreSO _score;
 
     [Header("Scene transitions")]
     [SerializeField] private VoidEventSO _sceneLoaded;
@@ -35,6 +36,7 @@ public class SceneInitializer : MonoBehaviour
         // Load the managers scene
         if (!SceneManager.GetSceneByName(_persistentManagersSceneName).isLoaded)
         {
+            _score.Reset();
             SceneManager.LoadSceneAsync(_persistentManagersSceneName,
                 LoadSceneMode.Additive).completed += OnPersistentManagersLoaded;
         }

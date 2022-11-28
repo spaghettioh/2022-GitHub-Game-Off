@@ -50,12 +50,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 6eb9381f6eb7d4299979aa0aa12b8466, type: 2}
-        m_TargetAssemblyTypeName: AudioEventSO, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+        m_TargetAssemblyTypeName: AudioEventSO, GameOff
+        m_MethodName: RaisePlayback
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: AudioCueSO, Assembly-CSharp
+          m_ObjectArgument: {fileID: 11400000, guid: 9354b28a4780d434daf1852b28a7f252, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AudioCueSO, GameOff
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -78,12 +78,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 6eb9381f6eb7d4299979aa0aa12b8466, type: 2}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+        m_TargetAssemblyTypeName: AudioEventSO, GameOff
+        m_MethodName: RaisePlayback
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 11400000, guid: 2617f3e3048b94e17ab72bba946c95bb, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AudioCueSO, GameOff
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -142,6 +142,7 @@ MonoBehaviour:
   _nextScene: 
   _retryScene: 
   _clumpData: {fileID: 11400000, guid: d0c59fb33456a457c9ee98332ddb6f79, type: 2}
+  _score: {fileID: 11400000, guid: 60dbe12a9cb0541ffb56ff26e30e5885, type: 2}
   _timerFinished: {fileID: 11400000, guid: 830071c964ee847c7aa2b0e9a5a5ea0a, type: 2}
   _sceneLoaded: {fileID: 11400000, guid: cb9a17bd10dbe46c3bf8ce92d3e6fdd2, type: 2}
   _propsToWin: {fileID: 11400000, guid: 80ab66e30ded047f99b434ce43d43867, type: 2}

@@ -50,9 +50,9 @@ public class WinScreenManager : MonoBehaviour
     [SerializeField] private float _timeBetweenTallies;
     [SerializeField] private int _totalScore;
     [Space]
-    [SerializeField] private int _thisLevelScore;
-    [SerializeField] private float _thisLevelTime;
-    [SerializeField] private float _timeForCounting;
+    [SerializeField] private int _scoreForCountingUp;
+    [SerializeField] private float _thisLevelRemainingTime;
+    [SerializeField] private float _timeForCountingDown;
 
     private void OnEnable()
     {
@@ -74,7 +74,7 @@ public class WinScreenManager : MonoBehaviour
 
     private void StartWinScreen()
     {
-        // Use test data when no props are present - useful for testing
+        // Use test data when no props are present
         if (_test)
         {
             _propCollection.Reset();
@@ -84,20 +84,23 @@ public class WinScreenManager : MonoBehaviour
                     prop.Sprite,
                     prop.transform.localScale.x,
                     prop.ScorePoints)));
-            _timeForCounting = _testRemainingTime;
+            _timeForCountingDown = _testRemainingTime;
+            _totalScore = 1000;
         }
         else
         {
+            _totalScore = _scoreSO.TotalScore;
             _propsCollected = _propCollection.GetPropsWon();
-            _timeForCounting = _scoreSO.LevelTimeRemaining;
+            _timeForCountingDown = _scoreSO.ThisLevelTimeRemaining;
+            _timeForCountingDown = _scoreSO.ThisLevelTimeRemaining;
         }
 
         _poolSize = _propsCollected.Count();
         _spawnedProps = _propPool.PreWarm(_poolSize, _propParent);
 
         _itemsText.text = _poolSize.ToString();
-        _timeText.text = _scoreSO.GetFormattedTime(_timeForCounting);
-        _scoreText.text = $"{_scoreSO.TotalScore}";
+        _timeText.text = _scoreSO.GetFormattedTime(_timeForCountingDown);
+        _scoreText.text = $"{_totalScore}";
 
         _timeBetweenTallies = _tallyTime / 3f;
 
@@ -121,7 +124,7 @@ public class WinScreenManager : MonoBehaviour
         var rPos = _bottleRight.position;
         var randomXPos = Random.Range(lPos.x, rPos.x);
         var randomYPos = Random.Range(lPos.y, lPos.y + 2);
-        float randomZPos = lPos.z += Random.Range(-1, 1);
+        float randomZPos = lPos.z += Random.Range(-.5f, .5f);
         return new Vector3(randomXPos, randomYPos, randomZPos);
     }
 
@@ -139,7 +142,6 @@ public class WinScreenManager : MonoBehaviour
             prop.Drop();
             _itemsText.text = _spawnedProps.Count.ToString();
             AddToScore(prop.ScorePoints);
-            _thisLevelScore += prop.ScorePoints;
 
             yield return new WaitForSeconds(_tallyIncrementTime);
         }
@@ -150,12 +152,12 @@ public class WinScreenManager : MonoBehaviour
     private IEnumerator TallyTimeRoutine()
     {
         yield return new WaitForSeconds(_timeBetweenTallies);
-        _thisLevelTime = _timeForCounting;
-        while (_timeForCounting > 0f)
+        //_thisLevelRemainingTime = _timeForCountingDown;
+        while (_timeForCountingDown > 0f)
         {
             AddToScore(1000);
-            _timeForCounting--;
-            _timeText.text = _scoreSO.GetFormattedTime(_timeForCounting);
+            _timeForCountingDown--;
+            _timeText.text = _scoreSO.GetFormattedTime(_timeForCountingDown);
 
             yield return new WaitForSeconds(_tallyIncrementTime);
         }
@@ -167,6 +169,7 @@ public class WinScreenManager : MonoBehaviour
 
     private void AddToScore(int amount)
     {
+        _scoreForCountingUp += amount;
         _totalScore += amount;
         _scoreText.text = _totalScore.ToString();
 
@@ -180,7 +183,7 @@ public class WinScreenManager : MonoBehaviour
         if (_scoreFinishedSound != null)
             _audioEvent.RaisePlayback(_scoreFinishedSound, name);
         _winScreenFinished.Raise(name);
-        UpdateScore();
+        UpdateScoreValues();
 
         var offTime = .2f;
         var onTime = .3f;
@@ -199,9 +202,9 @@ public class WinScreenManager : MonoBehaviour
         _scoreText.gameObject.SetActive(true);
     }
 
-    private void UpdateScore()
+    private void UpdateScoreValues()
     {
-        _scoreSO.UpdateTotalScore(_thisLevelScore);
-        _scoreSO.UpdateTotalTime(_thisLevelTime);
+        _scoreSO.UpdateTotalScore(_scoreForCountingUp);
+        _scoreSO.UpdateTotalTime();
     }
 }

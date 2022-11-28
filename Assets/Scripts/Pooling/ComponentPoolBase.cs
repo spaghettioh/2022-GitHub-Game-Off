@@ -19,7 +19,7 @@ public class ComponentPoolBase<T> : ScriptableObject where T : Component
 
         _parent = parent;
         // Create a pool of disabled audio emitters
-        for (var i = 1; i < count; i++)
+        for (var i = 0; i < count; i++)
         {
             returnList.Add(Create());
         }

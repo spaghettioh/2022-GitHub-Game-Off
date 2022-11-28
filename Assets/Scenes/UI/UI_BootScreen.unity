@@ -638,7 +638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7421898312163830147, guid: 7965837e311864be2b513be9db08329a, type: 3}
       propertyPath: m_Name
-      value: Canvas_Persistent_1
+      value: Canvas_Persistent
       objectReference: {fileID: 0}
     - target: {fileID: 7421898312163830151, guid: 7965837e311864be2b513be9db08329a, type: 3}
       propertyPath: m_Pivot.x
@@ -1146,6 +1146,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1478819537265998018, guid: 0d495808b01bc483db0f6ed76edda408, type: 3}
+      propertyPath: _openCurtains
+      value: 
+      objectReference: {fileID: 11400000, guid: 73801d0be729e4179bf1474ec86146d7, type: 2}
     - target: {fileID: 4119859294719742062, guid: 0d495808b01bc483db0f6ed76edda408, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1370,19 +1374,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.0015576323
+      value: 0.12085308
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.37041035
+      value: 0.03846154
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.9968847
+      value: 0.75829387
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.25917926
+      value: 0.9230769
       objectReference: {fileID: 0}
     - target: {fileID: 868993520624883822, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_Name

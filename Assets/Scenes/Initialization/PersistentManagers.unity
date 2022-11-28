@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 2004861670}
   - component: {fileID: 2004861673}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: Camera_Transitions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,15 +319,15 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.047876168
-    y: 0.08566978
-    width: 0.23038156
-    height: 0.2803738
+    x: 0.12085308
+    y: 0.03846154
+    width: 0.75829387
+    height: 0.9230769
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 2.8125
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2

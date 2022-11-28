@@ -322,19 +322,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.0015576323
+      value: 0.12085308
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.37041035
+      value: 0.03846154
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.9968847
+      value: 0.75829387
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.25917926
+      value: 0.9230769
       objectReference: {fileID: 0}
     - target: {fileID: 868993520624883822, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_Name
@@ -1660,6 +1660,6 @@ PrefabInstance:
     - target: {fileID: 7599696642773763721, guid: b81ffe1fc7a9b43ada0e7f18b3634d60, type: 3}
       propertyPath: _music
       value: 
-      objectReference: {fileID: 11400000, guid: 4b50c6d2c85454b91a6a675deffd8398, type: 2}
+      objectReference: {fileID: 11400000, guid: 41c2c0853b36e484bbda0cd14ebe4894, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b81ffe1fc7a9b43ada0e7f18b3634d60, type: 3}

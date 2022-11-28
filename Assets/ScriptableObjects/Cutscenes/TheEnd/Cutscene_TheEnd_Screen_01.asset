@@ -19,5 +19,28 @@ MonoBehaviour:
     BlockSound: {fileID: 0}
     CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
     WaitTime: 0
+  - Text: 'DJINN:
+
+      Poor prince!'
+    BlockSound: {fileID: 11400000, guid: 21fec282628a1437fb2307a137aac910, type: 2}
+    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
+    WaitTime: 0
+  - Text: 'DJINN:
+
+      I can see your love is true,
+
+      and can help reunite
+      you with
+
+      your Love and kingdom.'
+    BlockSound: {fileID: 0}
+    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
+    WaitTime: 0
+  - Text: 'DJINN:
+
+      But there will be a price.'
+    BlockSound: {fileID: 0}
+    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
+    WaitTime: 0
   _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
   _validateNow: 0

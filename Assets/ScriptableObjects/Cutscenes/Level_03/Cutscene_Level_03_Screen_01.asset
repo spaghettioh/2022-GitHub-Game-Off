@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Graphic>k__BackingField: {fileID: 21300000, guid: 62f09b7a36c334e6782fddf716de8151, type: 3}
   <TextBlocks>k__BackingField:
-  - Text: "PRINCESS:\nNo! You\u2019re not listening! I\nwant out of here!\nI have
-      a kingdom to rule!"
+  - Text: "PRINCESS:\nNo! You\u2019re not listening! I\nwant out of here!\nThe kingdom
+      needs me!"
     BlockSound: {fileID: 11400000, guid: fb8b336af07ff4cf488973b4c549e55b, type: 2}
     CharacterSound: {fileID: 11400000, guid: 94dc3fddfa24243859530d7fdf19e9d8, type: 2}
     WaitTime: 0

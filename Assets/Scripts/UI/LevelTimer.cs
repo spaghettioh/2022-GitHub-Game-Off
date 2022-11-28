@@ -69,6 +69,6 @@ public class LevelTimer : MonoBehaviour
     private void CaptureWinTime()
     {
         _timerIsRunning = false;
-        _scoreSO.SetTimeThisLevel(_timeRemainingSeconds);
+        _scoreSO.SetTimeWhenWon(_timeRemainingSeconds);
     }
 }

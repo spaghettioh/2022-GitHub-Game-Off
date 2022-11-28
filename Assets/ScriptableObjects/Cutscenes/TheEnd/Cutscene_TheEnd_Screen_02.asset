@@ -14,29 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Graphic>k__BackingField: {fileID: 21300000, guid: a91f440ccf0d44139a53caebbf8ef93f, type: 3}
   <TextBlocks>k__BackingField:
-  - Text: 'DJINN:
-
-      Poor prince!'
-    BlockSound: {fileID: 11400000, guid: 21fec282628a1437fb2307a137aac910, type: 2}
-    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
-    WaitTime: 1
-  - Text: 'DJINN:
-
-      I can see your love is true,
-
-      and can help reunite
-      you with
-
-      your Love and kingdom.'
-    BlockSound: {fileID: 0}
-    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
-    WaitTime: 0
-  - Text: 'DJINN:
-
-      But there will be a price.'
-    BlockSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
-    CharacterSound: {fileID: 11400000, guid: 26052d2a99ae143779025c7b2913f7dc, type: 2}
-    WaitTime: 0
   - Text: 'PRINCE:
 
       Anything.

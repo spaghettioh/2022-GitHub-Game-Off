@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +10,24 @@ public class DeviceOrientationManager : MonoBehaviour
     [SerializeField] private GameObject _mobileSpriteRight;
     [SerializeField] private float _blinkTime;
     [SerializeField] private AudioEventSO _audioEvent;
+    [SerializeField] private VoidEventSO _sceneLoaded;
 
     [Header("DEBUG ==========")]
     [SerializeField] private bool _isOrientationCorrect;
     [SerializeField] private bool _isShowingScrim;
+    [SerializeField] private bool _isSceneLoaded;
+
+    private void OnEnable()
+    {
+        _sceneLoaded.OnEventRaised += SetSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        _sceneLoaded.OnEventRaised -= SetSceneLoaded;
+    }
+
+    private void SetSceneLoaded() =>_isSceneLoaded = true;
 
     private void Start()
     {
@@ -23,7 +38,7 @@ public class DeviceOrientationManager : MonoBehaviour
 
     private void Update()
     {
-        if (Screen.width < Screen.height)
+        if (Screen.width < Screen.height && _isSceneLoaded)
         {
             _isOrientationCorrect = false;
 

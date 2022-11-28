@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private string _nextScene;
     [SerializeField] private string _retryScene;
     [SerializeField] private ClumpDataSO _clumpData;
+    [SerializeField] private ScoreSO _score;
 
     [Header("Listening to...")]
     [SerializeField] private VoidEventSO _timerFinished;
@@ -43,6 +44,7 @@ public class LevelManager : MonoBehaviour
         _propsToWin.Raise(_winCollectAmount, name);
         _secondsToWin.Raise(_winTimerSeconds, name);
         _openCurtains.Raise(name);
+        _score.SetTimeThisForLevel(_winTimerSeconds);
     }
 
     private void TimeIsUp()

@@ -8,7 +8,9 @@ public class ScoreSO : ScriptableObject
     [field: SerializeField] public int TotalScore { get; private set; }
     [field: SerializeField] public float TotalTime { get; private set; }
     [field: SerializeField]
-    public float LevelTimeRemaining { get; private set; }
+    public float ThisLevelTimer { get; private set; }
+    [field: SerializeField]
+    public float ThisLevelTimeRemaining { get; private set; }
     [field: SerializeField]
     public List<int> ScorePerLevel { get; private set; }
     [field: SerializeField]
@@ -18,7 +20,8 @@ public class ScoreSO : ScriptableObject
     {
         TotalScore = 0;
         TotalTime = 0;
-        LevelTimeRemaining = 0f;
+        ThisLevelTimer = 0f;
+        ThisLevelTimeRemaining = 0f;
     }
 
     public void UpdateTotalScore(int addedScore)
@@ -26,14 +29,19 @@ public class ScoreSO : ScriptableObject
         TotalScore += addedScore;
     }
 
-    public void UpdateTotalTime(float addedTime)
+    public void UpdateTotalTime()
     {
-        TotalTime += addedTime;
+        TotalTime += ThisLevelTimer - ThisLevelTimeRemaining;
     }
 
-    public void SetTimeThisLevel(float remainingTime)
+    public void SetTimeThisForLevel(float amount)
     {
-        LevelTimeRemaining = remainingTime;
+        ThisLevelTimer = amount;
+    }
+
+    public void SetTimeWhenWon(float amount)
+    {
+        ThisLevelTimeRemaining = amount;
     }
 
     public string GetFormattedTime(float timeToDisplay)

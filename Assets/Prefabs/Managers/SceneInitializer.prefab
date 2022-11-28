@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _persistentManagersSceneName: PersistentManagers
   _skipCurtains: {fileID: 11400000, guid: 73801d0be729e4179bf1474ec86146d7, type: 2}
+  _score: {fileID: 11400000, guid: 60dbe12a9cb0541ffb56ff26e30e5885, type: 2}
   _sceneLoaded: {fileID: 11400000, guid: cb9a17bd10dbe46c3bf8ce92d3e6fdd2, type: 2}
   _onSceneLoaded:
     m_PersistentCalls:
