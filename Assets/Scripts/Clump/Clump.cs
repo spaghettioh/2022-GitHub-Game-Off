@@ -13,17 +13,15 @@ public class Clump : ClumpController
     [SerializeField] private PauseGameplayEventSO _pauseGameplay;
 
     [Header("DEBUG ==========")]
-    [SerializeField] private bool _canMove = true;
+    [SerializeField] private bool _canMove;
 
     private void Awake()
     {
         TryGetComponent(out Collider);
         TryGetComponent(out Body);
         _clumpData.ConfigureData(transform, Collider);
-        ConfigureController(
-            _clumpData.MinColliderRadius
-            , _clumpData.MinMoveForce
-            , _clumpData.MaxSpeed);
+        ConfigureController(_clumpData.MinColliderRadius,
+            _clumpData.MinMoveForce, _clumpData.MaxSpeed);
     }
 
     private void OnEnable()
@@ -50,14 +48,23 @@ public class Clump : ClumpController
 
     private void SendDirectionalInput(Vector2 input)
     {
-        if (_canMove) SetDirectionalInput(input.normalized);
-        else SetDirectionalInput(Vector2.zero);
+        if (_canMove)
+        {
+            SetDirectionalInput(input.normalized);
+        }
+        else
+        {
+            SetDirectionalInput(Vector2.zero);
+        }
     }
 
     private void PauseMovement(bool pause, bool shouldStopMovement)
     {
         _canMove = !pause;
-        if (shouldStopMovement) Body.Sleep();
+        if (shouldStopMovement)
+        {
+            Body.Sleep();
+        }
     }
 
     private void Crashed() => StartCoroutine(CrashedRoutine());
