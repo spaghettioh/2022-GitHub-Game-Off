@@ -8,6 +8,10 @@ public class VoidEventSO : ScriptableObject
 
     public void Raise(string elevator = "(Unknown)")
     {
+#if UNITY_EDITOR
+        Debug.Log(
+            $"{elevator} raised {name} but no one listens.");
+#endif
         if (OnEventRaised != null)
         {
             OnEventRaised.Invoke();
