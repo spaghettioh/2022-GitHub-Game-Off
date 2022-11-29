@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnEnable()
     {
-        _sceneLoaded.OnEventRaised += FireEvents;
+        _sceneLoaded.OnEventRaised += SetUpScene;
         _timerFinished.OnEventRaised += TimeIsUp;
         _clumpData.OnPropCountChanged += CheckIfCollectedEnough;
         _finishLine.OnCollisionEvent += OnFinishLineCollision;
@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnDisable()
     {
-        _sceneLoaded.OnEventRaised -= FireEvents;
+        _sceneLoaded.OnEventRaised -= SetUpScene;
         _timerFinished.OnEventRaised -= TimeIsUp;
         _clumpData.OnPropCountChanged -= CheckIfCollectedEnough;
         _finishLine.OnCollisionEvent -= OnFinishLineCollision;
@@ -52,7 +52,7 @@ public class LevelManager : MonoBehaviour
         _hasReachedWinAmount = collected >= _winCollectAmount;
     }
 
-    private void FireEvents()
+    private void SetUpScene()
     {
         _propsToWin.Raise(_winCollectAmount, name);
         _secondsToWin.Raise(_winTimerSeconds, name);
