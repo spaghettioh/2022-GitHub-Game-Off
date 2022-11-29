@@ -179,19 +179,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.13769752
+      value: 0.12085308
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.35576925
+      value: 0.03846154
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.7223476
+      value: 0.75829387
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.28846154
+      value: 0.9230769
       objectReference: {fileID: 0}
     - target: {fileID: 868993520624883822, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_Name
@@ -259,9 +259,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3390787359361530975, guid: 7965837e311864be2b513be9db08329a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421898312163830144, guid: 7965837e311864be2b513be9db08329a, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 175085705}
     - target: {fileID: 7421898312163830147, guid: 7965837e311864be2b513be9db08329a, type: 3}
       propertyPath: m_Name
-      value: Canvas_Persistent_10
+      value: Canvas_Persistent
       objectReference: {fileID: 0}
     - target: {fileID: 7421898312163830151, guid: 7965837e311864be2b513be9db08329a, type: 3}
       propertyPath: m_Pivot.x

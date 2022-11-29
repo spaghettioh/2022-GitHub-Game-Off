@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
-using DG.Tweening;
 using TMPro;
+using UnityEngine;
 
 public class WinScreenManager : MonoBehaviour
 {
@@ -53,6 +52,8 @@ public class WinScreenManager : MonoBehaviour
     [SerializeField] private int _scoreForCountingUp;
     [SerializeField] private float _thisLevelRemainingTime;
     [SerializeField] private float _timeForCountingDown;
+    [Space]
+    [SerializeField] private bool _hasRushed;
 
     private void OnEnable()
     {
@@ -66,10 +67,13 @@ public class WinScreenManager : MonoBehaviour
 
     public void RushWinScreen()
     {
+        // TODO BUG the score never stops incrementing and isn't saved
         _tallyIncrementTime = 0f;
         _timeBetweenTallies = 0f;
         _scoreSound = null;
         _scoreFinishedSound = null;
+        Time.timeScale = 4f;
+        _hasRushed = true;
     }
 
     private void StartWinScreen()
@@ -151,7 +155,10 @@ public class WinScreenManager : MonoBehaviour
 
     private IEnumerator TallyTimeRoutine()
     {
-        yield return new WaitForSeconds(_timeBetweenTallies);
+        if (!_hasRushed)
+        {
+            yield return new WaitForSeconds(_timeBetweenTallies);
+        }
         //_thisLevelRemainingTime = _timeForCountingDown;
         while (_timeForCountingDown > 0f)
         {
@@ -159,7 +166,10 @@ public class WinScreenManager : MonoBehaviour
             _timeForCountingDown--;
             _timeText.text = _scoreSO.GetFormattedTime(_timeForCountingDown);
 
-            yield return new WaitForSeconds(_tallyIncrementTime);
+            if (!_hasRushed)
+            {
+                yield return new WaitForSeconds(_tallyIncrementTime);
+            }
         }
         _timeText.text = _scoreSO.GetFormattedTime(-1f);
 
@@ -181,31 +191,36 @@ public class WinScreenManager : MonoBehaviour
 
     private IEnumerator WrapUpPropScreenRoutine()
     {
-        yield return new WaitForSeconds(_timeBetweenTallies);
+        if (!_hasRushed)
+        {
+            yield return new WaitForSeconds(_timeBetweenTallies);
+        }
 
         if (_scoreFinishedSound != null)
         {
             _audioEvent.RaisePlayback(_scoreFinishedSound, name);
         }
 
-        _winScreenFinished.Raise(name);
         UpdateScoreValues();
+        Time.timeScale = 1f;
+        _winScreenFinished.Raise(name);
 
-        var offTime = .2f;
-        var onTime = .3f;
-        int loopPrevention = 0;
-        
-        // Blinks the text
-        while (loopPrevention < 1000f)
+        if (!_hasRushed)
         {
-            _scoreText.gameObject.SetActive(false);
-            yield return new WaitForSeconds(offTime);
-            _scoreText.gameObject.SetActive(true);
-            yield return new WaitForSeconds(onTime);
-            loopPrevention++;
+            var offTime = .2f;
+            var onTime = .3f;
+            int loopPrevention = 0;
+        
+            // Blinks the text
+            while (loopPrevention < 1000f)
+            {
+                _scoreText.gameObject.SetActive(false);
+                yield return new WaitForSeconds(offTime);
+                _scoreText.gameObject.SetActive(true);
+                yield return new WaitForSeconds(onTime);
+                loopPrevention++;
+            }
         }
-
-        _scoreText.gameObject.SetActive(true);
     }
 
     private void UpdateScoreValues()

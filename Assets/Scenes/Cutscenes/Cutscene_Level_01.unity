@@ -179,19 +179,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.0015576323
+      value: 0.12085308
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.37041035
+      value: 0.03846154
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.9968847
+      value: 0.75829387
       objectReference: {fileID: 0}
     - target: {fileID: 807727662636603819, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.25917926
+      value: 0.9230769
       objectReference: {fileID: 0}
     - target: {fileID: 868993520624883822, guid: dbc1c8cd9bf9e4563a3677799c3c5666, type: 3}
       propertyPath: m_Name
@@ -260,11 +260,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390787359361530975, guid: 7965837e311864be2b513be9db08329a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -159.99997
+      value: -160
       objectReference: {fileID: 0}
     - target: {fileID: 3390787359361530975, guid: 7965837e311864be2b513be9db08329a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -90.00002
+      value: -90.00003
       objectReference: {fileID: 0}
     - target: {fileID: 4083877013199809061, guid: 7965837e311864be2b513be9db08329a, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -276,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 1134947457}
     - target: {fileID: 7421898312163830147, guid: 7965837e311864be2b513be9db08329a, type: 3}
       propertyPath: m_Name
-      value: Canvas_Persistent_12
+      value: Canvas_Persistent
       objectReference: {fileID: 0}
     - target: {fileID: 7421898312163830151, guid: 7965837e311864be2b513be9db08329a, type: 3}
       propertyPath: m_Pivot.x

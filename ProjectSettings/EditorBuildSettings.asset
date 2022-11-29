@@ -28,13 +28,13 @@ EditorBuildSettings:
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/Levels/Level_02.unity
-    guid: 99d82e3b252194b5a89a235095b3f78d
+    guid: 424b65749dee843ada8d64d376298540
   - enabled: 1
     path: Assets/Scenes/Levels/Level_03.unity
-    guid: c1d41e8a2e331435195982cfe8d3fe03
+    guid: baaddd9f0709b42afafede224ef602d0
   - enabled: 1
     path: Assets/Scenes/Levels/Level_04.unity
-    guid: 6823b722c1d524bc68765931461800f1
+    guid: 289b7b5e9aa5547d18736279f7c08477
   - enabled: 1
     path: Assets/Scenes/Cutscenes/Cutscene_Title.unity
     guid: 666e2bd8c38c446b784b777815d6b4f0

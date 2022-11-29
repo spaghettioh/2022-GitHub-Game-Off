@@ -744,6 +744,7 @@ MonoBehaviour:
   Collider: {fileID: 8481394919303201980}
   Body: {fileID: 8481394919303201978}
   Telemetry: {fileID: 8481394920154577031}
+  _showTelemetry: 0
   _forceType: 3
   _force: 200
   _forceMode: 0
@@ -752,14 +753,10 @@ MonoBehaviour:
   _clumpData: {fileID: 11400000, guid: d0c59fb33456a457c9ee98332ddb6f79, type: 2}
   _crashEvent: {fileID: 11400000, guid: 33f50c759cd2040f6963327c2706f01b, type: 2}
   _crashStateDuration: 1
-  _minColliderRadius: 0.2
-  _maxColliderRadius: 3
-  _minMoveForce: 200
-  _maxMoveForce: 1000
   _inputHandler: {fileID: 11400000, guid: b780d23633ee24206ac4d23a7c152f74, type: 2}
+  _zoomFinished: {fileID: 11400000, guid: ace19b425833146b9ba671960b248568, type: 2}
   _pauseGameplay: {fileID: 11400000, guid: 22f792b1ccc424bba9789fa3641d76ad, type: 2}
   _canMove: 1
-  _showTelemetry: 0
 --- !u!135 &8481394919303201980
 SphereCollider:
   m_ObjectHideFlags: 0
