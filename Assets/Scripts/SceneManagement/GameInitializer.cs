@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 public class GameInitializer : MonoBehaviour
 {
     [SerializeField] private LoadEventSO _loadEventChannel;
-    [SerializeField] private string _titleSceneName;
-    [Header("PersistentManagers")]
-    [SerializeField] private string _persistentManagersSceneName = "PersistentManagers";
+    [SerializeField] private string _titleSceneName = "UI_BootScreen";
+    [SerializeField]
+    private string _persistentManagersSceneName = "PersistentManagers";
 
     private void Start()
     {
@@ -19,8 +19,6 @@ public class GameInitializer : MonoBehaviour
         }
     }
 
-    private void PersistentManagersLoaded(AsyncOperation unused)
-    {
+    private void PersistentManagersLoaded(AsyncOperation unused) =>
         _loadEventChannel.RaiseTransitionless(_titleSceneName, name);
-    }
 }

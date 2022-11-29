@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(menuName = "Scriptable Objects/Load Event Channel",
-    fileName = "LoadEvent")]
+[CreateAssetMenu(
+    menuName = "Game Off/Load Event Channel", fileName = "LoadEvent")]
 public class LoadEventSO : ScriptableObject
 {
     public UnityAction<string> OnSceneLoadRequested;
@@ -24,10 +24,12 @@ public class LoadEventSO : ScriptableObject
         {
             OnSceneLoadRequested.Invoke(sceneName);
         }
+#if UNITY_EDITOR
         else
         {
             Debug.LogWarning($"{elevator} raised {name} but no one listens.");
         }
+#endif
     }
 
     /// <summary>
@@ -41,10 +43,16 @@ public class LoadEventSO : ScriptableObject
         string sceneName, string elevator = "(Undefined)")
     {
         if (OnSceneLoadTransitionlessRequested != null)
+        {
             OnSceneLoadTransitionlessRequested.Invoke(sceneName);
+        }
+#if UNITY_EDITOR
         else
+        {
             Debug.LogWarning($"{elevator} raised {name} (transitionless)" +
                 $" but no one listens.");
+        }
+#endif
     }
 
     /// <summary>
@@ -58,10 +66,16 @@ public class LoadEventSO : ScriptableObject
         string sceneName, string elevator = "(Undefined)")
     {
         if (OnRetrySceneLoadRequested != null)
+        {
             OnRetrySceneLoadRequested.Invoke(sceneName);
+        }
+#if UNITY_EDITOR
         else
+        {
             Debug.LogWarning($"{elevator} raised {name} (retry)" +
                 $" but no one listens.");
+        }
+#endif
     }
 
     public void RaiseWinScene(string followingCutscene) =>
@@ -70,18 +84,30 @@ public class LoadEventSO : ScriptableObject
         string elevator = "(Undefined)")
     {
         if (OnWinSceneRequested != null)
+        {
             OnWinSceneRequested.Invoke(followingCutscene);
+        }
+#if UNITY_EDITOR
         else
+        {
             Debug.LogWarning($"{elevator} raised {name} (win)" +
                 $" but no one listens.");
+        }
+#endif
     }
 
     public void RaiseFollowingCutscene(string elevator = "(Undefined)")
     {
         if (OnFollowingCutsceneRequested != null)
+        {
             OnFollowingCutsceneRequested.Invoke();
+        }
+#if UNITY_EDITOR
         else
+        {
             Debug.LogWarning($"{elevator} raised {name} (win)" +
                 $" but no one listens.");
+        }
+#endif
     }
 }

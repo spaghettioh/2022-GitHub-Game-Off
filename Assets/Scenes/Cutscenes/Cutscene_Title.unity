@@ -264,9 +264,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _event:
     m_PersistentCalls:
+      m_Calls: []
+  _onAnimationEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 26da3b366274b4ea09c17ce2bb1024a2, type: 2}
-        m_TargetAssemblyTypeName: LoadEventSO, Assembly-CSharp
+        m_TargetAssemblyTypeName: LoadEventSO, GameOff
         m_MethodName: RaiseTransitionless
         m_Mode: 5
         m_Arguments:

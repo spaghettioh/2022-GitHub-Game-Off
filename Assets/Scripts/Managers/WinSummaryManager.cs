@@ -1,7 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class WinSummaryManager : MonoBehaviour
@@ -15,7 +14,6 @@ public class WinSummaryManager : MonoBehaviour
     [SerializeField] private AudioCueSO _postSound;
     [SerializeField] private UnityEvent _onWinSummaryFinished;
     [SerializeField] private bool _hasRushed;
-
 
     private void Start()
     {
@@ -39,8 +37,7 @@ public class WinSummaryManager : MonoBehaviour
         }
     }
 
-    public void StartWinSummary()
-        => StartCoroutine(StartWinSummaryRoutine());
+    public void StartWinSummary() => StartCoroutine(StartWinSummaryRoutine());
     private IEnumerator StartWinSummaryRoutine()
     {
         yield return new WaitForSeconds(_timeUntilStarting);

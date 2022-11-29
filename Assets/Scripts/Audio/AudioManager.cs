@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
 
     private AudioEmitter _musicEmitter;
     private AudioEmitter _fadingMusicEmitter;
+    private bool _hasMusicEmitter { get { return _musicEmitter == null; } }
 
     private void Awake()
     {
@@ -44,7 +45,7 @@ public class AudioManager : MonoBehaviour
         if (audioCue.CueType == AudioCueType.Music)
         {
             // Create a music emitter if one doesn't exist
-            if (_musicEmitter == null)
+            if (_hasMusicEmitter)
             {
                 _musicEmitter = _audioEmitterPool.Request();
                 _musicEmitter.gameObject.SetActive(true);
@@ -66,10 +67,12 @@ public class AudioManager : MonoBehaviour
 
     private void FadeOutMusic(float fadeLength)
     {
-        if (_musicEmitter == null)
+        if (_hasMusicEmitter)
         {
+#if UNITY_EDITOR
             Debug.LogWarning($"{name} heard Fade event but there's " +
                 $"no music emitter");
+#endif
             return;
         }
 
@@ -81,10 +84,12 @@ public class AudioManager : MonoBehaviour
 
     private void StopMusic()
     {
-        if (_musicEmitter == null)
+        if (_hasMusicEmitter)
         {
+#if UNITY_EDITOR
             Debug.LogWarning($"{name} heard Stop event but there's " +
                 $"no music emitter");
+#endif
             return;
         }
 
@@ -94,10 +99,12 @@ public class AudioManager : MonoBehaviour
 
     private void PauseUnpauseMusic(bool pauseUnpause)
     {
-        if (_musicEmitter == null)
+        if (_hasMusicEmitter)
         {
+#if UNITY_EDITOR
             Debug.LogWarning($"{name} heard Pause event but there's " +
                 $"no music emitter");
+#endif
             return;
         }
 

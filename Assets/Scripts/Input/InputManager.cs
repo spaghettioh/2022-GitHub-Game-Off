@@ -5,14 +5,16 @@ public class InputManager : MonoBehaviour
     [SerializeField] private InputHandlerSO _inputHandler;
     [SerializeField] private TouchInput _westJoystick;
     [SerializeField] private TouchInput _eastJoystick;
-    private Vector2 _keys;
-    private Vector2 _westTouch;
-    private Vector2 _eastTouch;
+
+    [Header("DEBUG ==========")]
+    [SerializeField] private Vector2 _keys;
+    [SerializeField] private Vector2 _westTouch;
+    [SerializeField] private Vector2 _eastTouch;
 
     private void Update()
     {
-        _keys = new Vector2(Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical"));
+        _keys = new Vector2(
+            Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         _westTouch = new Vector2(
             _westJoystick.Horizontal, _westJoystick.Vertical);

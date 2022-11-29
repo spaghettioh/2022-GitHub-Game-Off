@@ -96,16 +96,16 @@ public class PropManager : MonoBehaviour
             _audioEvent.RaisePlayback(_crashSoundLarge);
 
             // TODO make this query return all attaching or just the last one
-            if (_propCollection.GetCount() > 0)
+            if (_propCollection.Count > 0)
             {
-                var attaching = _propCollection.GetAttachingProps();
+                var attaching = _propCollection.AttachingProps;
                 if (attaching.Count > 0)
                 {
                     attaching.ForEach(p => UncollectProp(p));
                 }
                 else
                 {
-                    UncollectProp(_propCollection.GetLast());
+                    UncollectProp(_propCollection.Last);
                 }
             }
         }
@@ -147,12 +147,6 @@ public class PropManager : MonoBehaviour
             {
                 p.GetComponentInChildren<Billboard>().OrientNow();
                 _forceSpriteOrientation = false;
-
-                //var t = p.Graphic.rotation.eulerAngles;
-                //t.x = 0;
-                //t.z = 0;
-                //p.GetComponentInChildren<PropColliderMesh>()
-                //    .transform.rotation = Quaternion.Euler(t);
             });
         }
     }

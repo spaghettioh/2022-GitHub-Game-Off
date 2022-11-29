@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using DG.Tweening;
+﻿using DG.Tweening;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class WinScreenProp : MonoBehaviour
@@ -31,9 +30,15 @@ public class WinScreenProp : MonoBehaviour
             _isFalling = false;
 
             if (OnSleep != null)
+            {
                 OnSleep.Invoke();
+            }
+#if UNITY_EDITOR
             else
+            {
                 Debug.LogWarning($"{name} feel asleep but no one listens.");
+            }
+#endif
         }
     }
 

@@ -11,7 +11,7 @@ public class AudioEmitter : MonoBehaviour
 
     private void Awake()
     {
-        _audioSource = GetComponent<AudioSource>();
+        TryGetComponent(out _audioSource);
     }
 
     /// <summary>
@@ -51,8 +51,14 @@ public class AudioEmitter : MonoBehaviour
     /// <param name="audioCue"></param>
     public void PauseUnpause(bool pauseUnpause)
     {
-        if (pauseUnpause) _audioSource.Pause();
-        else _audioSource.Play();
+        if (pauseUnpause)
+        {
+            _audioSource.Pause();
+        }
+        else
+        {
+            _audioSource.UnPause();
+        }
     }
 
     public void Stop()
@@ -67,8 +73,8 @@ public class AudioEmitter : MonoBehaviour
     /// <returns></returns>
     private AudioClip GetRandomClip(List<AudioClip> clips)
     {
-        AudioClip clip = clips[Random.Range(0, clips.Count)];
-        return clip;
+        int randomIndex = Random.Range(0, clips.Count);
+        return clips[randomIndex];
     }
 
     /// <summary>
@@ -81,8 +87,8 @@ public class AudioEmitter : MonoBehaviour
         ClearEmitter();
     }
 
-    public void FadeMusic(float fadeLength) =>
-        StartCoroutine(FadeOutMusic(fadeLength));
+    public void FadeMusic(float fadeLength) => StartCoroutine(
+        FadeOutMusic(fadeLength));
     private IEnumerator FadeOutMusic(float fadeLength)
     {
         while (_audioSource.volume > 0)

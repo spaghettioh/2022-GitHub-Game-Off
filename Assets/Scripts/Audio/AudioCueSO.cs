@@ -11,13 +11,11 @@ public enum AudioCueType
     Music,
 }
 
-[CreateAssetMenu(menuName = "Game Off/Scriptable Objects/Audio Cue",
-    fileName = "SFXorMusic_NAME")]
+[CreateAssetMenu(menuName = "Game Off/Audio Cue", fileName = "SFXorMusic_NAME")]
 public class AudioCueSO : ScriptableObject
 {
     [field: SerializeField]
     public AudioCueType CueType { get; private set; }
-
     [field: SerializeField]
     public List<AudioClip> Clips { get; private set; }
 
@@ -29,8 +27,5 @@ public class AudioCueSO : ScriptableObject
     /// <summary>
     /// The amount of randomness to vary playback of the asset
     /// </summary>
-    public float PitchVariation
-    {
-        get { return _pitchVariation; }
-    }
+    public float PitchVariation { get { return _pitchVariation; } }
 }

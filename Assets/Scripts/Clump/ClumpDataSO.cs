@@ -36,7 +36,6 @@ public class ClumpDataSO : ScriptableObject
         MoveForce += force;
         Collider.radius += radius;
         CollectedCount++;
-        RaisePropCountChange();
         RaiseStatsChange();
     }
 
@@ -45,25 +44,27 @@ public class ClumpDataSO : ScriptableObject
         MoveForce -= force;
         Collider.radius -= radius;
         CollectedCount--;
-        RaisePropCountChange();
         RaiseStatsChange();
     }
 
     public void SetVelocity(float value) => Velocity = value;
 
-    private void RaisePropCountChange()
+    private void RaiseStatsChange()
     {
         if (OnPropCountChanged != null)
             OnPropCountChanged.Invoke(CollectedCount);
-        else Debug.LogWarning($"{name} announced a size change" +
+#if UNITY_EDITOR
+        else
+            Debug.LogWarning($"{name} announced a size change" +
             $" by no one listens.");
-    }
+#endif
 
-    private void RaiseStatsChange()
-    {
         if (OnStatsChanged != null)
             OnStatsChanged.Invoke(MoveForce);
-        else Debug.LogWarning($"{name} announced a size change" +
+#if UNITY_EDITOR
+        else
+            Debug.LogWarning($"{name} announced a size change" +
             $" by no one listens.");
+#endif
     }
 }

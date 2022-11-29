@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +9,7 @@ public class SceneLoaderSystem : MonoBehaviour
     [SerializeField] private VoidEventSO _curtainsClosed;
     [SerializeField] private VoidEventSO _sceneLoaded;
     [SerializeField] private string _winSceneName;
+    [SerializeField] private string _fallbackScene = "UI_Title";
 
     [Header("DEBUG ==========")]
     [SerializeField] private string _currentActiveScene;
@@ -76,7 +76,9 @@ public class SceneLoaderSystem : MonoBehaviour
     private void TransitionToFollowingCutscene()
     {
         if (_followingCutscene == "")
-            _followingCutscene = "UI_Title";
+        {
+            _followingCutscene = _fallbackScene;
+        }
         TransitionToNextScene(_followingCutscene);
         _followingCutscene = "";
     }

@@ -5,9 +5,7 @@ public abstract class ClumpController : MonoBehaviour
 {
     private enum ForceType
     {
-        //ExplosionForce,
         Force,
-        //ForceAtPosition,
         RelativeForce,
         RelativeTorque,
         Torque,
@@ -20,6 +18,7 @@ public abstract class ClumpController : MonoBehaviour
     [SerializeField] protected SphereCollider Collider;
     [SerializeField] protected Rigidbody Body;
     [SerializeField] private Transform Telemetry;
+    [SerializeField] private bool _showTelemetry;
 
     [Header("Movement")]
     [SerializeField] private ForceType _forceType;
@@ -27,7 +26,7 @@ public abstract class ClumpController : MonoBehaviour
     [SerializeField] private ForceMode _forceMode;
     [SerializeField] private float _maxSpeed;
 
-    [Header("CONTROLLER DEBUG ==========")]
+    [Header("DEBUG ==========")]
     [SerializeField] private Vector3 _directionalInput;
 
     private void Awake()
@@ -38,6 +37,7 @@ public abstract class ClumpController : MonoBehaviour
 
     public virtual void Update()
     {
+        ShowTelemetry(_showTelemetry);
         CalculateForceDirection();
     }
 
@@ -86,21 +86,11 @@ public abstract class ClumpController : MonoBehaviour
         {
             switch (_forceType)
             {
-                //case ForceType.ExplosionForce:
-                //    _body.AddExplosionForce(_force * Time.deltaTime * Telemetry.forward,
-                //     _forceMode);
-                //    break;
-
                 case ForceType.Force:
                     Body.AddForce(
                         _force * Time.deltaTime * Telemetry.forward,
                         _forceMode);
                     break;
-
-                //case ForceType.ForceAtPosition:
-                //    _body.AddForceAtPosition(_force * Time.deltaTime * Telemetry.forward,
-                //    _forceMode);
-                //    break;
 
                 case ForceType.RelativeForce:
                     Body.AddRelativeForce(
@@ -126,7 +116,7 @@ public abstract class ClumpController : MonoBehaviour
         }
     }
 
-    protected void ShowTelemetry(bool show)
+    private void ShowTelemetry(bool show)
     {
         Telemetry.gameObject.SetActive(show);
 

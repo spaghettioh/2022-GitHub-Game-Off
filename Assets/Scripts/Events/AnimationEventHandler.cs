@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class AnimationEventHandler : MonoBehaviour
 {
-    [SerializeField] private UnityEvent _event;
+    [SerializeField] private UnityEvent _onAnimationEvent;
 
     public void AnimationEvent()
     {
-        _event.Invoke();
+        _onAnimationEvent.Invoke();
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -18,9 +16,11 @@ public class InputHandler : MonoBehaviour
         {
             OnDirectionalInput.Invoke(input);
         }
+#if UNITY_EDITOR
         else
         {
             Debug.LogWarning($"No one hear input event from {name}");
         }
+#endif
     }
 }

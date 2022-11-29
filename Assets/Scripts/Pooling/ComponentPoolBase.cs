@@ -4,8 +4,7 @@ using UnityEngine;
 public class ComponentPoolBase<T> : ScriptableObject where T : Component
 {
     [SerializeField] private T _prefab;
-
-    private Stack<T> _stack = new Stack<T>();
+    private readonly Stack<T> _stack = new();
     private Transform _parent;
 
     /// <summary>
@@ -33,7 +32,10 @@ public class ComponentPoolBase<T> : ScriptableObject where T : Component
     /// <returns></returns>
     public T Request()
     {
-        if (_stack.Count == 0) Create();
+        if (_stack.Count == 0)
+        {
+            Create();
+        }
         return _stack.Pop();
     }
 
@@ -41,12 +43,18 @@ public class ComponentPoolBase<T> : ScriptableObject where T : Component
     /// Puts an object back into the pool
     /// </summary>
     /// <param name="returning"></param>
-    public void Return(T returning) => _stack.Push(returning);
+    public void Return(T returning)
+    {
+        _stack.Push(returning);
+    }
 
     /// <summary>
     /// Clears the stack whenever Play stops (because the pool is an asset)
     /// </summary>
-    private void OnDisable() => _stack.Clear();
+    private void OnDisable()
+    {
+        _stack.Clear();
+    }
 
     /// <summary>
     /// Instantiates an object and adds it to the pool

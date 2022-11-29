@@ -9,8 +9,15 @@ public class IntEventSO : ScriptableObject
 
     public void Raise(int value, string elevator = "(Unknown)")
     {
-        Debug.Log($"{elevator} raised {name}");
-        if (OnEventRaised != null) OnEventRaised.Invoke(value);
-        else Debug.LogWarning($"{elevator} raised {name} but no one listens.");
+        if (OnEventRaised != null)
+        {
+            OnEventRaised.Invoke(value);
+        }
+#if UNITY_EDITOR
+        else
+        {
+            Debug.LogWarning($"{elevator} raised {name} but no one listens.");
+        }
+#endif
     }
 }

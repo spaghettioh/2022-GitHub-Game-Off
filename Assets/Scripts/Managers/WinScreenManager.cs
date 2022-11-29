@@ -90,7 +90,7 @@ public class WinScreenManager : MonoBehaviour
         else
         {
             _totalScore = _scoreSO.TotalScore;
-            _propsCollected = _propCollection.GetPropsWon();
+            _propsCollected = _propCollection.PropsWon;
             _timeForCountingDown = _scoreSO.ThisLevelTimeRemaining;
             _timeForCountingDown = _scoreSO.ThisLevelTimeRemaining;
         }
@@ -173,7 +173,10 @@ public class WinScreenManager : MonoBehaviour
         _totalScore += amount;
         _scoreText.text = _totalScore.ToString();
 
-        if (_scoreSound != null) _audioEvent.RaisePlayback(_scoreSound, name);
+        if (_scoreSound != null)
+        {
+            _audioEvent.RaisePlayback(_scoreSound, name);
+        }
     }
 
     private IEnumerator WrapUpPropScreenRoutine()
@@ -181,7 +184,10 @@ public class WinScreenManager : MonoBehaviour
         yield return new WaitForSeconds(_timeBetweenTallies);
 
         if (_scoreFinishedSound != null)
+        {
             _audioEvent.RaisePlayback(_scoreFinishedSound, name);
+        }
+
         _winScreenFinished.Raise(name);
         UpdateScoreValues();
 

@@ -9,7 +9,15 @@ public class PropCollectEventSO : ScriptableObject
 
     public void Raise(Prop prop, string elevator = "(Unknown)")
     {
-        if (OnEventRaised != null) OnEventRaised.Invoke(prop);
-        else Debug.LogWarning($"{elevator} raised {name} but no one listens.");
+        if (OnEventRaised != null)
+        {
+            OnEventRaised.Invoke(prop);
+        }
+#if UNITY_EDITOR
+        else
+        {
+            Debug.LogWarning($"{elevator} raised {name} but no one listens.");
+        }
+#endif
     }
 }

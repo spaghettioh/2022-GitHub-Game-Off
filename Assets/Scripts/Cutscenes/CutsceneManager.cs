@@ -60,7 +60,7 @@ public class CutsceneManager : MonoBehaviour
     public void ShowNextScreen()
     {
         // Unsubscribe now because curtains raise twice for some reason
-        _curtainsOpened.OnEventRaised -= ShowNextScreen;
+        //_curtainsOpened.OnEventRaised -= ShowNextScreen;
 
         if (_currentScreenIndex < _screens.Count)
         {
@@ -130,8 +130,8 @@ public class CutsceneManager : MonoBehaviour
             }
         }
 
-        StartCoroutine(WaitTimeRoutine(
-            waitTime != 0 ? waitTime : _textWaitTime));
+        StartCoroutine(
+            WaitTimeRoutine(waitTime != 0 ? waitTime : _textWaitTime));
 
         _isParsingText = false;
 

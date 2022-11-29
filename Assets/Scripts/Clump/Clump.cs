@@ -7,16 +7,13 @@ public class Clump : ClumpController
     [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private VoidEventSO _crashEvent;
     [SerializeField] private float _crashStateDuration = 1f;
-    [SerializeField] private float _minColliderRadius = .2f;
-    [SerializeField] private float _maxColliderRadius = 3f;
 
     [Header("Listening to...")]
     [SerializeField] private InputHandlerSO _inputHandler;
     [SerializeField] private PauseGameplayEventSO _pauseGameplay;
 
-    [Header("CLUMP DEBUG ==========")]
+    [Header("DEBUG ==========")]
     [SerializeField] private bool _canMove = true;
-    [SerializeField] private bool _showTelemetry;
 
     private void Awake()
     {
@@ -48,7 +45,6 @@ public class Clump : ClumpController
     public override void Update()
     {
         base.Update();
-        ShowTelemetry(_showTelemetry);
         _clumpData.SetVelocity(Body.velocity.magnitude);
     }
 

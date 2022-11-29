@@ -11,22 +11,16 @@ public class Prop : MonoBehaviour
 
     [Header("Config")]
     [SerializeField] private Sprite _sprite;
-    public Sprite Sprite
-    {
-        get { return _renderer.sprite; }
-    }
+    public Sprite Sprite { get { return _renderer.sprite; } }
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private TrailRenderer _uncollectTrail;
     [SerializeField] private Transform _transform;
 
     [Header("Collection")]
     [SerializeField] private ClumpDataSO _clumpData;
-    [field: SerializeField] public int ScorePoints {get; private set;}
+    [field: SerializeField] public int ScorePoints { get; private set; }
     [SerializeField] private AudioCueSO _propCollectSound;
-    public AudioCueSO PropCollectSound
-    {
-        get { return _propCollectSound; }
-    }
+    public AudioCueSO PropCollectSound { get { return _propCollectSound; } }
     [field: SerializeField]
     public bool IsCollectable { get; private set; }
     [field: SerializeField] public float SizeToCollect { get; private set; }
@@ -71,8 +65,14 @@ public class Prop : MonoBehaviour
 
     private void RaiseCollision(Collider collider)
     {
-        if (OnCollisionEvent != null) OnCollisionEvent.Invoke(this);
-        else Debug.LogWarning($"{name} raised collision but no one listens.");
+        if (OnCollisionEvent != null)
+        {
+            OnCollisionEvent.Invoke(this);
+        }
+        else
+        {
+            Debug.LogWarning($"{name} raised collision but no one listens.");
+        }
     }
 
     private void BuildColliderList()
@@ -110,7 +110,9 @@ public class Prop : MonoBehaviour
         _colliders.ForEach(c => c.gameObject.SetActive(false));
 
         if (_propCollectSound != null)
+        {
             audioEvent.RaisePlayback(_propCollectSound);
+        }
 
         CreateAttachPoint();
 
@@ -189,6 +191,7 @@ public class Prop : MonoBehaviour
     private void OnValidate()
     {
         BuildColliderList();
+
         if (_sprite != null)
         {
             _renderer.sprite = _sprite;

@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class Jukebox : MonoBehaviour
 {
+    [Header("Music for this scene")]
     [SerializeField] private AudioCueSO _music;
+
     [Header("Listening for...")]
     [SerializeField] private VoidEventSO _beginPlaybackOn;
 
@@ -19,5 +21,8 @@ public class Jukebox : MonoBehaviour
         _beginPlaybackOn.OnEventRaised -= TriggerMusic;
     }
 
-    private void TriggerMusic() => _audioEventChannel.RaisePlayback(_music);
+    private void TriggerMusic()
+    {
+        _audioEventChannel.RaisePlayback(_music);
+    }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,8 +10,14 @@ public class CutsceneTestEventSO : ScriptableObject
     public void Raise(CutsceneScreenSO screen, string elevator = "?")
     {
         if (OnCutsceneChanged != null)
+        {
             OnCutsceneChanged.Invoke(screen);
+        }
+#if UNITY_EDITOR
         else
+        {
             Debug.LogWarning($"{elevator} raised {name}, unheard, DGAF");
+        }
+#endif
     }
 }

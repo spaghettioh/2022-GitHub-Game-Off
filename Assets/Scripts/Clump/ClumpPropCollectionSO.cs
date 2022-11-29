@@ -1,10 +1,10 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ClumpPropCollection"
-    , menuName = "Game Off/Clump prop collection")]
+[CreateAssetMenu(
+    fileName = "ClumpPropCollection",
+    menuName = "Game Off/Clump prop collection")]
 public class ClumpPropCollectionSO : ScriptableObject
 {
     [SerializeField] private VoidEventSO _winEvent;
@@ -40,18 +40,10 @@ public class ClumpPropCollectionSO : ScriptableObject
     // TODO - All 3 of these are only used to know
     // if PropManager can find an attaching
     // prop, so just move this and that check into that method
-    public int GetCount()
-    {
-        return _currentScenePropsCollected.Count;
-    }
-    public Prop GetLast()
-    {
-        return _currentScenePropsCollected.Last();
-    }
-    public List<Prop> GetAttachingProps()
-    {
-        return _currentScenePropsCollected.FindAll(p => p.IsAttaching);
-    }
+    public int Count => _currentScenePropsCollected.Count;
+    public Prop Last => _currentScenePropsCollected.Last();
+    public List<Prop> AttachingProps =>
+        _currentScenePropsCollected.FindAll(p => p.IsAttaching);
 
     // Waits until the scene is won before trying to build out prop data
     // to avoid having to manage the list in each method
@@ -62,8 +54,5 @@ public class ClumpPropCollectionSO : ScriptableObject
             prop.ScorePoints)));
     }
 
-    public List<PropData> GetPropsWon()
-    {
-        return _propsForWinScreen;
-    }
+    public List<PropData> PropsWon => _propsForWinScreen;
 }

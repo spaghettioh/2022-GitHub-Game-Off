@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.Events;
-using System;
+using UnityEngine.SceneManagement;
 
 public class SceneInitializer : MonoBehaviour
 {
@@ -44,10 +43,11 @@ public class SceneInitializer : MonoBehaviour
 
     private void OnPersistentManagersLoaded(AsyncOperation ignore)
     {
+        var message = $"{name}, on cold start after loading PeristentManagers,";
         // Unsubscribe on cold starts
         _sceneLoaded.OnEventRaised -= OnSceneLoaded;
-        _sceneLoaded.Raise($"{name}, after loading PeristentManagers,");
-        _skipCurtains.Raise($"{name}, after loading PeristentManagers,");
+        _sceneLoaded.Raise(message);
+        _skipCurtains.Raise(message);
     }
 
     private void OnSceneLoaded()

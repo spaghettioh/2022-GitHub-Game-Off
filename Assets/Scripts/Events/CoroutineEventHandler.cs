@@ -5,8 +5,9 @@ using UnityEngine.Events;
 
 public class CoroutineEventHandler : MonoBehaviour
 {
-    [Header("After waiting this many seconds...")]
+    [Header("After this many seconds...")]
     [SerializeField] private float _waitTime;
+
     [Header("...do this:")]
     [SerializeField] private UnityEvent _event;
 

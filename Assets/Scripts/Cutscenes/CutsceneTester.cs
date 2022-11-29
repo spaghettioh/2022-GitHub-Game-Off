@@ -18,7 +18,7 @@ public class CutsceneTester : MonoBehaviour
         // Reset all the boxes
         _textBoxes.ForEach(box =>
         {
-            box.text = ""; // Unity whines if you update disabled shit
+            box.text = ""; // Unity whines if you update disabled shit?
         });
 
         // Enable & update text boxes for each block

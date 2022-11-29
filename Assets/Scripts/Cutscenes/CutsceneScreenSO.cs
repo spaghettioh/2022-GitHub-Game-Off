@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Cutscene_NAME_Screen_00",
+[CreateAssetMenu(
+    fileName = "Cutscene_NAME_Screen_00",
     menuName = "Game Off/Cutscene Screen")]
 public class CutsceneScreenSO : ScriptableObject
 {
@@ -10,9 +10,8 @@ public class CutsceneScreenSO : ScriptableObject
     public struct TextAndSound
     {
         [Header("Required")]
-        [Tooltip(
-            "The text to show.")]
-        [TextArea(5, 5)]
+        [Tooltip("The text to show."),
+            TextArea(5, 5)]
         public string Text;
 
         [Header("Optional")]
@@ -24,6 +23,7 @@ public class CutsceneScreenSO : ScriptableObject
         public float WaitTime;
 
     }
+
     [field: SerializeField]
     public Sprite Graphic { get; private set; }
     [field: SerializeField]
