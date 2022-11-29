@@ -68,4 +68,13 @@ public class HUDManager : MonoBehaviour
     {
         _loseDialog.SetActive(true);
     }
+
+    private void OnValidate()
+    {
+        if (gameObject.activeInHierarchy)
+        {
+            _mainCamera = Camera.main;
+            _canvas.worldCamera = _mainCamera;
+        }
+    }
 }
