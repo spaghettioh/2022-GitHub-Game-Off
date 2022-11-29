@@ -140,7 +140,7 @@ MonoBehaviour:
   _winCollectAmount: 0
   _winTimerSeconds: 0
   _nextScene: 
-  _retryScene: 
+  _finishLine: {fileID: 0}
   _clumpData: {fileID: 11400000, guid: d0c59fb33456a457c9ee98332ddb6f79, type: 2}
   _score: {fileID: 11400000, guid: 60dbe12a9cb0541ffb56ff26e30e5885, type: 2}
   _timerFinished: {fileID: 11400000, guid: 830071c964ee847c7aa2b0e9a5a5ea0a, type: 2}
@@ -152,6 +152,7 @@ MonoBehaviour:
   _pauseEvent: {fileID: 11400000, guid: 22f792b1ccc424bba9789fa3641d76ad, type: 2}
   _loadEvent: {fileID: 11400000, guid: 26da3b366274b4ea09c17ce2bb1024a2, type: 2}
   _openCurtains: {fileID: 11400000, guid: 076250e70de264f6e94d4439130e6a16, type: 2}
+  _notEnough: {fileID: 11400000, guid: ccbc77f5398854e44b61850c64ed5076, type: 2}
 --- !u!114 &1979190858218016692
 MonoBehaviour:
   m_ObjectHideFlags: 0

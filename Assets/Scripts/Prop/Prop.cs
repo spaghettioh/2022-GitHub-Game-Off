@@ -97,6 +97,12 @@ public class Prop : MonoBehaviour
         IsCollectable = onOff;
     }
 
+    public void SetFinishLineSize(int size)
+    {
+        SizeToCollect = size;
+        ToggleCollectable(false);
+    }
+
     public void ShakeGraphic(float shakeDuration)
     {
         _renderer.transform.DOShakePosition(

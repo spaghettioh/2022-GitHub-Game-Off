@@ -1,14 +1,20 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    [Header("Level config")]
     [SerializeField] private int _winCollectAmount;
     [SerializeField] private float _winTimerSeconds;
-    [SerializeField] private string _nextScene;
-    [SerializeField] private string _retryScene;
+    [field: SerializeField] public string NextScene { get; private set; }
+    [SerializeField] private Prop _finishLine;
+
+    [Header("Level manager prefab")]
     [SerializeField] private ClumpDataSO _clumpData;
     [SerializeField] private ScoreSO _score;
+    [SerializeField] private float _winLoseWaitTime = 2f;
 
     [Header("Listening to...")]
     [SerializeField] private VoidEventSO _timerFinished;
@@ -22,22 +28,29 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private PauseGameplayEventSO _pauseEvent;
     [SerializeField] private LoadEventSO _loadEvent;
     [SerializeField] private VoidEventSO _openCurtains;
+    [SerializeField] private VoidEventSO _notEnough;
+    [SerializeField] private bool _hasReachedWinAmount;
 
     private void OnEnable()
     {
         _sceneLoaded.OnEventRaised += FireEvents;
         _timerFinished.OnEventRaised += TimeIsUp;
-        _clumpData.OnPropCountChanged += CheckForCollectionWin;
+        _clumpData.OnPropCountChanged += CheckIfCollectedEnough;
+        _finishLine.OnCollisionEvent += OnFinishLineCollision;
     }
 
     private void OnDisable()
     {
         _sceneLoaded.OnEventRaised -= FireEvents;
         _timerFinished.OnEventRaised -= TimeIsUp;
-        _clumpData.OnPropCountChanged -= CheckForCollectionWin;
+        _clumpData.OnPropCountChanged -= CheckIfCollectedEnough;
+        _finishLine.OnCollisionEvent -= OnFinishLineCollision;
     }
 
-    private bool HasReachedWinAmount() => _clumpData.CollectedCount >= _winCollectAmount;
+    private void CheckIfCollectedEnough(int collected)
+    {
+        _hasReachedWinAmount = collected >= _winCollectAmount;
+    }
 
     private void FireEvents()
     {
@@ -45,30 +58,42 @@ public class LevelManager : MonoBehaviour
         _secondsToWin.Raise(_winTimerSeconds, name);
         _openCurtains.Raise(name);
         _score.SetTimeThisForLevel(_winTimerSeconds);
+        _finishLine.SetFinishLineSize(_winCollectAmount);
     }
 
     private void TimeIsUp()
     {
-        _pauseEvent.Raise(true, false, name);
-        StartCoroutine(WinLoseCheckRoutine());
+        StartCoroutine(WinLoseCheckRoutine(false));
     }
 
-    private void CheckForCollectionWin(int count)
+    private void OnFinishLineCollision(Prop finishLine)
     {
-        if (HasReachedWinAmount()) StartCoroutine(WinLoseCheckRoutine());
+        StartCoroutine(WinLoseCheckRoutine(true));
     }
 
-    private IEnumerator WinLoseCheckRoutine()
+    private IEnumerator WinLoseCheckRoutine(bool isFinishLine)
     {
-        var won = HasReachedWinAmount();
-        if (won)
-            _winEvent.Raise(name);
+        if (isFinishLine)
+        {
+            if (_hasReachedWinAmount)
+            {
+                _winEvent.Raise(name);
+                _pauseEvent.Raise(true, false, name);
+                yield return new WaitForSeconds(_winLoseWaitTime);
+                _loadEvent.RaiseWinScene(NextScene, name);
+            }
+            else
+            {
+                _notEnough.Raise(name);
+                yield break;
+            }
+        }
         else
+        {
             _loseEvent.Raise(name);
-        _pauseEvent.Raise(true, true, name);
-
-        yield return new WaitForSeconds(2f);
-
-        _loadEvent.RaiseWinScene(won ? _nextScene : _retryScene, name);
+            _pauseEvent.Raise(true, false, name);
+            yield return new WaitForSeconds(_winLoseWaitTime);
+            _loadEvent.Raise(SceneManager.GetActiveScene().name, name);
+        }
     }
 }
