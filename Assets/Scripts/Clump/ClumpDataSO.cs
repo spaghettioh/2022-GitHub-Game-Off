@@ -52,19 +52,27 @@ public class ClumpDataSO : ScriptableObject
     private void RaiseStatsChange()
     {
         if (OnPropCountChanged != null)
+        {
             OnPropCountChanged.Invoke(CollectedCount);
+        }
 #if UNITY_EDITOR
         else
+        {
             Debug.LogWarning($"{name} announced a size change" +
-            $" by no one listens.");
+              $" by no one listens.");
+        }
 #endif
 
         if (OnStatsChanged != null)
+        {
             OnStatsChanged.Invoke(MoveForce);
+        }
 #if UNITY_EDITOR
         else
+        {
             Debug.LogWarning($"{name} announced a size change" +
-            $" by no one listens.");
+              $" by no one listens.");
+        }
 #endif
     }
 }
