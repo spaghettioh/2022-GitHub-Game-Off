@@ -708,7 +708,7 @@ GameObject:
   m_Layer: 6
   m_Name: Clump
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 4bc670a8f2cb345dfa99cf676c20ee94, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -754,7 +754,6 @@ MonoBehaviour:
   _crashEvent: {fileID: 11400000, guid: 33f50c759cd2040f6963327c2706f01b, type: 2}
   _crashStateDuration: 1
   _inputHandler: {fileID: 11400000, guid: b780d23633ee24206ac4d23a7c152f74, type: 2}
-  _zoomFinished: {fileID: 11400000, guid: ace19b425833146b9ba671960b248568, type: 2}
   _pauseGameplay: {fileID: 11400000, guid: 22f792b1ccc424bba9789fa3641d76ad, type: 2}
   _canMove: 1
 --- !u!135 &8481394919303201980

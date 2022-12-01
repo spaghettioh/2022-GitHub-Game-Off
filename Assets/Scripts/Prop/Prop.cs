@@ -15,6 +15,7 @@ public class Prop : MonoBehaviour
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private TrailRenderer _uncollectTrail;
     [SerializeField] private Transform _transform;
+    [SerializeField] private bool _flip;
 
     [Header("Collection")]
     [SerializeField] private ClumpDataSO _clumpData;
@@ -69,10 +70,12 @@ public class Prop : MonoBehaviour
         {
             OnCollisionEvent.Invoke(this);
         }
+#if UNITY_EDITOR
         else
         {
             Debug.LogWarning($"{name} raised collision but no one listens.");
         }
+#endif
     }
 
     private void BuildColliderList()
@@ -103,10 +106,11 @@ public class Prop : MonoBehaviour
         ToggleCollectable(false);
     }
 
-    public void ShakeGraphic(float shakeDuration)
+    public void ShakeGraphic(float shakeDuration, bool strong)
     {
+        var multiplier = strong ? .5f : .1f;
         _renderer.transform.DOShakePosition(
-            shakeDuration, .1f / transform.lossyScale.x);
+            shakeDuration, multiplier / transform.lossyScale.x);
     }
 
     public void SetCollected(AudioEventSO audioEvent)
@@ -135,6 +139,7 @@ public class Prop : MonoBehaviour
             _clumpData.Collider.ClosestPoint(transform.position);
         _attachPoint.transform.SetParent(_clumpData.Transform);
         transform.SetParent(_attachPoint.transform);
+        IsAttaching = true;
     }
 
     private void MoveTowardAttachPoint()
@@ -144,6 +149,7 @@ public class Prop : MonoBehaviour
         {
             transform.SetParent(_clumpData.Transform);
             Destroy(_attachPoint);
+            IsAttaching = false;
         });
     }
 
@@ -151,7 +157,7 @@ public class Prop : MonoBehaviour
     {
         // Stop everything, like moving, or waiting
         StopAllCoroutines();
-        _transform.DOKill();
+        _transform.DOKill(true);
 
         // Return to the starting parent
         _transform.SetParent(_originalParent);
@@ -161,10 +167,11 @@ public class Prop : MonoBehaviour
         SetTrailActive(true);
         var localPos = transform.localPosition;
         var endPos = Vector3.zero;
-        endPos.x = localPos.x + Random.Range(-2f, 2f);
-        endPos.z = localPos.z + Random.Range(-2f, 2f);
+        var random = Random.Range(-1, 2);
+        endPos.x = localPos.x + (1 * random) + Random.Range(-1f, 1f);
+        endPos.z = localPos.z + (1 * random) + Random.Range(-1f, 1f);
         //_transform.DOPunchScale(_transform.localScale * .5f, 1f, 1, 1f);
-        _transform.DOLocalJump(endPos, 1f, 2, 1f).OnComplete(() =>
+        _transform.DOLocalJump(endPos, 3f, 2, 1f).OnComplete(() =>
         {
             StartCoroutine(FlickerRoutine());
         });
@@ -203,6 +210,8 @@ public class Prop : MonoBehaviour
             _renderer.sprite = _sprite;
             name = _sprite.name;
         }
+
+        _renderer.flipX = _flip;
     }
 
     private void OnDrawGizmos()

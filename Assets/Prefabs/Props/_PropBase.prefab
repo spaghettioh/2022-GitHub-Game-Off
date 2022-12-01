@@ -252,7 +252,7 @@ GameObject:
   m_Layer: 7
   m_Name: _PropBase
   m_TagString: Prop
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -292,6 +292,7 @@ MonoBehaviour:
   _uncollectTrail: {fileID: 7494777731632551093}
   _transform: {fileID: 6338853664386030579}
   _clumpData: {fileID: 11400000, guid: d0c59fb33456a457c9ee98332ddb6f79, type: 2}
+  <ScorePoints>k__BackingField: 0
   _propCollectSound: {fileID: 0}
   <IsCollectable>k__BackingField: 0
   <SizeToCollect>k__BackingField: 0
@@ -301,7 +302,7 @@ MonoBehaviour:
   _flickerDuration: 2
   _shakeDuration: 1
   _attachPoint: {fileID: 0}
-  _attachDuration: 10
+  _attachDuration: 1
   <IsAttaching>k__BackingField: 0
 --- !u!1 &8446817313727042264
 GameObject:

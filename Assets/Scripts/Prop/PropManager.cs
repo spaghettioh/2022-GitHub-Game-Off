@@ -94,6 +94,8 @@ public class PropManager : MonoBehaviour
         if (_clumpData.Velocity >= _clumpData.MaxSpeed / 2)
         {
             _audioEvent.RaisePlayback(_crashSoundLarge);
+            _crashEvent.Raise(name);
+            p.ShakeGraphic(_crashShakeDuration, true);
 
             // TODO make this query return all attaching or just the last one
             if (_propCollection.Count > 0)
@@ -112,10 +114,9 @@ public class PropManager : MonoBehaviour
         else
         {
             _audioEvent.RaisePlayback(_crashSoundSmall);
+            p.ShakeGraphic(_crashShakeDuration, false);
         }
 
-        p.ShakeGraphic(_crashShakeDuration);
-        _crashEvent.Raise(name);
     }
 
     private void UncollectProp(Prop p)
@@ -128,13 +129,23 @@ public class PropManager : MonoBehaviour
 
     private void AdjustPropsCollectable(int count = 0)
     {
+        // Set props collectable as count increases
         _props.FindAll(p => p.SizeToCollect <= _clumpData.CollectedCount)
             .ForEach(p =>
-        {
-            _props.Remove(p);
-            _collectableProps.Add(p);
-            p.ToggleCollectable(true);
-        });
+            {
+                _props.Remove(p);
+                _collectableProps.Add(p);
+                p.ToggleCollectable(true);
+            });
+        // Set props not collectable as count decreases
+        _collectableProps.FindAll(
+            p => p.SizeToCollect > _clumpData.CollectedCount)
+            .ForEach(p =>
+            {
+                _collectableProps.Remove(p);
+                _props.Add(p);
+                p.ToggleCollectable(false);
+            });
     }
 
     private void OnValidate()

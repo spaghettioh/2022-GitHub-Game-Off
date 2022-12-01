@@ -6552,7 +6552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3338058913524155964, guid: 9048dcd10b91c41218775ed98a52449c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AudioEventSO, GameOff
+      value: AudioEventSO, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3338058913524155964, guid: 9048dcd10b91c41218775ed98a52449c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -6584,7 +6584,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3338058913524155964, guid: 9048dcd10b91c41218775ed98a52449c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: AudioCueSO, GameOff
+      value: AudioCueSO, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3338058913524155964, guid: 9048dcd10b91c41218775ed98a52449c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
