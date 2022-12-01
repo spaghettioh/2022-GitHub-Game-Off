@@ -136,6 +136,7 @@ public class LevelIntroCamera : MonoBehaviour
             lerpTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
+        _pixelPerfectCamera.assetsPPU = _endingPPU;
         _zoomFinished.Raise(name);
     }
 }
