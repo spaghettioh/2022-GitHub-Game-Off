@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05fd5e9081a4d45b992abe42a0b6ba6a, type: 3}
+  m_Name: Cutscene_Level_01_Screen_07-4
+  m_EditorClassIdentifier: 
+  <Graphic>k__BackingField: {fileID: 21300000, guid: 6362f4d456b204a0f97411b8f6bb0496, type: 3}
+  <TextBlocks>k__BackingField:
+  - Text: 'PRINCE:
+
+      To be safe, where no harm
+
+      ever comes to her!'
+    BlockSound: {fileID: 0}
+    CharacterSound: {fileID: 11400000, guid: 5fa68438110c4424cacef10be4b2eeb2, type: 2}
+    WaitTime: 0
+  _testEvent: {fileID: 11400000, guid: 84190af677b4c429c83a1cd508394e5f, type: 2}
+  _validateNow: 0

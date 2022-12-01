@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class WinScreenManager : MonoBehaviour
 {
-    [Header("Win Screen")]
+    [Header("When should it start")]
     [SerializeField] private float _startTime;
     [Tooltip("How long counting each score should take")]
     [SerializeField] private float _tallyTime;
@@ -67,7 +67,6 @@ public class WinScreenManager : MonoBehaviour
 
     public void RushWinScreen()
     {
-        // TODO BUG the score never stops incrementing and isn't saved
         _tallyIncrementTime = 0f;
         _timeBetweenTallies = 0f;
         _scoreSound = null;
@@ -191,11 +190,6 @@ public class WinScreenManager : MonoBehaviour
 
     private IEnumerator WrapUpPropScreenRoutine()
     {
-        if (!_hasRushed)
-        {
-            yield return new WaitForSeconds(_timeBetweenTallies);
-        }
-
         if (_scoreFinishedSound != null)
         {
             _audioEvent.RaisePlayback(_scoreFinishedSound, name);

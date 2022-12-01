@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CueType>k__BackingField: 1
   <Clips>k__BackingField:
-  - {fileID: 8300000, guid: 3419d9901e7434bb3ae9d0b8b0dd30aa, type: 3}
+  - {fileID: 8300000, guid: 6a92929a43f104a9cbc3b99126c954e5, type: 3}
   _pitchVariation: 0

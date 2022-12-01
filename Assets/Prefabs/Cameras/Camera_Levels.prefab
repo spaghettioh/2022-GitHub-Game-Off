@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 1
+  m_LookaheadTime: 0.8
   m_LookaheadSmoothing: 7.32
   m_LookaheadIgnoreY: 1
   m_XDamping: 1
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
+  m_SoftZoneWidth: 0.11
   m_SoftZoneHeight: 0.8
   m_BiasX: 0
   m_BiasY: 0
@@ -121,7 +121,9 @@ Transform:
   - {fileID: 3201861318942775170}
   - {fileID: 4965864233889058181}
   - {fileID: 1062530962917665126}
-  - {fileID: 6308752858983379535}
+  - {fileID: 6308752858764648083}
+  - {fileID: 6308752859562190366}
+  - {fileID: 6308752858290613248}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -141,10 +143,10 @@ MonoBehaviour:
   _zoomTime: 3
   _startingPPU: 1
   _endingPPU: 32
-  _pixelPerfectCamera: {fileID: 4965864232499698690}
-  _cinemachineBrain: {fileID: 4965864232499698688}
-  _levelCamera: {fileID: 6525166504910276644}
-  _clumpPositionCamera: {fileID: 4965864233889058180}
+  _pixelPerfectCamera: {fileID: 6308752858764648087}
+  _cinemachineBrain: {fileID: 6308752858764648086}
+  _levelCamera: {fileID: 6308752859562190365}
+  _clumpPositionCamera: {fileID: 6308752858290613255}
   _clumpFollowCamera: {fileID: 8703527512875626976}
   _sceneLoaded: {fileID: 11400000, guid: cb9a17bd10dbe46c3bf8ce92d3e6fdd2, type: 2}
   _curtainsOpened: {fileID: 11400000, guid: 0ee31f3c921054585871bdb1b4f479a6, type: 2}
@@ -169,7 +171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4965864232499698692
 Transform:
   m_ObjectHideFlags: 0
@@ -204,15 +206,15 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.11562501
-    y: 1.5092592
-    width: 0.6666667
-    height: 0.6666666
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 1
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.8125
+  orthographic size: 3.3333333
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -312,7 +314,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 6
-    m_Time: 2
+    m_Time: 3
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -382,12 +384,12 @@ GameObject:
   - component: {fileID: 4965864233889058180}
   - component: {fileID: 4965864233889058178}
   m_Layer: 0
-  m_Name: ClumpPositioCam
+  m_Name: ClumpPositionCam
   m_TagString: Clump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4965864233889058181
 Transform:
   m_ObjectHideFlags: 0
@@ -471,7 +473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1062530962917665126
 Transform:
   m_ObjectHideFlags: 0
@@ -511,7 +513,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 3.31
-    NearClipPlane: 10
+    NearClipPlane: 1
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
@@ -594,12 +596,12 @@ GameObject:
   - component: {fileID: 6308752858290613255}
   - component: {fileID: 6308752858290613254}
   m_Layer: 0
-  m_Name: ClumpCam
+  m_Name: ClumpZoomCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6308752858290613248
 Transform:
   m_ObjectHideFlags: 0
@@ -608,13 +610,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6308752858290613253}
   m_LocalRotation: {x: 0.23911752, y: 0.3696438, z: -0.09904572, w: 0.89239913}
-  m_LocalPosition: {x: -24.803383, y: -10.526789, z: -1.253561}
+  m_LocalPosition: {x: -13.092524, y: 10.908747, z: -25.092524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6308752859241886348}
-  m_Father: {fileID: 6308752858983379535}
-  m_RootOrder: 2
+  m_Father: {fileID: 5336943327195292872}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 30, y: 45, z: 0}
 --- !u!114 &6308752858290613255
 MonoBehaviour:
@@ -639,7 +641,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 90
-    NearClipPlane: 0.3
+    NearClipPlane: 1
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
@@ -681,12 +683,12 @@ GameObject:
   - component: {fileID: 6308752858764648087}
   - component: {fileID: 6308752858764648086}
   m_Layer: 0
-  m_Name: MainCamera
+  m_Name: ZoomMainCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6308752858764648083
 Transform:
   m_ObjectHideFlags: 0
@@ -695,12 +697,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6308752858764648085}
   m_LocalRotation: {x: 0.6532815, y: 0.27059805, z: -0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: -24.803383, y: 42.564465, z: -1.2610378}
+  m_LocalPosition: {x: -13.092523, y: 64, z: -25.092524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6308752858983379535}
-  m_RootOrder: 0
+  m_Father: {fileID: 5336943327195292872}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
 --- !u!20 &6308752858764648082
 Camera:
@@ -721,19 +723,19 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
+    x: 0.065625004
+    y: 0.74814814
+    width: 0.33333334
+    height: 0.3333333
+  near clip plane: 1
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 90
+  orthographic size: 3.3333333
   m_Depth: 99
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1015
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -843,94 +845,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &6308752858983379533
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6308752858983379535}
-  - component: {fileID: 6308752858983379534}
-  - component: {fileID: 6308752858983379528}
-  m_Layer: 0
-  m_Name: Test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &6308752858983379535
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6308752858983379533}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.710859, y: 21.435535, z: -23.838963}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6308752858764648083}
-  - {fileID: 6308752859562190366}
-  - {fileID: 6308752858290613248}
-  m_Father: {fileID: 5336943327195292872}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6308752858983379534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6308752858983379533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b6f42fbfbe1a4f68ac582ceaf990df2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waitTime: 1
-  _zoomTime: 3
-  _startingPPU: 1
-  _endingPPU: 32
-  _pixelPerfectCamera: {fileID: 6308752858764648087}
-  _cinemachineBrain: {fileID: 6308752858764648086}
-  _levelCamera: {fileID: 6308752859562190365}
-  _clumpPositionCamera: {fileID: 0}
-  _clumpFollowCamera: {fileID: 0}
-  _sceneLoaded: {fileID: 11400000, guid: cb9a17bd10dbe46c3bf8ce92d3e6fdd2, type: 2}
-  _curtainsOpened: {fileID: 11400000, guid: 0ee31f3c921054585871bdb1b4f479a6, type: 2}
-  _zoomFinished: {fileID: 11400000, guid: ace19b425833146b9ba671960b248568, type: 2}
---- !u!114 &6308752858983379528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6308752858983379533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07e070d7a6e4f49e981636c303f8abc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _voidEventChannel: {fileID: 11400000, guid: 73801d0be729e4179bf1474ec86146d7, type: 2}
-  OnEventRaised:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 0ee31f3c921054585871bdb1b4f479a6, type: 2}
-        m_TargetAssemblyTypeName: VoidEventSO, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &6308752859241886355
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,12 +901,12 @@ GameObject:
   - component: {fileID: 6308752859562190365}
   - component: {fileID: 6308752859562190364}
   m_Layer: 0
-  m_Name: LevelCam
+  m_Name: LevelZoomCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6308752859562190366
 Transform:
   m_ObjectHideFlags: 0
@@ -1001,13 +915,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6308752859562190371}
   m_LocalRotation: {x: 0.6532815, y: 0.27059805, z: -0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: -24.803383, y: 42.564465, z: -1.2610378}
+  m_LocalPosition: {x: -13.092524, y: 64, z: -25.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6308752857901023990}
-  m_Father: {fileID: 6308752858983379535}
-  m_RootOrder: 1
+  m_Father: {fileID: 5336943327195292872}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
 --- !u!114 &6308752859562190365
 MonoBehaviour:
@@ -1032,7 +946,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 90
-    NearClipPlane: 0.3
+    NearClipPlane: 1
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0

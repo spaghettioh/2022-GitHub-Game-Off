@@ -56,6 +56,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: a7001ae57ff8a41099bf750d06cee655, type: 3}
     - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+      propertyPath: _propCollectSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b61930a30c7a41069efc9bd91c1279b, type: 2}
+    - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: <ScorePoints>k__BackingField
       value: 1000
       objectReference: {fileID: 0}
@@ -87,6 +91,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6338853664386030576, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6338853664386030576, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: m_Name
       value: Prop_Crown

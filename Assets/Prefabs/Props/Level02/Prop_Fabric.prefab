@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 94253132491989657, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.434
+      objectReference: {fileID: 0}
+    - target: {fileID: 94253132491989657, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.8923992
       objectReference: {fileID: 0}
@@ -44,8 +48,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 16e2ee1bc6969401e8401cc648286348, type: 3}
     - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+      propertyPath: _propCollectSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 27aea94216a9b45b4b52ec9ab8cafe54, type: 2}
+    - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+      propertyPath: <ScorePoints>k__BackingField
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: <SizeToCollect>k__BackingField
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161551464957821711, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+      propertyPath: m_Radius
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5156284617504704147, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: m_Size.x

@@ -39,6 +39,10 @@ PrefabInstance:
       propertyPath: _propCollectSound
       value: 
       objectReference: {fileID: 11400000, guid: fb8b336af07ff4cf488973b4c549e55b, type: 2}
+    - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+      propertyPath: <ScorePoints>k__BackingField
+      value: 100000
+      objectReference: {fileID: 0}
     - target: {fileID: 5156284617504704147, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: m_Size.x
       value: 1

@@ -32,7 +32,6 @@ public class Prop : MonoBehaviour
     [SerializeField] private Transform _originalParent;
     [Space]
     [SerializeField] private float _flickerDuration = 2f;
-    [SerializeField] private float _shakeDuration = 1f;
     [Space]
     [SerializeField] private GameObject _attachPoint;
     [SerializeField] private float _attachDuration = 10f;
@@ -205,13 +204,18 @@ public class Prop : MonoBehaviour
     {
         BuildColliderList();
 
-        if (_sprite != null)
-        {
-            _renderer.sprite = _sprite;
-            name = _sprite.name;
-        }
+        //if (_sprite != null)
+        //{
+        //    _renderer.sprite = _sprite;
+        //    name = _sprite.name;
+        //}
 
         _renderer.flipX = _flip;
+
+        if (ScorePoints == 0 && name != "_PropBase")
+        {
+            Debug.LogError($"{name} score cannot be 0!");
+        }
     }
 
     private void OnDrawGizmos()

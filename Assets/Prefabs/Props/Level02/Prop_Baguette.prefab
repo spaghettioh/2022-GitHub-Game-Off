@@ -51,6 +51,14 @@ PrefabInstance:
       propertyPath: _sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3f7a3865e6f854e149d22a9ecf754c88, type: 3}
+    - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+      propertyPath: _propCollectSound
+      value: 
+      objectReference: {fileID: 11400000, guid: a9c94e34624264fa8a6c26099a39ca2e, type: 2}
+    - target: {fileID: 2585733098176632727, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
+      propertyPath: <ScorePoints>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3161551464957821711, guid: a04ea2a33e44f43e481eaffc7c80724b, type: 3}
       propertyPath: m_Radius
       value: 0.4

@@ -10,8 +10,6 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private int _winAmount;
     [SerializeField] private GameObject _winDialog;
     [SerializeField] private GameObject _loseDialog;
-    [SerializeField] private Canvas _canvas;
-    [SerializeField] private Camera _mainCamera;
 
     [Header("Listening to...")]
     [SerializeField] private ClumpDataSO _clumpData;
@@ -43,10 +41,6 @@ public class HUDManager : MonoBehaviour
     {
         _winDialog.SetActive(false);
         _loseDialog.SetActive(false);
-        _mainCamera = Camera.main;
-
-        _canvas.worldCamera = _mainCamera;
-        _canvas.planeDistance = _mainCamera.nearClipPlane + .1f;
     }
 
     private void SetWinAmount(int winAmount)
@@ -67,14 +61,5 @@ public class HUDManager : MonoBehaviour
     private void ShowLoseDialog()
     {
         _loseDialog.SetActive(true);
-    }
-
-    private void OnValidate()
-    {
-        if (gameObject.activeInHierarchy)
-        {
-            _mainCamera = Camera.main;
-            _canvas.worldCamera = _mainCamera;
-        }
     }
 }

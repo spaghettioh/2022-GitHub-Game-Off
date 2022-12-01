@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxSpeed>k__BackingField: 10
   <MinColliderRadius>k__BackingField: 0.2
-  <MaxColliderRadius>k__BackingField: 3
-  <MinMoveForce>k__BackingField: 500
+  <MaxColliderRadius>k__BackingField: 2
+  <MinMoveForce>k__BackingField: 400
   <MaxMoveForce>k__BackingField: 2000
   _header: 
   <Collider>k__BackingField: {fileID: 0}
   <Transform>k__BackingField: {fileID: 0}
-  <CollectedCount>k__BackingField: 171
-  <Velocity>k__BackingField: 0.9901091
-  <MoveForce>k__BackingField: 1332.79
+  <CollectedCount>k__BackingField: 295
+  <Velocity>k__BackingField: 0.242396
+  <MoveForce>k__BackingField: 1813.1696

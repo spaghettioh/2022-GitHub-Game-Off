@@ -29,12 +29,12 @@ public class CutsceneScreenSO : ScriptableObject
     [field: SerializeField]
     public List<TextAndSound> TextBlocks { get; private set; }
 
-    //[Tooltip("For use with Cutscene_Tester.scene")]
-    //[SerializeField]
-    //private CutsceneTestEventSO _testEvent;
-    //[Tooltip("Click to fire the tester event")]
-    //[SerializeField]
-    //private bool _validateNow;
+    [Tooltip("For use with Cutscene_Tester.scene")]
+    [SerializeField]
+    private CutsceneTestEventSO _testEvent;
+    [Tooltip("Click to fire the tester event")]
+    [SerializeField]
+    private bool _validateNow;
 
     //private void OnValidate()
     //{
