@@ -124,17 +124,17 @@ public class LevelIntroCamera : MonoBehaviour
         _clumpFollowCamera.Priority = 0;
         yield return new WaitForSeconds(_waitTime);
         _levelCamera.Priority = 0;
-        _clumpPositionCamera.Priority = 1;
-        _clumpFollowCamera.Priority = 0;
+        //_clumpPositionCamera.Priority = 1;
+        _clumpFollowCamera.Priority = 1;
         var lerpTime = 0f;
 
         while (lerpTime < _zoomTime)
         {
-            Debug.Log($"Blend duration {_cinemachineBrain.IsBlending}");
+            Debug.Log($"Blend duration {lerpTime / _zoomTime}");
             _pixelPerfectCamera.assetsPPU =
-                (int)Mathf.Lerp(_startingPPU, _endingPPU, lerpTime);
-            lerpTime += Time.deltaTime / _zoomTime;
-            yield return new WaitForSeconds(Time.deltaTime / _zoomTime);
+                (int)Mathf.Lerp(_startingPPU, _endingPPU, lerpTime / _zoomTime);
+            lerpTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
         }
         _zoomFinished.Raise(name);
     }
