@@ -6952,8 +6952,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577427514}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 5.55, y: 2, z: 2.56}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6, y: 2, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7354,7 +7354,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh1914526
+  m_Name: pb_Mesh1128286
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8786,6 +8786,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3589275088846375201, guid: e927d4e2a1efb4f6ab659bd49960afa3, type: 3}
   m_PrefabInstance: {fileID: 338940475}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &790305367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 790305369}
+  - component: {fileID: 790305368}
+  m_Layer: 0
+  m_Name: ObjectPit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &790305368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790305367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 61.57963, y: 1, z: 5.8662143}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &790305369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790305367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -6.6, z: 4.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &795013134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10782,8 +10827,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915204375}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.73, y: 2, z: 2.68}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 2, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14622,6 +14667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198764902}
   - component: {fileID: 1198764903}
+  - component: {fileID: 1198764904}
   m_Layer: 0
   m_Name: WinScreenManager
   m_TagString: Untagged
@@ -14687,6 +14733,19 @@ MonoBehaviour:
   _thisLevelRemainingTime: 0
   _timeForCountingDown: 0
   _hasRushed: 0
+--- !u!65 &1198764904
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198764901}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 36.89805, y: 1, z: 11.029452}
+  m_Center: {x: 0, y: -6.58, z: 5.014726}
 --- !u!1001 &1201067070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26300,6 +26359,14 @@ PrefabInstance:
     - target: {fileID: 775904567607299125, guid: 7965837e311864be2b513be9db08329a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683466700979578139, guid: 7965837e311864be2b513be9db08329a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 107
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683466700979578139, guid: 7965837e311864be2b513be9db08329a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 3390787359361530975, guid: 7965837e311864be2b513be9db08329a, type: 3}
       propertyPath: m_AnchoredPosition.x

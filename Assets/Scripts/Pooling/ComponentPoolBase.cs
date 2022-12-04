@@ -45,6 +45,7 @@ public class ComponentPoolBase<T> : ScriptableObject where T : Component
     /// <param name="returning"></param>
     public void Return(T returning)
     {
+        returning.gameObject.SetActive(false);
         _stack.Push(returning);
     }
 

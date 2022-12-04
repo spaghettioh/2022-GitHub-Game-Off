@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _waitTime: 2
   _zoomTime: 3
-  _startingPPU: 26
+  _startingPPU: 32
   _endingPPU: 32
   _pixelPerfectCamera: {fileID: 4965864232499698690}
   _cinemachineBrain: {fileID: 4965864232499698688}
@@ -206,10 +206,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.087500006
-    y: 1.2018518
-    width: 0.6666667
-    height: 0.6666666
+    x: 0.067708336
+    y: 0.75555557
+    width: 0.33333334
+    height: 0.3333333
   near clip plane: 1
   far clip plane: 1000
   field of view: 60

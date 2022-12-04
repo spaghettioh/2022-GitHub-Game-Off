@@ -30,6 +30,17 @@ public class ClumpPropCollectionSO : ScriptableObject
     public void AddProp(Prop prop)
     {
         _currentScenePropsCollected.Add(prop);
+
+        DisableOlderProps();
+    }
+
+    private void DisableOlderProps()
+    {
+        var count = _currentScenePropsCollected.Count;
+        if (count > 100)
+        {
+            _currentScenePropsCollected[count - 100].gameObject.SetActive(false);
+        }
     }
 
     public void RemoveProp(Prop prop)

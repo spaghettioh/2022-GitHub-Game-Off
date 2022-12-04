@@ -127,7 +127,7 @@ public class WinScreenManager : MonoBehaviour
         var rPos = _bottleRight.position;
         var randomXPos = Random.Range(lPos.x, rPos.x);
         var randomYPos = Random.Range(lPos.y, lPos.y + 2);
-        float randomZPos = lPos.z += Random.Range(-.5f, .5f);
+        float randomZPos = lPos.z += Random.Range(-1, 2);
         return new Vector3(randomXPos, randomYPos, randomZPos);
     }
 
@@ -195,8 +195,8 @@ public class WinScreenManager : MonoBehaviour
             _audioEvent.RaisePlayback(_scoreFinishedSound, name);
         }
 
-        UpdateScoreValues();
         Time.timeScale = 1f;
+        UpdateScoreValues();
         _winScreenFinished.Raise(name);
 
         if (!_hasRushed)
@@ -221,5 +221,10 @@ public class WinScreenManager : MonoBehaviour
     {
         _scoreSO.UpdateTotalScore(_scoreForCountingUp);
         _scoreSO.UpdateTotalTime();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        _propPool.Return(other.GetComponent<WinScreenProp>());
     }
 }
