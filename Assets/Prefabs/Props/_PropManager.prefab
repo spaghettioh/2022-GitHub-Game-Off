@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3984956405087293208}
   - component: {fileID: 33196364726931049}
-  - component: {fileID: 5122032243296443293}
   m_Layer: 7
   m_Name: _PropManager
   m_TagString: Untagged
@@ -59,15 +58,3 @@ MonoBehaviour:
   _clumpForceIncrement: 0
   _props: []
   _collectableProps: []
---- !u!114 &5122032243296443293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7874543331437844782}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd24517a1a6d4e89afd02f54517813a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
